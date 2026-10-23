@@ -1,0 +1,31 @@
+name: earnings-history
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: "Ticker to measure earnings reactions for (e.g. GLW)"
+        required: true
+permissions:
+  contents: write
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TICKER: ${{ inputs.ticker }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python earnings.py --test
+      - run: python earnings.py "$TICKER"
+      - name: Commit results
+        run: |
+          git config user.name "setup-scanner"
+          git config user.email "actions@users.noreply.github.com"
+          git add results
+          git diff --cached --quiet || git commit -m "Earnings history $TICKER $(date -u +%Y-%m-%d)"
+          git pull --rebase -q origin main
+          git push
