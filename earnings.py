@@ -22,7 +22,8 @@ from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
 ROOT = os.path.dirname(os.path.abspath(__file__))
-UA = {"User-Agent": "checker-setup-scanner github.com/Wilk0608/checker"}
+# SEC fair-access policy: declare a user agent with a contact address (a generic no-reply address, nothing personal).
+UA = {"User-Agent": "checker-setup-scanner actions@users.noreply.github.com", "Accept-Encoding": "identity"}
 
 
 def get_json(url):
@@ -132,15 +133,24 @@ if __name__ == "__main__":
     if not re.fullmatch(r"[A-Z][A-Z.\-]{0,6}", ticker):
         raise SystemExit(f"bad ticker: {ticker!r}")
     now = dt.datetime.now(ET)
-    cik, name = cik_for(ticker)
-    recent = get_json(f"https://data.sec.gov/submissions/CIK{cik:010d}.json")["filings"]["recent"]
-    filings = earnings_filings(recent, (now - dt.timedelta(days=366)).date())
-    import yfinance as yf
-    h = yf.download(ticker, period="13mo", interval="1d", auto_adjust=False, progress=False)
-    c = h["Close"]
-    c = c[ticker] if hasattr(c, "columns") else c
-    closes = [(d.date(), float(v)) for d, v in c.dropna().items()]
-    md, _ = build(ticker, name, filings, closes, now)
     os.makedirs(os.path.join(ROOT, "results"), exist_ok=True)
-    open(os.path.join(ROOT, "results", f"earnings-{ticker}.md"), "w").write(md)
+    out = os.path.join(ROOT, "results", f"earnings-{ticker}.md")
+    step = "SEC ticker lookup"
+    try:
+        cik, name = cik_for(ticker)
+        step = "SEC filings"
+        recent = get_json(f"https://data.sec.gov/submissions/CIK{cik:010d}.json")["filings"]["recent"]
+        filings = earnings_filings(recent, (now - dt.timedelta(days=366)).date())
+        step = "price history"
+        import yfinance as yf
+        h = yf.download(ticker, period="13mo", interval="1d", auto_adjust=False, progress=False)
+        c = h["Close"]
+        c = c[ticker] if hasattr(c, "columns") else c
+        closes = [(d.date(), float(v)) for d, v in c.dropna().items()]
+        md, _ = build(ticker, name, filings, closes, now)
+    except Exception as e:   # keep the failure readable: it is committed like a normal result
+        open(out, "w").write(f"# Earnings reactions: {ticker}\nRun {now:%Y-%m-%d %H:%M} ET | FAILED at {step}: "
+                             f"{type(e).__name__}: {e}\n")
+        raise
+    open(out, "w").write(md)
     print(md)
