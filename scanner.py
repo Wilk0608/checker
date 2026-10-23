@@ -84,17 +84,27 @@ def report(results, missing, spy3, dates, now_et):
          f"Run {now_et:%Y-%m-%d %H:%M} ET | universe {sum(1 for _ in results) + len(missing)} | scanned {len(ok)} | "
          f"passed price $5-275 and avg vol 1M: {len(live)} | setups {len(hits)} | watch {len(watch)} | SPY 3M {spy3:+.1f}%" if spy3 is not None else "",
          "", "Source: free daily data (Yahoo). Verify every finalist on live broker data before scoring.", "",
+         "Stop = thesis invalidation (10-session extreme close, kept 1 to 2 ATR away). Target = nearest swing level or 52-week "
+         "extreme; 'new high/low' means use the 1-sigma cap. R:R is before that cap, which can only lower it.", "",
          "## Confirmed setups",
-         "| Ticker | Dir | Setup | Close | Trend C/P | 3M % | vs SPY | vs sector | ATR % | HV20 | Vol x | % above 52w low | Note |",
-         "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+         "| Ticker | Dir | Setup | Close | Stop | Target | R:R | Trend C/P | 3M % | vs SPY | vs sector | ATR % | HV20 | Vol x | % above 52w low | Note |",
+         "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     def d(r):
         s = " ".join(r["setups"])
         return "put" if ("Breakdown" in s or "Failed" in s) and "Breakout" not in s and "Pullback" not in s else "call"
+    def lv(r):
+        x = r.get("levels_put" if d(r) == "put" else "levels_call") or {}
+        if not x:
+            return "", "", ""
+        tgt = x["target"] if x["target"] is not None else ("new low" if d(r) == "put" else "new high")
+        rr = x["rr_before_cap"] if x["rr_before_cap"] is not None else "cap"
+        return x["invalidation"], tgt, rr
     for r in sorted(hits, key=lambda r: (d(r), -r["vol_ratio"])):
-        L.append(f"| {r['tk']} | {d(r)} | {'; '.join(r['setups'])} | {r['close']} | {r['trend_call']}/{r['trend_put']} | {r['ret3m']} | "
+        stop, tgt, rr = lv(r)
+        L.append(f"| {r['tk']} | {d(r)} | {'; '.join(r['setups'])} | {r['close']} | {stop} | {tgt} | {rr} | {r['trend_call']}/{r['trend_put']} | {r['ret3m']} | "
                  f"{r.get('rs_spy', '')} | {r.get('rs_sector', '')} | {r['atr_pct']} | {r['hv20']} | {r['vol_ratio']} | {r['pct_above_lo52']} | {r['note']} |")
     if not hits:
-        L.append("| none | | | | | | | | | | | | |")
+        L.append("| none | | | | | | | | | | | | | | | |")
     L += ["", "## Watch (near a trigger, not confirmed)"]
     L += [f"- {r['tk']} {r['close']}: {'; '.join(r['watch'])}" for r in sorted(watch, key=lambda r: r["tk"])] or ["- none"]
     L += ["", "## Data notes",
@@ -131,7 +141,20 @@ def selftest():
     assert any(s.startswith("Breakdown") for s in R["DNN"]["setups"]), R["DNN"]
     assert R["DNN"]["near_low"] and "PUT BLOCKED" in R["DNN"]["note"]
     assert R["CHEAP"]["filtered"] and miss == ["ZZZ"]
+    # Levels: new highs/lows have no target; stop sits 1 to 2 ATR from entry on the correct side
+    lc, lp = R["UPP"]["levels_call"], R["DNN"]["levels_put"]
+    assert lc["target"] is None and lp["target"] is None, (lc, lp)
+    for x, sign in ((lc, -1), (lp, 1)):
+        dist = (x["invalidation"] - x["entry"]) * sign
+        assert x["atr14"] - 0.011 <= dist <= 2 * x["atr14"] + 0.011, x
+    # A swing high above entry becomes the call target; R:R = distance to it / distance to the stop
+    from setups import levels
+    zz = np.concatenate([np.linspace(50, 60, 120), np.linspace(60, 52, 60), np.linspace(52, 57, 80)])   # peak 60, now 57
+    lz = levels(mk(zz, vol), "call")
+    assert abs(lz["target"] - 60.6) < 0.05, lz                      # the peak's high (60 x 1.01) is the nearest resistance
+    assert abs(lz["rr_before_cap"] - (lz["target"] - 57) / lz["risk"]) < 0.01, lz
     print("PBB:", R["PBB"]["setups"], R["PBB"]["trend_call"])
+    print("levels ok:", lz["target"], lz["invalidation"], lz["rr_before_cap"])
     print(report(res, miss, spy3, dates, dt.datetime(2026, 10, 23, 18, 0, tzinfo=ET)))
     print("self-test passed")
 

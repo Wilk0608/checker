@@ -8,6 +8,14 @@ Definitions (from the plan):
 - Pullback: trend 2 uptrend, price within 3% of a RISING SMA20 or SMA50, after a 5-15% drop from the recent high (30 sessions).
 - Failed rally: trend 2 downtrend, within 3% of a FALLING SMA20 or SMA50, after a 5-15% bounce off the recent low.
 - Near 52-week low (puts blocked): last close within 5% of the lowest low of the past year, or below it.
+
+Levels (for confirmed setups, entry = last close; puts mirror):
+- Invalidation: lowest close of the last 10 sessions, but no closer than 1 x ATR(14) and no farther than 2 x ATR(14) from entry.
+- Target: nearest swing high above entry (a high that is the highest of the 5 sessions on each side) or the prior 52-week
+  high, whichever is nearer (the entry bar's own wick doesn't count). None means the close is at new highs, so the session
+  uses the 1-sigma cap instead.
+- R:R before cap = target distance / invalidation distance. The session must still cap the target at entry plus the
+  1-sigma move to the time-stop date (higher of IV and HV20), which can only lower R:R.
 """
 import math
 import numpy as np
@@ -33,6 +41,48 @@ def atr14(df):
 def hv20(c):
     r = np.log(c / c.shift()).dropna().iloc[-20:]
     return float(r.std(ddof=1) * math.sqrt(252))
+
+
+PIVOT_K = 5
+
+
+def pivots(df, k=PIVOT_K):
+    """Swing highs and lows: a bar whose high (low) is the highest (lowest) of the k sessions on each side."""
+    h, l = df["High"].to_numpy(dtype=float), df["Low"].to_numpy(dtype=float)
+    n = len(df)
+    ph = [float(h[i]) for i in range(k, n - k) if h[i] == h[i - k:i + k + 1].max()]
+    pl = [float(l[i]) for i in range(k, n - k) if l[i] == l[i - k:i + k + 1].min()]
+    return ph, pl
+
+
+def levels(df, direction):
+    """Invalidation, target and reward-to-risk (before the 1-sigma cap) for a call or put entered at the last close."""
+    c = df["Close"].astype(float)
+    last = float(c.iloc[-1])
+    a = atr14(df.iloc[-66:])
+    yr = df.iloc[-253:-1]                      # the prior year, excluding the entry bar's own high/low
+    ph, pl = pivots(yr)
+    hi52, lo52 = float(yr["High"].max()), float(yr["Low"].min())
+    if direction == "call":
+        ext10 = float(c.iloc[-10:].min())
+        risk = min(max(last - ext10, a), 2 * a)
+        inv = last - risk
+        cands = sorted({p for p in ph if p > last} | ({hi52} if hi52 > last else set()))
+        target = cands[0] if cands else None
+        nearby = cands[:3]
+    else:
+        ext10 = float(c.iloc[-10:].max())
+        risk = min(max(ext10 - last, a), 2 * a)
+        inv = last + risk
+        cands = sorted({p for p in pl if p < last} | ({lo52} if lo52 < last else set()), reverse=True)
+        target = cands[0] if cands else None
+        nearby = cands[:3]
+    rr = abs(target - last) / risk if target is not None else None
+    tail = [(d.strftime("%Y-%m-%d"), round(float(r.High), 2), round(float(r.Low), 2), round(float(r.Close), 2))
+            for d, r in df.iloc[-12:].iterrows()]
+    return dict(dir=direction, entry=round(last, 2), atr14=round(a, 3), ext10_close=round(ext10, 2),
+                invalidation=round(inv, 2), risk=round(risk, 3), target=None if target is None else round(target, 2),
+                next_levels=[round(x, 2) for x in nearby], rr_before_cap=None if rr is None else round(rr, 2), tail=tail)
 
 
 def trigger(c, v, i):
@@ -109,5 +159,10 @@ def analyze(tk, df, bench_ret3m=None, sector_ret3m=None):
         watch.append(f"within {last / t0['lo'] - 1:.1%} of 20d low {t0['lo']:.2f}")
     out.update(vol_ratio=round(t0["vr"], 2), hi20=round(t0["hi"], 2), lo20=round(t0["lo"], 2), setups=setups, watch=watch)
     puts = any(s.startswith(("Breakdown", "Failed")) for s in setups)
+    calls = any(s.startswith(("Breakout", "Pullback")) for s in setups)
     out["note"] = "PUT BLOCKED: near 52-wk low" if puts and out["near_low"] else ""
+    if calls:
+        out["levels_call"] = levels(df, "call")
+    if puts:
+        out["levels_put"] = levels(df, "put")
     return out
