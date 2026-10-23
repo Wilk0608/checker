@@ -9,6 +9,7 @@ Foreign filers report on 6-K, which carries no item numbers, so they are listed 
 Reports with no verifiable timing are dropped, never estimated. The pre-event rule needs at least 3 verified reactions.
 
 Run: python earnings.py GLW        (normally from the "earnings-history" GitHub Actions workflow)
+     python earnings.py GLW 24741  (with the SEC CIK, if the ticker lookup on www.sec.gov is refused)
      python earnings.py --test     (offline self-test)
 Writes results/earnings-<TICKER>.md
 """
@@ -137,9 +138,17 @@ if __name__ == "__main__":
     out = os.path.join(ROOT, "results", f"earnings-{ticker}.md")
     step = "SEC ticker lookup"
     try:
-        cik, name = cik_for(ticker)
+        cik_arg = (sys.argv[2] if len(sys.argv) > 2 else "").strip()
+        if cik_arg:                       # www.sec.gov can refuse cloud runners; the CIK skips that lookup
+            if not cik_arg.isdigit():
+                raise SystemExit(f"bad CIK: {cik_arg!r}")
+            cik, name = int(cik_arg), f"CIK {int(cik_arg)}"
+        else:
+            cik, name = cik_for(ticker)
         step = "SEC filings"
-        recent = get_json(f"https://data.sec.gov/submissions/CIK{cik:010d}.json")["filings"]["recent"]
+        sub = get_json(f"https://data.sec.gov/submissions/CIK{cik:010d}.json")
+        recent = sub["filings"]["recent"]
+        name = sub.get("name") or name
         filings = earnings_filings(recent, (now - dt.timedelta(days=366)).date())
         step = "price history"
         import yfinance as yf

@@ -5,6 +5,10 @@ on:
       ticker:
         description: "Ticker to measure earnings reactions for (e.g. GLW)"
         required: true
+      cik:
+        description: "Optional SEC CIK (e.g. 24741 for GLW), used if the SEC ticker lookup is refused"
+        required: false
+        default: ""
 permissions:
   contents: write
 jobs:
@@ -13,6 +17,7 @@ jobs:
     timeout-minutes: 10
     env:
       TICKER: ${{ inputs.ticker }}
+      CIK: ${{ inputs.cik }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -20,7 +25,7 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - run: python earnings.py --test
-      - run: python earnings.py "$TICKER"
+      - run: python earnings.py "$TICKER" "$CIK"
       - name: Commit results
         if: always()
         run: |
