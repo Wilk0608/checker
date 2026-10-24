@@ -3,13 +3,15 @@ on:
   schedule:
     - cron: "30 21 * * 1-5"   # 21:30 UTC = 5:30 PM EDT / 4:30 PM EST, after every close
     - cron: "30 10 * * 2-6"   # 10:30 UTC = 6:30 AM EDT / 5:30 AM EST: re-run on official closes before the next session
-    - cron: "30 10 * * 2-6"   # 10:30 UTC = 6:30 AM EDT / 5:30 AM EST next morning: re-run on the feed's final bars
   workflow_dispatch: {}
 permissions:
   contents: write
+concurrency:                  # one scan at a time: an overlapping run waits, so two runs never race to push results
+  group: daily-setup-scan
+  cancel-in-progress: false
 jobs:
   scan:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04     # pinned: ubuntu-latest is migrating to a new image, which could break the Python setup
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
