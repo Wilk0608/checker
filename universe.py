@@ -28,8 +28,9 @@ NASDAQ_SECTOR_ETF = {"Technology": "XLK", "Health Care": "XLV", "Finance": "XLF"
                      "Utilities": "XLU", "Real Estate": "XLRE", "Basic Materials": "XLB", "Telecommunications": "XLC"}
 # GICS sectors (what the SPDR sector ETFs track) from the iShares Russell 3000 ETF holdings file. Nasdaq's own labels
 # differ (it files P&G under Consumer Discretionary and Corning under Industrials), so they are only a fallback.
-ISHARES_IWV = ("https://www.ishares.com/us/products/239714/ishares-russell-3000-etf/1467271812596.ajax"
-               "?fileType=csv&fileName=IWV_holdings&dataType=fund")
+ISHARES_IWV = ["https://www.ishares.com/us/products/239714/ishares-russell-3000-etf/latest-holdings.csv",
+               "https://www.ishares.com/us/products/239714/ishares-russell-3000-etf/1467271812596.ajax"
+               "?fileType=csv&fileName=IWV_holdings&dataType=fund"]
 GICS_ETF = {"Information Technology": "XLK", "Health Care": "XLV", "Financials": "XLF", "Energy": "XLE",
             "Industrials": "XLI", "Consumer Discretionary": "XLY", "Consumer Staples": "XLP", "Utilities": "XLU",
             "Real Estate": "XLRE", "Materials": "XLB", "Communication": "XLC", "Communication Services": "XLC"}
@@ -69,12 +70,12 @@ def parse_ishares(text):
     """iShares holdings CSV -> {ticker: GICS sector} for equity rows (the file has a preamble and a footer)."""
     import csv
     import io
-    lines = text.splitlines()
-    start = next((i for i, l in enumerate(lines) if l.startswith("Ticker,")), None)
+    lines = text.lstrip("﻿").splitlines()
+    start = next((i for i, l in enumerate(lines) if l.replace('"', "").startswith("Ticker,")), None)
     if start is None:
         return {}
     out = {}
-    for row in csv.DictReader(io.StringIO("\n".join(lines[start:]))):
+    for row in csv.DictReader(io.StringIO("\n".join([lines[start].replace('"', "")] + lines[start + 1:]))):
         t, s = (row.get("Ticker") or "").strip().upper(), (row.get("Sector") or "").strip()
         if t and s in GICS_ETF and (row.get("Asset Class") or "Equity").strip() == "Equity":
             out[t] = s
@@ -82,9 +83,19 @@ def parse_ishares(text):
 
 
 def fetch_gics(timeout=60):
-    req = urllib.request.Request(ISHARES_IWV, headers={"User-Agent": HEADERS["User-Agent"], "Accept": "text/csv,*/*"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return parse_ishares(r.read().decode("utf-8-sig", errors="replace"))
+    """First iShares address that returns a parseable holdings file wins."""
+    errors = []
+    for url in ISHARES_IWV:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": HEADERS["User-Agent"], "Accept": "text/csv,*/*"})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                got = parse_ishares(r.read().decode("utf-8-sig", errors="replace"))
+            if len(got) >= 1000:
+                return got
+            errors.append(f"{len(got)} rows")
+        except Exception as e:
+            errors.append(f"{type(e).__name__}: {e}")
+    raise ValueError("; ".join(errors))
 
 
 def build(now=None):
@@ -98,8 +109,6 @@ def build(now=None):
             raise ValueError(f"only {len(stocks)} stocks passed the pre-filters out of {listed} listed")
         try:
             gics = fetch_gics()
-            if len(gics) < 1000:
-                raise ValueError(f"only {len(gics)} rows")
         except Exception as e:
             gics, gnote = {}, f"GICS sectors unavailable ({type(e).__name__}: {e}); Nasdaq sector labels used"
         for sym, v in stocks.items():

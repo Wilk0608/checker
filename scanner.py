@@ -246,6 +246,9 @@ def selftest():
               'USD,USD CASH,Cash and/or Derivatives,Cash,1,0.1\n\n"The content contained herein is owned by BlackRock"\n')
     g = U.parse_ishares(csvtxt)
     assert g == {"AAA": "Consumer Staples", "BRKB": "Financials"}, g
+    quoted = csvtxt.replace("Ticker,Name,Sector,Asset Class,Market Value,Weight (%)",
+                            '"Ticker","Name","Sector","Asset Class","Market Value","Weight (%)"')
+    assert U.parse_ishares("﻿" + quoted) == g                         # BOM and quoted headers parse the same
     st["AAA"]["gics"] = g["AAA"]
     assert U.sector_etf("AAA", st) == "XLP" and U.sector_etf("TSM", st) == "XLK"
     # Which session a run should have: after 4:15 PM on a trading day -> today; before -> prior trading day
