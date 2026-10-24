@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 
 import universe as U
-from setups import analyze, capped_rr, contract_plan, MIN_PRICE, MAX_PRICE
+from setups import analyze, capped_rr, contract_plan, last_completed_session, MIN_PRICE, MAX_PRICE
 
 ET = ZoneInfo("America/New_York")
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -84,6 +84,11 @@ def drop_partial(df, now_et):
     return df
 
 
+def stale_names(bars, now_et, expected):
+    """Names whose last final bar is older than the session the run should have (a data-feed lag)."""
+    return sorted(t for t, df in bars.items() if len(df) and drop_partial(df, now_et).index[-1].date() < expected)
+
+
 def run(bars, groups, stocks, now_et):
     bars = {t: drop_partial(df, now_et) for t, df in bars.items()}
 
@@ -107,10 +112,11 @@ def run(bars, groups, stocks, now_et):
 
 
 def rank_rows(results, asof):
-    """One row per setup direction: known points = trend + relative strength + capped reward-to-risk."""
+    """One row per setup direction: known points = trend + relative strength + capped reward-to-risk.
+    Names whose last bar isn't `asof` are left out: their setups would come from an older day."""
     rows = []
     for r in results:
-        if "err" in r or r["filtered"] or not r["setups"]:
+        if "err" in r or r["filtered"] or not r["setups"] or r["date"] != asof.isoformat():
             continue
         for d, kinds in (("call", ("Breakout", "Pullback")), ("put", ("Breakdown", "Failed"))):
             lv = r.get(f"levels_{d}")
@@ -134,11 +140,12 @@ def _setup_label(s):
     return base + (", holding" if s.endswith("holding") else "")
 
 
-def report(results, rows, missing, etf3, dates, now_et, src):
+def report(results, rows, missing, etf3, expected, now_et, src):
     ok = [r for r in results if "err" not in r]
     live = [r for r in ok if not r["filtered"]]
-    asof = dates[-1] if dates else "n/a"
-    stale = [r["tk"] for r in ok if r["date"] != asof]
+    asof = expected.isoformat()
+    dates = [asof]
+    stale = sorted(r["tk"] for r in ok if r["date"] != asof)
     key = lambda x: (-x["known"], -x["r"]["vol_ratio"])
     calls = sorted([x for x in rows if x["dir"] == "call"], key=key)
     puts = sorted([x for x in rows if x["dir"] == "put" and not x["near_low"]], key=key)
@@ -152,8 +159,11 @@ def report(results, rows, missing, etf3, dates, now_et, src):
          f"Run {now_et:%Y-%m-%d %H:%M} ET | scanned {len(ok):,} | passed price ${MIN_PRICE:.0f}-{MAX_PRICE:.0f} and 20-day avg vol 1M+: "
          f"{len(live):,} | setups {len(rows)} (calls {len(calls)}, puts {len(puts) + len(near)}) | SPY 3M "
          + (f"{spy3:+.1f}%" if spy3 is not None else "n/a"),
-         f"Universe: {src}",
-         "", "Free daily data (Yahoo). Verify every finalist on live broker data before scoring.", "",
+         f"Universe: {src}", ""]
+    if len(stale) > 0.1 * max(len(ok), 1):
+        L += [f"**WARNING: {len(stale):,} of {len(ok):,} names have no final bar for {asof} (data-feed lag). They are left "
+              "out of the ranking, so this report is incomplete. Use the next run's file.**", ""]
+    L += ["Free daily data (Yahoo). Verify every finalist on live broker data before scoring.", "",
          "**How to read it.** Known = trend (0-2) + relative strength, i.e. beats SPY and its sector ETF over 3 months for "
          "calls, trails both for puts (0-1) + reward-to-risk (0-2). The session adds Fed bias (0-1), catalyst (0-2), "
          "pricing (0-2) and liquidity (0-2): up to 7 more, so Max = Known + 7. Calls need 7+ to trade and puts need 10+, "
@@ -192,7 +202,8 @@ def report(results, rows, missing, etf3, dates, now_et, src):
     errs = [r["tk"] + " (" + r["err"] + ")" for r in results if "err" in r]
     L += ["", "## Data notes",
           f"- No data: {len(missing)}" + (f" ({', '.join(missing[:40])}{', ...' if len(missing) > 40 else ''})" if missing else ""),
-          f"- Not on the latest date ({asof}): {len(stale)}" + (f" ({', '.join(stale[:40])})" if stale else ""),
+          f"- No final bar for {asof} (left out of the ranking): {len(stale)}"
+          + (f" ({', '.join(stale[:20])}{', ...' if len(stale) > 20 else ''})" if stale else ""),
           f"- Too little history: {len(errs)}" + (f" ({', '.join(errs[:20])})" if errs else "")]
     return "\n".join(L) + "\n"
 
@@ -228,6 +239,20 @@ def selftest():
     st = U.parse_screener(js)
     assert sorted(st) == ["AAA", "BRK-B", "TSM"], sorted(st)
     assert U.sector_etf("BRK-B", st) == "XLF" and U.sector_etf("ZZZ", st, "XLE") == "XLE" and U.sector_etf("ZZZ", st) == "SPY"
+    # GICS sectors from an iShares-style file win over Nasdaq's labels
+    csvtxt = ('iShares Russell 3000 ETF\nFund Holdings as of,"Oct 22, 2026"\n\n'
+              'Ticker,Name,Sector,Asset Class,Market Value,Weight (%)\n'
+              'AAA,ALPHA INC,Consumer Staples,Equity,1,0.1\nBRKB,BERKSHIRE HATHAWAY INC CLASS B,Financials,Equity,1,0.1\n'
+              'USD,USD CASH,Cash and/or Derivatives,Cash,1,0.1\n\n"The content contained herein is owned by BlackRock"\n')
+    g = U.parse_ishares(csvtxt)
+    assert g == {"AAA": "Consumer Staples", "BRKB": "Financials"}, g
+    st["AAA"]["gics"] = g["AAA"]
+    assert U.sector_etf("AAA", st) == "XLP" and U.sector_etf("TSM", st) == "XLK"
+    # Which session a run should have: after 4:15 PM on a trading day -> today; before -> prior trading day
+    assert last_completed_session(dt.datetime(2026, 10, 23, 17, 30, tzinfo=ET)) == dt.date(2026, 10, 23)
+    assert last_completed_session(dt.datetime(2026, 10, 27, 6, 30, tzinfo=ET)) == dt.date(2026, 10, 26)
+    assert last_completed_session(dt.datetime(2026, 10, 26, 6, 30, tzinfo=ET)) == dt.date(2026, 10, 23)   # Monday morning
+    assert last_completed_session(dt.datetime(2026, 11, 27, 7, 0, tzinfo=ET)) == dt.date(2026, 11, 25)    # day after Thanksgiving
     # 2) Contract calendar for an Oct 23 2026 scan: entry Mon Oct 26; Dec 18 (53 days) for fresh moves, time stop Dec 8;
     #    Jan 15 '27 for slower moves, time stop Dec 25 -> Dec 24 (holiday)
     e, x, ts, h = contract_plan(dt.date(2026, 10, 23), True)
@@ -244,10 +269,16 @@ def selftest():
     vol = np.full(260, 2e6)
     up = base.copy(); vb = vol.copy(); up[-1] = up[-21:-1].max() * 1.03; vb[-1] = 4e6          # breakout to new highs
     dn = base[::-1].copy(); vd = vol.copy(); dn[-1] = dn[-21:-1].min() * 0.97; vd[-1] = 4e6     # breakdown to new lows
-    bars = {"UPP": mk(up, vb), "DNN": mk(dn, vd), "CHEAP": mk(np.full(260, 3.0), vol)}
+    oc, ov = base[:-1].copy(), vol[:-1].copy()                                                 # stale: a breakout whose
+    oc[-1], ov[-1] = oc[-21:-1].max() * 1.03, 4e6                                              # last bar is a day old
+    old = pd.DataFrame({"Open": oc, "High": oc * 1.01, "Low": oc * 0.99, "Close": oc, "Volume": ov}, index=idx[:-1])
+    bars = {"UPP": mk(up, vb), "DNN": mk(dn, vd), "CHEAP": mk(np.full(260, 3.0), vol), "OLD": old}
     bars.update({e: mk(base, vol) for e in SECTOR_ETFS})
-    stocks = {"UPP": {"sector": "Technology"}, "DNN": {"sector": "Energy"}, "CHEAP": {"sector": "Technology"}}
+    stocks = {"UPP": {"sector": "Technology"}, "DNN": {"sector": "Energy"}, "CHEAP": {"sector": "Technology"},
+              "OLD": {"sector": "Technology"}}
     now = dt.datetime(2026, 10, 23, 18, 0, tzinfo=ET)
+    last = idx[-1].date()
+    assert stale_names(bars, now, last) == ["OLD"]
     res, miss, etf3, dates = run(bars, {"g10_etfs": ["SPY"], "g02_software_fintech": ["ZZZ"]}, stocks, now)
     R = {r["tk"]: r for r in res}
     assert any(s.startswith("Breakout") for s in R["UPP"]["setups"]) and R["UPP"]["sector_etf"] == "XLK"
@@ -261,14 +292,18 @@ def selftest():
     zz = np.concatenate([np.linspace(50, 60, 120), np.linspace(60, 52, 60), np.linspace(52, 57, 80)])   # peak 60, now 57
     lz = levels(mk(zz, vol), "call")
     assert abs(lz["target"] - 60.6) < 0.05 and abs(lz["rr_before_cap"] - (lz["target"] - 57) / lz["risk"]) < 0.01, lz
-    rows = rank_rows(res, dt.date(2026, 10, 23))
+    assert R["OLD"]["setups"] and R["OLD"]["date"] != last.isoformat()
+    rows = rank_rows(res, last)
+    assert "OLD" not in {x["r"]["tk"] for x in rows}                     # stale names stay out of the ranking
     up_row = [x for x in rows if x["r"]["tk"] == "UPP"][0]
-    rr, pts, cap = capped_rr(lc, R["UPP"]["hv20"] / 100, 43)
-    assert up_row["exp"] == dt.date(2026, 12, 18) and (up_row["rr"], up_row["rr_pts"]) == (rr, pts)
+    e, x, ts, h = contract_plan(last, True)
+    rr, pts, cap = capped_rr(lc, R["UPP"]["hv20"] / 100, h)
+    assert up_row["exp"] == x and (up_row["rr"], up_row["rr_pts"]) == (rr, pts)
     assert up_row["known"] == R["UPP"]["trend_call"] + up_row["rs"] + pts and up_row["max"] == up_row["known"] + 7
     assert [x for x in rows if x["r"]["tk"] == "DNN"][0]["near_low"]
-    md = report(res, rows, miss, etf3, dates, now, "self-test")
-    assert "## Top calls" in md and "UPP" in md and "shadow log only): DNN" in md, md
+    md = report(res, rows, miss, etf3, last, now, "self-test")
+    assert "## Top calls" in md and "UPP" in md and "shadow log only): DNN" in md and "ranking): 1 (OLD)" in md, md
+    assert "WARNING" in report(res, rows, miss, etf3, dt.date(2026, 10, 23), now, "self-test")   # most names stale
     print(md)
     print("levels ok:", lz["target"], lz["invalidation"], lz["rr_before_cap"])
     print("self-test passed")
@@ -278,15 +313,20 @@ if __name__ == "__main__":
     if "--test" in sys.argv:
         selftest(); sys.exit()
     now = dt.datetime.now(ET)
+    expected = last_completed_session(now)
     groups = load_universe()
     stocks, src = U.build()
     curated = {t for v in groups.values() for t in v}
     names = sorted(set(stocks) | curated | set(SECTOR_ETFS))
-    print(f"universe: {src}; downloading {len(names):,} names")
+    print(f"universe: {src}; downloading {len(names):,} names; expecting final bars of {expected}")
     bars = download(names)
+    late = stale_names(bars, now, expected)
+    if len(late) > 0.1 * max(len(bars), 1):              # the feed sometimes lags; give it one more chance
+        print(f"{len(late):,} of {len(bars):,} names end before {expected}; retrying them in 3 minutes")
+        time.sleep(180)
+        bars.update(download(late))
     results, missing, etf3, dates = run(bars, groups, stocks, now)
-    asof = dates[-1] if dates else now.strftime("%Y-%m-%d")
-    rows = rank_rows(results, dt.date.fromisoformat(asof))
-    md = report(results, rows, missing, etf3, dates, now, src)
-    write(md, results, rows, asof)
+    rows = rank_rows(results, expected)
+    md = report(results, rows, missing, etf3, expected, now, src)
+    write(md, results, rows, expected.isoformat())
     print(md)

@@ -34,6 +34,15 @@ def _trading_day_on_or_before(d):
     return d
 
 
+def last_completed_session(now_et):
+    """The session whose final bar a run at `now_et` (New York time) should have: today after 4:15 PM on a trading day,
+    else the trading day before."""
+    d = now_et.date()
+    if d.weekday() < 5 and d not in HOLIDAYS and now_et.time() >= dt.time(16, 15):
+        return d
+    return _trading_day_on_or_before(d - dt.timedelta(days=1))
+
+
 def next_session(d):
     d += dt.timedelta(days=1)
     while d.weekday() >= 5 or d in HOLIDAYS:

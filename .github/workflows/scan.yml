@@ -2,6 +2,7 @@ name: daily-setup-scan
 on:
   schedule:
     - cron: "30 21 * * 1-5"   # 21:30 UTC = 5:30 PM EDT / 4:30 PM EST, after every close
+    - cron: "30 10 * * 2-6"   # 10:30 UTC = 6:30 AM EDT / 5:30 AM EST next morning: re-run on the feed's final bars
   workflow_dispatch: {}
 permissions:
   contents: write

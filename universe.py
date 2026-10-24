@@ -26,6 +26,13 @@ NOT_COMMON = re.compile(r"\b(warrants?|units?|rights?|preferred|preference|notes
 NASDAQ_SECTOR_ETF = {"Technology": "XLK", "Health Care": "XLV", "Finance": "XLF", "Energy": "XLE",
                      "Industrials": "XLI", "Consumer Discretionary": "XLY", "Consumer Staples": "XLP",
                      "Utilities": "XLU", "Real Estate": "XLRE", "Basic Materials": "XLB", "Telecommunications": "XLC"}
+# GICS sectors (what the SPDR sector ETFs track) from the iShares Russell 3000 ETF holdings file. Nasdaq's own labels
+# differ (it files P&G under Consumer Discretionary and Corning under Industrials), so they are only a fallback.
+ISHARES_IWV = ("https://www.ishares.com/us/products/239714/ishares-russell-3000-etf/1467271812596.ajax"
+               "?fileType=csv&fileName=IWV_holdings&dataType=fund")
+GICS_ETF = {"Information Technology": "XLK", "Health Care": "XLV", "Financials": "XLF", "Energy": "XLE",
+            "Industrials": "XLI", "Consumer Discretionary": "XLY", "Consumer Staples": "XLP", "Utilities": "XLU",
+            "Real Estate": "XLRE", "Materials": "XLB", "Communication": "XLC", "Communication Services": "XLC"}
 
 
 def _num(s):
@@ -58,8 +65,30 @@ def fetch_screener(timeout=60):
         return json.loads(r.read().decode())
 
 
+def parse_ishares(text):
+    """iShares holdings CSV -> {ticker: GICS sector} for equity rows (the file has a preamble and a footer)."""
+    import csv
+    import io
+    lines = text.splitlines()
+    start = next((i for i, l in enumerate(lines) if l.startswith("Ticker,")), None)
+    if start is None:
+        return {}
+    out = {}
+    for row in csv.DictReader(io.StringIO("\n".join(lines[start:]))):
+        t, s = (row.get("Ticker") or "").strip().upper(), (row.get("Sector") or "").strip()
+        if t and s in GICS_ETF and (row.get("Asset Class") or "Equity").strip() == "Equity":
+            out[t] = s
+    return out
+
+
+def fetch_gics(timeout=60):
+    req = urllib.request.Request(ISHARES_IWV, headers={"User-Agent": HEADERS["User-Agent"], "Accept": "text/csv,*/*"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return parse_ishares(r.read().decode("utf-8-sig", errors="replace"))
+
+
 def build(now=None):
-    """Returns (stocks, source_note). stocks = {symbol: {"sector", "name"}}. Saves the list for fallback use."""
+    """Returns (stocks, source_note). stocks = {symbol: {"sector", "gics", "name"}}. Saves the list for fallback use."""
     now = now or dt.datetime.now(dt.timezone.utc)
     try:
         js = fetch_screener()
@@ -67,20 +96,37 @@ def build(now=None):
         stocks = parse_screener(js)
         if len(stocks) < 500:
             raise ValueError(f"only {len(stocks)} stocks passed the pre-filters out of {listed} listed")
+        try:
+            gics = fetch_gics()
+            if len(gics) < 1000:
+                raise ValueError(f"only {len(gics)} rows")
+        except Exception as e:
+            gics, gnote = {}, f"GICS sectors unavailable ({type(e).__name__}: {e}); Nasdaq sector labels used"
+        for sym, v in stocks.items():
+            g = gics.get(sym) or gics.get(sym.replace("-", "")) or gics.get(sym.replace("-", "."))
+            if g:
+                v["gics"] = g
+        if gics:
+            n = sum(1 for v in stocks.values() if "gics" in v)
+            gnote = f"GICS sectors (iShares Russell 3000) for {n:,}, Nasdaq labels for the other {len(stocks) - n:,}"
         os.makedirs(os.path.dirname(CACHE), exist_ok=True)
-        json.dump(dict(built=now.strftime("%Y-%m-%d %H:%M UTC"), listed=listed, stocks=stocks), open(CACHE, "w"))
-        return stocks, f"Nasdaq stock screener, {listed:,} US listings, {len(stocks):,} passed the loose pre-filters"
+        json.dump(dict(built=now.strftime("%Y-%m-%d %H:%M UTC"), listed=listed, stocks=stocks, sectors=gnote), open(CACHE, "w"))
+        return stocks, (f"Nasdaq stock screener, {listed:,} US listings, {len(stocks):,} passed the loose pre-filters. "
+                        f"Sectors: {gnote}")
     except Exception as e:
         if os.path.exists(CACHE):
             c = json.load(open(CACHE))
             return c["stocks"], (f"SAVED LIST from {c['built']} ({len(c['stocks']):,} stocks): the screener failed today "
-                                 f"({type(e).__name__}: {e})")
+                                 f"({type(e).__name__}: {e}). Sectors: {c.get('sectors', 'n/a')}")
         return {}, f"CURATED LIST ONLY: the screener failed ({type(e).__name__}: {e}) and no saved list exists"
 
 
 def sector_etf(symbol, stocks, group_etf=None):
-    """Sector ETF for the relative-strength test: the listed sector, else the curated group's ETF, else SPY."""
-    s = (stocks.get(symbol) or {}).get("sector", "")
-    if s in NASDAQ_SECTOR_ETF:
-        return NASDAQ_SECTOR_ETF[s]
+    """Sector ETF for the relative-strength test: GICS sector, else Nasdaq's sector label, else the curated group's
+    ETF, else SPY."""
+    v = stocks.get(symbol) or {}
+    if v.get("gics") in GICS_ETF:
+        return GICS_ETF[v["gics"]]
+    if v.get("sector") in NASDAQ_SECTOR_ETF:
+        return NASDAQ_SECTOR_ETF[v["sector"]]
     return group_etf or "SPY"
