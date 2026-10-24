@@ -45,6 +45,9 @@ def load_universe():
     return groups
 
 
+BLANK_FILLED = {}
+
+
 def download(tickers, chunk=250, pause=2.0):
     """Daily bars in chunks, with one retry pass for anything that came back empty."""
     import yfinance as yf
@@ -61,7 +64,8 @@ def download(tickers, chunk=250, pause=2.0):
                 continue
             for t in part:
                 try:
-                    df = data[t][["Open", "High", "Low", "Close", "Volume"]].dropna(subset=["Close"])
+                    df = data[t][["Open", "High", "Low", "Close", "Volume"]]
+                    df = df[df["Close"].notna() | (df.index == df.index[-1])].dropna(how="all")
                     if len(df):
                         out[t] = df
                 except KeyError:
@@ -74,7 +78,41 @@ def download(tickers, chunk=250, pause=2.0):
     if missing:
         time.sleep(10)
         bars.update(grab(missing, 50))
+    fill_blank_closes(bars, yf)
     return bars
+
+
+def fill_blank_closes(bars, yf, chunk=200):
+    """Yahoo sometimes publishes the latest daily bar with open/high/low/volume but a blank close for hours after
+    the session. Fill that close from the last 60-minute bar of the same day (the final regular-hours trade)."""
+    need = [t for t, df in bars.items() if len(df) and pd.isna(df["Close"].iloc[-1]) and df["Volume"].iloc[-1] > 0]
+    filled = 0
+    for i in range(0, len(need), chunk):
+        part = need[i:i + chunk]
+        try:
+            h = yf.download(part, period="5d", interval="60m", auto_adjust=False, group_by="ticker",
+                            threads=True, progress=False, prepost=False)
+        except Exception as e:
+            print(f"hourly fill chunk failed: {type(e).__name__}: {e}")
+            continue
+        for t in part:
+            try:
+                hc = h[t]["Close"].dropna()
+            except KeyError:
+                continue
+            day = bars[t].index[-1].date()
+            same = hc[[ts.date() == day for ts in hc.index]]
+            if len(same):
+                bars[t].iloc[-1, bars[t].columns.get_loc("Close")] = float(same.iloc[-1])
+                filled += 1
+        time.sleep(1)
+    for t in list(bars):                                   # anything still blank is dropped as before
+        bars[t] = bars[t].dropna(subset=["Close"])
+        if not len(bars[t]):
+            del bars[t]
+    if need:
+        print(f"blank latest close for {len(need):,} names; filled {filled:,} from hourly bars")
+    BLANK_FILLED.update({"need": len(need), "filled": filled})
 
 
 def drop_partial(df, now_et):
@@ -163,6 +201,10 @@ def report(results, rows, missing, etf3, expected, now_et, src):
     if len(stale) > 0.1 * max(len(ok), 1):
         L += [f"**WARNING: {len(stale):,} of {len(ok):,} names have no final bar for {asof} (data-feed lag). They are left "
               "out of the ranking, so this report is incomplete. Use the next run's file.**", ""]
+    if BLANK_FILLED.get("filled"):
+        L += [f"Note: Yahoo published {BLANK_FILLED['need']:,} latest bars with a blank close; {BLANK_FILLED['filled']:,} were filled "
+              "from the last regular-hours 60-minute bar (can differ from the official close by a few cents). "
+              "The morning re-run uses official closes.", ""]
     L += ["Free daily data (Yahoo). Verify every finalist on live broker data before scoring.", "",
          "**How to read it.** Known = trend (0-2) + relative strength, i.e. beats SPY and its sector ETF over 3 months for "
          "calls, trails both for puts (0-1) + reward-to-risk (0-2). The session adds Fed bias (0-1), catalyst (0-2), "
