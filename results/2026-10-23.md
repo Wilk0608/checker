@@ -1,5 +1,5 @@
 # Setup scan: final bars of 2026-10-23
-Run 2026-10-24 07:19 ET | scanned 2,522 | passed price $5-275 and 20-day avg vol 1M+: 1,506 | setups 302 (calls 135, puts 167) | SPY 3M +2.8%
+Run 2026-10-24 10:05 ET | scanned 2,522 | passed price $5-275 and 20-day avg vol 1M+: 1,506 | setups 302 (calls 135, puts 167) | SPY 3M +2.8%
 Universe: Nasdaq stock screener, 6,978 US listings, 2,434 passed the loose pre-filters. Sectors: GICS sectors (iShares Russell 3000) for 1,853, Nasdaq labels for the other 581
 
 Free daily data (Yahoo). Verify every finalist on live broker data before scoring.
