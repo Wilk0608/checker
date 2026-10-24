@@ -214,23 +214,7 @@
    ]
   },
   "group": "g07_discretionary_travel_media",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 11.68 +7.9%, -0.9% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.09,
-   "rr_pts": 0,
-   "cap": 10.56,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "AAMI",
@@ -890,23 +874,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 86.22 +8.4%, -1.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.37,
-   "rr_pts": 0,
-   "cap": 71.44,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "ABX",
@@ -1426,23 +1394,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLP",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 13.47, vol 2.04x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.69,
-   "rr_pts": 0,
-   "cap": 15.33,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLP"
  },
  {
   "tk": "ACIW",
@@ -1836,23 +1788,7 @@
    ]
   },
   "group": "g02_software_fintech",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 256.73, vol 1.64x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.27,
-   "rr_pts": 0,
-   "cap": 306.3,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "ADC",
@@ -2796,23 +2732,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 9.37, vol 1.75x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.62,
-   "rr_pts": 0,
-   "cap": 6.34,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "AEVA",
@@ -3627,23 +3547,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 259.26, vol 1.50x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.02,
-   "rr_pts": 0,
-   "cap": 300.28,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "AKAM",
@@ -3821,23 +3725,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 284.80, vol 1.63x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.13,
-   "rr_pts": 0,
-   "cap": 193.57,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "ALB",
@@ -4258,24 +4146,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 15.10, vol 1.59x)",
-    "Breakout 10-21 (> 14.66, vol 1.59x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.2,
-   "rr_pts": 0,
-   "cap": 18.15,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "ALL",
@@ -4424,23 +4295,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 159.00, vol 2.09x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.74,
-   "rr_pts": 0,
-   "cap": 202.69,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "ALLT",
@@ -4622,23 +4477,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLB",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 9.83, vol 1.93x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.2,
-   "rr_pts": 0,
-   "cap": 6.43,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "ALMR",
@@ -4786,23 +4625,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 6.06 +12.5%, -0.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 2.84,
-   "rr_pts": 1,
-   "cap": 5.22,
-   "trend": 2,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "ALMU",
@@ -6185,23 +6008,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 41.70, vol 1.84x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.07,
-   "rr_pts": 0,
-   "cap": 31.09,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "AMLX",
@@ -6808,23 +6615,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 245.96 +6.8%, -1.6% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.46,
-   "rr_pts": 0,
-   "cap": 217.56,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "AN",
@@ -7004,23 +6795,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLC",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 176.98, vol 1.55x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.51,
-   "rr_pts": 0,
-   "cap": 142.94,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLC"
  },
  {
   "tk": "ANF",
@@ -7502,23 +7277,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 79.20, vol 1.69x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.01,
-   "rr_pts": 0,
-   "cap": 63.61,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "APLD",
@@ -8203,23 +7962,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 10.94, vol 1.73x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.02,
-   "rr_pts": 0,
-   "cap": 13.48,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "ARI",
@@ -8490,23 +8233,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 53.55, vol 1.97x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.81,
-   "rr_pts": 0,
-   "cap": 47.85,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "AROC",
@@ -8627,23 +8354,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLU",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-20 (< 29.25, vol 1.61x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.38,
-   "rr_pts": 0,
-   "cap": 25.72,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLU"
  },
  {
   "tk": "ARQT",
@@ -8762,24 +8473,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 31.89, vol 1.83x), holding",
-    "Breakout 10-19 (> 29.10, vol 2.57x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.36,
-   "rr_pts": 0,
-   "cap": 39.48,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "ARR",
@@ -8897,23 +8591,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 13.20, vol 1.75x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.48,
-   "rr_pts": 0,
-   "cap": 11.24,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "ARTV",
@@ -9274,23 +8952,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 29.37, vol 1.71x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.13,
-   "rr_pts": 0,
-   "cap": 31.6,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "ASBH",
@@ -10140,23 +9802,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 39.53, vol 1.98x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.24,
-   "rr_pts": 0,
-   "cap": 29.0,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "ASYS",
@@ -10427,23 +10073,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 11.25, vol 1.50x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.19,
-   "rr_pts": 0,
-   "cap": 13.49,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "ATEN",
@@ -10625,23 +10255,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 180.67, vol 2.96x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.9,
-   "rr_pts": 0,
-   "cap": 134.68,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "ATMU",
@@ -11368,23 +10982,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-21 (< 14.13, vol 7.55x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.51,
-   "rr_pts": 0,
-   "cap": 5.07,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "AVGO",
@@ -11686,23 +11284,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 16.09, vol 3.52x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.18,
-   "rr_pts": 0,
-   "cap": 18.69,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "AVTX",
@@ -11818,23 +11400,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 11.27, vol 22.68x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.89,
-   "rr_pts": 0,
-   "cap": 2.8,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "AVY",
@@ -12287,23 +11853,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 34.62 +6.0%, -2.6% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 3.4,
-   "rr_pts": 2,
-   "cap": 31.06,
-   "trend": 2,
-   "rs": 1,
-   "known": 5,
-   "max": 12,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "AXP",
@@ -12731,23 +12281,7 @@
    ]
   },
   "group": "g05_healthcare",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 168.37, vol 1.65x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.33,
-   "rr_pts": 0,
-   "cap": 188.68,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "AZTA",
@@ -12984,24 +12518,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 104.41, vol 1.60x)",
-    "Breakdown 10-21 (< 105.70, vol 1.51x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.53,
-   "rr_pts": 0,
-   "cap": 90.22,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "BAC",
@@ -13123,23 +12640,7 @@
    ]
   },
   "group": "g04_financials",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 51.39, vol 1.53x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.15,
-   "rr_pts": 0,
-   "cap": 47.12,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "BACC",
@@ -13958,23 +13459,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 28.34, vol 2.88x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.31,
-   "rr_pts": 0,
-   "cap": 32.89,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "BBUC",
@@ -15097,23 +14582,7 @@
    ]
   },
   "group": "g03_ai_infra_crypto_nuclear_space",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 221.31, vol 1.69x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.04,
-   "rr_pts": 0,
-   "cap": 147.81,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "BEAM",
@@ -15381,24 +14850,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 15.58, vol 1.53x)",
-    "Breakout 10-21 (> 12.16, vol 2.24x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.97,
-   "rr_pts": 1,
-   "cap": 26.2,
-   "trend": 1,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "BF-B",
@@ -15913,23 +15365,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 80.82, vol 1.51x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.01,
-   "rr_pts": 0,
-   "cap": 71.54,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "BHVN",
@@ -16049,23 +15485,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 13.35, vol 15.99x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.13,
-   "rr_pts": 0,
-   "cap": 19.53,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "BIDU",
@@ -16212,23 +15632,7 @@
    ]
   },
   "group": "g05_healthcare",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 243.10, vol 1.81x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.89,
-   "rr_pts": 0,
-   "cap": 279.89,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "BILI",
@@ -16832,23 +16236,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 21.34, vol 1.53x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.27,
-   "rr_pts": 0,
-   "cap": 17.05,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "BL",
@@ -17300,23 +16688,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 9.73, vol 1.69x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.84,
-   "rr_pts": 0,
-   "cap": 5.29,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "BMBL",
@@ -18243,25 +17615,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 41.75, vol 1.58x), holding",
-    "Breakout 10-20 (> 40.46, vol 1.71x), holding",
-    "Breakout 10-19 (> 39.56, vol 1.67x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.74,
-   "rr_pts": 0,
-   "cap": 46.73,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "BP",
@@ -18771,23 +18125,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 8.89, vol 2.13x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.11,
-   "rr_pts": 0,
-   "cap": 4.46,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "BRX",
@@ -18936,25 +18274,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 45.68, vol 1.54x)",
-    "Breakout 10-21 (> 45.57, vol 3.77x), holding",
-    "Breakout 10-20 (> 30.38, vol 32.66x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 5.51,
-   "rr_pts": 2,
-   "cap": 70.21,
-   "trend": 2,
-   "rs": 1,
-   "known": 5,
-   "max": 12,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "BSAC",
@@ -19167,23 +18487,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 38.13, vol 1.53x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.13,
-   "rr_pts": 0,
-   "cap": 44.87,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "BTDR",
@@ -19427,23 +18731,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 58.00, vol 3.04x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.51,
-   "rr_pts": 0,
-   "cap": 66.09,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "BTSG",
@@ -19592,23 +18880,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 22.44, vol 1.52x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.2,
-   "rr_pts": 0,
-   "cap": 19.61,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "BTX",
@@ -20062,24 +19334,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 57.45, vol 1.65x)",
-    "Breakdown 10-21 (< 58.13, vol 1.55x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.45,
-   "rr_pts": 0,
-   "cap": 48.97,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "BWIN",
@@ -20323,23 +19578,7 @@
    ]
   },
   "group": "g04_financials",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 118.42, vol 2.12x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.18,
-   "rr_pts": 0,
-   "cap": 136.36,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "BXDC",
@@ -21085,23 +20324,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLP",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 60.61 +5.3%, -1.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.85,
-   "rr_pts": 0,
-   "cap": 55.31,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLP"
  },
  {
   "tk": "CALX",
@@ -22404,24 +21627,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 10.35, vol 3.26x)",
-    "Breakdown 10-20 (< 10.48, vol 1.61x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.05,
-   "rr_pts": 0,
-   "cap": 8.56,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "CDE",
@@ -22599,23 +21805,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 15.92, vol 2.94x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.09,
-   "rr_pts": 0,
-   "cap": 8.64,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "CDP",
@@ -23519,23 +22709,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 105.96, vol 1.67x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.82,
-   "rr_pts": 0,
-   "cap": 115.92,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "CHDN",
@@ -23927,23 +23101,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 135.05 +6.5%, -0.5% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.21,
-   "rr_pts": 0,
-   "cap": 111.41,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "CHTR",
@@ -24725,23 +23883,7 @@
    ]
   },
   "group": "g08_energy_materials",
-  "sector_etf": "XLB",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-19 (> 12.98, vol 4.88x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.06,
-   "rr_pts": 0,
-   "cap": 16.74,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "CLM",
@@ -24892,23 +24034,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 52.38, vol 1.68x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.68,
-   "rr_pts": 0,
-   "cap": 41.92,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "CLOV",
@@ -25086,23 +24212,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 299.69, vol 1.54x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.06,
-   "rr_pts": 0,
-   "cap": 207.24,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "CLSK",
@@ -25284,23 +24394,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 9.73 +11.7%, -2.8% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.48,
-   "rr_pts": 0,
-   "cap": 7.77,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "CM",
@@ -25480,23 +24574,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 62.05 +5.6%, -0.6% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.39,
-   "rr_pts": 0,
-   "cap": 57.28,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "CMCO",
@@ -25737,23 +24815,7 @@
    ]
   },
   "group": "g07_discretionary_travel_media",
-  "sector_etf": "XLC",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 22.36, vol 1.78x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.3,
-   "rr_pts": 0,
-   "cap": 24.86,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLC"
  },
  {
   "tk": "CMG",
@@ -25935,23 +24997,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 10.75 +10.7%, -1.7% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.11,
-   "rr_pts": 0,
-   "cap": 9.08,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "CMRE",
@@ -26102,23 +25148,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLU",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 66.94, vol 1.75x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.87,
-   "rr_pts": 0,
-   "cap": 74.64,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLU"
  },
  {
   "tk": "CNC",
@@ -26297,23 +25327,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 122.05, vol 2.20x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.21,
-   "rr_pts": 0,
-   "cap": 133.16,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "CNK",
@@ -26433,23 +25447,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 39.00, vol 1.70x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.32,
-   "rr_pts": 0,
-   "cap": 43.39,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "CNM",
@@ -26546,32 +25544,123 @@
  },
  {
   "tk": "CNO",
-  "date": "2026-10-23",
-  "close": 53.66,
-  "avg20m": 0.97,
-  "filtered": "avg vol 0.97M",
-  "sma20": 53.87,
-  "sma50": 54.42,
-  "trend_call": 0,
-  "trend_put": 2,
-  "atr_pct": 1.97,
-  "hv20": 19.8,
-  "ret3m": 1.0,
-  "rs_spy": -2.4,
-  "rs_sector": 0.4,
+  "date": "2026-10-22",
+  "close": 55.5,
+  "avg20m": 0.93,
+  "filtered": "avg vol 0.93M",
+  "sma20": 53.88,
+  "sma50": 54.45,
+  "trend_call": 1,
+  "trend_put": 0,
+  "atr_pct": 1.72,
+  "hv20": 15.6,
+  "ret3m": 4.3,
+  "rs_spy": 0.9,
+  "rs_sector": 3.7,
   "lo52": 38.99,
   "hi52": 57.59,
-  "pct_above_lo52": 37.6,
-  "pct_below_hi52": 6.8,
+  "pct_above_lo52": 42.3,
+  "pct_below_hi52": 3.6,
   "near_low": false,
-  "vol_ratio": 0.63,
-  "hi20": 55.5,
+  "vol_ratio": 1.54,
+  "hi20": 55.41,
   "lo20": 52.91,
-  "setups": [],
-  "watch": [
-   "within 1.4% of 20d low 52.91"
+  "setups": [
+   "Breakout 10-22 (> 55.41, vol 1.54x)",
+   "Breakout 10-21 (> 54.86, vol 1.53x), holding",
+   "Breakout 10-20 (> 54.71, vol 1.55x), holding"
   ],
+  "watch": [],
   "note": "",
+  "levels_call": {
+   "dir": "call",
+   "entry": 55.5,
+   "atr14": 0.955,
+   "ext10_close": 52.99,
+   "invalidation": 53.59,
+   "risk": 1.91,
+   "target": 56.35,
+   "next_levels": [
+    56.35,
+    56.98,
+    57.59
+   ],
+   "rr_before_cap": 0.44,
+   "tail": [
+    [
+     "2026-10-07",
+     53.92,
+     52.98,
+     52.99
+    ],
+    [
+     "2026-10-08",
+     53.98,
+     52.86,
+     53.55
+    ],
+    [
+     "2026-10-09",
+     53.68,
+     52.77,
+     52.99
+    ],
+    [
+     "2026-10-12",
+     53.54,
+     52.82,
+     53.21
+    ],
+    [
+     "2026-10-13",
+     53.72,
+     53.08,
+     53.42
+    ],
+    [
+     "2026-10-14",
+     53.75,
+     52.96,
+     53.55
+    ],
+    [
+     "2026-10-15",
+     54.6,
+     53.57,
+     54.58
+    ],
+    [
+     "2026-10-16",
+     55.16,
+     54.32,
+     54.71
+    ],
+    [
+     "2026-10-19",
+     54.8,
+     53.97,
+     54.07
+    ],
+    [
+     "2026-10-20",
+     55.2,
+     54.4,
+     54.86
+    ],
+    [
+     "2026-10-21",
+     55.46,
+     55.04,
+     55.41
+    ],
+    [
+     "2026-10-22",
+     55.6,
+     54.8,
+     55.5
+    ]
+   ]
+  },
   "group": "",
   "sector_etf": "XLF"
  },
@@ -26844,23 +25933,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 52.14, vol 1.62x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.45,
-   "rr_pts": 0,
-   "cap": 58.14,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "CNR",
@@ -27158,23 +26231,7 @@
    ]
   },
   "group": "g04_financials",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 201.74, vol 1.74x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.73,
-   "rr_pts": 0,
-   "cap": 219.0,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "COGT",
@@ -27323,23 +26380,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 231.80, vol 1.81x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.07,
-   "rr_pts": 0,
-   "cap": 141.05,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "COHU",
@@ -27459,23 +26500,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 50.81, vol 2.07x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.02,
-   "rr_pts": 0,
-   "cap": 32.05,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "COIN",
@@ -27934,23 +26959,7 @@
    ]
   },
   "group": "g03_ai_infra_crypto_nuclear_space",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 13.51, vol 1.68x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.41,
-   "rr_pts": 0,
-   "cap": 9.91,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "COST",
@@ -28130,23 +27139,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 88.10, vol 1.89x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.27,
-   "rr_pts": 0,
-   "cap": 96.25,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "CPB",
@@ -28417,23 +27410,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 100.19, vol 1.57x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.32,
-   "rr_pts": 0,
-   "cap": 108.91,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "CR",
@@ -29273,23 +28250,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 14.32 -10.7%, +1.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.92,
-   "rr_pts": 0,
-   "cap": 16.35,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "CRUS",
@@ -29494,25 +28455,7 @@
    ]
   },
   "group": "g03_ai_infra_crypto_nuclear_space",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 61.12, vol 1.70x)",
-    "Breakdown 10-19 (< 61.39, vol 2.56x), holding",
-    "Breakdown 10-16 (< 65.78, vol 2.51x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.38,
-   "rr_pts": 0,
-   "cap": 38.27,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "CSCO",
@@ -29663,23 +28606,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 33.05, vol 1.56x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.28,
-   "rr_pts": 1,
-   "cap": 41.29,
-   "trend": 1,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "CSIQ",
@@ -29797,23 +28724,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 10.33, vol 1.54x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.64,
-   "rr_pts": 0,
-   "cap": 7.12,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "CSQR",
@@ -29929,23 +28840,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 15.81, vol 2.28x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.49,
-   "rr_pts": 0,
-   "cap": 11.62,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "CSTL",
@@ -30246,23 +29141,7 @@
    ]
   },
   "group": "g09_industrials_utilities_reits",
-  "sector_etf": "XLI",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 48.69, vol 3.11x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.24,
-   "rr_pts": 0,
-   "cap": 56.35,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "CTAS",
@@ -30622,23 +29501,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 69.55, vol 1.54x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.26,
-   "rr_pts": 0,
-   "cap": 84.27,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "CTVA",
@@ -30758,23 +29621,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLP",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 14.45 -12.5%, +0.5% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.5,
-   "rr_pts": 0,
-   "cap": 16.2,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLP"
  },
  {
   "tk": "CUBE",
@@ -31018,23 +29865,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 22.53, vol 2.20x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.27,
-   "rr_pts": 0,
-   "cap": 24.86,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "CVE",
@@ -31427,23 +30258,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLU",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 30.73, vol 1.59x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.18,
-   "rr_pts": 0,
-   "cap": 34.54,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLU"
  },
  {
   "tk": "CWH",
@@ -31989,23 +30804,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 29.25, vol 2.98x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.19,
-   "rr_pts": 1,
-   "cap": 28.28,
-   "trend": 2,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "D",
@@ -32187,23 +30986,7 @@
    ]
   },
   "group": "g07_discretionary_travel_media",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 74.63 +6.2%, -2.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.81,
-   "rr_pts": 0,
-   "cap": 69.83,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "DAN",
@@ -32383,23 +31166,7 @@
    ]
   },
   "group": "g02_software_fintech",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 178.39 +10.2%, -1.8% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.37,
-   "rr_pts": 0,
-   "cap": 147.51,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "DAVI",
@@ -33423,23 +32190,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 239.15, vol 1.61x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.3,
-   "rr_pts": 0,
-   "cap": 259.98,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "DHC",
@@ -33646,23 +32397,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 26.59 -13.4%, +1.3% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 2.52,
-   "rr_pts": 1,
-   "cap": 28.98,
-   "trend": 2,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "DIA",
@@ -33902,23 +32637,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 6.99, vol 2.13x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.4,
-   "rr_pts": 0,
-   "cap": 5.51,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "DK",
@@ -34098,23 +32817,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 140.84, vol 2.07x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.61,
-   "rr_pts": 0,
-   "cap": 164.0,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "DLB",
@@ -34659,23 +33362,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 109.29, vol 1.57x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.88,
-   "rr_pts": 0,
-   "cap": 65.51,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "DOCS",
@@ -34977,23 +33664,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLC",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-20 (< 30.89, vol 2.16x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.0,
-   "rr_pts": 0,
-   "cap": 20.89,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLC"
  },
  {
   "tk": "DPZ",
@@ -35175,23 +33846,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 13.28, vol 1.57x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.24,
-   "rr_pts": 0,
-   "cap": 14.96,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "DRI",
@@ -35694,9 +34349,9 @@
   "ret3m": -9.0,
   "rs_spy": -12.4,
   "rs_sector": -9.6,
-  "lo52": 8.49,
+  "lo52": 8.5,
   "hi52": 10.4,
-  "pct_above_lo52": 0.4,
+  "pct_above_lo52": 0.2,
   "pct_below_hi52": 18.1,
   "near_low": true,
   "vol_ratio": 0.91,
@@ -35712,10 +34367,10 @@
   "levels_put": {
    "dir": "put",
    "entry": 8.52,
-   "atr14": 0.083,
+   "atr14": 0.082,
    "ext10_close": 8.84,
-   "invalidation": 8.69,
-   "risk": 0.166,
+   "invalidation": 8.68,
+   "risk": 0.165,
    "target": null,
    "next_levels": [],
    "rr_before_cap": null,
@@ -35789,7 +34444,7 @@
     [
      "2026-10-23",
      8.58,
-     8.49,
+     8.5,
      8.52
     ]
    ]
@@ -36154,23 +34809,7 @@
    ]
   },
   "group": "g08_energy_materials",
-  "sector_etf": "XLE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 51.33 -10.3%, +1.2% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.37,
-   "rr_pts": 0,
-   "cap": 54.5,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "DX",
@@ -36317,23 +34956,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-19 (> 13.79, vol 4.33x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.01,
-   "rr_pts": 1,
-   "cap": 18.93,
-   "trend": 2,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "DXCM",
@@ -36454,24 +35077,7 @@
    ]
   },
   "group": "g05_healthcare",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 80.26, vol 3.20x)",
-    "Breakdown 10-21 (< 83.39, vol 2.54x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.59,
-   "rr_pts": 0,
-   "cap": 68.32,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "DXYZ",
@@ -37492,23 +36098,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 9.80 +5.8%, -2.7% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.23,
-   "rr_pts": 0,
-   "cap": 8.89,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "ED",
@@ -37901,23 +36491,7 @@
    ]
   },
   "group": "g10_etfs",
-  "sector_etf": "SPY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 63.96, vol 1.60x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.01,
-   "rr_pts": 0,
-   "cap": 57.55,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "EFC",
@@ -38219,23 +36793,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 161.26, vol 1.96x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.23,
-   "rr_pts": 0,
-   "cap": 221.63,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "EFXT",
@@ -38595,23 +37153,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 127.87 -5.8%, +2.2% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.27,
-   "rr_pts": 0,
-   "cap": 141.77,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "EIKN",
@@ -39091,23 +37633,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 37.32 +12.4%, -1.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.69,
-   "rr_pts": 0,
-   "cap": 33.75,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "EMA",
@@ -39471,23 +37997,7 @@
    ]
   },
   "group": "g03_ai_infra_crypto_nuclear_space",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 29.35 +9.8%, -2.3% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.29,
-   "rr_pts": 0,
-   "cap": 24.76,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "ENR",
@@ -39700,23 +38210,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 138.74, vol 2.25x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.09,
-   "rr_pts": 0,
-   "cap": 97.83,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "ENVA",
@@ -39865,23 +38359,7 @@
    ]
   },
   "group": "g08_energy_materials",
-  "sector_etf": "XLE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 154.19, vol 1.74x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.26,
-   "rr_pts": 0,
-   "cap": 170.21,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "EOLS",
@@ -40575,24 +39053,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLB",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 31.99, vol 1.83x)",
-    "Breakdown 10-21 (< 32.90, vol 2.05x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.53,
-   "rr_pts": 0,
-   "cap": 25.11,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "EROC",
@@ -40708,23 +39169,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 8.65, vol 1.53x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.3,
-   "rr_pts": 0,
-   "cap": 5.51,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "EROK",
@@ -41055,23 +39500,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 34.50, vol 3.27x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.56,
-   "rr_pts": 0,
-   "cap": 27.88,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "ESNT",
@@ -42224,23 +40653,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 92.37, vol 1.71x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.01,
-   "rr_pts": 0,
-   "cap": 100.84,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "EXEL",
@@ -42455,23 +40868,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 39.10, vol 1.67x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.12,
-   "rr_pts": 0,
-   "cap": 47.99,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "EXP",
@@ -43168,23 +41565,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 5.95 +5.0%, -0.4% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.45,
-   "rr_pts": 0,
-   "cap": 5.19,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "FCEL",
@@ -43304,23 +41685,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 12.40, vol 1.63x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.28,
-   "rr_pts": 0,
-   "cap": 7.08,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "FCF",
@@ -44044,23 +42409,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 30.77, vol 2.93x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.11,
-   "rr_pts": 0,
-   "cap": 27.99,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "FG",
@@ -44614,27 +42963,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 86.25, vol 2.71x)",
-    "Breakdown 10-21 (< 87.49, vol 2.33x), holding",
-    "Breakdown 10-20 (< 87.54, vol 1.90x), holding",
-    "Breakdown 10-19 (< 90.46, vol 1.79x), holding",
-    "Breakdown 10-16 (< 98.50, vol 1.58x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.07,
-   "rr_pts": 0,
-   "cap": 58.08,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "FLG",
@@ -45088,23 +43417,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 45.18, vol 1.82x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.16,
-   "rr_pts": 0,
-   "cap": 37.46,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "FLS",
@@ -45224,23 +43537,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 69.65, vol 1.61x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.06,
-   "rr_pts": 0,
-   "cap": 59.92,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "FLUT",
@@ -45449,23 +43746,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 5.62, vol 1.66x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.16,
-   "rr_pts": 0,
-   "cap": 2.75,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "FMNB",
@@ -46045,23 +44326,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 67.00, vol 1.63x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.13,
-   "rr_pts": 0,
-   "cap": 74.6,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "FOXF",
@@ -46355,23 +44620,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 30.23, vol 5.68x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.58,
-   "rr_pts": 0,
-   "cap": 15.78,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "FR",
@@ -46490,23 +44739,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 58.18, vol 3.70x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.27,
-   "rr_pts": 0,
-   "cap": 49.46,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "FRME",
@@ -46833,23 +45066,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLU",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 10.26, vol 2.32x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.97,
-   "rr_pts": 0,
-   "cap": 6.13,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLU"
  },
  {
   "tk": "FSCO",
@@ -47145,23 +45362,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 157.95, vol 1.62x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.64,
-   "rr_pts": 0,
-   "cap": 131.61,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "FTDR",
@@ -47428,23 +45629,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 67.92, vol 1.51x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.1,
-   "rr_pts": 0,
-   "cap": 60.38,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "FTK",
@@ -47783,23 +45968,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 23.23, vol 1.73x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.69,
-   "rr_pts": 0,
-   "cap": 25.07,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "FUN",
@@ -47918,24 +46087,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-21 (< 7.86, vol 2.44x), holding",
-    "Breakdown 10-16 (< 8.55, vol 2.28x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.18,
-   "rr_pts": 0,
-   "cap": 4.92,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "FUTU",
@@ -48359,23 +46511,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 39.33, vol 1.57x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.56,
-   "rr_pts": 0,
-   "cap": 48.0,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "GAB",
@@ -48848,24 +46984,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 23.08, vol 1.63x), holding",
-    "Breakdown 10-16 (< 25.32, vol 2.10x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.71,
-   "rr_pts": 0,
-   "cap": 16.27,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "GDX",
@@ -48985,23 +47104,7 @@
    ]
   },
   "group": "g10_etfs",
-  "sector_etf": "SPY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 83.40, vol 1.74x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.43,
-   "rr_pts": 0,
-   "cap": 69.97,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "GDXJ",
@@ -49121,23 +47224,7 @@
    ]
   },
   "group": "g10_etfs",
-  "sector_etf": "SPY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 104.75, vol 1.96x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.72,
-   "rr_pts": 0,
-   "cap": 84.84,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "GDYN",
@@ -49889,23 +47976,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 76.84, vol 3.78x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 3.24,
-   "rr_pts": 2,
-   "cap": 54.51,
-   "trend": 1,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": true
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "GGN",
@@ -51054,23 +49125,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 132.00, vol 1.65x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.01,
-   "rr_pts": 0,
-   "cap": 96.37,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "GLXY",
@@ -51190,23 +49245,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 17.93, vol 1.57x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.08,
-   "rr_pts": 0,
-   "cap": 11.53,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "GM",
@@ -52968,23 +51007,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 25.83, vol 2.09x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.17,
-   "rr_pts": 0,
-   "cap": 21.95,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "GTLB",
@@ -53163,24 +51186,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 23.33, vol 2.44x)",
-    "Breakdown 10-19 (< 24.44, vol 2.26x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.73,
-   "rr_pts": 0,
-   "cap": 18.83,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "GTY",
@@ -53724,23 +51730,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 10.92 -8.6%, +1.4% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.95,
-   "rr_pts": 0,
-   "cap": 12.03,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "HAL",
@@ -53948,24 +51938,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 109.52, vol 2.41x), holding",
-    "Breakout 10-20 (> 98.76, vol 4.25x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.58,
-   "rr_pts": 1,
-   "cap": 134.25,
-   "trend": 2,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "HASI",
@@ -54209,23 +52182,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLB",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 23.62, vol 1.65x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.06,
-   "rr_pts": 0,
-   "cap": 18.4,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "HBNC",
@@ -54710,23 +52667,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 22.01 +8.3%, -1.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.13,
-   "rr_pts": 0,
-   "cap": 19.79,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "HDSN",
@@ -54993,23 +52934,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 30.23, vol 1.57x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.08,
-   "rr_pts": 0,
-   "cap": 23.5,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "HFWA",
@@ -55461,23 +53386,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 11.65, vol 1.65x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.32,
-   "rr_pts": 0,
-   "cap": 9.01,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "HIPO",
@@ -55905,23 +53814,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 7.26, vol 3.06x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.62,
-   "rr_pts": 0,
-   "cap": 7.94,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "HLN",
@@ -56313,24 +54206,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 107.51, vol 1.52x), holding",
-    "Breakout 10-20 (> 105.14, vol 2.46x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.26,
-   "rr_pts": 0,
-   "cap": 126.04,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "HNI",
@@ -56481,23 +54357,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLU",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 12.42, vol 1.70x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.04,
-   "rr_pts": 0,
-   "cap": 8.37,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLU"
  },
  {
   "tk": "HNST",
@@ -56802,24 +54662,7 @@
    ]
   },
   "group": "g09_industrials_utilities_reits",
-  "sector_etf": "XLI",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 214.73, vol 2.36x)",
-    "Breakout 10-21 (> 214.14, vol 1.69x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.32,
-   "rr_pts": 0,
-   "cap": 230.22,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "HONA",
@@ -57094,23 +54937,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 58.63, vol 1.50x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.06,
-   "rr_pts": 0,
-   "cap": 43.06,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "HPK",
@@ -57887,24 +55714,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 12.42, vol 2.64x)",
-    "Breakdown 10-16 (< 13.36, vol 1.73x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.66,
-   "rr_pts": 0,
-   "cap": 9.32,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "HSBC",
@@ -58145,23 +55955,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 23.85, vol 1.54x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.51,
-   "rr_pts": 0,
-   "cap": 26.61,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "HSY",
@@ -58312,23 +56106,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 52.21, vol 1.90x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.32,
-   "rr_pts": 0,
-   "cap": 65.82,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "HTGC",
@@ -58865,25 +56643,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 208.15, vol 2.34x)",
-    "Breakdown 10-21 (< 211.63, vol 2.20x), holding",
-    "Breakdown 10-20 (< 216.84, vol 2.21x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.03,
-   "rr_pts": 0,
-   "cap": 169.34,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "HXL",
@@ -59281,23 +57041,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLB",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 17.05, vol 1.58x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.22,
-   "rr_pts": 0,
-   "cap": 13.67,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "IAM",
@@ -59423,23 +57167,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-21 (< 12.68, vol 1.85x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.29,
-   "rr_pts": 0,
-   "cap": 7.97,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "IBIT",
@@ -59592,23 +57320,7 @@
    ]
   },
   "group": "g04_financials",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 84.14, vol 1.87x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.56,
-   "rr_pts": 0,
-   "cap": 72.25,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "IBM",
@@ -59729,24 +57441,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 251.46, vol 2.11x)",
-    "Breakout 10-21 (> 241.92, vol 1.92x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.41,
-   "rr_pts": 0,
-   "cap": 274.78,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "IBN",
@@ -59959,23 +57654,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 161.56, vol 1.71x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.08,
-   "rr_pts": 0,
-   "cap": 176.66,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "ICHR",
@@ -60424,23 +58103,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLB",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 8.19, vol 2.43x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.02,
-   "rr_pts": 0,
-   "cap": 5.88,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "IEP",
@@ -61551,23 +59214,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 6.73 +14.3%, -1.1% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 2.03,
-   "rr_pts": 1,
-   "cap": 5.62,
-   "trend": 2,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "IMUX",
@@ -61894,23 +59541,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 12.75, vol 1.85x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.06,
-   "rr_pts": 0,
-   "cap": 14.96,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "ING",
@@ -62150,23 +59781,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 16.01, vol 1.81x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.02,
-   "rr_pts": 0,
-   "cap": 10.46,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "INMD",
@@ -62890,23 +60505,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 42.38 +7.1%, -0.4% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.51,
-   "rr_pts": 0,
-   "cap": 37.22,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "IOSP",
@@ -63208,23 +60807,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 74.78, vol 2.15x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.05,
-   "rr_pts": 0,
-   "cap": 66.25,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "IRDM",
@@ -63374,24 +60957,7 @@
    ]
   },
   "group": "g03_ai_infra_crypto_nuclear_space",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-20 (< 26.99, vol 1.59x), holding",
-    "Breakdown 10-16 (< 30.39, vol 1.54x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.23,
-   "rr_pts": 0,
-   "cap": 18.83,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "IRM",
@@ -63542,23 +61108,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-19 (> 68.49, vol 13.47x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.78,
-   "rr_pts": 0,
-   "cap": 107.25,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "IRT",
@@ -64105,23 +61655,7 @@
    ]
   },
   "group": "g04_financials",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 10.16 -7.2%, +1.8% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.1,
-   "rr_pts": 0,
-   "cap": 11.85,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "ITW",
@@ -64568,23 +62102,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 27.83 +5.2%, -1.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.08,
-   "rr_pts": 0,
-   "cap": 25.9,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "JANX",
@@ -65938,23 +63456,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 37.31, vol 2.02x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.07,
-   "rr_pts": 0,
-   "cap": 43.59,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "KC",
@@ -66133,24 +63635,7 @@
    ]
   },
   "group": "g06_staples_retail",
-  "sector_etf": "XLP",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 34.63, vol 2.42x)",
-    "Breakout 10-20 (> 34.62, vol 1.65x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.12,
-   "rr_pts": 1,
-   "cap": 38.54,
-   "trend": 2,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": false
-  }
+  "sector_etf": "XLP"
  },
  {
   "tk": "KELYA",
@@ -66452,23 +63937,7 @@
    ]
   },
   "group": "g04_financials",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 20.61, vol 2.04x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.05,
-   "rr_pts": 0,
-   "cap": 22.74,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "KFII",
@@ -66680,23 +64149,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLU",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 47.16, vol 1.61x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.46,
-   "rr_pts": 0,
-   "cap": 36.45,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLU"
  },
  {
   "tk": "KHC",
@@ -67026,23 +64479,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 161.74, vol 2.21x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.63,
-   "rr_pts": 0,
-   "cap": 121.9,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "KLAR",
@@ -67406,23 +64843,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 49.82 +8.0%, -1.6% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.5,
-   "rr_pts": 0,
-   "cap": 41.87,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "KN",
@@ -67842,23 +65263,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 63.01, vol 1.89x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.21,
-   "rr_pts": 0,
-   "cap": 56.49,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "KO",
@@ -68311,23 +65716,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 34.93, vol 1.82x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.7,
-   "rr_pts": 0,
-   "cap": 40.01,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "KRE",
@@ -68865,23 +66254,7 @@
    ]
   },
   "group": "g06_staples_retail",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 22.41, vol 2.12x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.2,
-   "rr_pts": 0,
-   "cap": 28.87,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "KT",
@@ -69247,23 +66620,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 18.09, vol 2.43x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.16,
-   "rr_pts": 0,
-   "cap": 24.98,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "KWEB",
@@ -69381,23 +66738,7 @@
    ]
   },
   "group": "g10_etfs",
-  "sector_etf": "SPY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-21 (< 23.86, vol 2.65x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.97,
-   "rr_pts": 0,
-   "cap": 21.31,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "KYIV",
@@ -70086,23 +67427,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 16.58, vol 2.64x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.29,
-   "rr_pts": 0,
-   "cap": 12.4,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "LBTYA",
@@ -70763,24 +68088,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 41.23, vol 1.89x)",
-    "Breakdown 10-16 (< 44.91, vol 2.95x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.59,
-   "rr_pts": 0,
-   "cap": 28.64,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "LHX",
@@ -70902,23 +68210,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 247.29, vol 2.09x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.43,
-   "rr_pts": 0,
-   "cap": 273.25,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "LI",
@@ -71096,23 +68388,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 41.07, vol 1.70x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.26,
-   "rr_pts": 0,
-   "cap": 51.72,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "LILAK",
@@ -71440,24 +68716,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 12.15, vol 2.28x), holding",
-    "Breakout 10-20 (> 11.36, vol 5.36x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.06,
-   "rr_pts": 0,
-   "cap": 15.03,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "LITE",
@@ -72429,24 +69688,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 260.81, vol 2.63x)",
-    "Breakdown 10-21 (< 263.45, vol 1.90x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.52,
-   "rr_pts": 0,
-   "cap": 183.07,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "LRN",
@@ -72595,23 +69837,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 103.65, vol 1.80x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.28,
-   "rr_pts": 0,
-   "cap": 75.36,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "LSPD",
@@ -72946,23 +70172,7 @@
    ]
   },
   "group": "g07_discretionary_travel_media",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 101.64, vol 1.62x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.02,
-   "rr_pts": 0,
-   "cap": 119.03,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "LUNR",
@@ -73140,23 +70350,7 @@
    ]
   },
   "group": "g07_discretionary_travel_media",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 35.81 +7.0%, -1.9% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.7,
-   "rr_pts": 0,
-   "cap": 32.89,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "LW",
@@ -75149,23 +72343,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 8.00, vol 1.52x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.02,
-   "rr_pts": 0,
-   "cap": 6.0,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "MFA",
@@ -75347,23 +72525,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-20 (< 10.07, vol 1.63x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.02,
-   "rr_pts": 0,
-   "cap": 8.66,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "MFIC",
@@ -75570,23 +72732,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 62.22 +6.7%, -0.2% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.1,
-   "rr_pts": 0,
-   "cap": 56.94,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "MGM",
@@ -76250,23 +73396,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 211.14, vol 2.08x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.39,
-   "rr_pts": 0,
-   "cap": 158.82,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "MKTX",
@@ -76509,24 +73639,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 56.81, vol 1.90x)",
-    "Breakdown 10-20 (< 59.90, vol 3.08x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.01,
-   "rr_pts": 0,
-   "cap": 47.47,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "MLKN",
@@ -76677,23 +73790,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 12.12, vol 3.44x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.9,
-   "rr_pts": 0,
-   "cap": 15.36,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "MLYS",
@@ -76873,25 +73970,7 @@
    ]
   },
   "group": "g09_industrials_utilities_reits",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 174.74, vol 1.82x)",
-    "Breakout 10-21 (> 171.37, vol 1.80x), holding",
-    "Breakout 10-20 (> 170.30, vol 2.65x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.23,
-   "rr_pts": 0,
-   "cap": 192.19,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "MMS",
@@ -77073,23 +74152,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 43.37 +7.9%, -0.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.32,
-   "rr_pts": 0,
-   "cap": 36.55,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "MNDY",
@@ -77210,24 +74273,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 100.86, vol 1.62x)",
-    "Breakout 10-20 (> 94.30, vol 1.62x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.2,
-   "rr_pts": 1,
-   "cap": 131.4,
-   "trend": 1,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "MNRO",
@@ -79004,23 +76050,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 262.24, vol 1.90x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.04,
-   "rr_pts": 0,
-   "cap": 158.37,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "MTZ",
@@ -79384,24 +76414,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 22.93, vol 1.58x)",
-    "Breakdown 10-20 (< 23.81, vol 1.59x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.43,
-   "rr_pts": 0,
-   "cap": 17.75,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "MXL",
@@ -79521,23 +76534,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 71.32, vol 1.60x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.57,
-   "rr_pts": 0,
-   "cap": 38.28,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "MYGN",
@@ -79659,25 +76656,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 5.57, vol 1.50x)",
-    "Breakout 10-21 (> 5.54, vol 1.78x), holding",
-    "Breakout 10-20 (> 4.58, vol 14.02x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.66,
-   "rr_pts": 0,
-   "cap": 8.13,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "MYI",
@@ -79982,23 +76961,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 19.83 +8.8%, -1.6% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.47,
-   "rr_pts": 0,
-   "cap": 17.64,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "NANO",
@@ -80302,23 +77265,7 @@
    ]
   },
   "group": "g03_ai_infra_crypto_nuclear_space",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 186.01, vol 1.93x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.4,
-   "rr_pts": 0,
-   "cap": 115.52,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "NBIX",
@@ -80554,23 +77501,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 96.12, vol 2.41x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.33,
-   "rr_pts": 1,
-   "cap": 114.26,
-   "trend": 1,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "NE",
@@ -81294,23 +78225,7 @@
    ]
   },
   "group": "g07_discretionary_travel_media",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-21 (< 67.06, vol 2.76x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.12,
-   "rr_pts": 0,
-   "cap": 59.0,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "NG",
@@ -81645,23 +78560,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLU",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 41.49, vol 1.58x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.26,
-   "rr_pts": 0,
-   "cap": 46.64,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLU"
  },
  {
   "tk": "NICE",
@@ -82732,23 +79631,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 9.02, vol 3.05x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.09,
-   "rr_pts": 0,
-   "cap": 5.85,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "NOMD",
@@ -82958,23 +79841,7 @@
    ]
   },
   "group": "g02_software_fintech",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 153.12, vol 1.63x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.46,
-   "rr_pts": 0,
-   "cap": 178.34,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "NP",
@@ -84418,23 +81285,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 139.78, vol 2.77x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.99,
-   "rr_pts": 0,
-   "cap": 99.84,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "NVTS",
@@ -85665,23 +82516,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 6.87, vol 2.15x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.4,
-   "rr_pts": 0,
-   "cap": 4.34,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "ODD",
@@ -85776,25 +82611,25 @@
  },
  {
   "tk": "OFG",
-  "date": "2026-10-23",
-  "close": 51.27,
-  "avg20m": 0.28,
-  "filtered": "avg vol 0.28M",
-  "sma20": 51.16,
-  "sma50": 51.91,
+  "date": "2026-10-22",
+  "close": 51.36,
+  "avg20m": 0.27,
+  "filtered": "avg vol 0.27M",
+  "sma20": 51.19,
+  "sma50": 51.96,
   "trend_call": 0,
   "trend_put": 1,
-  "atr_pct": 2.18,
+  "atr_pct": 2.28,
   "hv20": 24.4,
-  "ret3m": -2.1,
-  "rs_spy": -5.5,
-  "rs_sector": -2.7,
+  "ret3m": -2.0,
+  "rs_spy": -5.4,
+  "rs_sector": -2.6,
   "lo52": 35.71,
   "hi52": 54.47,
-  "pct_above_lo52": 43.6,
-  "pct_below_hi52": 5.9,
+  "pct_above_lo52": 43.8,
+  "pct_below_hi52": 5.7,
   "near_low": false,
-  "vol_ratio": 1.07,
+  "vol_ratio": 1.66,
   "hi20": 52.95,
   "lo20": 50.08,
   "setups": [],
@@ -86050,30 +82885,30 @@
  },
  {
   "tk": "OGS",
-  "date": "2026-10-23",
-  "close": 77.93,
+  "date": "2026-10-22",
+  "close": 78.25,
   "avg20m": 0.64,
   "filtered": "avg vol 0.64M",
-  "sma20": 73.88,
-  "sma50": 76.46,
+  "sma20": 73.57,
+  "sma50": 76.52,
   "trend_call": 1,
   "trend_put": 0,
-  "atr_pct": 1.86,
-  "hv20": 17.5,
-  "ret3m": -2.6,
-  "rs_spy": -6.0,
-  "rs_sector": 4.8,
+  "atr_pct": 1.85,
+  "hv20": 17.4,
+  "ret3m": -2.8,
+  "rs_spy": -6.2,
+  "rs_sector": 4.6,
   "lo52": 70.37,
   "hi52": 90.78,
-  "pct_above_lo52": 10.7,
-  "pct_below_hi52": 14.2,
+  "pct_above_lo52": 11.2,
+  "pct_below_hi52": 13.8,
   "near_low": false,
-  "vol_ratio": 0.95,
-  "hi20": 78.25,
+  "vol_ratio": 0.81,
+  "hi20": 75.6,
   "lo20": 71.66,
   "setups": [],
   "watch": [
-   "within 0.4% of 20d high 78.25"
+   "above 20d high 75.60 but vol 0.81x"
   ],
   "note": "",
   "group": "",
@@ -86228,23 +83063,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 6.17, vol 1.59x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.6,
-   "rr_pts": 0,
-   "cap": 7.31,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "OIH",
@@ -86967,23 +83786,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 81.11, vol 1.81x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.15,
-   "rr_pts": 0,
-   "cap": 88.91,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "OMCL",
@@ -87163,23 +83966,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 17.87, vol 3.29x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.2,
-   "rr_pts": 0,
-   "cap": 13.23,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "OMF",
@@ -87901,23 +84688,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 39.68, vol 1.52x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.09,
-   "rr_pts": 0,
-   "cap": 42.53,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "ORIC",
@@ -88426,23 +85197,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 26.75, vol 1.51x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.52,
-   "rr_pts": 0,
-   "cap": 30.35,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "OTF",
@@ -88715,23 +85470,7 @@
    ]
   },
   "group": "g04_financials",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 9.49, vol 1.65x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.41,
-   "rr_pts": 0,
-   "cap": 10.96,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "OXLC",
@@ -89050,24 +85789,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 48.09, vol 1.91x)",
-    "Breakout 10-21 (> 46.89, vol 1.84x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.01,
-   "rr_pts": 0,
-   "cap": 55.24,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "P",
@@ -89218,23 +85940,7 @@
    ]
   },
   "group": "g08_energy_materials",
-  "sector_etf": "XLB",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 42.33, vol 1.68x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.09,
-   "rr_pts": 0,
-   "cap": 35.26,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "PACS",
@@ -90114,23 +86820,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "SPY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 17.29, vol 1.58x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.23,
-   "rr_pts": 0,
-   "cap": 18.95,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "PBLS",
@@ -90581,23 +87271,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 75.38 +9.3%, -0.2% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.59,
-   "rr_pts": 0,
-   "cap": 70.45,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "PDFS",
@@ -90899,23 +87573,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 38.21, vol 1.65x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.37,
-   "rr_pts": 0,
-   "cap": 40.56,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "PEG",
@@ -91068,23 +87726,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 35.95, vol 4.17x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.53,
-   "rr_pts": 0,
-   "cap": 41.92,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "PENG",
@@ -91505,24 +88147,7 @@
    ]
   },
   "group": "g06_staples_retail",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 159.35, vol 2.42x)",
-    "Breakout 10-16 (> 157.08, vol 1.60x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.27,
-   "rr_pts": 0,
-   "cap": 180.42,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "PGEN",
@@ -91765,23 +88390,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 6.70 +11.9%, -1.5% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.2,
-   "rr_pts": 0,
-   "cap": 5.56,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "PHG",
@@ -92445,24 +89054,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 16.57, vol 1.51x), holding",
-    "Breakout 10-16 (> 15.72, vol 1.72x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.5,
-   "rr_pts": 0,
-   "cap": 18.24,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "PKE",
@@ -92944,23 +89536,7 @@
    ]
   },
   "group": "g02_software_fintech",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 209.05 -11.0%, +0.5% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.26,
-   "rr_pts": 0,
-   "cap": 232.4,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "PLUG",
@@ -93471,24 +90047,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 98.21, vol 1.90x)",
-    "Breakout 10-21 (> 96.14, vol 2.24x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.16,
-   "rr_pts": 0,
-   "cap": 108.49,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "PNR",
@@ -94478,23 +91037,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 71.12, vol 1.57x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.24,
-   "rr_pts": 0,
-   "cap": 54.23,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": true
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "PRKS",
@@ -94734,23 +91277,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 26.32 +8.7%, -1.1% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.09,
-   "rr_pts": 0,
-   "cap": 23.14,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "PRMB",
@@ -95773,23 +92300,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-20 (< 7.73, vol 1.65x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.15,
-   "rr_pts": 0,
-   "cap": 6.1,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "PURR",
@@ -96179,23 +92690,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 115.37, vol 2.07x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.24,
-   "rr_pts": 0,
-   "cap": 91.57,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "QADR",
@@ -96470,25 +92965,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 50.00, vol 12.90x)",
-    "Breakout 10-21 (> 48.90, vol 4.66x), holding",
-    "Breakout 10-20 (> 46.55, vol 4.49x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.66,
-   "rr_pts": 0,
-   "cap": 56.53,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "QLYS",
@@ -96817,12 +93294,6 @@
   },
   "group": "g10_etfs",
   "sector_etf": "SPY"
- },
- {
-  "tk": "QRVO",
-  "err": "only 1 bars",
-  "group": "g01_semis_hw",
-  "sector_etf": "XLK"
  },
  {
   "tk": "QSR",
@@ -97179,23 +93650,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 10.14 +8.7%, -2.1% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.48,
-   "rr_pts": 0,
-   "cap": 8.11,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "R",
@@ -97466,23 +93921,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-19 (> 37.71, vol 5.51x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.25,
-   "rr_pts": 0,
-   "cap": 39.29,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "RAPP",
@@ -97811,23 +94250,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 125.80 -10.6%, +2.5% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.86,
-   "rr_pts": 0,
-   "cap": 144.3,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "RCEL",
@@ -98066,23 +94489,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLC",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 32.27, vol 1.51x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.1,
-   "rr_pts": 0,
-   "cap": 36.74,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLC"
  },
  {
   "tk": "RCL",
@@ -98234,23 +94641,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-21 (< 22.12, vol 2.71x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.24,
-   "rr_pts": 0,
-   "cap": 13.39,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "RDDT",
@@ -98370,23 +94761,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 142.44 +12.3%, -1.2% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.64,
-   "rr_pts": 0,
-   "cap": 121.99,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "RDN",
@@ -98724,24 +95099,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 39.39, vol 1.78x)",
-    "Breakout 10-16 (> 38.42, vol 1.60x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.08,
-   "rr_pts": 0,
-   "cap": 43.58,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "RELY",
@@ -99068,23 +95426,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 36.02 +5.1%, -1.7% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.17,
-   "rr_pts": 0,
-   "cap": 32.71,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "REYN",
@@ -99897,25 +96239,7 @@
    ]
   },
   "group": "g08_energy_materials",
-  "sector_etf": "XLB",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 86.92, vol 1.58x)",
-    "Breakdown 10-21 (< 88.16, vol 1.58x), holding",
-    "Breakdown 10-20 (< 89.50, vol 2.25x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.44,
-   "rr_pts": 0,
-   "cap": 78.08,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "RIOT",
@@ -100397,23 +96721,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-19 (> 11.65, vol 1.51x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.66,
-   "rr_pts": 0,
-   "cap": 13.04,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "RMBS",
@@ -100564,23 +96872,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 246.20, vol 1.65x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.26,
-   "rr_pts": 0,
-   "cap": 271.13,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "RMIX",
@@ -100881,23 +97173,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 36.98, vol 2.24x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.12,
-   "rr_pts": 0,
-   "cap": 42.32,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "ROKU",
@@ -101014,24 +97290,7 @@
    ]
   },
   "group": "g02_software_fintech",
-  "sector_etf": "XLC",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 157.78, vol 2.85x)",
-    "Breakout 10-21 (> 157.57, vol 4.81x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.44,
-   "rr_pts": 0,
-   "cap": 165.99,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLC"
  },
  {
   "tk": "ROL",
@@ -101151,23 +97410,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 33.89, vol 1.61x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.11,
-   "rr_pts": 0,
-   "cap": 39.44,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "ROST",
@@ -101411,23 +97654,7 @@
    ]
   },
   "group": "g05_healthcare",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 59.62, vol 1.88x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.23,
-   "rr_pts": 0,
-   "cap": 69.44,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "RQI",
@@ -101638,23 +97865,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 151.11, vol 1.81x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.2,
-   "rr_pts": 0,
-   "cap": 128.75,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "RSG",
@@ -101867,23 +98078,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 21.21, vol 1.98x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.14,
-   "rr_pts": 0,
-   "cap": 25.57,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "RTX",
@@ -102366,24 +98561,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 202.02, vol 1.52x)",
-    "Breakout 10-21 (> 201.98, vol 1.69x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.77,
-   "rr_pts": 0,
-   "cap": 213.99,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "RYAAY",
@@ -102503,23 +98681,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 51.33 +5.4%, -0.7% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.26,
-   "rr_pts": 0,
-   "cap": 47.87,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "RYAM",
@@ -103331,24 +99493,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 232.73, vol 2.29x)",
-    "Breakout 10-21 (> 228.98, vol 2.04x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.54,
-   "rr_pts": 0,
-   "cap": 254.88,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "SARO",
@@ -103949,23 +100094,7 @@
    ]
   },
   "group": "g04_financials",
-  "sector_etf": "XLF",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 94.16, vol 1.53x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.04,
-   "rr_pts": 0,
-   "cap": 84.69,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "SCI",
@@ -104421,26 +100550,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 77.94, vol 1.51x)",
-    "Breakdown 10-21 (< 80.43, vol 3.01x), holding",
-    "Breakdown 10-20 (< 88.47, vol 4.23x), holding",
-    "Breakdown 10-19 (< 92.89, vol 1.80x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.51,
-   "rr_pts": 0,
-   "cap": 64.16,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "SECZ",
@@ -104620,23 +100730,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 62.74, vol 1.54x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.63,
-   "rr_pts": 0,
-   "cap": 38.69,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "SEIC",
@@ -104936,23 +101030,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 12.36, vol 1.67x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.07,
-   "rr_pts": 0,
-   "cap": 11.03,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "SFM",
@@ -105072,23 +101150,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLP",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 66.63, vol 1.65x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.5,
-   "rr_pts": 0,
-   "cap": 77.13,
-   "trend": 0,
-   "rs": 0,
-   "known": 0,
-   "max": 7,
-   "near_low": false
-  }
+  "sector_etf": "XLP"
  },
  {
   "tk": "SFNC",
@@ -105390,23 +101452,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 15.49, vol 1.77x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.17,
-   "rr_pts": 0,
-   "cap": 17.92,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "SHAK",
@@ -105706,25 +101752,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 12.40, vol 2.27x), holding",
-    "Breakout 10-20 (> 11.99, vol 1.60x), holding",
-    "Breakout 10-19 (> 11.87, vol 2.38x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.32,
-   "rr_pts": 0,
-   "cap": 13.46,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "SHOE",
@@ -106028,23 +102056,7 @@
    ]
   },
   "group": "g10_etfs",
-  "sector_etf": "SPY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 24.74, vol 1.67x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.2,
-   "rr_pts": 0,
-   "cap": 19.96,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "SIMO",
@@ -106953,23 +102965,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-19 (> 37.80, vol 1.80x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.01,
-   "rr_pts": 0,
-   "cap": 44.06,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "SLM",
@@ -107121,24 +103117,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 19.58, vol 3.00x), holding",
-    "Breakout 10-19 (> 12.29, vol 65.85x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.0,
-   "rr_pts": 0,
-   "cap": 39.75,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "SLRC",
@@ -107315,23 +103294,7 @@
    ]
   },
   "group": "g10_etfs",
-  "sector_etf": "SPY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 50.22, vol 1.55x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.47,
-   "rr_pts": 0,
-   "cap": 42.28,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "SM",
@@ -108536,23 +104499,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLP",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 18.18 -6.9%, +0.9% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.23,
-   "rr_pts": 0,
-   "cap": 19.55,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLP"
  },
  {
   "tk": "SONY",
@@ -108916,23 +104863,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 145.47, vol 2.13x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.11,
-   "rr_pts": 0,
-   "cap": 111.76,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "SPG",
@@ -109621,23 +105552,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 11.56 +9.6%, -1.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.49,
-   "rr_pts": 0,
-   "cap": 9.53,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "SRE",
@@ -110202,23 +106117,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 16.34, vol 1.76x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.27,
-   "rr_pts": 1,
-   "cap": 19.89,
-   "trend": 2,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "SSMR",
@@ -110365,23 +106264,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 87.09, vol 2.21x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.11,
-   "rr_pts": 0,
-   "cap": 95.47,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "SSRM",
@@ -111524,23 +107407,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 12.46 -10.5%, +1.7% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.41,
-   "rr_pts": 0,
-   "cap": 14.74,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "STNG",
@@ -111836,23 +107703,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 11.98 +5.0%, -2.5% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.96,
-   "rr_pts": 0,
-   "cap": 10.92,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "STX",
@@ -112032,23 +107883,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 75.89, vol 1.66x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.57,
-   "rr_pts": 0,
-   "cap": 84.03,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "SUI",
@@ -112346,23 +108181,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 5.85 +6.3%, -1.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.74,
-   "rr_pts": 0,
-   "cap": 3.94,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "SVCC",
@@ -112546,24 +108365,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLB",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 9.26, vol 2.45x)",
-    "Breakdown 10-20 (< 9.43, vol 1.86x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.12,
-   "rr_pts": 0,
-   "cap": 7.16,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "SVRA",
@@ -113161,23 +108963,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 37.90 +10.1%, -2.7% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.03,
-   "rr_pts": 0,
-   "cap": 32.21,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "SYNA",
@@ -113512,24 +109298,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-21 (< 11.58, vol 2.59x), holding",
-    "Breakdown 10-20 (< 11.73, vol 2.02x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.37,
-   "rr_pts": 0,
-   "cap": 8.88,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "TALO",
@@ -113648,23 +109417,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 17.56, vol 2.10x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.91,
-   "rr_pts": 0,
-   "cap": 19.57,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "TAN",
@@ -114782,23 +110535,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 62.78, vol 1.50x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.08,
-   "rr_pts": 0,
-   "cap": 50.61,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "TEL",
@@ -116065,23 +111802,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLC",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 12.42, vol 6.38x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 3.32,
-   "rr_pts": 2,
-   "cap": 9.13,
-   "trend": 2,
-   "rs": 1,
-   "known": 5,
-   "max": 12,
-   "near_low": false
-  }
+  "sector_etf": "XLC"
  },
  {
   "tk": "TLN",
@@ -116471,23 +112192,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLC",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 148.58 +7.1%, -1.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 2.03,
-   "rr_pts": 1,
-   "cap": 121.89,
-   "trend": 2,
-   "rs": 1,
-   "known": 4,
-   "max": 11,
-   "near_low": false
-  }
+  "sector_etf": "XLC"
  },
  {
   "tk": "TNDM",
@@ -116755,24 +112460,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 26.98, vol 1.63x)",
-    "Breakout 10-21 (> 25.25, vol 1.53x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.14,
-   "rr_pts": 0,
-   "cap": 34.34,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "TNL",
@@ -117229,23 +112917,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLB",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 46.49, vol 2.54x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.21,
-   "rr_pts": 0,
-   "cap": 56.85,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLB"
  },
  {
   "tk": "TRGP",
@@ -117396,25 +113068,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 115.26, vol 1.87x)",
-    "Breakout 10-20 (> 109.01, vol 1.52x), holding",
-    "Breakout 10-16 (> 107.89, vol 2.14x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.36,
-   "rr_pts": 0,
-   "cap": 137.01,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "TRIN",
@@ -118105,23 +113759,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLV",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 11.88 +8.9%, -1.7% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.52,
-   "rr_pts": 0,
-   "cap": 10.8,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLV"
  },
  {
   "tk": "TS",
@@ -118391,23 +114029,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 33.70, vol 2.53x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.53,
-   "rr_pts": 0,
-   "cap": 38.65,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "TSEM",
@@ -118528,24 +114150,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 183.78, vol 2.02x)",
-    "Breakdown 10-20 (< 195.58, vol 2.22x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.47,
-   "rr_pts": 0,
-   "cap": 119.36,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "TSLA",
@@ -119123,23 +114728,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 93.88, vol 5.87x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.43,
-   "rr_pts": 0,
-   "cap": 38.79,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "TTWO",
@@ -119471,24 +115060,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 120.01, vol 2.49x)",
-    "Breakout 10-20 (> 114.70, vol 2.39x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.91,
-   "rr_pts": 0,
-   "cap": 131.72,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "TWI",
@@ -120118,25 +115690,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 35.85, vol 1.71x)",
-    "Breakout 10-21 (> 35.47, vol 1.95x), holding",
-    "Breakout 10-20 (> 34.23, vol 1.75x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.21,
-   "rr_pts": 1,
-   "cap": 40.64,
-   "trend": 1,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "UCTT",
@@ -120256,23 +115810,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 51.00, vol 1.58x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.28,
-   "rr_pts": 0,
-   "cap": 32.42,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "UDR",
@@ -120394,23 +115932,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-21 (> 34.41, vol 2.07x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.29,
-   "rr_pts": 0,
-   "cap": 38.6,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "UE",
@@ -120714,23 +116236,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 64.65, vol 1.83x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.18,
-   "rr_pts": 0,
-   "cap": 72.57,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "ULCC",
@@ -121092,23 +116598,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 19.67, vol 1.68x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.34,
-   "rr_pts": 0,
-   "cap": 15.08,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "UMH",
@@ -121380,24 +116870,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLRE",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 5.60, vol 1.52x), holding",
-    "Breakdown 10-16 (< 5.64, vol 1.53x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.66,
-   "rr_pts": 0,
-   "cap": 3.89,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLRE"
  },
  {
   "tk": "UNM",
@@ -121758,23 +117231,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 8.75, vol 2.38x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.03,
-   "rr_pts": 0,
-   "cap": 10.66,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "URA",
@@ -122896,23 +118353,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 13.66, vol 1.84x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.39,
-   "rr_pts": 0,
-   "cap": 17.79,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "VET",
@@ -123034,23 +118475,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLE",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-19 (> 13.20, vol 1.77x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.31,
-   "rr_pts": 0,
-   "cap": 14.74,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLE"
  },
  {
   "tk": "VFC",
@@ -123357,24 +118782,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-19 (< 191.50, vol 2.14x), holding",
-    "Breakdown 10-16 (< 219.92, vol 1.82x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.03,
-   "rr_pts": 0,
-   "cap": 115.8,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "VIK",
@@ -124027,23 +119435,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 13.08, vol 1.91x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.1,
-   "rr_pts": 0,
-   "cap": 15.23,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "VMC",
@@ -124712,23 +120104,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Pullback (off 50.12 -7.5%, +1.6% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.26,
-   "rr_pts": 0,
-   "cap": 57.54,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "VRSK",
@@ -124879,23 +120255,7 @@
    ]
   },
   "group": "g01_semis_hw",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-22 (< 203.56, vol 1.63x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.95,
-   "rr_pts": 0,
-   "cap": 162.36,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "VSAT",
@@ -125628,12 +120988,6 @@
   "sector_etf": "XLK"
  },
  {
-  "tk": "WBD",
-  "err": "only 1 bars",
-  "group": "g07_discretionary_travel_media",
-  "sector_etf": "XLY"
- },
- {
   "tk": "WBI",
   "date": "2026-10-22",
   "close": 28.33,
@@ -125807,23 +121161,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLU",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 169.48, vol 2.91x)"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 2.9,
-   "rr_pts": 1,
-   "cap": 211.15,
-   "trend": 1,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLU"
  },
  {
   "tk": "WD",
@@ -126875,23 +122213,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 26.46 +8.8%, -1.4% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.71,
-   "rr_pts": 0,
-   "cap": 22.51,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "WING",
@@ -127311,23 +122633,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-16 (> 30.69, vol 1.50x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.85,
-   "rr_pts": 0,
-   "cap": 34.81,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "WMS",
@@ -127836,23 +123142,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 15.65 +5.9%, -2.6% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 1.7,
-   "rr_pts": 0,
-   "cap": 13.99,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "WSE",
@@ -127973,23 +123263,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLI",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 11.30, vol 2.99x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.43,
-   "rr_pts": 0,
-   "cap": 9.57,
-   "trend": 2,
-   "rs": 0,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "XLI"
  },
  {
   "tk": "WSFS",
@@ -128569,23 +123843,7 @@
    ]
   },
   "group": "g07_discretionary_travel_media",
-  "sector_etf": "XLY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 73.73 +5.0%, -2.0% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.85,
-   "rr_pts": 0,
-   "cap": 66.01,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": true
-  }
+  "sector_etf": "XLY"
  },
  {
   "tk": "XBI",
@@ -128705,23 +123963,7 @@
    ]
   },
   "group": "g10_etfs",
-  "sector_etf": "SPY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 144.32 +6.2%, -0.2% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.56,
-   "rr_pts": 0,
-   "cap": 132.13,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "XE",
@@ -129305,23 +124547,7 @@
    ]
   },
   "group": "g10_etfs",
-  "sector_etf": "SPY",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Breakdown 10-16 (< 189.19, vol 1.96x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.03,
-   "rr_pts": 0,
-   "cap": 167.51,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "XLP",
@@ -129441,24 +124667,7 @@
    ]
   },
   "group": "g10_etfs",
-  "sector_etf": "SPY",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-22 (> 87.75, vol 1.79x)",
-    "Breakout 10-16 (> 86.68, vol 2.03x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 0.03,
-   "rr_pts": 0,
-   "cap": 95.46,
-   "trend": 1,
-   "rs": 1,
-   "known": 2,
-   "max": 9,
-   "near_low": false
-  }
+  "sector_etf": "SPY"
  },
  {
   "tk": "XLRE",
@@ -130432,23 +125641,7 @@
    ]
   },
   "group": "",
-  "sector_etf": "XLK",
-  "rank_put": {
-   "dir": "put",
-   "setups": [
-    "Failed rally (off 8.06 +9.7%, -1.4% vs SMA20)"
-   ],
-   "exp": "2027-01-15",
-   "ts": "2026-12-24",
-   "rr": 0.09,
-   "rr_pts": 0,
-   "cap": 7.4,
-   "trend": 2,
-   "rs": 1,
-   "known": 3,
-   "max": 10,
-   "near_low": false
-  }
+  "sector_etf": "XLK"
  },
  {
   "tk": "YOU",
@@ -131177,23 +126370,7 @@
    ]
   },
   "group": "g04_financials",
-  "sector_etf": "XLF",
-  "rank_call": {
-   "dir": "call",
-   "setups": [
-    "Breakout 10-20 (> 63.83, vol 2.40x), holding"
-   ],
-   "exp": "2026-12-18",
-   "ts": "2026-12-08",
-   "rr": 1.37,
-   "rr_pts": 0,
-   "cap": 70.35,
-   "trend": 1,
-   "rs": 0,
-   "known": 1,
-   "max": 8,
-   "near_low": false
-  }
+  "sector_etf": "XLF"
  },
  {
   "tk": "ZIP",
