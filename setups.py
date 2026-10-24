@@ -17,11 +17,68 @@ Levels (for confirmed setups, entry = last close; puts mirror):
 - R:R before cap = target distance / invalidation distance. The session must still cap the target at entry plus the
   1-sigma move to the time-stop date (higher of IV and HV20), which can only lower R:R.
 """
+import datetime as dt
 import math
 import numpy as np
 import pandas as pd
 
 MIN_PRICE, MAX_PRICE, MIN_AVG_VOL = 5.0, 275.0, 1_000_000
+# NYSE holidays in the plan year (account_mechanics); a rule date that lands on one moves to the trading day before.
+HOLIDAYS = {dt.date(2026, 11, 26), dt.date(2026, 12, 25), dt.date(2027, 1, 1), dt.date(2027, 1, 18), dt.date(2027, 2, 15),
+            dt.date(2027, 3, 26), dt.date(2027, 5, 31), dt.date(2027, 6, 18), dt.date(2027, 7, 5), dt.date(2027, 9, 6)}
+
+
+def _trading_day_on_or_before(d):
+    while d.weekday() >= 5 or d in HOLIDAYS:
+        d -= dt.timedelta(days=1)
+    return d
+
+
+def next_session(d):
+    d += dt.timedelta(days=1)
+    while d.weekday() >= 5 or d in HOLIDAYS:
+        d += dt.timedelta(days=1)
+    return d
+
+
+def third_friday(y, m):
+    d = dt.date(y, m, 15)
+    return d + dt.timedelta(days=(4 - d.weekday()) % 7)
+
+
+def contract_plan(asof, fresh):
+    """Rules v7.6 contract timing for an entry on the next session after `asof`:
+    a fresh breakout/breakdown uses the monthly 45-59 days out (time stop 10 days before expiration), else the first
+    monthly 60+ days out (time stop 21 days before). Returns (entry, expiration, time_stop, days_to_time_stop)."""
+    entry = next_session(asof)
+    exps, y, m = [], entry.year, entry.month
+    for _ in range(8):
+        exps.append(third_friday(y, m))
+        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    short = next((e for e in exps if 45 <= (e - entry).days <= 59), None) if fresh else None
+    if short:
+        exp, ts = short, short - dt.timedelta(days=10)
+    else:
+        exp = next(e for e in exps if (e - entry).days >= 60)
+        ts = exp - dt.timedelta(days=21)
+    ts = _trading_day_on_or_before(ts)
+    return entry, exp, ts, (ts - entry).days
+
+
+def capped_rr(lv, hv, horizon_days):
+    """Reward-to-risk after capping the target at the 1-sigma move to the time stop. The scan uses HV20 for sigma; the
+    session must use the higher of IV and HV20, which can only widen the cap. Returns (rr, points, cap_price)."""
+    e, risk = lv["entry"], lv["risk"]
+    capd = e * hv * math.sqrt(max(horizon_days, 1) / 365)
+    if lv["dir"] == "call":
+        cap = e + capd
+        tgt = cap if lv["target"] is None else min(lv["target"], cap)
+        rr = (tgt - e) / risk
+    else:
+        cap = e - capd
+        tgt = cap if lv["target"] is None else max(lv["target"], cap)
+        rr = (e - tgt) / risk
+    return round(rr, 2), (2 if rr >= 3 else 1 if rr >= 2 else 0), round(cap, 2)
 
 
 def _sma(s, n, back=0):
