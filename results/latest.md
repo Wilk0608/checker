@@ -1,8 +1,8 @@
 # Setup scan: final bars of 2026-10-23
-Run 2026-10-23 20:11 ET | scanned 2,522 | passed price $5-275 and 20-day avg vol 1M+: 1,500 | setups 2 (calls 0, puts 2) | SPY 3M +3.4%
-Universe: Nasdaq stock screener, 6,978 US listings, 2,434 passed the loose pre-filters. Sectors: GICS sectors unavailable (ValueError: only 0 rows); Nasdaq sector labels used
+Run 2026-10-23 20:22 ET | scanned 2,522 | passed price $5-275 and 20-day avg vol 1M+: 1,500 | setups 2 (calls 0, puts 2) | SPY 3M +3.4%
+Universe: Nasdaq stock screener, 6,978 US listings, 2,434 passed the loose pre-filters. Sectors: GICS sectors (iShares Russell 3000) for 1,853, Nasdaq labels for the other 581
 
-**WARNING: 2,452 of 2,522 names have no final bar for 2026-10-23 (data-feed lag). They are left out of the ranking, so this report is incomplete. Use the next run's file.**
+**WARNING: 2,449 of 2,522 names have no final bar for 2026-10-23 (data-feed lag). They are left out of the ranking, so this report is incomplete. Use the next run's file.**
 
 Free daily data (Yahoo). Verify every finalist on live broker data before scoring.
 
@@ -49,5 +49,5 @@ Contract timing for an entry on 2026-10-26: fresh breakout/breakdown -> 2026-12-
 
 ## Data notes
 - No data: 0
-- No final bar for 2026-10-23 (left out of the ranking): 2452 (A, AA, AADX, AAL, AAMI, AAOI, AAON, AAP, AAT, AAUC, ABBV, ABCB, ABCL, ABG, ABM, ABNB, ABSI, ABT, ABTC, ABVX, ...)
+- No final bar for 2026-10-23 (left out of the ranking): 2449 (A, AA, AADX, AAL, AAMI, AAOI, AAON, AAP, AAT, AAUC, ABBV, ABCB, ABCL, ABG, ABM, ABNB, ABSI, ABT, ABTC, ABVX, ...)
 - Too little history: 14 (AAC (only 40 bars), ACCV (only 13 bars), ADIG (only 60 bars), AMRO (only 6 bars), ASBH (only 27 bars), CGCF (only 48 bars), DAVI (only 1 bars), FTRA (only 64 bars), IAM (only 6 bars), JMKE (only 60 bars), REF (only 60 bars), SCTX (only 63 bars), VYLR (only 16 bars), XIII (only 25 bars))
