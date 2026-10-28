@@ -31,7 +31,7 @@ GitHub runs scheduled jobs late when it is busy (delays of hours have happened),
 
 ## Reading the report
 
-Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings date, estimated, falls inside the option's life). The trading session adds the Fed point and raises the catalyst to 2 once the date is confirmed, so Max = Score + 1 + (2 - catalyst). Calls need 7 and puts 10.
+Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings date, estimated, falls inside the option's life). The trading session adds the Fed point and raises the catalyst to 2 once the date is confirmed, so Max = Score + 1 + (2 - catalyst). Calls need 7 and puts 10; a call whose contract only fits the High cap needs 10 as well.
 
 Sections: calls and puts ready to verify; calls and puts with earnings within 2 weeks (the pre-event rule, with the provisional test result); names with merger filings (read the filing: a stock agreed to be acquired is an automatic reject); setups whose contract passes but whose Max can't reach the bar; setups with no passing contract, grouped by reason; puts near the 52-week low (shadow log only); and the watch list.
 
