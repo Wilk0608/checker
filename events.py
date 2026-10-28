@@ -15,6 +15,7 @@ import datetime as dt
 import json
 import math
 import time
+import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from zoneinfo import ZoneInfo
@@ -29,15 +30,21 @@ DEAL_FORMS = {"425", "SC 14D9", "SC TO-T", "SC TO-C", "DEFM14A", "PREM14A", "DEF
 TIME_LABEL = {"time-pre-market": "BMO", "time-after-hours": "AMC", "time-not-supplied": "time n/a"}
 
 
-def _get_json(url, timeout=30, tries=2):
+def _get_json(url, timeout=30, tries=3):
+    """GET + JSON with retries; a 429 (rate limit) waits 15/30 s, a 403/404 is not retried."""
     last = None
     for i in range(tries):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=NASDAQ_H), timeout=timeout) as r:
                 return json.loads(r.read().decode("utf-8", errors="replace"))
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code in (403, 404):
+                raise
+            time.sleep(15.0 * (i + 1) if e.code == 429 else 2.0 * (i + 1))
         except Exception as e:
             last = e
-            time.sleep(1.5 * (i + 1))
+            time.sleep(2.0 * (i + 1))
     raise last
 
 

@@ -27,7 +27,7 @@ import pandas as pd
 import events as E
 import options as O
 import universe as U
-from setups import analyze, capped_rr, contract_plan, last_completed_session, HOLIDAYS, MIN_PRICE, MAX_PRICE
+from setups import analyze, capped_rr, contract_plan, last_completed_session, time_stop, HOLIDAYS, MIN_PRICE, MAX_PRICE
 
 ET = ZoneInfo("America/New_York")
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -199,19 +199,21 @@ def plan_expirations(asof):
     return entry, short, (es, tsl, hl)
 
 
-def evaluate_row(x, meta, contracts, S, caps, entry, short, long_, regular, r):
-    """Pick and check the contract for one setup row; re-score reward-to-risk with the higher of IV and HV20."""
+def evaluate_row(x, meta, contracts, S, caps, entry, regular, r):
+    """Pick and check the contract for one setup row; re-score reward-to-risk with the higher of IV and HV20 over the
+    chosen contract's own time stop. Expirations come from what this chain lists (quarterly cycles skip months)."""
     fresh = any(s.startswith(("Breakout", "Breakdown")) for s in x["setups"])
     hv = (x["r"].get("hv20") or 0) / 100 or None
-    ch = O.choose(contracts, x["dir"], fresh, (short[0] if short else None, long_[0]), S, caps, hv, entry, regular, r)
+    short_e, long_e = O.monthly_targets(contracts, entry, HOLIDAYS)
+    ch = O.choose(contracts, x["dir"], fresh, (short_e, long_e), S, caps, hv, entry, regular, r)
     x["opt"] = dict(status=ch["status"], notes=ch["notes"], cap=ch["cap"], contract=ch["contract"], S=round(S, 2),
                     quotes=meta.get("source", "Cboe"), regular=bool(regular),
                     quote_time=meta["ts"].astimezone(O.ET).strftime("%m-%d %H:%M ET") if meta.get("ts") else "n/a")
     c = ch["contract"]
     if not c:
         return x
-    use_short = short is not None and abs((c["exp"] - short[0]).days) <= 3
-    _, ts, h = short if use_short else long_
+    ts = time_stop(c["exp"], entry)
+    h = (ts - entry).days
     lv = x["r"][f"levels_{x['dir']}"]
     rr, rr_pts, cap_px = capped_rr(lv, max(c.get("iv") or 0, hv or 0), h)
     x.update(rr=rr, rr_pts=rr_pts, cap=cap_px, known=x["trend"] + x["rs"] + rr_pts, exp=c["exp"], ts=ts,
@@ -240,7 +242,7 @@ def latest_price(raw):
     return float(c.iloc[-1]) if len(c) else None
 
 
-def run_option_screen(rows, raw_bars, asof, now, plan, workers=6):
+def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
     """Network part of the option screen: Cboe chains (Nasdaq for stale files during market hours), the earnings
     calendar, provisional pre-event tests and merger filings. Fills x['opt'], x['earn'], x['pre'], x['deal']."""
     t0 = time.time()
@@ -250,22 +252,22 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=6):
     SCREEN.update(caps=caps, plan_updated=plan.get("updated", "n/a"), entry=entry)
     tickers = sorted({x["r"]["tk"] for x in rows})
     chains, errs = O.fetch_all(tickers, workers=workers)
-    keep_to = long_[0] + dt.timedelta(days=7)
+    keep_to = entry + dt.timedelta(days=130)          # covers the first monthly 60+ days out on quarterly cycles
     chains = {t: (m, [c for c in cs if c["exp"] <= keep_to]) for t, (m, cs) in chains.items()}
     run_regular = O.regular_hours(now.astimezone(dt.timezone.utc), HOLIDAYS)
     etfs = set(load_universe().get("g10_etfs", []))
     refreshed, ref_fail = [], []
+    now_utc = now.astimezone(dt.timezone.utc)
     for t, (meta, contracts) in chains.items():
-        if run_regular and not O.regular_hours(meta.get("ts"), HOLIDAYS):
+        age_h = (now_utc - meta["ts"]).total_seconds() / 3600 if meta.get("ts") else 999
+        if (run_regular and not O.regular_hours(meta.get("ts"), HOLIDAYS)) or age_h > 20:
             S = latest_price(raw_bars.get(t)) or meta.get("price")
             try:
                 n = 0
-                for planned in {e for e in (short[0] if short else None, long_[0]) if e}:
-                    exp = O.listed_expiration(contracts, planned, "C") or O.listed_expiration(contracts, planned, "P")
-                    if exp:
-                        n += O.refresh_from_nasdaq(t, contracts, exp, S, r, now, etf=t in etfs)
+                for exp in {e for e in O.monthly_targets(contracts, entry, HOLIDAYS) if e}:
+                    n += O.refresh_from_nasdaq(t, contracts, exp, S, r, now, etf=t in etfs)
                 if n:
-                    meta.update(refreshed=True, source="Nasdaq (Cboe file from " +
+                    meta.update(refreshed=True, refreshed_regular=run_regular, source="Nasdaq (Cboe file from " +
                                 (meta["ts"].astimezone(O.ET).strftime("%m-%d %H:%M") if meta.get("ts") else "n/a") + ")",
                                 price=S)
                     refreshed.append(t)
@@ -280,10 +282,9 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=6):
             x["opt"] = dict(status="no-chain", notes=[f"no option chain ({errs.get(t, 'n/a')})"], contract=None)
             continue
         meta, contracts = chains[t]
-        regular = bool(meta.get("refreshed")) or O.regular_hours(meta.get("ts"), HOLIDAYS)
-        S = meta.get("price") if (regular and not meta.get("refreshed")) else (meta.get("price") or latest_price(raw_bars.get(t)))
-        S = S or x["r"]["close"]
-        evaluate_row(x, meta, contracts, S, caps, entry, short, long_, regular, r)
+        regular = bool(meta.get("refreshed_regular")) if meta.get("refreshed") else O.regular_hours(meta.get("ts"), HOLIDAYS)
+        S = meta.get("price") or latest_price(raw_bars.get(t)) or x["r"]["close"]
+        evaluate_row(x, meta, contracts, S, caps, entry, regular, r)
     ok = [x for x in rows if (x.get("opt") or {}).get("contract")]
     # earnings calendar: from a few days before entry (recent reports) to the latest chosen expiration
     cal, cal_days, cal_failed, horizon = {}, 0, [], None
@@ -331,7 +332,8 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=6):
                   newest=max(ts).astimezone(O.ET).strftime("%m-%d %H:%M ET") if ts else "n/a",
                   cal_days=cal_days, cal_failed=[d.isoformat() for d in cal_failed],
                   cal_horizon=horizon.isoformat() if horizon else None, pre_tests=len(pre), pre_failed=pre_fail,
-                  deal_checked=len({x["r"]["tk"] for x in ok}), deal_failed=deal_failed, secs=round(time.time() - t0))
+                  deal_checked=len({x["r"]["tk"] for x in ok}), deal_failed=deal_failed, secs=round(time.time() - t0),
+                  cboe_429=O.STATS["cboe_429"])
     return rows
 
 
@@ -476,7 +478,8 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
                                               + (f" ({why})" if why and lab not in ("no option chain",) else ""))
         L += [f"## No contract passes the option rules: {len(failed)} of {len(rows) - len(near)} setups"]
         for lab in sorted(groups, key=lambda k: -len(groups[k])):
-            L += [f"- {lab} ({len(groups[lab])}): " + ", ".join(groups[lab])]
+            g = groups[lab]
+            L += [f"- {lab} ({len(g)}): " + ", ".join(g[:60]) + (f", +{len(g) - 60} more in latest.json" if len(g) > 60 else "")]
         L += [""]
     L += [f"## Puts within 5% of the 52-week low (shadow log only): {len(near)}",
           "- " + (", ".join(x["r"]["tk"] + ("" if not screened else (" (" + (
@@ -502,7 +505,7 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
         ce = SCREEN.get("chain_errors") or {}
         L += [f"- Option chains: {SCREEN['chains']} read from Cboe" + (f", {len(ce)} missing ({', '.join(sorted(ce)[:15])}"
               f"{', ...' if len(ce) > 15 else ''})" if ce else "") + (f"; Nasdaq re-read failed for {len(SCREEN['refresh_failed'])}"
-              f" ({', '.join(SCREEN['refresh_failed'][:15])})" if SCREEN.get("refresh_failed") else "") + f"; option step took {SCREEN['secs']}s",
+              f" ({', '.join(SCREEN['refresh_failed'][:15])})" if SCREEN.get("refresh_failed") else "") + f"; Cboe rate-limit retries {SCREEN.get('cboe_429', 0)}; option step took {SCREEN['secs']}s",
               f"- Earnings calendar (Nasdaq): {SCREEN['cal_days']} days read"
               + (f", {len(SCREEN['cal_failed'])} failed" if SCREEN.get("cal_failed") else "")
               + (f"; listings run through {SCREEN['cal_horizon']}, so later reports show as 'none found'" if SCREEN.get("cal_horizon") else "")
@@ -699,6 +702,21 @@ def option_selftest(res, rows, miss, etf3, last, now):
     # 8) a planned Friday that is a holiday maps to the listed Thursday
     hol = [dict(x, exp=dt.date(2027, 3, 25)) for x in ch[:4]]
     assert O.listed_expiration(hol, dt.date(2027, 3, 26), "C") == dt.date(2027, 3, 25)
+    # 8b) expirations come from the chain: monthlies only, quarterly cycles skip months, holiday Thursdays count
+    assert O.is_monthly(dt.date(2027, 6, 17), HOLIDAYS) and not O.is_monthly(dt.date(2027, 6, 17))   # Juneteenth Friday
+    assert O.is_monthly(dt.date(2026, 12, 18)) and not O.is_monthly(dt.date(2026, 12, 11))
+    q = synth_chain("QTR", 50.0, [dt.date(2026, 11, 20), dt.date(2026, 12, 18), dt.date(2027, 2, 19)], today)
+    assert O.monthly_targets(q, today) == (dt.date(2026, 12, 18), dt.date(2027, 2, 19)), O.monthly_targets(q, today)
+    got = O.choose(q, "call", False, O.monthly_targets(q, today), 50.0, caps, 0.30, today, True)
+    assert got["status"] == "ok" and got["contract"]["exp"] == dt.date(2027, 2, 19), got
+    assert time_stop(dt.date(2027, 2, 19), today) == dt.date(2027, 1, 29) and time_stop(short, today) == dt.date(2026, 12, 8)
+    # 8c) failure notes say why: strike gaps show the nearest deltas; one-sided quotes are named as such
+    gap = synth_chain("GAP", 50.0, [short], today, mults=(0.80, 1.20))
+    got = O.choose(gap, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    assert got["status"] == "fail" and got["notes"][0].startswith("no strike at 0.50-0.70 delta (nearest 40C"), got
+    dead = [dict(x, bid=0.0) for x in ch]
+    got = O.choose(dead, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    assert got["status"] == "fail" and got["notes"][0] == "no two-sided quotes at Dec 18", got
     # 9) Cboe parsing: adjusted roots dropped, timestamp in UTC; regular-hours test
     js = {"timestamp": "2026-10-28 17:28:50", "data": {"current_price": 13.415, "options": [
         {"option": "ACI270115C00013000", "bid": 1.15, "ask": 1.25, "iv": 0.3634, "open_interest": 1811, "delta": 0.6324},
@@ -710,6 +728,24 @@ def option_selftest(res, rows, miss, etf3, last, now):
     nq = {"data": {"table": {"rows": [{"strike": "14.00", "c_Bid": "0.45", "c_Ask": "0.55", "c_Openinterest": "165",
                                         "p_Bid": "0.95", "p_Ask": "1.20", "p_Openinterest": "193"}]}}}
     assert O.parse_nasdaq_chain(nq, short) == {("C", 14.0): (0.45, 0.55, 165), ("P", 14.0): (0.95, 1.2, 193)}
+    # 9b) Nasdaq re-read of a stale expiration: quoted strikes take Nasdaq's quotes with IV/delta rebuilt; the rest
+    #     keep Cboe's quotes, flagged stale, so their spreads count as provisional
+    fresh_chain = [dict(x) for x in synth_chain("REF", 50.0, [short], today) if x["cp"] == "C"]
+    k1 = sorted({x["strike"] for x in fresh_chain}, key=lambda v: abs(v - 47.0))[0]
+    saved = O._get_json
+    O._get_json = lambda url, headers, **kw: {"data": {"table": {"rows": [
+        {"strike": f"{k1:.2f}", "c_Bid": "4.00", "c_Ask": "4.20", "c_Openinterest": "900", "p_Bid": "--", "p_Ask": "--"}]}}}
+    try:
+        n = O.refresh_from_nasdaq("REF", fresh_chain, short, 50.0, 0.04, dt.datetime(2026, 10, 29, 11, 0, tzinfo=ET))
+    finally:
+        O._get_json = saved
+    upd = [x for x in fresh_chain if x["strike"] == k1][0]
+    others = [x for x in fresh_chain if x["strike"] != k1]
+    assert n == 1 and upd["src"] == "Nasdaq" and (upd["bid"], upd["ask"], upd["oi"]) == (4.0, 4.2, 900), upd
+    assert abs(O.bs_price(50.0, k1, 50 / 365, upd["iv"], 0.04, False) - 4.1) < 0.01 and 0.5 < upd["delta"] < 0.9
+    assert all(x["src"] == "Cboe (stale)" for x in others)
+    stale = O.assess(dict(others[0], bid=1.0, ask=1.5), 50.0, 1680, 0.3, today, True)
+    assert stale["spread_provisional"] and stale["passes"] == (stale["oi_ok"] and stale["fits"]), stale
     # 10) events: calendar rows, earnings context (pre-event, exit date for after-close vs before-open), recent report
     cal = E.parse_calendar({"data": {"rows": [{"symbol": "PLTR", "time": "time-after-hours"}, {"symbol": "MOG.A", "time": "x"}]}},
                            dt.date(2026, 11, 2))
@@ -755,7 +791,7 @@ def option_selftest(res, rows, miss, etf3, last, now):
     for x in rows2:
         S0 = x["r"]["close"]
         chain = synth_chain(x["r"]["tk"], S0, [e for e in (sh[0] if sh else None, lg[0]) if e], entry, iv=0.30)
-        evaluate_row(x, dict(meta, price=S0), chain, S0, caps, entry, sh, lg, True, 0.04)
+        evaluate_row(x, dict(meta, price=S0), chain, S0, caps, entry, True, 0.04)
         apply_events(x, (entry + dt.timedelta(days=30), "AMC") if x["r"]["tk"] == "UPP" else None, entry)
     up = [x for x in rows2 if x["r"]["tk"] == "UPP"][0]
     k = up["opt"]["contract"]

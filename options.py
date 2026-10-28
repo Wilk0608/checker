@@ -22,7 +22,9 @@ Rules applied (from <contract_selection>, <idea_generation> and <risk_rules>):
 import datetime as dt
 import json
 import math
+import threading
 import time
+import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from zoneinfo import ZoneInfo
@@ -149,27 +151,65 @@ def regular_hours(ts, holidays=()):
     return e.weekday() < 5 and e.date() not in holidays and dt.time(9, 30) <= e.time() <= dt.time(16, 0)
 
 
-def _get_json(url, headers, timeout=30, tries=2):
+class Pacer:
+    """Spaces requests to one host across threads; slows down further whenever the host answers 429."""
+    def __init__(self, interval):
+        self.interval, self.next, self.lock = interval, 0.0, threading.Lock()
+
+    def wait(self):
+        with self.lock:
+            now = time.monotonic()
+            at = max(now, self.next)
+            self.next = at + self.interval
+        time.sleep(max(0.0, at - now))
+
+    def slow_down(self):
+        with self.lock:
+            self.interval = min(self.interval * 1.5, 3.0)
+            self.next = time.monotonic() + 20.0
+
+
+CBOE_PACE = Pacer(0.4)
+STATS = {"cboe_429": 0}
+
+
+def _get_json(url, headers, timeout=30, tries=4, pacer=None):
+    """GET + JSON with retries. A 429 (rate limit) waits for Retry-After or 20/40/60 s and slows the pacer;
+    a 403/404 means the file doesn't exist and is not retried."""
     last = None
     for i in range(tries):
+        if pacer:
+            pacer.wait()
         try:
             req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return json.loads(r.read().decode("utf-8", errors="replace"))
-        except Exception as e:                      # one retry, then give up on this name
+        except urllib.error.HTTPError as e:
             last = e
-            time.sleep(1.5 * (i + 1))
+            if e.code in (403, 404):
+                raise
+            if e.code == 429:
+                STATS["cboe_429"] += 1
+                if pacer:
+                    pacer.slow_down()
+                ra = e.headers.get("Retry-After") if e.headers else None
+                time.sleep(float(ra) if ra and ra.isdigit() else 20.0 * (i + 1))
+                continue
+            time.sleep(2.0 * (i + 1))
+        except Exception as e:
+            last = e
+            time.sleep(2.0 * (i + 1))
     raise last
 
 
 def fetch_cboe(ticker):
     sym = ticker.upper().replace("-", ".")
     try:
-        js = _get_json(CBOE_URL.format(sym), {"User-Agent": UA})
+        js = _get_json(CBOE_URL.format(sym), {"User-Agent": UA}, pacer=CBOE_PACE)
     except Exception:
         if sym == ticker.upper():
             raise
-        js = _get_json(CBOE_URL.format(ticker.upper().replace("-", "")), {"User-Agent": UA})
+        js = _get_json(CBOE_URL.format(ticker.upper().replace("-", "")), {"User-Agent": UA}, pacer=CBOE_PACE)
     return parse_cboe(js, ticker)
 
 
@@ -202,16 +242,38 @@ def refresh_from_nasdaq(ticker, contracts, exp, S, r, now, etf=False):
         if c["exp"] != exp or (c["cp"], c["strike"]) not in q:
             continue
         bid, ask, oi = q[(c["cp"], c["strike"])]
+        if not (bid > 0 and ask > 0 and ask >= bid):
+            c["src"] = "Cboe (stale)"                   # Nasdaq has no two-sided quote: keep Cboe's, flagged
+            continue
         c.update(bid=bid, ask=ask, oi=oi or c["oi"], src="Nasdaq")
-        mid = (bid + ask) / 2
-        iv = implied_vol(mid, S, c["strike"], T, r, c["cp"] == "P") if bid > 0 and ask > 0 else None
+        iv = implied_vol((bid + ask) / 2, S, c["strike"], T, r, c["cp"] == "P")
         if iv:
             c.update(iv=iv, delta=bs_delta(S, c["strike"], T, iv, r, c["cp"] == "P"))
         n += 1
+    for c in contracts:                                 # strikes Nasdaq didn't list at all
+        if c["exp"] == exp and c.get("src") not in ("Nasdaq", "Cboe (stale)"):
+            c["src"] = "Cboe (stale)"
     return n
 
 
 # ----------------------------------------------------------------------------------------------------- selection
+def is_monthly(d, holidays=()):
+    """A standard monthly expiration: the third Friday, or the Thursday before it when that Friday is a holiday."""
+    if d.weekday() == 4 and 15 <= d.day <= 21:
+        return True
+    nxt = d + dt.timedelta(days=1)
+    return d.weekday() == 3 and 15 <= nxt.day <= 21 and nxt in holidays
+
+
+def monthly_targets(contracts, entry, holidays=()):
+    """(short, long) from the expirations this chain actually lists: the monthly 45-59 days after entry and the first
+    monthly 60+ days out. Stocks on quarterly cycles skip months, so these can differ from the market-wide calendar."""
+    exps = sorted({c["exp"] for c in contracts if is_monthly(c["exp"], holidays)})
+    short = next((e for e in exps if 45 <= (e - entry).days <= 59), None)
+    long_ = next((e for e in exps if (e - entry).days >= 60), None)
+    return short, long_
+
+
 def listed_expiration(contracts, planned, cp):
     """The listed expiration for a planned monthly (third Friday), allowing for holiday Thursdays."""
     exps = sorted({c["exp"] for c in contracts if c["cp"] == cp and planned - dt.timedelta(days=3) <= c["exp"] <= planned + dt.timedelta(days=1)})
@@ -221,6 +283,7 @@ def listed_expiration(contracts, planned, cp):
 def assess(c, S, cap, hv, today, regular, r=0.04):
     """All plan checks for one contract. hv = HV20 as a fraction. Returns a dict (never raises on bad quotes)."""
     put = c["cp"] == "P"
+    regular = regular and c.get("src") != "Cboe (stale)"   # a stale quote's spread is provisional
     bid, ask = c["bid"], c["ask"]
     out = dict(osi=c["osi"], exp=c["exp"], cp=c["cp"], strike=c["strike"], bid=bid, ask=ask, oi=c["oi"],
                src=c.get("src", "Cboe"), dte=(c["exp"] - today).days)
@@ -277,8 +340,12 @@ def _pick(rows, prefer_high_delta=False):
 
 def choose_at(contracts, exp, cp, S, cap, hv, today, regular, r):
     """Best contract at one expiration, with the delta-band fallback. Returns (choice or None, notes, cost_blocked)."""
-    at = [assess(c, S, cap, hv, today, regular, r) for c in contracts if c["exp"] == exp and c["cp"] == cp]
-    at = [a for a in at if a.get("quote") and a.get("delta") is not None]
+    every = [assess(c, S, cap, hv, today, regular, r) for c in contracts if c["exp"] == exp and c["cp"] == cp]
+    at = [a for a in every if a.get("quote") and a.get("delta") is not None]
+    if not at:
+        quoted = [a for a in every if a.get("quote")]
+        why = (f"no two-sided quotes at {exp:%b %d}" if not quoted else f"no IV/delta for the {exp:%b %d} quotes")
+        return None, [why], False
     A = [a for a in at if BAND_A[0] <= abs(a["delta"]) <= BAND_A[1]]
     B = [a for a in at if BAND_B[0] <= abs(a["delta"]) < BAND_A[0]]
     passA = [a for a in A if a["passes"]]
@@ -292,7 +359,10 @@ def choose_at(contracts, exp, cp, S, cap, hv, today, regular, r):
     # nothing passes: report the most informative failure
     pool = A or B
     if not pool:
-        return None, ["no strike at 0.50-0.70 delta"], False
+        near = sorted(at, key=lambda a: min(abs(abs(a["delta"]) - 0.5), abs(abs(a["delta"]) - 0.7)))[:2]
+        near = sorted(near, key=lambda a: a["strike"])
+        return None, ["no strike at 0.50-0.70 delta (nearest " + ", ".join(
+            f"{a['strike']:g}{a['cp']} {a['delta']:+.2f}" for a in near) + f", {exp:%b %d})"], False
     best = sorted(pool, key=lambda a: (len(a["reasons"]), -a["liquidity"], a["spread_pct"]))[0]
     cost_blocked = any(a["oi_ok"] and (a["spread_ok"] or not regular) and not a["fits"] for a in pool)
     note = f"{'0.60-0.70' if A else '0.50-0.60'} delta: " + ", ".join(best["reasons"] or ["no pass"])
@@ -311,6 +381,8 @@ def choose(contracts, direction, fresh, plan_exps, S, caps, hv, today, regular, 
     if not fresh and short:
         order.append(("45-59", short))                  # allowed only when no 60+ contract fits the cap
     notes, tried = [], []
+    if long_ is None and not (fresh and short):
+        notes.append("no listed monthly 60+ days out")
     for label, planned in order:
         if planned is None:
             continue
@@ -338,7 +410,7 @@ def choose(contracts, direction, fresh, plan_exps, S, caps, hv, today, regular, 
     return dict(status="fail", contract=None, notes=notes or ["no contract"], cap=cap)
 
 
-def fetch_all(tickers, workers=6):
+def fetch_all(tickers, workers=2):
     """Cboe chains for many tickers in parallel. Returns {ticker: (meta, contracts)} and {ticker: error}."""
     got, err = {}, {}
 
