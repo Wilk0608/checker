@@ -1,0 +1,30 @@
+name: scan-test-temporary
+on:
+  push:
+    branches: [option-screen]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python scanner.py --test
+      - run: python scanner.py 2>&1 | tail -300
+      - name: Push the results to the scan-test branch
+        run: |
+          git config user.name "setup-scanner"
+          git config user.email "actions@users.noreply.github.com"
+          mkdir -p /tmp/out && cp results/latest.md results/latest.json /tmp/out/
+          git checkout --orphan scan-test-out
+          git rm -rf -q .
+          mkdir -p out && cp /tmp/out/* out/
+          git add out
+          git commit -qm "scan test $(date -u +%H:%M)"
+          git push -f origin scan-test-out:scan-test

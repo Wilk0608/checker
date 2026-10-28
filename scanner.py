@@ -2,7 +2,9 @@
 
 Universe: every US-listed common stock that passes loose price/volume pre-filters (see universe.py), plus the curated
 list in universe.txt (which also holds the ETFs). Downloads ~13 months of daily bars, applies setups.py to FINAL bars
-only, ranks the confirmed setups by the score points the scan can compute, and writes:
+only, prices the contract the plan would buy for every setup (options.py: Cboe delayed quotes, Nasdaq for stale files),
+adds earnings dates, a provisional pre-event test and merger-filing flags (events.py), ranks what is tradeable by the
+score points the scan can compute, and writes:
   results/latest.md      short report for the trading session (top setups only)
   results/latest.json    every scanned name, with levels for each setup
   results/<date>.md      dated copy of the report
@@ -13,15 +15,19 @@ Run: python scanner.py            (normally from GitHub Actions after the close)
 """
 import datetime as dt
 import json
+import math
 import os
 import sys
 import time
+from collections import Counter
 from zoneinfo import ZoneInfo
 
 import pandas as pd
 
+import events as E
+import options as O
 import universe as U
-from setups import analyze, capped_rr, contract_plan, last_completed_session, MIN_PRICE, MAX_PRICE
+from setups import analyze, capped_rr, contract_plan, last_completed_session, HOLIDAYS, MIN_PRICE, MAX_PRICE
 
 ET = ZoneInfo("America/New_York")
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -31,8 +37,11 @@ GROUP_ETF = {"g01_semis_hw": "XLK", "g02_software_fintech": "XLK", "g03_ai_infra
              "g07_discretionary_travel_media": "XLY", "g08_energy_materials": "XLE",
              "g09_industrials_utilities_reits": "XLI", "g10_etfs": "SPY"}
 SECTOR_ETFS = ["SPY", "XLK", "XLV", "XLF", "XLE", "XLI", "XLY", "XLP", "XLU", "XLRE", "XLB", "XLC"]
-TOP_N, WATCH_N = 15, 20
-OTHER_POINTS = 7          # most the session can add: Fed bias 1 + catalyst 2 + pricing 2 + liquidity 2
+TOP_N, WATCH_N = 20, 20
+OTHER_POINTS = 7          # most the session can add before the option check: Fed 1 + catalyst 2 + pricing 2 + liquidity 2
+NEEDS = {"call": 7, "put": 10}
+PLAN_FILE = os.path.join(ROOT, "plan.json")
+SCREEN = {}               # summary of the option screen for the report
 
 
 def load_universe():
@@ -173,29 +182,224 @@ def rank_rows(results, asof):
     return rows
 
 
+def load_plan():
+    """Account figures the caps come from (balance, base, phase, T-bill rate). Updated by the trading session."""
+    try:
+        return json.load(open(PLAN_FILE))
+    except Exception:
+        return None
+
+
+def plan_expirations(asof):
+    """(entry, short, long): short = (expiration, time stop, days to time stop) for the monthly 45-59 days out, or None
+    when no monthly falls in that window; long = the same for the first monthly 60+ days out."""
+    entry, ef, tf, hf = contract_plan(asof, True)
+    _, es, tsl, hl = contract_plan(asof, False)
+    short = (ef, tf, hf) if 45 <= (ef - entry).days <= 59 else None
+    return entry, short, (es, tsl, hl)
+
+
+def evaluate_row(x, meta, contracts, S, caps, entry, short, long_, regular, r):
+    """Pick and check the contract for one setup row; re-score reward-to-risk with the higher of IV and HV20."""
+    fresh = any(s.startswith(("Breakout", "Breakdown")) for s in x["setups"])
+    hv = (x["r"].get("hv20") or 0) / 100 or None
+    ch = O.choose(contracts, x["dir"], fresh, (short[0] if short else None, long_[0]), S, caps, hv, entry, regular, r)
+    x["opt"] = dict(status=ch["status"], notes=ch["notes"], cap=ch["cap"], contract=ch["contract"], S=round(S, 2),
+                    quotes=meta.get("source", "Cboe"), regular=bool(regular),
+                    quote_time=meta["ts"].astimezone(O.ET).strftime("%m-%d %H:%M ET") if meta.get("ts") else "n/a")
+    c = ch["contract"]
+    if not c:
+        return x
+    use_short = short is not None and abs((c["exp"] - short[0]).days) <= 3
+    _, ts, h = short if use_short else long_
+    lv = x["r"][f"levels_{x['dir']}"]
+    rr, rr_pts, cap_px = capped_rr(lv, max(c.get("iv") or 0, hv or 0), h)
+    x.update(rr=rr, rr_pts=rr_pts, cap=cap_px, known=x["trend"] + x["rs"] + rr_pts, exp=c["exp"], ts=ts,
+             liq=c["liquidity"], pricing=c["pricing"], cat=0)
+    x["score"] = x["known"] + x["liq"] + x["pricing"]
+    x["max"] = x["score"] + 1 + 2
+    return x
+
+
+def apply_events(x, cal_entry, entry):
+    """Earnings context, the estimated catalyst point and the final Score / Max for a row with a contract."""
+    c = (x.get("opt") or {}).get("contract")
+    if not c:
+        return
+    ctx = E.earnings_context(cal_entry[0], cal_entry[1], entry, c["exp"], x["ts"], HOLIDAYS) if cal_entry else {}
+    x["earn"] = ctx
+    x["cat"] = 1 if ctx.get("inside_life") else 0
+    x["score"] = x["known"] + x["liq"] + x["pricing"] + x["cat"]
+    x["max"] = x["score"] + 1 + (2 - x["cat"])
+
+
+def latest_price(raw):
+    if raw is None or not len(raw):
+        return None
+    c = raw["Close"].dropna()
+    return float(c.iloc[-1]) if len(c) else None
+
+
+def run_option_screen(rows, raw_bars, asof, now, plan, workers=6):
+    """Network part of the option screen: Cboe chains (Nasdaq for stale files during market hours), the earnings
+    calendar, provisional pre-event tests and merger filings. Fills x['opt'], x['earn'], x['pre'], x['deal']."""
+    t0 = time.time()
+    caps = O.plan_caps(plan)
+    r = float(plan.get("rate", 0.04))
+    entry, short, long_ = plan_expirations(asof)
+    SCREEN.update(caps=caps, plan_updated=plan.get("updated", "n/a"), entry=entry)
+    tickers = sorted({x["r"]["tk"] for x in rows})
+    chains, errs = O.fetch_all(tickers, workers=workers)
+    keep_to = long_[0] + dt.timedelta(days=7)
+    chains = {t: (m, [c for c in cs if c["exp"] <= keep_to]) for t, (m, cs) in chains.items()}
+    run_regular = O.regular_hours(now.astimezone(dt.timezone.utc), HOLIDAYS)
+    etfs = set(load_universe().get("g10_etfs", []))
+    refreshed, ref_fail = [], []
+    for t, (meta, contracts) in chains.items():
+        if run_regular and not O.regular_hours(meta.get("ts"), HOLIDAYS):
+            S = latest_price(raw_bars.get(t)) or meta.get("price")
+            try:
+                n = 0
+                for planned in {e for e in (short[0] if short else None, long_[0]) if e}:
+                    exp = O.listed_expiration(contracts, planned, "C") or O.listed_expiration(contracts, planned, "P")
+                    if exp:
+                        n += O.refresh_from_nasdaq(t, contracts, exp, S, r, now, etf=t in etfs)
+                if n:
+                    meta.update(refreshed=True, source="Nasdaq (Cboe file from " +
+                                (meta["ts"].astimezone(O.ET).strftime("%m-%d %H:%M") if meta.get("ts") else "n/a") + ")",
+                                price=S)
+                    refreshed.append(t)
+                else:
+                    ref_fail.append(t)
+            except Exception:
+                ref_fail.append(t)
+            time.sleep(0.3)
+    for x in rows:
+        t = x["r"]["tk"]
+        if t not in chains:
+            x["opt"] = dict(status="no-chain", notes=[f"no option chain ({errs.get(t, 'n/a')})"], contract=None)
+            continue
+        meta, contracts = chains[t]
+        regular = bool(meta.get("refreshed")) or O.regular_hours(meta.get("ts"), HOLIDAYS)
+        S = meta.get("price") if (regular and not meta.get("refreshed")) else (meta.get("price") or latest_price(raw_bars.get(t)))
+        S = S or x["r"]["close"]
+        evaluate_row(x, meta, contracts, S, caps, entry, short, long_, regular, r)
+    ok = [x for x in rows if (x.get("opt") or {}).get("contract")]
+    # earnings calendar: from a few days before entry (recent reports) to the latest chosen expiration
+    cal, cal_days, cal_failed, horizon = {}, 0, [], None
+    if ok:
+        last_exp = max(x["opt"]["contract"]["exp"] for x in ok)
+        try:
+            cal, cal_days, cal_failed, horizon = E.earnings_calendar(entry - dt.timedelta(days=5), last_exp, HOLIDAYS)
+        except Exception as e:
+            SCREEN["earn_error"] = f"{type(e).__name__}: {e}"
+    for x in ok:
+        apply_events(x, cal.get(x["r"]["tk"]), entry)
+    # provisional pre-event tests (Yahoo report dates + the scan's daily bars + the Cboe straddle)
+    pre = [x for x in ok if (x.get("earn") or {}).get("pre_event") and x["max"] >= NEEDS[x["dir"]]]
+    hist, pre_fail = {}, []
+    for t in sorted({x["r"]["tk"] for x in pre}):
+        try:
+            hist[t] = E.past_reports_yahoo(t, now)
+        except Exception as e:
+            pre_fail.append(t)
+        time.sleep(0.4)
+    for x in pre:
+        t = x["r"]["tk"]
+        if t not in hist:
+            x["pre"] = dict(result="n/a", why="Yahoo report dates unavailable")
+            continue
+        raw = raw_bars.get(t)
+        fin = raw.dropna(subset=["Close"]) if raw is not None else None
+        dates = [d.date() for d in fin.index] if fin is not None else []
+        closes = [float(v) for v in fin["Close"]] if fin is not None else []
+        meta, contracts = chains[t]
+        e = x["earn"]
+        x["pre"] = E.pre_event_test(contracts, x["opt"]["S"], dates, closes, dt.date.fromisoformat(e["date"]), e["time"],
+                                    hist[t], now.date(), HOLIDAYS)
+    # merger filings for every ticker with a tradeable contract
+    flags, deal_failed = {}, []
+    if ok:
+        flags, deal_failed = E.deal_flags([x["r"]["tk"] for x in ok], now.date())
+    for x in ok:
+        if x["r"]["tk"] in flags:
+            x["deal"] = flags[x["r"]["tk"]]
+    ts = [m["ts"] for m, _ in chains.values() if m.get("ts")]
+    SCREEN.update(chains=len(chains), chain_errors=errs, refreshed=refreshed, refresh_failed=ref_fail, run_regular=run_regular,
+                  regular_files=sum(1 for m, _ in chains.values() if O.regular_hours(m.get("ts"), HOLIDAYS)),
+                  oldest=min(ts).astimezone(O.ET).strftime("%m-%d %H:%M ET") if ts else "n/a",
+                  newest=max(ts).astimezone(O.ET).strftime("%m-%d %H:%M ET") if ts else "n/a",
+                  cal_days=cal_days, cal_failed=[d.isoformat() for d in cal_failed],
+                  cal_horizon=horizon.isoformat() if horizon else None, pre_tests=len(pre), pre_failed=pre_fail,
+                  deal_checked=len({x["r"]["tk"] for x in ok}), deal_failed=deal_failed, secs=round(time.time() - t0))
+    return rows
+
+
 def _setup_label(s):
     base = s.split(" (")[0]
     return base + (", holding" if s.endswith("holding") else "")
 
 
-def report(results, rows, missing, etf3, expected, now_et, src):
+def _fail_reason(x):
+    o = x.get("opt") or {}
+    if o.get("status") == "no-chain":
+        return "no option chain", ""
+    note = "; ".join(o.get("notes") or [])
+    for key, label in (("no strike at 0.50-0.70", "no strike at 0.50-0.70 delta"), ("no listed", "no listed monthly"),
+                       ("cost", "over the cap"), ("spread", "spread over the limit"), ("OI", "open interest under 500"),
+                       ("no two-sided", "no two-sided quote")):
+        if key in note:
+            return label, note.split(": ", 1)[-1]
+    return "other", note
+
+
+def _opt_cells(x):
+    o, c = x["opt"], x["opt"]["contract"]
+    lots = int(o["cap"] // c["cost"]) if c.get("cost") else 0
+    spr = f"{c['spread_pct']:.1%}" + ("*" if c.get("spread_provisional") else "")
+    e = x.get("earn") or {}
+    if not e:
+        earn = "none found"
+    else:
+        d = dt.date.fromisoformat(e["date"])
+        earn = f"{d:%b %d} {e['time']}" + (" (reported)" if e.get("recent") else f" ({e['days']}d)")
+    notes = [n for n in o.get("notes") or []]
+    if e.get("exit_by"):
+        notes.append(f"earnings exit {dt.date.fromisoformat(e['exit_by']):%b %d}")
+    if e.get("recent"):
+        notes.append("just reported: post-event rule")
+    p = x.get("pre")
+    if p:
+        notes.append(f"pre-event {p['result']} (provisional): {p['why']}")
+    if str(o.get("quotes", "")).startswith("Nasdaq"):
+        notes.append("quotes: " + o["quotes"])
+    if x.get("deal"):
+        notes.append("MERGER FILINGS: " + x["deal"])
+    ivhv = "n/a" if c.get("ivhv") is None else f"{c['ivhv']:.2f}"
+    besd = "n/a" if c.get("be_sd") is None else f"{c['be_sd']:.2f}"
+    return [f"{c['exp']:%b %d} {c['strike']:g}{c['cp']}", f"{c['delta']:+.2f}", f"{c['bid']:.2f}/{c['ask']:.2f} ({spr})",
+            f"{c['oi']:,}", f"${c['cost']:,.0f} x{lots}", ivhv, besd,
+            f"{x['score']} ({x['trend']}+{x['rs']}+{x['rr_pts']}+{x['liq']}+{x['pricing']}+{x['cat']})", str(x["max"]), earn,
+            "; ".join(notes)]
+
+
+def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
     ok = [r for r in results if "err" not in r]
     live = [r for r in ok if not r["filtered"]]
     asof = expected.isoformat()
-    dates = [asof]
     stale = sorted(r["tk"] for r in ok if r["date"] != asof)
-    key = lambda x: (-x["known"], -x["r"]["vol_ratio"])
-    calls = sorted([x for x in rows if x["dir"] == "call"], key=key)
-    puts = sorted([x for x in rows if x["dir"] == "put" and not x["near_low"]], key=key)
+    calls = [x for x in rows if x["dir"] == "call"]
+    puts = [x for x in rows if x["dir"] == "put" and not x["near_low"]]
     near = sorted([x for x in rows if x["near_low"]], key=lambda x: x["r"]["tk"])
-    top_c, top_p = calls[:TOP_N], [x for x in puts if x["known"] >= 3][:TOP_N]
-    rest_c, rest_p = calls[TOP_N:], [x for x in puts if x not in top_p]
     spy3 = etf3.get("SPY")
-    exp_f = contract_plan(dt.date.fromisoformat(asof), True) if dates else None
-    exp_s = contract_plan(dt.date.fromisoformat(asof), False) if dates else None
+    exp_f = contract_plan(dt.date.fromisoformat(asof), True)
+    exp_s = contract_plan(dt.date.fromisoformat(asof), False)
+    has = lambda x: bool((x.get("opt") or {}).get("contract"))
+    tradeable = [x for x in rows if has(x) and not x["near_low"]]
     L = [f"# Setup scan: final bars of {asof}",
          f"Run {now_et:%Y-%m-%d %H:%M} ET | scanned {len(ok):,} | passed price ${MIN_PRICE:.0f}-{MAX_PRICE:.0f} and 20-day avg vol 1M+: "
-         f"{len(live):,} | setups {len(rows)} (calls {len(calls)}, puts {len(puts) + len(near)}) | SPY 3M "
+         f"{len(live):,} | setups {len(rows)} (calls {len(calls)}, puts {len(puts) + len(near)})"
+         + (f" | contract passes the option rules: {len(tradeable)}" if screened else "") + " | SPY 3M "
          + (f"{spy3:+.1f}%" if spy3 is not None else "n/a"),
          f"Universe: {src}", ""]
     if len(stale) > 0.1 * max(len(ok), 1):
@@ -204,33 +408,80 @@ def report(results, rows, missing, etf3, expected, now_et, src):
     if BLANK_FILLED.get("filled"):
         L += [f"Note: Yahoo published {BLANK_FILLED['need']:,} latest bars with a blank close; {BLANK_FILLED['filled']:,} were filled "
               "from the last regular-hours 60-minute bar (can differ from the official close by a few cents). "
-              "The morning re-run uses official closes.", ""]
-    L += ["Free daily data (Yahoo). Verify every finalist on live broker data before scoring.", "",
-         "**How to read it.** Known = trend (0-2) + relative strength, i.e. beats SPY and its sector ETF over 3 months for "
-         "calls, trails both for puts (0-1) + reward-to-risk (0-2). The session adds Fed bias (0-1), catalyst (0-2), "
-         "pricing (0-2) and liquidity (0-2): up to 7 more, so Max = Known + 7. Calls need 7+ to trade and puts need 10+, "
-         "so only puts with Known 3+ are listed. Stop = thesis invalidation close. Target = nearest swing level or prior "
-         "52-week extreme, capped at the 1-sigma move to the time stop using HV20 (the session uses the higher of IV and HV20).",
-         ""]
-    if exp_f:
-        L += [f"Contract timing for an entry on {exp_f[0]}: fresh breakout/breakdown -> {exp_f[1]} expiration, time stop "
-              f"{exp_f[2]}; pullback/failed rally -> {exp_s[1]}, time stop {exp_s[2]}.", ""]
-    hdr = ["| Ticker | Setup | Close | Stop | Target | R:R | Known (T+RS+RR) | Max | Sector | 3M % | vs SPY | vs sector | ATR % | HV20 | Vol x |",
-           "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+              "The market-hours re-run uses official closes.", ""]
+    if screened:
+        c = SCREEN["caps"]
+        L += [f"Option check: caps from plan.json (updated {SCREEN.get('plan_updated')}): balance ${c['balance']:,.2f}, {c['phase']}, "
+              f"{c['mode']} -> Medium ${c['medium']:,.0f}, High ${c['high']:,.0f}, puts ${c['put']:,.0f}. Quotes: Cboe delayed "
+              f"(files {SCREEN['oldest']} to {SCREEN['newest']}; {SCREEN['regular_files']} of {SCREEN['chains']} taken in regular hours"
+              + (f"; {len(SCREEN['refreshed'])} stale files re-read from Nasdaq" if SCREEN.get("refreshed") else "") + "). "
+              "A * on a spread means closing or after-hours quotes: the plan judges spreads on regular-hours quotes only, so "
+              "that spread is provisional and didn't fail the contract.", ""]
+        if c["mode"] == "Hard stop":
+            L += ["**HARD STOP: balance under 60% of the base. No new trades; this list is for the shadow log only.**", ""]
+    L += ["Free data (Yahoo bars, Cboe/Nasdaq quotes, Nasdaq calendars). Verify every finalist on live broker data before scoring.", "",
+          "**How to read it.** Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the "
+          "1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) of the contract shown + catalyst "
+          "(1 when an earnings date, estimated, falls inside the option's life). The session adds the Fed point and raises "
+          "the catalyst to 2 for a confirmed date: Max = Score + 1 + (2 - catalyst). Calls need 7, puts 10; only setups whose "
+          "contract passes the plan's option rules and whose Max reaches the bar are in the tables. Contract = what the plan "
+          "would buy (expiration by setup type, delta 0.60-0.70 or 0.50-0.60 as allowed, OI 500+, spread 8% or less, cost "
+          "under the cap); Cost = one contract at mid + a quarter of the spread + $1, x lots under the cap. BE sigma = "
+          "breakeven distance in 1-sigma moves to expiration.", "",
+          f"Contract timing for an entry on {exp_f[0]}: fresh breakout/breakdown -> {exp_f[1]} expiration, time stop "
+          f"{exp_f[2]}; pullback/failed rally -> {exp_s[1]}, time stop {exp_s[2]}.", ""]
+    hdr = ["| Ticker | Setup | Close | Stop | Target | R:R | Contract | Delta | Bid/Ask (spread) | OI | Cost | IV/HV | BE sigma | "
+           "Score (T+RS+RR+L+P+C) | Max | Earnings | Notes |", "|" + "---|" * 17]
 
     def line(x):
         r, lv = x["r"], x["r"][f"levels_{x['dir']}"]
         tgt = lv["target"] if lv["target"] is not None else "cap"
-        return (f"| {r['tk']} | {'; '.join(_setup_label(s) for s in x['setups'])} | {r['close']} | {lv['invalidation']} | {tgt} | "
-                f"{x['rr']} | {x['known']} ({x['trend']}+{x['rs']}+{x['rr_pts']}) | {x['max']} | {r['sector_etf']} | {r['ret3m']} | "
-                f"{r.get('rs_spy', '')} | {r.get('rs_sector', '')} | {r['atr_pct']} | {r['hv20']} | {r['vol_ratio']} |")
-    L += [f"## Top calls ({len(top_c)} of {len(calls)})"] + hdr + ([line(x) for x in top_c] or ["| none |" + " |" * 14])
-    L += ["", f"## Top puts with Known 3+ ({len(top_p)} of {len(puts)}; puts trade at 10+ only)"] + hdr
-    L += [line(x) for x in top_p] or ["| none |" + " |" * 14]
-    L += ["", "## Other setups (Known in brackets)",
-          "- Calls: " + (", ".join(f"{x['r']['tk']} ({x['known']})" for x in rest_c) or "none"),
-          "- Puts: " + (", ".join(f"{x['r']['tk']} ({x['known']})" for x in rest_p) or "none"),
-          "- Puts within 5% of the 52-week low (shadow log only): " + (", ".join(x["r"]["tk"] for x in near) or "none")]
+        return ("| " + " | ".join([r["tk"], "; ".join(_setup_label(s) for s in x["setups"]), str(r["close"]),
+                                   str(lv["invalidation"]), str(tgt), str(x["rr"])] + _opt_cells(x)) + " |")
+    empty = ["| none |" + " |" * 16]
+    if not screened:
+        L += ["**Option check not run** (no plan.json or it failed): setups below are ranked by Known only.", ""]
+        key = lambda x: (-x["known"], -x["r"]["vol_ratio"])
+        for d, lab in (("call", "calls"), ("put", "puts")):
+            xs = sorted([x for x in rows if x["dir"] == d and not x["near_low"]], key=key)
+            L += [f"## Top {lab} by Known", ", ".join(f"{x['r']['tk']} ({x['known']})" for x in xs[:40]) or "none", ""]
+    else:
+        key = lambda x: (-x["score"], -x["known"], -x["liq"], -x["r"]["vol_ratio"])
+        reach = [x for x in tradeable if x["max"] >= NEEDS[x["dir"]]]
+        deal = sorted([x for x in reach if x.get("deal")], key=key)
+        clean = [x for x in reach if not x.get("deal")]
+        for d, lab in (("call", "Calls"), ("put", "Puts")):
+            mine = [x for x in clean if x["dir"] == d]
+            ready = sorted([x for x in mine if not (x.get("earn") or {}).get("pre_event")], key=key)
+            pre = sorted([x for x in mine if (x.get("earn") or {}).get("pre_event")], key=key)
+            bar = NEEDS[d]
+            L += [f"## {lab} ready to verify (Max {bar}+, no earnings within 2 weeks): {len(ready)}"] + hdr
+            L += [line(x) for x in ready[:TOP_N]] or empty
+            if len(ready) > TOP_N:
+                L += [f"More: " + ", ".join(f"{x['r']['tk']} ({x['score']}/{x['max']})" for x in ready[TOP_N:])]
+            L += ["", f"## {lab} with earnings within 2 weeks (pre-event rule; the test result is provisional): {len(pre)}"] + hdr
+            L += [line(x) for x in pre[:TOP_N]] or empty
+            L += [""]
+        L += [f"## Merger filings in the last 120 days: {len(deal)} (read the filing first; a stock agreed to be acquired "
+              "is an automatic reject)"] + hdr + ([line(x) for x in deal] or empty) + [""]
+        low = sorted([x for x in tradeable if x["max"] < NEEDS[x["dir"]]], key=key)
+        L += [f"## Contract passes but the score can't reach the bar: {len(low)}",
+              "- Calls (Score/Max): " + (", ".join(f"{x['r']['tk']} ({x['score']}/{x['max']})" for x in low if x["dir"] == "call") or "none"),
+              "- Puts (Score/Max): " + (", ".join(f"{x['r']['tk']} ({x['score']}/{x['max']})" for x in low if x["dir"] == "put") or "none"), ""]
+        failed = [x for x in rows if not has(x) and not x["near_low"]]
+        groups = {}
+        for x in failed:
+            lab, why = _fail_reason(x)
+            groups.setdefault(lab, []).append(f"{x['r']['tk']} {'C' if x['dir'] == 'call' else 'P'}"
+                                              + (f" ({why})" if why and lab not in ("no option chain",) else ""))
+        L += [f"## No contract passes the option rules: {len(failed)} of {len(rows) - len(near)} setups"]
+        for lab in sorted(groups, key=lambda k: -len(groups[k])):
+            L += [f"- {lab} ({len(groups[lab])}): " + ", ".join(groups[lab])]
+        L += [""]
+    L += [f"## Puts within 5% of the 52-week low (shadow log only): {len(near)}",
+          "- " + (", ".join(x["r"]["tk"] + ("" if not screened else (" (" + (
+              (lambda c: f"{c['exp']:%b %d} {c['strike']:g}P {c['bid']:.2f}/{c['ask']:.2f}, OI {c['oi']:,}")(x["opt"]["contract"])
+              if has(x) else _fail_reason(x)[0]) + ")")) for x in near) or "none")]
     watch = []
     for r in live:
         if r["setups"]:
@@ -247,6 +498,19 @@ def report(results, rows, missing, etf3, expected, now_et, src):
           f"- No final bar for {asof} (left out of the ranking): {len(stale)}"
           + (f" ({', '.join(stale[:20])}{', ...' if len(stale) > 20 else ''})" if stale else ""),
           f"- Too little history: {len(errs)}" + (f" ({', '.join(errs[:20])})" if errs else "")]
+    if screened:
+        ce = SCREEN.get("chain_errors") or {}
+        L += [f"- Option chains: {SCREEN['chains']} read from Cboe" + (f", {len(ce)} missing ({', '.join(sorted(ce)[:15])}"
+              f"{', ...' if len(ce) > 15 else ''})" if ce else "") + (f"; Nasdaq re-read failed for {len(SCREEN['refresh_failed'])}"
+              f" ({', '.join(SCREEN['refresh_failed'][:15])})" if SCREEN.get("refresh_failed") else "") + f"; option step took {SCREEN['secs']}s",
+              f"- Earnings calendar (Nasdaq): {SCREEN['cal_days']} days read"
+              + (f", {len(SCREEN['cal_failed'])} failed" if SCREEN.get("cal_failed") else "")
+              + (f"; listings run through {SCREEN['cal_horizon']}, so later reports show as 'none found'" if SCREEN.get("cal_horizon") else "")
+              + (f"; ERROR {SCREEN['earn_error']}" if SCREEN.get("earn_error") else ""),
+              f"- Pre-event tests: {SCREEN['pre_tests']} run" + (f"; Yahoo dates unavailable for {', '.join(SCREEN['pre_failed'])}"
+                                                                  if SCREEN.get("pre_failed") else ""),
+              f"- Merger filings: {SCREEN['deal_checked']} names checked" + (f"; failed for {', '.join(SCREEN['deal_failed'][:15])}"
+                                                                           if SCREEN.get("deal_failed") else "")]
     return "\n".join(L) + "\n"
 
 
@@ -347,16 +611,167 @@ def selftest():
     assert up_row["known"] == R["UPP"]["trend_call"] + up_row["rs"] + pts and up_row["max"] == up_row["known"] + 7
     assert [x for x in rows if x["r"]["tk"] == "DNN"][0]["near_low"]
     md = report(res, rows, miss, etf3, last, now, "self-test")
-    assert "## Top calls" in md and "UPP" in md and "shadow log only): DNN" in md and "ranking): 1 (OLD)" in md, md
+    assert "Option check not run" in md and "UPP" in md and "shadow log only): 1" in md and "ranking): 1 (OLD)" in md, md
     assert "WARNING" in report(res, rows, miss, etf3, dt.date(2026, 10, 23), now, "self-test")   # most names stale
-    print(md)
     print("levels ok:", lz["target"], lz["invalidation"], lz["rr_before_cap"])
+    option_selftest(res, rows, miss, etf3, last, now)
     print("self-test passed")
 
 
-if __name__ == "__main__":
-    if "--test" in sys.argv:
-        selftest(); sys.exit()
+def synth_chain(tk, S, exps, today, iv=0.35, spread_pct=0.03, oi=2000, r=0.04, mults=None):
+    """Synthetic option chain priced with Black-Scholes, for the offline self-test."""
+    out = []
+    for e in exps:
+        T = (e - today).days / 365
+        for m in mults or (0.80, 0.84, 0.88, 0.90, 0.92, 0.94, 0.96, 0.98, 1.0, 1.02, 1.04, 1.06, 1.08, 1.10, 1.12, 1.16, 1.20):
+            k = round(S * m, 1)
+            for cp in "CP":
+                put = cp == "P"
+                fair = O.bs_price(S, k, T, iv, r, put)
+                half = max(fair * spread_pct / 2, 0.005)
+                out.append(dict(osi=f"{tk}{e:%y%m%d}{cp}{int(round(k * 1000)):08d}", exp=e, cp=cp, strike=k,
+                                bid=round(max(fair - half, 0.01), 2), ask=round(fair + half, 2), oi=oi, iv=iv,
+                                delta=O.bs_delta(S, k, T, iv, r, put), volume=10, theo=fair))
+    return out
+
+
+def option_selftest(res, rows, miss, etf3, last, now):
+    import copy
+    # caps: Proving High 15% / Medium 9%, x0.75 under the base, x0.5 under 70%, hard stop under 60%; puts half of High
+    c = O.plan_caps({"balance": 24889.50, "base": 25000, "phase": "Proving"})
+    assert c["mode"] == "Cut to 75%" and (c["medium"], c["high"], c["put"]) == (1680.04, 2800.07, 1400.03), c
+    assert O.plan_caps({"balance": 30000, "base": 25000})["medium"] == 2700.0
+    assert O.plan_caps({"balance": 16000, "base": 25000})["mode"] == "Cut to 50%"
+    assert O.plan_caps({"balance": 14000, "base": 25000})["mode"] == "Hard stop"
+    cp_ = O.plan_caps({"balance": 30000, "base": 25000, "phase": "Pressing since 2027-03-01"})
+    assert (cp_["high"], cp_["medium"], cp_["put"]) == (7500.0, 4500.0, 3750.0), cp_
+    # Black-Scholes helpers: put-call parity, IV inversion, delta range
+    S, K, T, v, r = 100.0, 95.0, 0.2, 0.4, 0.04
+    cpx, ppx = O.bs_price(S, K, T, v, r, False), O.bs_price(S, K, T, v, r, True)
+    assert abs(cpx - ppx - (S - K * math.exp(-r * T))) < 1e-9
+    assert abs(O.implied_vol(cpx, S, K, T, r, False) - v) < 1e-6 and O.implied_vol(0.001, S, K, T, r, False) is None
+    assert 0.5 < O.bs_delta(S, K, T, v, r, False) < 1 and -0.5 < O.bs_delta(S, K, T, v, r, True) < 0
+    today = dt.date(2026, 10, 29)
+    short, long_ = dt.date(2026, 12, 18), dt.date(2027, 1, 15)
+    caps = O.plan_caps({"balance": 24889.50, "base": 25000})
+    ch = synth_chain("AAA", 50.0, [short, long_], today)
+    # 1) fresh call: 0.60-0.70 delta at the 45-59 day monthly, tight and affordable
+    got = O.choose(ch, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    k = got["contract"]
+    assert got["status"] == "ok" and k["exp"] == short and 0.60 <= k["delta"] <= 0.70 and k["liquidity"] == 2 and k["fits"], got
+    assert abs(k["lim"] - (k["mid"] + (k["ask"] - k["bid"]) / 4)) < 1e-3 and abs(k["cost"] - (k["lim"] * 100 + 1)) < 0.06
+    # 2) the 0.60-0.70 strikes fail the spread rule -> 0.50-0.60 allowed
+    wide = copy.deepcopy(ch)
+    for x in wide:
+        if x["exp"] == short and x["cp"] == "C" and 0.60 <= x["delta"] <= 0.70:
+            m = (x["bid"] + x["ask"]) / 2
+            x["bid"], x["ask"] = round(m * 0.9, 2), round(m * 1.1, 2)
+    got = O.choose(wide, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    assert got["status"] == "ok" and 0.50 <= got["contract"]["delta"] < 0.60 and "0.50-0.60" in got["notes"][0], got
+    # ... but the same wide quotes outside regular hours are provisional: the 0.60-0.70 strike still passes
+    got = O.choose(wide, "call", True, (short, long_), 50.0, caps, 0.30, today, False)
+    k = got["contract"]
+    assert got["status"] == "ok" and 0.60 <= k["delta"] <= 0.70 and k["spread_provisional"] and not k["spread_ok"], got
+    assert abs(k["lim"] - (k["mid"] + 0.08 * k["mid"] / 4)) < 1e-3           # cost uses the spread capped at 8%
+    # 3) the 0.60-0.70 strikes fail open interest only -> no fallback, and the note says why
+    thin = copy.deepcopy(ch)
+    for x in thin:
+        if x["exp"] == short and x["cp"] == "C" and 0.60 <= x["delta"] <= 0.70:
+            x["oi"] = 120
+    got = O.choose(thin, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    assert got["status"] == "fail" and "open interest only" in got["notes"][0], got
+    # 4) too big for the Medium cap but inside the High cap -> ok-high-only
+    big = synth_chain("BIG", 340.0, [short, long_], today, iv=0.35)
+    got = O.choose(big, "call", True, (short, long_), 340.0, caps, 0.30, today, True)
+    assert got["status"] == "ok-high-only" and got["contract"]["cost"] <= caps["high"] and got["cap"] == caps["high"], got
+    # 5) puts mirror, at the put cap (half of High)
+    got = O.choose(ch, "put", True, (short, long_), 50.0, caps, 0.30, today, True)
+    assert got["status"] == "ok" and -0.70 <= got["contract"]["delta"] <= -0.60 and got["cap"] == caps["put"], got
+    # 6) options under $1: the spread limit is $0.10
+    lo = synth_chain("LOW", 6.0, [short], today, iv=0.30, mults=(0.86, 0.88, 0.90, 0.92, 0.95, 1.0))
+    a = O.assess(dict(lo[0], bid=0.60, ask=0.69), 6.0, 1680, 0.3, today, True)
+    b = O.assess(dict(lo[0], bid=0.60, ask=0.75), 6.0, 1680, 0.3, today, True)
+    assert a["spread_ok"] and not b["spread_ok"] and "spread $0.15" in b["reasons"], (a, b)
+    # 7) pullback: the 60+ day monthly is over the cap, the 45-59 day one fits -> allowed, with a note
+    mid_ = synth_chain("MID", 310.0, [short, long_], today, iv=0.30)
+    got = O.choose(mid_, "call", False, (short, long_), 310.0, caps, 0.30, today, True)
+    assert got["status"] == "ok" and got["contract"]["exp"] == short and any("60+ over the cap" in n for n in got["notes"]), got
+    # 8) a planned Friday that is a holiday maps to the listed Thursday
+    hol = [dict(x, exp=dt.date(2027, 3, 25)) for x in ch[:4]]
+    assert O.listed_expiration(hol, dt.date(2027, 3, 26), "C") == dt.date(2027, 3, 25)
+    # 9) Cboe parsing: adjusted roots dropped, timestamp in UTC; regular-hours test
+    js = {"timestamp": "2026-10-28 17:28:50", "data": {"current_price": 13.415, "options": [
+        {"option": "ACI270115C00013000", "bid": 1.15, "ask": 1.25, "iv": 0.3634, "open_interest": 1811, "delta": 0.6324},
+        {"option": "ACI1270115C00013000", "bid": 0.5, "ask": 0.6, "iv": 0.4, "open_interest": 10, "delta": 0.5}]}}
+    meta, cs = O.parse_cboe(js, "ACI")
+    assert len(cs) == 1 and cs[0]["strike"] == 13.0 and cs[0]["exp"] == dt.date(2027, 1, 15) and cs[0]["oi"] == 1811
+    assert O.regular_hours(meta["ts"]) and not O.regular_hours(dt.datetime(2026, 10, 28, 1, 43, tzinfo=dt.timezone.utc))
+    assert not O.regular_hours(dt.datetime(2026, 10, 31, 15, 0, tzinfo=dt.timezone.utc))                 # Saturday
+    nq = {"data": {"table": {"rows": [{"strike": "14.00", "c_Bid": "0.45", "c_Ask": "0.55", "c_Openinterest": "165",
+                                        "p_Bid": "0.95", "p_Ask": "1.20", "p_Openinterest": "193"}]}}}
+    assert O.parse_nasdaq_chain(nq, short) == {("C", 14.0): (0.45, 0.55, 165), ("P", 14.0): (0.95, 1.2, 193)}
+    # 10) events: calendar rows, earnings context (pre-event, exit date for after-close vs before-open), recent report
+    cal = E.parse_calendar({"data": {"rows": [{"symbol": "PLTR", "time": "time-after-hours"}, {"symbol": "MOG.A", "time": "x"}]}},
+                           dt.date(2026, 11, 2))
+    assert cal == {"PLTR": (dt.date(2026, 11, 2), "AMC"), "MOG-A": (dt.date(2026, 11, 2), "time n/a")}
+    e = E.earnings_context(dt.date(2026, 11, 2), "AMC", today, short, dt.date(2026, 12, 8))
+    assert e["pre_event"] and e["inside_life"] and e["exit_by"] == "2026-11-02" and e["days"] == 4, e
+    e = E.earnings_context(dt.date(2026, 11, 5), "BMO", today, short, dt.date(2026, 12, 8))
+    assert e["exit_by"] == "2026-11-04" and e["pre_event"], e
+    e = E.earnings_context(dt.date(2026, 12, 2), "time n/a", today, short, dt.date(2026, 12, 8))
+    assert not e["pre_event"] and e["inside_life"] and e["exit_by"] == "2026-12-01", e
+    assert E.earnings_context(dt.date(2026, 10, 27), "AMC", today, short, dt.date(2026, 12, 8))["recent"]
+    # 11) reactions: after the close -> that close to the next; before the open -> prior close to that close
+    ds = [dt.date(2026, 8, 3), dt.date(2026, 8, 4), dt.date(2026, 8, 5)]
+    cl = [100.0, 110.0, 99.0]
+    assert abs(E.reaction(ds, cl, dt.datetime(2026, 8, 3, 16, 0, tzinfo=E.ET)) - 0.10) < 1e-9
+    assert abs(E.reaction(ds, cl, dt.datetime(2026, 8, 5, 7, 0, tzinfo=E.ET)) - (99 / 110 - 1)) < 1e-9
+    assert E.reaction(ds, cl, dt.datetime(2026, 8, 4, 12, 0, tzinfo=E.ET)) is None
+    # 12) provisional pre-event test: straddle on the first expiration after the report vs average reaction
+    wk = dt.date(2026, 11, 6)
+    chp = synth_chain("PRE", 100.0, [wk, short], today, iv=0.60)
+    im = E.implied_move(chp, 100.0, dt.date(2026, 11, 3))
+    assert im and im["exp"] == "2026-11-06" and im["strike"] == 100.0 and 0.03 < im["move"] < 0.12, im
+    bd = [dt.date(2025, 11, 4) + dt.timedelta(days=i) for i in range(400)]
+    bc = [100.0 + (15.0 if i % 90 == 1 else 0.0) for i in range(400)]                     # 15% jumps after each report
+    reps = [dt.datetime.combine(bd[i], dt.time(16, 0), tzinfo=E.ET) for i in (0, 90, 180, 270)]
+    t_ = E.pre_event_test(chp, 100.0, bd, bc, dt.date(2026, 11, 2), "AMC", reps, dt.date(2026, 10, 28))
+    assert t_["n"] >= 3 and t_["result"] == "PASS", t_
+    t2 = E.pre_event_test(chp, 100.0, bd, bc, dt.date(2026, 11, 2), "AMC", reps[:2], dt.date(2026, 10, 28))
+    assert t2["result"] == "FAIL" and "only" in t2["why"], t2
+    # 13) merger filings: deal forms only, within 120 days
+    fl = {"data": {"rows": [{"formType": "425", "filed": "10/27/2026"}, {"formType": "8-K", "filed": "10/27/2026"},
+                            {"formType": "SC 14D9/A", "filed": "09/01/2026"}, {"formType": "425", "filed": "01/02/2026"}]}}
+    assert E.parse_filings(fl, dt.date(2026, 6, 30)) == [("425", dt.date(2026, 10, 27)), ("SC 14D9", dt.date(2026, 9, 1))]
+    # 14) end to end offline: synthetic chains through evaluate_row / apply_events, then the report
+    rows2 = copy.deepcopy(rows)
+    entry, sh, lg = plan_expirations(last)
+    R = {r["tk"]: r for r in res}
+    SCREEN.clear()
+    SCREEN.update(caps=caps, plan_updated="2026-10-28", oldest="10-28 13:28 ET", newest="10-28 13:55 ET", regular_files=2, chains=2,
+                  refreshed=[], chain_errors={}, refresh_failed=[], secs=0, cal_days=40, cal_failed=[], cal_horizon="2026-12-16",
+                  pre_tests=0, pre_failed=[], deal_checked=2, deal_failed=[])
+    meta = dict(ts=dt.datetime(2026, 10, 28, 17, 28, tzinfo=dt.timezone.utc), price=None, source="Cboe")
+    for x in rows2:
+        S0 = x["r"]["close"]
+        chain = synth_chain(x["r"]["tk"], S0, [e for e in (sh[0] if sh else None, lg[0]) if e], entry, iv=0.30)
+        evaluate_row(x, dict(meta, price=S0), chain, S0, caps, entry, sh, lg, True, 0.04)
+        apply_events(x, (entry + dt.timedelta(days=30), "AMC") if x["r"]["tk"] == "UPP" else None, entry)
+    up = [x for x in rows2 if x["r"]["tk"] == "UPP"][0]
+    k = up["opt"]["contract"]
+    assert up["opt"]["status"] == "ok" and 0.60 <= k["delta"] <= 0.70 and up["cat"] == 1 and up["earn"]["inside_life"], up["opt"]
+    assert up["score"] == up["known"] + up["liq"] + up["pricing"] + 1 and up["max"] == up["score"] + 2
+    md = report(res, rows2, miss, etf3, last, now, "self-test", screened=True)
+    for frag in ("## Calls ready to verify", "## Puts with earnings within 2 weeks", "## Merger filings", "Cut to 75%",
+                 "## No contract passes the option rules", "shadow log only): 1", "(30d)"):
+        assert frag in md, (frag, md)
+    if up["max"] >= 7:
+        assert "| UPP |" in md, md
+    print(md)
+    print("option screen ok:", k["osi"], k["delta"], k["cost"], up["score"], up["max"])
+
+
+def run_scan():
     now = dt.datetime.now(ET)
     expected = last_completed_session(now)
     groups = load_universe()
@@ -372,6 +787,23 @@ if __name__ == "__main__":
         bars.update(download(late))
     results, missing, etf3, dates = run(bars, groups, stocks, now)
     rows = rank_rows(results, expected)
-    md = report(results, rows, missing, etf3, expected, now, src)
+    plan, screened = load_plan(), False
+    if plan and rows:
+        try:
+            run_option_screen(rows, bars, expected, now, plan)
+            screened = True
+        except Exception as e:                               # the setup list still ships, flagged as unscreened
+            import traceback
+            traceback.print_exc()
+            SCREEN["error"] = f"{type(e).__name__}: {e}"
+    md = report(results, rows, missing, etf3, expected, now, src, screened=screened)
+    if SCREEN.get("error"):
+        md = md.replace("**Option check not run**", f"**Option check failed ({SCREEN['error'][:150]})**")
     write(md, results, rows, expected.isoformat())
     print(md)
+
+
+if __name__ == "__main__":
+    if "--test" in sys.argv:
+        selftest(); sys.exit()
+    run_scan()
