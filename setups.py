@@ -74,6 +74,13 @@ def contract_plan(asof, fresh):
     return entry, exp, ts, (ts - entry).days
 
 
+def time_stop(exp, entry):
+    """Time stop for a contract bought on `entry`: 21 days before expiration when bought 60+ days out, 10 days when
+    bought 45-59 days out, moved to the trading day before a weekend or holiday."""
+    ts = exp - dt.timedelta(days=21 if (exp - entry).days >= 60 else 10)
+    return _trading_day_on_or_before(ts)
+
+
 def capped_rr(lv, hv, horizon_days):
     """Reward-to-risk after capping the target at the 1-sigma move to the time stop. The scan uses HV20 for sigma; the
     session must use the higher of IV and HV20, which can only widen the cap. Returns (rr, points, cap_price)."""

@@ -1,8 +1,8 @@
 name: daily-setup-scan
 on:
   schedule:
-    - cron: "30 21 * * 1-5"   # 21:30 UTC = 5:30 PM EDT / 4:30 PM EST, after every close
-    - cron: "30 10 * * 2-6"   # 10:30 UTC = 6:30 AM EDT / 5:30 AM EST: re-run on official closes before the next session
+    - cron: "17 21 * * 1-5"   # 21:17 UTC = 5:17 PM EDT / 4:17 PM EST, after every close (option spreads provisional)
+    - cron: "7 15 * * 1-5"    # 15:07 UTC = 11:07 AM EDT / 10:07 AM EST: re-run on official closes with regular-hours option quotes
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -12,7 +12,7 @@ concurrency:                  # one scan at a time: an overlapping run waits, so
 jobs:
   scan:
     runs-on: ubuntu-24.04     # pinned: ubuntu-latest is migrating to a new image, which could break the Python setup
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
