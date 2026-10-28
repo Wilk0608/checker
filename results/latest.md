@@ -1,79 +1,81 @@
-# Setup scan: final bars of 2026-10-26
-Run 2026-10-27 11:58 ET | scanned 2,414 | passed price $5-275 and 20-day avg vol 1M+: 1,499 | setups 316 (calls 134, puts 182) | SPY 3M +3.3%
+# Setup scan: final bars of 2026-10-27
+Run 2026-10-27 20:35 ET | scanned 2,414 | passed price $5-275 and 20-day avg vol 1M+: 1,496 | setups 291 (calls 138, puts 153) | SPY 3M +5.5%
 Universe: Nasdaq stock screener, 6,967 US listings, 2,324 passed the loose pre-filters. Sectors: GICS sectors (iShares Russell 3000) for 1,787, Nasdaq labels for the other 537
+
+Note: Yahoo published 2,364 latest bars with a blank close; 2,364 were filled from the last regular-hours 60-minute bar (can differ from the official close by a few cents). The morning re-run uses official closes.
 
 Free daily data (Yahoo). Verify every finalist on live broker data before scoring.
 
 **How to read it.** Known = trend (0-2) + relative strength, i.e. beats SPY and its sector ETF over 3 months for calls, trails both for puts (0-1) + reward-to-risk (0-2). The session adds Fed bias (0-1), catalyst (0-2), pricing (0-2) and liquidity (0-2): up to 7 more, so Max = Known + 7. Calls need 7+ to trade and puts need 10+, so only puts with Known 3+ are listed. Stop = thesis invalidation close. Target = nearest swing level or prior 52-week extreme, capped at the 1-sigma move to the time stop using HV20 (the session uses the higher of IV and HV20).
 
-Contract timing for an entry on 2026-10-27: fresh breakout/breakdown -> 2026-12-18 expiration, time stop 2026-12-08; pullback/failed rally -> 2027-01-15, time stop 2026-12-24.
+Contract timing for an entry on 2026-10-28: fresh breakout/breakdown -> 2026-12-18 expiration, time stop 2026-12-08; pullback/failed rally -> 2027-01-15, time stop 2026-12-24.
 
-## Top calls (15 of 134)
+## Top calls (15 of 138)
 | Ticker | Setup | Close | Stop | Target | R:R | Known (T+RS+RR) | Max | Sector | 3M % | vs SPY | vs sector | ATR % | HV20 | Vol x |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| RRC | Breakout 10-26 | 53.56 | 50.12 | cap | 3.26 | 5 (2+1+2) | 12 | XLE | 40.0 | 36.7 | 19.0 | 3.21 | 61.6 | 9.77 |
-| TENB | Breakout 10-26 | 48.21 | 43.46 | cap | 2.13 | 4 (2+1+1) | 11 | XLK | 53.7 | 50.4 | 44.8 | 4.93 | 62.0 | 1.71 |
-| GMAB | Breakout 10-26; Breakout 10-23, holding | 44.69 | 41.77 | cap | 2.9 | 4 (2+1+1) | 11 | XLV | 54.1 | 50.8 | 46.9 | 3.26 | 55.8 | 1.51 |
-| HAS | Breakout 10-21, holding; Breakout 10-20, holding | 117.96 | 111.58 | cap | 2.68 | 4 (2+1+1) | 11 | XLY | 22.4 | 19.1 | 20.8 | 2.7 | 42.7 | 1.19 |
-| SLN | Breakout 10-20, holding | 19.78 | 17.77 | cap | 9.95 | 4 (1+1+2) | 11 | XLV | 71.3 | 68.0 | 64.1 | 5.07 | 297.6 | 0.83 |
-| SGRY | Breakout 10-26; Breakout 10-22, holding | 23.25 | 21.02 | 23.44 | 0.09 | 3 (2+1+0) | 10 | XLV | 49.2 | 45.9 | 42.0 | 4.8 | 141.8 | 33.4 |
-| CART | Breakout 10-26; Breakout 10-23, holding | 60.88 | 55.81 | cap | 1.83 | 3 (2+1+0) | 10 | XLP | 33.5 | 30.2 | 32.5 | 4.16 | 45.0 | 8.38 |
-| RPD | Breakout 10-26; Breakout 10-23, holding | 17.93 | 15.84 | 19.34 | 0.67 | 3 (2+1+0) | 10 | XLK | 86.6 | 83.3 | 77.7 | 5.84 | 83.9 | 3.28 |
-| SSNC | Pullback | 82.01 | 79.95 | 82.15 | 0.07 | 3 (2+1+0) | 10 | XLI | 5.3 | 2.0 | 13.8 | 2.52 | 35.4 | 1.64 |
-| RNG | Breakout 10-26; Breakout 10-23, holding | 86.31 | 76.56 | 98.14 | 1.21 | 3 (2+1+0) | 10 | XLK | 51.6 | 48.3 | 42.7 | 5.65 | 52.8 | 1.61 |
-| RBRK | Breakout 10-26 | 133.4 | 120.41 | cap | 1.77 | 3 (2+1+0) | 10 | XLK | 86.7 | 83.4 | 77.8 | 4.87 | 50.8 | 1.52 |
-| CHKP | Breakout 10-23, holding; Breakout 10-22, holding; Breakout 10-21, holding | 159.63 | 149.6 | 166.31 | 0.67 | 3 (2+1+0) | 10 | XLK | 16.0 | 12.7 | 7.1 | 3.14 | 32.5 | 1.49 |
-| PEB | Breakout 10-21, holding | 21.04 | 19.69 | 21.26 | 0.16 | 3 (2+1+0) | 10 | XLRE | 8.6 | 5.3 | 15.6 | 3.2 | 26.8 | 1.39 |
-| ACI | Breakout 10-22, holding | 13.98 | 13.11 | 15.48 | 1.54 | 3 (2+1+0) | 10 | XLP | 20.7 | 17.4 | 19.7 | 3.11 | 28.1 | 1.37 |
-| CCI | Breakout 10-23, holding | 87.47 | 80.7 | 87.59 | 0.02 | 3 (2+1+0) | 10 | XLRE | 15.5 | 12.2 | 22.5 | 3.87 | 61.6 | 1.32 |
+| RRC | Breakout 10-27; Breakout 10-26, holding | 56.38 | 52.77 | cap | 3.16 | 5 (2+1+2) | 12 | XLE | 41.3 | 35.8 | 25.0 | 3.2 | 60.5 | 4.12 |
+| ACI | Breakout 10-22, holding | 13.7 | 13.03 | 15.48 | 2.04 | 4 (2+1+1) | 11 | XLP | 13.6 | 8.1 | 13.8 | 3.16 | 29.8 | 1.16 |
+| HLF | Pullback | 13.48 | 12.99 | 14.89 | 2.86 | 4 (2+1+1) | 11 | XLP | 7.8 | 2.3 | 8.0 | 3.66 | 36.0 | 1.08 |
+| CRM | Pullback | 240.87 | 232.26 | 261.82 | 2.43 | 4 (2+1+1) | 11 | XLK | 27.9 | 22.4 | 14.1 | 3.58 | 32.1 | 0.97 |
+| TENB | Breakout 10-26, holding | 48.62 | 43.93 | cap | 2.16 | 4 (2+1+1) | 11 | XLK | 54.4 | 48.9 | 40.6 | 4.82 | 62.1 | 0.89 |
+| CART | Breakout 10-26, holding; Breakout 10-23, holding | 60.06 | 55.06 | 62.0 | 0.39 | 3 (2+1+0) | 10 | XLP | 31.6 | 26.1 | 31.8 | 4.16 | 46.1 | 2.53 |
+| SGRY | Breakout 10-27; Breakout 10-26, holding; Breakout 10-22, holding | 23.35 | 21.25 | 23.44 | 0.04 | 3 (2+1+0) | 10 | XLV | 42.3 | 36.8 | 34.5 | 4.5 | 141.1 | 2.41 |
+| BUUU | Breakout 10-27; Breakout 10-23, holding | 6.58 | 5.01 | 6.9 | 0.2 | 3 (2+1+0) | 10 | XLY | 186.2 | 180.7 | 182.8 | 11.94 | 97.7 | 2.0 |
+| RPD | Breakout 10-26, holding; Breakout 10-23, holding | 17.59 | 15.53 | 19.34 | 0.85 | 3 (2+1+0) | 10 | XLK | 87.4 | 81.9 | 73.6 | 5.87 | 84.4 | 1.85 |
+| AEO | Breakout 10-27 | 19.44 | 18.09 | 20.5 | 0.79 | 3 (2+1+0) | 10 | XLY | 10.8 | 5.3 | 7.4 | 3.47 | 32.1 | 1.52 |
+| PK | Breakout 10-21, holding | 16.78 | 15.89 | 17.14 | 0.4 | 3 (2+1+0) | 10 | XLRE | 9.5 | 4.0 | 17.2 | 2.65 | 28.0 | 1.42 |
+| NOW | Breakout 10-22, holding | 154.81 | 142.92 | 175.0 | 1.62 | 3 (2+1+0) | 10 | XLK | 33.7 | 28.2 | 19.9 | 3.84 | 37.2 | 1.18 |
+| CHKP | Breakout 10-23, holding; Breakout 10-22, holding; Breakout 10-21, holding | 159.82 | 150.08 | 166.31 | 0.67 | 3 (2+1+0) | 10 | XLK | 14.4 | 8.9 | 0.6 | 3.05 | 30.9 | 1.16 |
+| STLN | Pullback | 6.59 | 6.2 | 6.67 | 0.21 | 3 (2+1+0) | 10 | XLV | 38.1 | 32.6 | 30.3 | 5.88 | 65.1 | 1.1 |
+| BIIB | Breakout 10-22, holding | 252.54 | 239.13 | 254.41 | 0.14 | 3 (2+1+0) | 10 | XLV | 20.7 | 15.2 | 12.9 | 2.65 | 30.3 | 1.08 |
 
-## Top puts with Known 3+ (15 of 146; puts trade at 10+ only)
+## Top puts with Known 3+ (15 of 122; puts trade at 10+ only)
 | Ticker | Setup | Close | Stop | Target | R:R | Known (T+RS+RR) | Max | Sector | 3M % | vs SPY | vs sector | ATR % | HV20 | Vol x |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| APAM | Failed rally | 33.34 | 34.4 | 30.86 | 2.34 | 4 (2+1+1) | 11 | XLF | -18.4 | -21.7 | -15.7 | 3.17 | 36.6 | 0.45 |
-| AMKR | Breakdown 10-26; Breakdown 10-22, holding | 36.81 | 42.29 | 29.76 | 1.29 | 3 (2+1+0) | 10 | XLK | -19.4 | -22.7 | -28.3 | 7.45 | 61.2 | 5.7 |
-| ORIC | Breakdown 10-26 | 8.95 | 11.09 | 7.97 | 0.46 | 3 (2+1+0) | 10 | XLV | -24.8 | -28.1 | -32.0 | 11.91 | 150.8 | 4.76 |
-| STNE | Breakdown 10-26 | 8.33 | 9.97 | cap | 2.46 | 3 (1+1+1) | 10 | XLF | -25.4 | -28.7 | -22.7 | 9.83 | 142.6 | 4.22 |
-| VALE | Breakdown 10-26 | 12.0 | 12.75 | 11.82 | 0.24 | 3 (2+1+0) | 10 | XLB | -18.4 | -21.7 | -16.6 | 3.13 | 30.1 | 2.79 |
-| SLM | Breakdown 10-23, holding | 19.62 | 21.34 | 19.43 | 0.11 | 3 (2+1+0) | 10 | XLF | -22.1 | -25.4 | -19.4 | 4.39 | 48.2 | 2.35 |
-| DASH | Breakdown 10-26 | 168.44 | 185.28 | 166.58 | 0.11 | 3 (2+1+0) | 10 | XLY | -13.9 | -17.2 | -15.5 | 5.0 | 48.3 | 2.32 |
-| SVV | Breakdown 10-26 | 8.9 | 9.65 | 8.83 | 0.09 | 3 (2+1+0) | 10 | XLY | -13.2 | -16.5 | -14.8 | 4.22 | 40.3 | 2.13 |
-| TTMI | Breakdown 10-22, holding | 85.5 | 105.23 | 81.8 | 0.19 | 3 (2+1+0) | 10 | XLK | -21.3 | -24.6 | -30.2 | 11.54 | 146.1 | 2.01 |
-| RDDT | Breakdown 10-26 | 138.45 | 154.28 | 135.22 | 0.2 | 3 (2+1+0) | 10 | XLC | -22.4 | -25.7 | -17.1 | 5.72 | 47.9 | 1.94 |
-| PCAR | Breakdown 10-26 | 104.37 | 109.64 | 96.22 | 1.53 | 3 (2+1+0) | 10 | XLI | -24.5 | -27.8 | -16.0 | 2.52 | 22.8 | 1.85 |
-| HWM | Breakdown 10-22, holding; Breakdown 10-21, holding; Breakdown 10-20, holding | 194.36 | 210.96 | 192.76 | 0.1 | 3 (2+1+0) | 10 | XLI | -32.1 | -35.4 | -23.6 | 4.27 | 41.5 | 1.83 |
-| GLW | Breakdown 10-22, holding | 127.74 | 143.35 | 126.68 | 0.07 | 3 (2+1+0) | 10 | XLK | 1.4 | -1.9 | -7.5 | 6.11 | 65.5 | 1.73 |
-| SAN | Breakdown 10-26 | 12.37 | 13.03 | 11.91 | 0.69 | 3 (2+1+0) | 10 | XLF | -11.5 | -14.8 | -8.8 | 2.67 | 30.7 | 1.73 |
-| ELVN | Failed rally | 41.49 | 43.37 | 38.58 | 1.55 | 3 (2+1+0) | 10 | XLV | -22.8 | -26.1 | -30.0 | 4.53 | 47.1 | 1.63 |
+| PMT | Failed rally | 7.26 | 7.52 | 6.7 | 2.19 | 4 (2+1+1) | 11 | XLF | -25.1 | -30.6 | -23.7 | 3.52 | 36.8 | 1.19 |
+| MOS | Failed rally | 18.8 | 19.63 | 16.99 | 2.18 | 4 (2+1+1) | 11 | XLB | -16.9 | -22.4 | -17.0 | 4.41 | 42.8 | 1.17 |
+| VZ | Failed rally | 43.92 | 45.21 | 40.81 | 2.39 | 4 (2+1+1) | 11 | XLC | -7.0 | -12.5 | -1.6 | 2.96 | 47.4 | 0.95 |
+| ALB | Failed rally | 98.97 | 102.76 | 88.01 | 2.89 | 4 (2+1+1) | 11 | XLB | -13.1 | -18.6 | -13.2 | 3.83 | 31.8 | 0.87 |
+| AVAV | Failed rally | 126.76 | 133.56 | 113.15 | 2.0 | 4 (2+1+1) | 11 | XLI | -10.8 | -16.3 | -5.9 | 5.36 | 39.2 | 0.75 |
+| CLYM | Breakdown 10-26, holding | 9.56 | 10.91 | 9.25 | 0.23 | 3 (2+1+0) | 10 | XLV | -21.1 | -26.6 | -28.9 | 9.27 | 88.8 | 3.53 |
+| ORIC | Breakdown 10-26, holding | 8.99 | 11.06 | 7.97 | 0.49 | 3 (2+1+0) | 10 | XLV | -20.3 | -25.8 | -28.1 | 11.48 | 150.7 | 2.86 |
+| TEX | Breakdown 10-27 | 49.75 | 53.07 | 43.81 | 1.79 | 3 (2+1+0) | 10 | XLI | -22.9 | -28.4 | -18.0 | 4.4 | 41.3 | 2.85 |
+| PCAR | Breakdown 10-27; Breakdown 10-26, holding | 103.74 | 109.53 | 96.22 | 1.3 | 3 (2+1+0) | 10 | XLI | -22.5 | -28.0 | -17.6 | 2.79 | 22.7 | 2.74 |
+| AMKR | Breakdown 10-22, holding | 39.96 | 44.82 | 39.47 | 0.1 | 3 (2+1+0) | 10 | XLK | -6.5 | -12.0 | -20.3 | 6.95 | 69.9 | 2.71 |
+| FLEX | Breakdown 10-22, holding; Breakdown 10-21, holding | 83.41 | 96.13 | 62.48 | 1.65 | 3 (2+1+0) | 10 | XLK | -19.0 | -24.5 | -32.8 | 7.63 | 78.1 | 2.42 |
+| EYE | Breakdown 10-27 | 16.18 | 17.73 | 15.91 | 0.17 | 3 (2+1+0) | 10 | XLY | -26.3 | -31.8 | -29.7 | 4.8 | 49.6 | 2.14 |
+| SVV | Breakdown 10-27; Breakdown 10-26, holding | 8.76 | 9.52 | 7.82 | 1.24 | 3 (2+1+0) | 10 | XLY | -12.0 | -17.5 | -15.4 | 4.33 | 40.4 | 2.07 |
+| HSBC | Breakdown 10-27 | 86.01 | 90.21 | 85.21 | 0.19 | 3 (2+1+0) | 10 | XLF | -16.2 | -21.7 | -14.8 | 2.44 | 30.7 | 2.05 |
+| DASH | Breakdown 10-26, holding | 170.56 | 187.52 | 166.58 | 0.23 | 3 (2+1+0) | 10 | XLY | -11.9 | -17.4 | -15.3 | 4.97 | 44.9 | 1.98 |
 
 ## Other setups (Known in brackets)
-- Calls: NOW (3), AMT (3), BOX (3), EQNR (3), HNGE (3), TW (3), KSS (3), ARHS (3), APPN (3), BRZE (3), DVN (3), QCOM (3), RMD (3), NDAQ (3), NTAP (3), PG (3), BEKE (3), SSL (3), TRI (3), WCN (3), FTNT (3), PK (3), G (3), VRNS (3), KDP (3), SAP (3), TALO (3), RELX (3), SHO (3), DHT (3), KVYO (3), OTEX (3), QGEN (3), SG (3), BSY (3), NTNX (3), PLTR (3), BIIB (3), VERX (3), DHR (3), HTFL (3), SHOP (3), MNDY (3), SONO (3), XERS (3), LIFE (3), MYGN (3), BUUU (3), XNCR (2), SUZ (2), LXP (2), AR (2), DG (2), DOW (2), NE (2), RIG (2), ALLE (2), PEGA (2), RHI (2), KBR (2), UCB (2), VET (2), XLP (2), CSGP (2), TREX (2), EHC (2), CPRI (2), BETR (2), IBM (2), NWBI (1), ARI (1), RY (1), TNDM (1), GBCI (1), YUMC (1), UPWK (1), BBT (1), FTV (1), EFX (1), HON (1), COLB (1), CNI (1), ASB (1), CVBF (1), AZN (1), PECO (1), PHM (1), NMIH (1), UDR (1), ZION (1), AJG (1), KRC (1), OI (1), VLY (1), SLB (1), FULT (1), MMM (1), LION (1), HAL (1), REXR (1), DGX (1), OZK (1), CSX (1), ROL (1), WFRD (1), KEY (1), BHVN (1), ADBE (1), CWEN (1), PNFP (1), ZGN (1), CP (1), RTO (1), RCI (0), RITM (0), BX (0), LULU (0), COF (0), ALKT (0)
-- Puts: MFG (3), LGN (3), LILAK (3), MLI (3), PHAT (3), HAPN (3), ARLO (3), ATI (3), ARE (3), CRWV (3), SILJ (3), INCY (3), Q (3), TSEM (3), LRCX (3), SGHC (3), BHP (3), PYPL (3), FLEX (3), IREN (3), RIO (3), RCUS (3), DAN (3), HXL (3), AKAM (3), PAAS (3), SVM (3), FTAI (3), KLAC (3), COHR (3), ODFL (3), SEDG (3), AAL (3), MBC (3), NOK (3), BTU (3), EROC (3), VRT (3), KNX (3), BABA (3), NVT (3), SRRK (3), WSC (3), IVR (3), KGS (3), ORC (3), GPN (3), SLV (3), DAL (3), GPC (3), JAN (3), LASR (3), MGA (3), VSNT (3), KMX (3), HRMY (3), CMC (3), FCEL (3), BWA (3), LBRT (3), MKSI (3), LMND (3), XPO (3), AESI (3), IART (3), KTOS (3), FLR (3), NEXT (3), OMDA (3), UCTT (3), HIMX (3), AVEX (3), FUN (3), OC (3), GTX (3), PUMP (3), STWD (3), CHRW (3), ACAD (3), VIPS (3), KC (3), CTRI (3), RPM (3), ARWR (3), MWH (3), XBI (3), RRX (3), XENE (3), SPHR (3), CLDX (3), DNLI (3), MDA (3), INDV (3), SVC (3), MMED (3), XP (2), EWZ (2), PAGS (2), ITUB (2), WTTR (2), DXCM (2), ESI (2), TECK (2), GDXJ (2), FLS (2), IR (2), NWL (2), NHP (2), FPS (2), GDX (2), AMZN (2), LSCC (2), HBM (2), TSCO (2), MTSI (2), PRIM (2), ALAB (2), BETA (2), UGP (1), BE (1), ERO (1), CLMT (1), IAG (1), SCCO (1), MXL (1), APH (1), GTES (1), SEI (1), TAL (1), COHU (1), UMC (1)
-- Puts within 5% of the 52-week low (shadow log only): AVTX, BKV, BNL, BXSL, CALM, CBRE, CCXI, CLM, CLS, CRF, CSQR, DPC, FLG, FR, GGG, GNTX, HE, IE, IEP, IONS, KWEB, LKQ, MBLY, NAMS, NFLX, ORI, OXLC, PAX, PTCT, RYAAY, SE, SGI, T, UPST, WEN, WHR
+- Calls: RNG (3), RIG (3), VET (3), FTNT (3), DT (3), BOX (3), NTNX (3), BRZE (3), GMAB (3), PEB (3), SHO (3), TEVA (3), FRO (3), PLTR (3), TRI (3), KSS (3), RMD (3), SAP (3), SSL (3), HAS (3), KDP (3), RBRK (3), APPN (3), MTCH (3), QGEN (3), CCI (3), LIFE (3), PRCH (3), MYGN (3), ARHS (3), TALO (3), HNGE (3), BEKE (3), HAFN (3), VRNS (3), IOVA (3), DHR (3), NTAP (3), TRMD (3), XERS (3), ZIM (3), CRML (2), PNR (2), EQT (2), NUE (2), VCYT (2), NXPI (2), SUZ (2), TIC (2), WCN (2), AR (2), XNCR (2), KBR (2), NDAQ (2), EQNR (2), ALLE (2), SONO (2), DOW (2), GDDY (2), DVN (2), TAC (2), CPRI (2), STNG (2), CL (2), CWEN (2), ROL (2), LXP (2), OTEX (2), BSY (2), BHVN (2), SOFI (1), UPS (1), NE (1), TEL (1), BKR (1), CNP (1), NVS (1), FTV (1), OI (1), LADR (1), UTI (1), AMRZ (1), BANC (1), BRX (1), ARLO (1), RHI (1), GBCI (1), HON (1), RTO (1), REXR (1), ARI (1), RITM (1), WFRD (1), BETR (1), UPWK (1), CP (1), COLB (1), UDR (1), TNDM (1), YUMC (1), ZGN (1), SLB (1), CSX (1), PHM (1), NMIH (1), CVBF (1), DGX (1), LULU (1), KRC (1), BBT (1), MMM (1), LION (1), VLY (1), PNFP (1), FULT (1), UCB (1), IBM (1), RY (1), OZK (1), ASB (1), WSC (0), ALKT (0), COF (0)
+- Puts: GLW (3), CSTM (3), BKD (3), ATI (3), ALMS (3), VTR (3), BHP (3), PHAT (3), OII (3), NVCR (3), CSQR (3), JAN (3), DXCM (3), SVM (3), BIPC (3), HXL (3), VSNT (3), AESI (3), ARWR (3), GPN (3), IART (3), ALGM (3), FUN (3), SLM (3), IMTX (3), IVR (3), MLI (3), RDDT (3), ADEA (3), ROST (3), ADTN (3), RUN (3), STM (3), SAN (3), ELAN (3), HLIT (3), MFA (3), KLAC (3), LRCX (3), CRWV (3), HOS (3), LGN (3), PAAS (3), SILJ (3), MWH (3), T (3), GTX (3), MGA (3), INDV (3), SGHC (3), TTMI (3), LSCC (3), PRMB (3), FCEL (3), Q (3), SEDG (3), STWD (3), RIO (3), APAM (3), BWA (3), BABA (3), LI (3), CGNX (3), RPM (3), SLV (3), AVEX (3), KGC (3), CMC (3), VIPS (3), ONTO (3), BWXT (3), STTK (3), INOD (2), XP (2), APH (2), EWZ (2), STNE (2), NWL (2), TECK (2), ACHV (2), NVT (2), GDXJ (2), KURA (2), PAGS (2), AMZN (2), HBM (2), NOK (2), FPS (2), GDX (2), ITUB (2), DC (2), NG (2), CRSP (2), ERO (2), HRMY (2), APPS (2), PRIM (2), CXW (2), TGB (2), SCCO (1), MTSI (1), MSM (1), CLMT (1), BE (1), UMC (1), UGP (1), TAL (1)
+- Puts within 5% of the 52-week low (shadow log only): AVTX, BA, BNL, BXSL, CALM, CBRE, CCXI, CLM, CRF, ELS, FLG, FNF, FR, GGG, GNTX, GPGI, HE, HWM, IEP, JMIA, KWEB, LKQ, NFLX, PAX, RCUS, RYAAY, SE, SFM, VALE, WU, XYL
 
-## Watch: closed past a 20-day trigger, volume short of 1.5x (top 20 of 260)
-- CON 40.2: above 20d high 39.97 but vol 1.50x
-- NBIS 153.27: below 20d low 158.74 but vol 1.49x
-- MTDR 60.09: above 20d high 59.96 but vol 1.47x
-- FIBK 37.68: above 20d high 36.88 but vol 1.45x
-- ESTC 106.29: above 20d high 102.43 but vol 1.44x
-- XLC 103.85: below 20d low 105.51 but vol 1.43x
-- GFL 45.68: above 20d high 45.56 but vol 1.43x
-- UBER 66.13: below 20d low 66.70 but vol 1.42x
-- FNB 18.33: above 20d high 18.18 but vol 1.42x
-- TTEK 37.13: above 20d high 36.98 but vol 1.39x
-- BAH 83.36: above 20d high 78.57 but vol 1.39x
-- PTRN 15.87: below 20d low 16.19 but vol 1.37x
-- NXPI 245.83: above 20d high 244.38 but vol 1.34x
-- ENB 48.26: above 20d high 48.15 but vol 1.34x
-- VSXY 94.96: above 20d high 91.73 but vol 1.31x
-- RPRX 64.76: above 20d high 63.86 but vol 1.31x
-- LYB 67.35: above 20d high 66.45 but vol 1.28x
-- RDY 13.75: above 20d high 13.26 but vol 1.26x
-- MGNI 21.62: below 20d low 22.89 but vol 1.26x
-- LTH 43.86: above 20d high 41.99 but vol 1.26x
+## Watch: closed past a 20-day trigger, volume short of 1.5x (top 20 of 167)
+- RLJ 12.47: above 20d high 12.30 but vol 1.50x
+- PPG 113.42: above 20d high 113.09 but vol 1.46x
+- HAYW 13.02: above 20d high 12.82 but vol 1.44x
+- RYN 19.21: above 20d high 18.99 but vol 1.42x
+- ENB 48.39: above 20d high 48.26 but vol 1.40x
+- BEPC 30.02: above 20d high 29.65 but vol 1.39x
+- VRDN 24.09: above 20d high 23.34 but vol 1.37x
+- RARE 16.76: above 20d high 16.08 but vol 1.35x
+- NOV 20.57: above 20d high 20.19 but vol 1.34x
+- BBNX 21.46: above 20d high 20.51 but vol 1.34x
+- REAL 10.99: above 20d high 10.96 but vol 1.32x
+- UBER 65.78: below 20d low 66.13 but vol 1.31x
+- TDS 35.68: above 20d high 35.67 but vol 1.31x
+- SOLV 83.01: below 20d low 85.05 but vol 1.31x
+- OCTV 21.74: above 20d high 21.51 but vol 1.31x
+- LAZ 38.19: above 20d high 37.70 but vol 1.31x
+- NAVI 8.41: below 20d low 8.42 but vol 1.29x
+- GRND 12.93: below 20d low 13.12 but vol 1.29x
+- AER 150.07: above 20d high 147.88 but vol 1.28x
+- UGI 39.28: above 20d high 39.11 but vol 1.26x
 
 ## Data notes
 - No data: 0
-- No final bar for 2026-10-26 (left out of the ranking): 0
-- Too little history: 13 (ACCV (only 15 bars), ADIG (only 62 bars), AIOK (only 12 bars), AMRO (only 8 bars), APXC (only 2 bars), GUNN (only 1 bars), IOND (only 64 bars), IVAI (only 19 bars), JMKE (only 62 bars), LYCA (only 2 bars), REF (only 62 bars), SCTX (only 65 bars), VYLR (only 18 bars))
+- No final bar for 2026-10-27 (left out of the ranking): 1 (TWLV)
+- Too little history: 13 (ACCV (only 16 bars), ADIG (only 63 bars), AIOK (only 13 bars), AMRO (only 9 bars), APXC (only 3 bars), GUNN (only 2 bars), IOND (only 65 bars), IVAI (only 20 bars), JMKE (only 63 bars), LYCA (only 3 bars), REF (only 63 bars), SCTX (only 66 bars), VYLR (only 19 bars))
