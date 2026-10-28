@@ -1,0 +1,1138 @@
+{
+ "started_utc": "2026-10-28 18:00:56",
+ "cboe_fresh": {
+  "TENB": {
+   "plain": {
+    "status": 200,
+    "ts": "2026-10-28 01:43:56",
+    "age": null,
+    "cache": "Miss from cloudfront",
+    "price": 48.48,
+    "kb": 135
+   },
+   "bust": {
+    "status": 200,
+    "ts": "2026-10-28 01:43:56",
+    "age": "0",
+    "cache": "Miss from cloudfront",
+    "price": 48.48,
+    "kb": 135
+   }
+  },
+  "HLF": {
+   "plain": {
+    "status": 200,
+    "ts": "2026-10-28 00:35:18",
+    "age": null,
+    "cache": "Miss from cloudfront",
+    "price": 13.47,
+    "kb": 231
+   },
+   "bust": {
+    "status": 200,
+    "ts": "2026-10-28 00:35:18",
+    "age": "0",
+    "cache": "Miss from cloudfront",
+    "price": 13.47,
+    "kb": 231
+   }
+  },
+  "AEO": {
+   "plain": {
+    "status": 200,
+    "ts": "2026-10-28 17:48:20",
+    "age": null,
+    "cache": "Miss from cloudfront",
+    "price": 19.445,
+    "kb": 284
+   },
+   "bust": {
+    "status": 200,
+    "ts": "2026-10-28 17:48:20",
+    "age": "0",
+    "cache": "Miss from cloudfront",
+    "price": 19.445,
+    "kb": 284
+   }
+  },
+  "KSS": {
+   "plain": {
+    "status": 200,
+    "ts": "2026-10-28 10:04:39",
+    "age": null,
+    "cache": "Miss from cloudfront",
+    "price": 23.78,
+    "kb": 321
+   },
+   "bust": {
+    "status": 200,
+    "ts": "2026-10-28 10:04:39",
+    "age": "0",
+    "cache": "Miss from cloudfront",
+    "price": 23.78,
+    "kb": 321
+   }
+  }
+ },
+ "filings": {
+  "RRC": {
+   "status": 200,
+   "secs": 1.43,
+   "data_keys": [
+    "symbol",
+    "totalRecords",
+    "latest",
+    "headers",
+    "filterOptions",
+    "rows"
+   ],
+   "n": 20,
+   "keys": [
+    "companyName",
+    "reportingOwner",
+    "formType",
+    "filed",
+    "period",
+    "view"
+   ],
+   "rows": [
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "RANGE RESOURCES CORP",
+     "formType": "425",
+     "filed": "10/28/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320429163&type=HTML&symbol=RRC&cdn=f4ebc3590ff048b751ce45fe8779a427&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-28",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320429163&type=DOC&symbol=RRC&cdn=f4ebc3590ff048b751ce45fe8779a427&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-28",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320429163&type=PDF&symbol=RRC&cdn=f4ebc3590ff048b751ce45fe8779a427&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-28",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320429163&type=XLS&symbol=RRC&cdn=f4ebc3590ff048b751ce45fe8779a427&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-28",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "",
+     "formType": "8-K",
+     "filed": "10/28/2026",
+     "period": "10/27/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320429140&type=HTML&symbol=RRC&cdn=4b26fb9b4bb7b642ea8e42894abc1c40&companyName=Range+Resources+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-28",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320429140&type=DOC&symbol=RRC&cdn=4b26fb9b4bb7b642ea8e42894abc1c40&companyName=Range+Resources+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-28",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320429140&type=PDF&symbol=RRC&cdn=4b26fb9b4bb7b642ea8e42894abc1c40&companyName=Range+Resources+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-28",
+      "xbrLink": "https://api.quotemedia.com/supplement/filings/index.php?webmasterId=90423&ref=320429140&type=XBRL&symbol=RRC&companyName=Range%20Resources%20Corporation&formType=8-K&formDescription=Current%20report%20pursuant%20to%20Section%2013%20or%2015(d)&dateFiled=2026-10-28",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320429140&type=XLS&symbol=RRC&cdn=4b26fb9b4bb7b642ea8e42894abc1c40&companyName=Range+Resources+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-28",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "RANGE RESOURCES CORP",
+     "formType": "425",
+     "filed": "10/27/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320428379&type=HTML&symbol=RRC&cdn=02477d3cbb7d993c1a5d9c4eed9ab97a&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320428379&type=DOC&symbol=RRC&cdn=02477d3cbb7d993c1a5d9c4eed9ab97a&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320428379&type=PDF&symbol=RRC&cdn=02477d3cbb7d993c1a5d9c4eed9ab97a&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320428379&type=XLS&symbol=RRC&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "",
+     "formType": "10-Q",
+     "filed": "10/27/2026",
+     "period": "09/30/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320428075&type=HTML&symbol=RRC&cdn=7745009dbcf3023ad40398b2ae6fdb5a&companyName=Range+Resources+Corporation&formType=10-Q&formDescription=General+form+for+quarterly+reports+under+Section+13+or+15%28d%29&dateFiled=2026-10-27",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320428075&type=DOC&symbol=RRC&cdn=7745009dbcf3023ad40398b2ae6fdb5a&companyName=Range+Resources+Corporation&formType=10-Q&formDescription=General+form+for+quarterly+reports+under+Section+13+or+15%28d%29&dateFiled=2026-10-27",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320428075&type=PDF&symbol=RRC&cdn=7745009dbcf3023ad40398b2ae6fdb5a&companyName=Range+Resources+Corporation&formType=10-Q&formDescription=General+form+for+quarterly+reports+under+Section+13+or+15%28d%29&dateFiled=2026-10-27",
+      "xbrLink": "https://api.quotemedia.com/supplement/filings/index.php?webmasterId=90423&ref=320428075&type=XBRL&symbol=RRC&companyName=Range%20Resources%20Corporation&formType=10-Q&formDescription=General%20form%20for%20quarterly%20reports%20under%20Section%2013%20or%2015(d)&dateFiled=2026-10-27",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320428075&type=XLS&symbol=RRC&cdn=7745009dbcf3023ad40398b2ae6fdb5a&companyName=Range+Resources+Corporation&formType=10-Q&formDescription=General+form+for+quarterly+reports+under+Section+13+or+15%28d%29&dateFiled=2026-10-27",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "RANGE RESOURCES CORP",
+     "formType": "425",
+     "filed": "10/27/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427990&type=HTML&symbol=RRC&cdn=50eebf9ea85537f877acafa31fd44172&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427990&type=DOC&symbol=RRC&cdn=50eebf9ea85537f877acafa31fd44172&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427990&type=PDF&symbol=RRC&cdn=50eebf9ea85537f877acafa31fd44172&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427990&type=XLS&symbol=RRC&cdn=50eebf9ea85537f877acafa31fd44172&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "RANGE RESOURCES CORP",
+     "formType": "425",
+     "filed": "10/27/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427906&type=HTML&symbol=RRC&cdn=b988cf3dc1df224272c7fc3b602dac1c&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427906&type=DOC&symbol=RRC&cdn=b988cf3dc1df224272c7fc3b602dac1c&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427906&type=PDF&symbol=RRC&cdn=b988cf3dc1df224272c7fc3b602dac1c&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427906&type=XLS&symbol=RRC&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "RANGE RESOURCES CORP",
+     "formType": "425",
+     "filed": "10/27/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427395&type=HTML&symbol=RRC&cdn=1e43e60b3476be0a5b6f9f17a8f66273&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427395&type=DOC&symbol=RRC&cdn=1e43e60b3476be0a5b6f9f17a8f66273&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427395&type=PDF&symbol=RRC&cdn=1e43e60b3476be0a5b6f9f17a8f66273&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427395&type=XLS&symbol=RRC&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-27",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "RANGE RESOURCES CORP",
+     "formType": "425",
+     "filed": "10/26/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320425136&type=HTML&symbol=RRC&cdn=128e55f78873096eca57192bcddaad48&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320425136&type=DOC&symbol=RRC&cdn=128e55f78873096eca57192bcddaad48&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320425136&type=PDF&symbol=RRC&cdn=128e55f78873096eca57192bcddaad48&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320425136&type=XLS&symbol=RRC&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "RANGE RESOURCES CORP",
+     "formType": "425",
+     "filed": "10/26/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320425116&type=HTML&symbol=RRC&cdn=3d841b80c183668293f5a957bd2b7758&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320425116&type=DOC&symbol=RRC&cdn=3d841b80c183668293f5a957bd2b7758&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320425116&type=PDF&symbol=RRC&cdn=3d841b80c183668293f5a957bd2b7758&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320425116&type=XLS&symbol=RRC&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "RANGE RESOURCES CORP",
+     "formType": "425",
+     "filed": "10/26/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320424863&type=HTML&symbol=RRC&cdn=463127dde26e697b6965c62a7b480b7b&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320424863&type=DOC&symbol=RRC&cdn=463127dde26e697b6965c62a7b480b7b&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320424863&type=PDF&symbol=RRC&cdn=463127dde26e697b6965c62a7b480b7b&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320424863&type=XLS&symbol=RRC&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "RANGE RESOURCES CORP",
+     "formType": "425",
+     "filed": "10/26/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320423028&type=HTML&symbol=RRC&cdn=1924a14381977d8c5cb6706dff72bda3&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320423028&type=DOC&symbol=RRC&cdn=1924a14381977d8c5cb6706dff72bda3&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320423028&type=PDF&symbol=RRC&cdn=1924a14381977d8c5cb6706dff72bda3&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320423028&type=XLS&symbol=RRC&cdn=1924a14381977d8c5cb6706dff72bda3&companyName=Range+Resources+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Range Resources Corporation",
+     "reportingOwner": "",
+     "formType": "8-K",
+     "filed": "10/26/2026",
+     "period": "10/25/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320423026&type=HTML&symbol=RRC&cdn=366aea1f614c544f17bbc8d235cbc31e&companyName=Range+Resources+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-26",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320423026&type=DOC&symbol=RRC&cdn=366aea1f614c544f17bbc8d235cbc31e&companyName=Range+Resources+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-26",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320423026&type=PDF&symbol=RRC&cdn=366aea1f614c544f17bbc8d235cbc31e&companyName=Range+Resources+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-26",
+      "xbrLink": "https://api.quotemedia.com/supplement/filings/index.php?webmasterId=90423&ref=320423026&type=XBRL&symbol=RRC&companyName=Range%20Resources%20Corporation&formType=8-K&formDescription=Current%20report%20pursuant%20to%20Section%2013%20or%2015(d)&dateFiled=2026-10-26",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320423026&type=XLS&symbol=RRC&cdn=366aea1f614c544f17bbc8d235cbc31e&companyName=Range+Resources+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-26",
+      "xBrlSubDoc": ""
+     }
+    }
+   ]
+  },
+  "EQT": {
+   "status": 200,
+   "secs": 2.2,
+   "data_keys": [
+    "symbol",
+    "totalRecords",
+    "latest",
+    "headers",
+    "filterOptions",
+    "rows"
+   ],
+   "n": 20,
+   "keys": [
+    "companyName",
+    "reportingOwner",
+    "formType",
+    "filed",
+    "period",
+    "view"
+   ],
+   "rows": [
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "",
+     "formType": "8-K",
+     "filed": "10/27/2026",
+     "period": "10/27/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427941&type=HTML&symbol=EQT&cdn=17bc8b2e228f26b1d5fcc70de7bfe74b&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-27",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427941&type=DOC&symbol=EQT&cdn=17bc8b2e228f26b1d5fcc70de7bfe74b&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-27",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427941&type=PDF&symbol=EQT&cdn=17bc8b2e228f26b1d5fcc70de7bfe74b&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-27",
+      "xbrLink": "https://api.quotemedia.com/supplement/filings/index.php?webmasterId=90423&ref=320427941&type=XBRL&symbol=EQT&companyName=EQT%20Corporation&formType=8-K&formDescription=Current%20report%20pursuant%20to%20Section%2013%20or%2015(d)&dateFiled=2026-10-27",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320427941&type=XLS&symbol=EQT&cdn=17bc8b2e228f26b1d5fcc70de7bfe74b&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-27",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "EQT CORP",
+     "formType": "425",
+     "filed": "10/26/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320422970&type=HTML&symbol=EQT&cdn=0c1ea8cd6aa5e7a8c1bd941f7927b7ae&companyName=EQT+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320422970&type=DOC&symbol=EQT&cdn=0c1ea8cd6aa5e7a8c1bd941f7927b7ae&companyName=EQT+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320422970&type=PDF&symbol=EQT&cdn=0c1ea8cd6aa5e7a8c1bd941f7927b7ae&companyName=EQT+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320422970&type=XLS&symbol=EQT&cdn=0c1ea8cd6aa5e7a8c1bd941f7927b7ae&companyName=EQT+Corporation&formType=425&formDescription=Prospectuses+and+communications%2C+business+combinations&dateFiled=2026-10-26",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "",
+     "formType": "8-K",
+     "filed": "10/26/2026",
+     "period": "10/25/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320422968&type=HTML&symbol=EQT&cdn=f28986fcbc624c0546f30b50dbb60a18&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-26",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320422968&type=DOC&symbol=EQT&cdn=f28986fcbc624c0546f30b50dbb60a18&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-26",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320422968&type=PDF&symbol=EQT&cdn=f28986fcbc624c0546f30b50dbb60a18&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-26",
+      "xbrLink": "https://api.quotemedia.com/supplement/filings/index.php?webmasterId=90423&ref=320422968&type=XBRL&symbol=EQT&companyName=EQT%20Corporation&formType=8-K&formDescription=Current%20report%20pursuant%20to%20Section%2013%20or%2015(d)&dateFiled=2026-10-26",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320422968&type=XLS&symbol=EQT&cdn=f28986fcbc624c0546f30b50dbb60a18&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-26",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "",
+     "formType": "8-K",
+     "filed": "10/13/2026",
+     "period": "10/13/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320402943&type=HTML&symbol=EQT&cdn=99481e845cc5b7d9623c73bec4838521&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-13",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320402943&type=DOC&symbol=EQT&cdn=99481e845cc5b7d9623c73bec4838521&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-13",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320402943&type=PDF&symbol=EQT&cdn=99481e845cc5b7d9623c73bec4838521&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-13",
+      "xbrLink": "https://api.quotemedia.com/supplement/filings/index.php?webmasterId=90423&ref=320402943&type=XBRL&symbol=EQT&companyName=EQT%20Corporation&formType=8-K&formDescription=Current%20report%20pursuant%20to%20Section%2013%20or%2015(d)&dateFiled=2026-10-13",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320402943&type=XLS&symbol=EQT&cdn=99481e845cc5b7d9623c73bec4838521&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-13",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "",
+     "formType": "8-K",
+     "filed": "10/07/2026",
+     "period": "10/07/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320395510&type=HTML&symbol=EQT&cdn=ee96ce9c45ab306bf82be4c856b5a1ba&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-07",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320395510&type=DOC&symbol=EQT&cdn=ee96ce9c45ab306bf82be4c856b5a1ba&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-07",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320395510&type=PDF&symbol=EQT&cdn=ee96ce9c45ab306bf82be4c856b5a1ba&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-07",
+      "xbrLink": "https://api.quotemedia.com/supplement/filings/index.php?webmasterId=90423&ref=320395510&type=XBRL&symbol=EQT&companyName=EQT%20Corporation&formType=8-K&formDescription=Current%20report%20pursuant%20to%20Section%2013%20or%2015(d)&dateFiled=2026-10-07",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320395510&type=XLS&symbol=EQT&cdn=ee96ce9c45ab306bf82be4c856b5a1ba&companyName=EQT+Corporation&formType=8-K&formDescription=Current+report+pursuant+to+Section+13+or+15%28d%29&dateFiled=2026-10-07",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "MCCARTNEY JOHN",
+     "formType": "4",
+     "filed": "10/05/2026",
+     "period": "10/01/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320389968&type=HTML&symbol=EQT&cdn=59329163c40ebebd35180adaaec2a454&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320389968&type=DOC&symbol=EQT&cdn=59329163c40ebebd35180adaaec2a454&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320389968&type=PDF&symbol=EQT&cdn=59329163c40ebebd35180adaaec2a454&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320389968&type=XLS&symbol=EQT&cdn=59329163c40ebebd35180adaaec2a454&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "RICE DANIEL J. IV",
+     "formType": "4",
+     "filed": "10/05/2026",
+     "period": "10/01/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320389960&type=HTML&symbol=EQT&cdn=0cbe1585b059969e3960dd3011ac86e2&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320389960&type=DOC&symbol=EQT&cdn=0cbe1585b059969e3960dd3011ac86e2&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320389960&type=PDF&symbol=EQT&cdn=0cbe1585b059969e3960dd3011ac86e2&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320389960&type=XLS&symbol=EQT&cdn=0cbe1585b059969e3960dd3011ac86e2&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "RICE TOBY Z.",
+     "formType": "4",
+     "filed": "08/18/2026",
+     "period": "08/14/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320286168&type=HTML&symbol=EQT&cdn=58c000039862a7d00260ba24facd6c2c&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-08-18",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320286168&type=DOC&symbol=EQT&cdn=58c000039862a7d00260ba24facd6c2c&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-08-18",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320286168&type=PDF&symbol=EQT&cdn=58c000039862a7d00260ba24facd6c2c&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-08-18",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320286168&type=XLS&symbol=EQT&cdn=58c000039862a7d00260ba24facd6c2c&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-08-18",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "",
+     "formType": "144",
+     "filed": "08/14/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320277889&type=HTML&symbol=EQT&cdn=03e56c5914a0dbfae81ff11e8b28cf2f&companyName=EQT+Corporation&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-08-14",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320277889&type=DOC&symbol=EQT&cdn=03e56c5914a0dbfae81ff11e8b28cf2f&companyName=EQT+Corporation&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-08-14",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320277889&type=PDF&symbol=EQT&cdn=03e56c5914a0dbfae81ff11e8b28cf2f&companyName=EQT+Corporation&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-08-14",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320277889&type=XLS&symbol=EQT&cdn=03e56c5914a0dbfae81ff11e8b28cf2f&companyName=EQT+Corporation&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-08-14",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "BOLEN J.E.B.",
+     "formType": "4",
+     "filed": "07/28/2026",
+     "period": "07/27/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221739&type=HTML&symbol=EQT&cdn=dd8ea8da4cb2e0585b1f799b7097f6b7&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221739&type=DOC&symbol=EQT&cdn=dd8ea8da4cb2e0585b1f799b7097f6b7&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221739&type=PDF&symbol=EQT&cdn=dd8ea8da4cb2e0585b1f799b7097f6b7&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221739&type=XLS&symbol=EQT&cdn=dd8ea8da4cb2e0585b1f799b7097f6b7&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "FENTON SARAH",
+     "formType": "4",
+     "filed": "07/28/2026",
+     "period": "07/27/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221738&type=HTML&symbol=EQT&cdn=65db1716bf4b6b6df88d9e8500c0b064&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221738&type=DOC&symbol=EQT&cdn=65db1716bf4b6b6df88d9e8500c0b064&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221738&type=PDF&symbol=EQT&cdn=65db1716bf4b6b6df88d9e8500c0b064&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221738&type=XLS&symbol=EQT&cdn=65db1716bf4b6b6df88d9e8500c0b064&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "EQT Corporation",
+     "reportingOwner": "KNOP JEREMY",
+     "formType": "4",
+     "filed": "07/28/2026",
+     "period": "07/24/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221737&type=HTML&symbol=EQT&cdn=9adab6fb75427dabc8fef7fa0449e61d&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221737&type=DOC&symbol=EQT&cdn=9adab6fb75427dabc8fef7fa0449e61d&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221737&type=PDF&symbol=EQT&cdn=9adab6fb75427dabc8fef7fa0449e61d&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320221737&type=XLS&symbol=EQT&cdn=9adab6fb75427dabc8fef7fa0449e61d&companyName=EQT+Corporation&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-07-28",
+      "xBrlSubDoc": ""
+     }
+    }
+   ]
+  },
+  "PLTR": {
+   "status": 200,
+   "secs": 2.31,
+   "data_keys": [
+    "symbol",
+    "totalRecords",
+    "latest",
+    "headers",
+    "filterOptions",
+    "rows"
+   ],
+   "n": 20,
+   "keys": [
+    "companyName",
+    "reportingOwner",
+    "formType",
+    "filed",
+    "period",
+    "view"
+   ],
+   "rows": [
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "MOORE ALEXANDER D.",
+     "formType": "4",
+     "filed": "10/19/2026",
+     "period": "10/15/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320413215&type=HTML&symbol=PLTR&cdn=cf8d91621dae9058bb47fae102eb6d9a&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-19",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320413215&type=DOC&symbol=PLTR&cdn=cf8d91621dae9058bb47fae102eb6d9a&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-19",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320413215&type=PDF&symbol=PLTR&cdn=cf8d91621dae9058bb47fae102eb6d9a&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-19",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320413215&type=XLS&symbol=PLTR&cdn=cf8d91621dae9058bb47fae102eb6d9a&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-19",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "",
+     "formType": "144",
+     "filed": "10/15/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320408271&type=HTML&symbol=PLTR&cdn=a777762d2535222d2dbce20298b1fe03&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-15",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320408271&type=DOC&symbol=PLTR&cdn=a777762d2535222d2dbce20298b1fe03&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-15",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320408271&type=PDF&symbol=PLTR&cdn=a777762d2535222d2dbce20298b1fe03&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-15",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320408271&type=XLS&symbol=PLTR&cdn=a777762d2535222d2dbce20298b1fe03&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-15",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "WOERSCHING ERIC H.",
+     "formType": "4",
+     "filed": "10/14/2026",
+     "period": "10/09/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320405892&type=HTML&symbol=PLTR&cdn=df5df76b4fdd024ffe3da70bde058a98&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-14",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320405892&type=DOC&symbol=PLTR&cdn=df5df76b4fdd024ffe3da70bde058a98&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-14",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320405892&type=PDF&symbol=PLTR&cdn=df5df76b4fdd024ffe3da70bde058a98&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-14",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320405892&type=XLS&symbol=PLTR&cdn=df5df76b4fdd024ffe3da70bde058a98&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-14",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "STAT LAUREN ELAINA FRIEDMAN",
+     "formType": "4",
+     "filed": "10/13/2026",
+     "period": "10/08/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320403622&type=HTML&symbol=PLTR&cdn=c1509af465922b444083404945641222&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-13",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320403622&type=DOC&symbol=PLTR&cdn=c1509af465922b444083404945641222&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-13",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320403622&type=PDF&symbol=PLTR&cdn=c1509af465922b444083404945641222&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-13",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320403622&type=XLS&symbol=PLTR&cdn=c1509af465922b444083404945641222&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-13",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "TAYLOR RYAN D.",
+     "formType": "4",
+     "filed": "10/13/2026",
+     "period": "10/08/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320403619&type=HTML&symbol=PLTR&cdn=d262d313842b4a09e1a226e0880b7082&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-13",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320403619&type=DOC&symbol=PLTR&cdn=d262d313842b4a09e1a226e0880b7082&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-13",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320403619&type=PDF&symbol=PLTR&cdn=d262d313842b4a09e1a226e0880b7082&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-13",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320403619&type=XLS&symbol=PLTR&cdn=d262d313842b4a09e1a226e0880b7082&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-13",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "",
+     "formType": "144",
+     "filed": "10/09/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320400132&type=HTML&symbol=PLTR&cdn=f16fbca648deee8d3b50c858e203f23d&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-09",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320400132&type=DOC&symbol=PLTR&cdn=f16fbca648deee8d3b50c858e203f23d&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-09",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320400132&type=PDF&symbol=PLTR&cdn=f16fbca648deee8d3b50c858e203f23d&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-09",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320400132&type=XLS&symbol=PLTR&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-09",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "",
+     "formType": "144",
+     "filed": "10/08/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320397708&type=HTML&symbol=PLTR&cdn=a80f98c04b7c6e1b3a6295b6d38c35e9&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-08",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320397708&type=DOC&symbol=PLTR&cdn=a80f98c04b7c6e1b3a6295b6d38c35e9&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-08",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320397708&type=PDF&symbol=PLTR&cdn=a80f98c04b7c6e1b3a6295b6d38c35e9&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-08",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320397708&type=XLS&symbol=PLTR&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-08",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "",
+     "formType": "144",
+     "filed": "10/08/2026",
+     "period": "",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320397706&type=HTML&symbol=PLTR&cdn=18a0f7602fcf649f6ebb772c9b95f5a9&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-08",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320397706&type=DOC&symbol=PLTR&cdn=18a0f7602fcf649f6ebb772c9b95f5a9&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-08",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320397706&type=PDF&symbol=PLTR&cdn=18a0f7602fcf649f6ebb772c9b95f5a9&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-08",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320397706&type=XLS&symbol=PLTR&cdn=18a0f7602fcf649f6ebb772c9b95f5a9&companyName=Palantir+Technologies+Inc.&formType=144&formDescription=Notice+of+proposed+sale+of+securities+pursuant+to+Rule+144&dateFiled=2026-10-08",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "STAT LAUREN ELAINA FRIEDMAN",
+     "formType": "4",
+     "filed": "10/05/2026",
+     "period": "10/01/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320391417&type=HTML&symbol=PLTR&cdn=d0c2672e5fc1ac129e24bbc6392c9355&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320391417&type=DOC&symbol=PLTR&cdn=d0c2672e5fc1ac129e24bbc6392c9355&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320391417&type=PDF&symbol=PLTR&cdn=d0c2672e5fc1ac129e24bbc6392c9355&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320391417&type=XLS&symbol=PLTR&cdn=d0c2672e5fc1ac129e24bbc6392c9355&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-05",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "GLAZER DAVID A.",
+     "formType": "4",
+     "filed": "10/01/2026",
+     "period": "09/29/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384011&type=HTML&symbol=PLTR&cdn=d074abc9b0e74d0b29eaf9d7f38f9e57&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384011&type=DOC&symbol=PLTR&cdn=d074abc9b0e74d0b29eaf9d7f38f9e57&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384011&type=PDF&symbol=PLTR&cdn=d074abc9b0e74d0b29eaf9d7f38f9e57&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384011&type=XLS&symbol=PLTR&cdn=d074abc9b0e74d0b29eaf9d7f38f9e57&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "TAYLOR RYAN D.",
+     "formType": "4",
+     "filed": "10/01/2026",
+     "period": "09/29/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384009&type=HTML&symbol=PLTR&cdn=4ffb4661e0d3643de74d3b56171b5d77&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384009&type=DOC&symbol=PLTR&cdn=4ffb4661e0d3643de74d3b56171b5d77&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384009&type=PDF&symbol=PLTR&cdn=4ffb4661e0d3643de74d3b56171b5d77&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384009&type=XLS&symbol=PLTR&cdn=4ffb4661e0d3643de74d3b56171b5d77&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "xBrlSubDoc": ""
+     }
+    },
+    {
+     "companyName": "Palantir Technologies Inc.",
+     "reportingOwner": "BUCKLEY JEFFREY",
+     "formType": "4",
+     "filed": "10/01/2026",
+     "period": "09/29/2026",
+     "view": {
+      "htmlLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384008&type=HTML&symbol=PLTR&cdn=c827432db42849ce24e8f2a23876e3b7&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "docLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384008&type=DOC&symbol=PLTR&cdn=c827432db42849ce24e8f2a23876e3b7&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "pdfLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384008&type=PDF&symbol=PLTR&cdn=c827432db42849ce24e8f2a23876e3b7&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "xbrLink": "",
+      "ixbrlContent": "",
+      "xlsLink": "https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=320384008&type=XLS&symbol=PLTR&cdn=c827432db42849ce24e8f2a23876e3b7&companyName=Palantir+Technologies+Inc.&formType=4&formDescription=Statement+of+changes+in+beneficial+ownership+of+securities&dateFiled=2026-10-01",
+      "xBrlSubDoc": ""
+     }
+    }
+   ]
+  },
+  "sec_ua_url": {
+   "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "sec_ua_browser": {
+   "status": 200,
+   "total": {
+    "value": 129,
+    "relation": "eq"
+   }
+  }
+ },
+ "yahoo_earn": {
+  "PLTR": [
+   {
+    "when": "2026-11-02 15:00:00-05:00",
+    "EPS Estimate": 0.41,
+    "Reported EPS": null,
+    "Surprise(%)": null
+   },
+   {
+    "when": "2026-08-03 16:00:00-04:00",
+    "EPS Estimate": 0.35,
+    "Reported EPS": 0.41,
+    "Surprise(%)": 18.51
+   },
+   {
+    "when": "2026-05-04 16:00:00-04:00",
+    "EPS Estimate": 0.28,
+    "Reported EPS": 0.33,
+    "Surprise(%)": 18.08
+   },
+   {
+    "when": "2026-02-02 16:00:00-05:00",
+    "EPS Estimate": 0.23,
+    "Reported EPS": 0.25,
+    "Surprise(%)": 8.6
+   },
+   {
+    "when": "2025-11-03 16:00:00-05:00",
+    "EPS Estimate": 0.17,
+    "Reported EPS": 0.21,
+    "Surprise(%)": 25.46
+   },
+   {
+    "when": "2025-08-04 16:00:00-04:00",
+    "EPS Estimate": 0.14,
+    "Reported EPS": 0.16,
+    "Surprise(%)": 15.57
+   },
+   {
+    "when": "2025-05-05 16:00:00-04:00",
+    "EPS Estimate": 0.13,
+    "Reported EPS": 0.13,
+    "Surprise(%)": 1.11
+   },
+   {
+    "when": "2025-02-03 16:00:00-05:00",
+    "EPS Estimate": 0.11,
+    "Reported EPS": 0.14,
+    "Surprise(%)": 23.72
+   },
+   {
+    "when": "2024-11-04 16:00:00-05:00",
+    "EPS Estimate": 0.09,
+    "Reported EPS": 0.1,
+    "Surprise(%)": 10.06
+   },
+   {
+    "when": "2024-08-05 16:00:00-04:00",
+    "EPS Estimate": 0.08,
+    "Reported EPS": 0.09,
+    "Surprise(%)": 10.55
+   },
+   {
+    "when": "2024-05-06 16:00:00-04:00",
+    "EPS Estimate": 0.08,
+    "Reported EPS": 0.08,
+    "Surprise(%)": 4.1
+   },
+   {
+    "when": "2024-02-05 16:00:00-05:00",
+    "EPS Estimate": 0.08,
+    "Reported EPS": 0.08,
+    "Surprise(%)": 5.39
+   },
+   {
+    "when": "2023-11-02 07:00:00-04:00",
+    "EPS Estimate": 0.06,
+    "Reported EPS": 0.07,
+    "Surprise(%)": 25.07
+   },
+   {
+    "when": "2023-08-07 16:00:00-04:00",
+    "EPS Estimate": 0.05,
+    "Reported EPS": 0.05,
+    "Surprise(%)": -0.79
+   },
+   {
+    "when": "2023-05-08 16:00:00-04:00",
+    "EPS Estimate": 0.04,
+    "Reported EPS": 0.05,
+    "Surprise(%)": 25.03
+   },
+   {
+    "when": "2023-02-13 16:00:00-05:00",
+    "EPS Estimate": 0.03,
+    "Reported EPS": 0.04,
+    "Surprise(%)": 49.48
+   },
+   {
+    "when": "2022-11-07 07:00:00-05:00",
+    "EPS Estimate": 0.02,
+    "Reported EPS": 0.01,
+    "Surprise(%)": -38.61
+   },
+   {
+    "when": "2022-08-08 07:00:00-04:00",
+    "EPS Estimate": 0.03,
+    "Reported EPS": -0.01,
+    "Surprise(%)": -131.7
+   },
+   {
+    "when": "2022-05-09 07:00:00-04:00",
+    "EPS Estimate": 0.04,
+    "Reported EPS": 0.02,
+    "Surprise(%)": -45.37
+   },
+   {
+    "when": "2022-02-17 06:00:00-05:00",
+    "EPS Estimate": 0.04,
+    "Reported EPS": 0.02,
+    "Surprise(%)": -44.09
+   },
+   {
+    "when": "2021-11-09 07:00:00-05:00",
+    "EPS Estimate": 0.04,
+    "Reported EPS": 0.04,
+    "Surprise(%)": 10.16
+   },
+   {
+    "when": "2021-08-12 07:00:00-04:00",
+    "EPS Estimate": 0.03,
+    "Reported EPS": 0.04,
+    "Surprise(%)": 16.01
+   },
+   {
+    "when": "2021-05-11 07:00:00-04:00",
+    "EPS Estimate": 0.04,
+    "Reported EPS": 0.04,
+    "Surprise(%)": 7.87
+   },
+   {
+    "when": "2021-02-16 07:00:00-05:00",
+    "EPS Estimate": 0.02,
+    "Reported EPS": 0.06,
+    "Surprise(%)": 128.04
+   },
+   {
+    "when": "2020-11-12 16:00:00-05:00",
+    "EPS Estimate": 0.03,
+    "Reported EPS": 0.06,
+    "Surprise(%)": 145.25
+   }
+  ],
+  "CCJ": [
+   {
+    "when": "2026-10-30 08:00:00-04:00",
+    "EPS Estimate": 0.27,
+    "Reported EPS": null,
+    "Surprise(%)": null
+   },
+   {
+    "when": "2026-07-31 07:00:00-04:00",
+    "EPS Estimate": 0.38,
+    "Reported EPS": 0.18,
+    "Surprise(%)": -52.1
+   },
+   {
+    "when": "2026-05-05 07:00:00-04:00",
+    "EPS Estimate": 0.34,
+    "Reported EPS": 0.47,
+    "Surprise(%)": 38.07
+   },
+   {
+    "when": "2026-02-13 06:00:00-05:00",
+    "EPS Estimate": 0.44,
+    "Reported EPS": 0.5,
+    "Surprise(%)": 12.92
+   },
+   {
+    "when": "2025-11-05 07:00:00-05:00",
+    "EPS Estimate": 0.27,
+    "Reported EPS": 0.07,
+    "Surprise(%)": -74.51
+   },
+   {
+    "when": "2025-07-31 07:00:00-04:00",
+    "EPS Estimate": 0.52,
+    "Reported EPS": 0.71,
+    "Surprise(%)": 37.59
+   },
+   {
+    "when": "2025-05-01 07:00:00-04:00",
+    "EPS Estimate": 0.19,
+    "Reported EPS": 0.16,
+    "Surprise(%)": -17.52
+   },
+   {
+    "when": "2025-02-20 07:00:00-05:00",
+    "EPS Estimate": 0.32,
+    "Reported EPS": 0.36,
+    "Surprise(%)": 12.9
+   },
+   {
+    "when": "2024-11-07 06:00:00-05:00",
+    "EPS Estimate": 0.25,
+    "Reported EPS": -0.01,
+    "Surprise(%)": -104.07
+   },
+   {
+    "when": "2024-07-31 07:00:00-04:00",
+    "EPS Estimate": 0.26,
+    "Reported EPS": 0.14,
+    "Surprise(%)": -45.33
+   },
+   {
+    "when": "2024-04-30 06:00:00-04:00",
+    "EPS Estimate": 0.34,
+    "Reported EPS": 0.13,
+    "Surprise(%)": -61.9
+   },
+   {
+    "when": "2024-02-08 07:00:00-05:00",
+    "EPS Estimate": 0.25,
+    "Reported EPS": 0.21,
+    "Surprise(%)": -15.98
+   },
+   {
+    "when": "2023-10-31 07:00:00-04:00",
+    "EPS Estimate": 0.13,
+    "Reported EPS": 0.32,
+    "Surprise(%)": 140.01
+   },
+   {
+    "when": "2023-08-02 06:00:00-04:00",
+    "EPS Estimate": 0.13,
+    "Reported EPS": -0.01,
+    "Surprise(%)": -108.0
+   },
+   {
+    "when": "2023-04-28 07:00:00-04:00",
+    "EPS Estimate": 0.22,
+    "Reported EPS": 0.27,
+    "Surprise(%)": 21.15
+   },
+   {
+    "when": "2023-02-09 06:00:00-05:00",
+    "EPS Estimate": 0.05,
+    "Reported EPS": 0.09,
+    "Surprise(%)": 65.78
+   },
+   {
+    "when": "2022-10-27 07:00:00-04:00",
+    "EPS Estimate": -0.01,
+    "Reported EPS": 0.03,
+    "Surprise(%)": 300.0
+   },
+   {
+    "when": "2022-07-27 07:00:00-04:00",
+    "EPS Estimate": 0.02,
+    "Reported EPS": 0.18,
+    "Surprise(%)": 981.73
+   },
+   {
+    "when": "2022-05-05 07:00:00-04:00",
+    "EPS Estimate": -0.02,
+    "Reported EPS": 0.04,
+    "Surprise(%)": 346.15
+   },
+   {
+    "when": "2022-02-09 06:00:00-05:00",
+    "EPS Estimate": 0.01,
+    "Reported EPS": 0.06,
+    "Surprise(%)": 601.75
+   },
+   {
+    "when": "2021-10-29 07:00:00-04:00",
+    "EPS Estimate": -0.04,
+    "Reported EPS": -0.14,
+    "Surprise(%)": -261.29
+   },
+   {
+    "when": "2021-07-28 06:00:00-04:00",
+    "EPS Estimate": -0.06,
+    "Reported EPS": -0.1,
+    "Surprise(%)": -53.85
+   },
+   {
+    "when": "2021-05-07 07:00:00-04:00",
+    "EPS Estimate": -0.1,
+    "Reported EPS": -0.07,
+    "Surprise(%)": 30.0
+   },
+   {
+    "when": "2021-02-10 06:00:00-05:00",
+    "EPS Estimate": -0.05,
+    "Reported EPS": 0.12,
+    "Surprise(%)": 333.33
+   },
+   {
+    "when": "2020-11-04 07:00:00-05:00",
+    "EPS Estimate": -0.05,
+    "Reported EPS": -0.2,
+    "Surprise(%)": -278.36
+   }
+  ]
+ },
+ "nasdaq_horizon": {
+  "2026-11-20": {
+   "n": 13,
+   "sample": [
+    [
+     "BJ",
+     "time-not-supplied"
+    ],
+    [
+     "FRO",
+     "time-not-supplied"
+    ],
+    [
+     "MOG.A",
+     "time-not-supplied"
+    ],
+    [
+     "MOG.B",
+     "time-not-supplied"
+    ],
+    [
+     "IESC",
+     "time-not-supplied"
+    ],
+    [
+     "VFS",
+     "time-not-supplied"
+    ]
+   ]
+  },
+  "2026-12-09": {
+   "n": 23,
+   "sample": [
+    [
+     "ORCL",
+     "time-not-supplied"
+    ],
+    [
+     "ADBE",
+     "time-not-supplied"
+    ],
+    [
+     "SNPS",
+     "time-not-supplied"
+    ],
+    [
+     "NDSN",
+     "time-not-supplied"
+    ],
+    [
+     "CHWY",
+     "time-not-supplied"
+    ],
+    [
+     "MTN",
+     "time-not-supplied"
+    ]
+   ]
+  },
+  "2026-12-16": {
+   "n": 12,
+   "sample": [
+    [
+     "MU",
+     "time-not-supplied"
+    ],
+    [
+     "JBL",
+     "time-not-supplied"
+    ],
+    [
+     "GIS",
+     "time-not-supplied"
+    ],
+    [
+     "TTC",
+     "time-not-supplied"
+    ],
+    [
+     "ABM",
+     "time-not-supplied"
+    ],
+    [
+     "WS",
+     "time-not-supplied"
+    ]
+   ]
+  },
+  "2027-01-06": {
+   "n": 0,
+   "sample": []
+  },
+  "2027-01-13": {
+   "n": 0,
+   "sample": []
+  }
+ },
+ "finished_utc": "2026-10-28 18:01:20"
+}
