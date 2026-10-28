@@ -143,9 +143,74 @@ def sec():
     return res
 
 
+def cboe_fresh():
+    """Does a query string bypass the CDN cache? Compare file timestamps with and without one."""
+    res = {}
+    for t in ("TENB", "HLF", "AEO", "KSS"):
+        row = {}
+        for label, url in (("plain", f"https://cdn.cboe.com/api/global/delayed_quotes/options/{t}.json"),
+                           ("bust", f"https://cdn.cboe.com/api/global/delayed_quotes/options/{t}.json?t={int(time.time())}")):
+            try:
+                st, body, secs, hd = get(url, {"User-Agent": UA, "Cache-Control": "no-cache"})
+                js = json.loads(body)
+                row[label] = dict(status=st, ts=js.get("timestamp"), age=hd.get("Age"), cache=hd.get("X-Cache") or hd.get("x-cache"),
+                                  price=(js.get("data") or {}).get("current_price"), kb=len(body) // 1024)
+            except Exception as e:
+                row[label] = {"error": f"{type(e).__name__}: {e}"}
+        res[t] = row
+    return res
+
+
+def filings():
+    res = {}
+    for t in ("RRC", "EQT", "PLTR"):
+        url = f"https://api.nasdaq.com/api/company/{t}/sec-filings?limit=20&sortColumn=filed&sortOrder=desc&IsQuoteMedia=true"
+        try:
+            st, body, secs, _ = get(url, NASDAQ_H)
+            js = json.loads(body)
+            data = js.get("data") or {}
+            rows = ((data.get("rows")) or (data.get("filings") or {}).get("rows") or [])
+            res[t] = dict(status=st, secs=secs, data_keys=list(data.keys()), n=len(rows), keys=list(rows[0].keys()) if rows else [],
+                          rows=[{k: r.get(k) for k in list(r.keys())[:8]} for r in rows[:12]])
+        except Exception as e:
+            res[t] = {"error": f"{type(e).__name__}: {e}"}
+    for label, ua in (("sec_ua_url", "checker-scan/1.0 (+https://github.com/Wilk0608/checker)"),
+                      ("sec_ua_browser", UA)):
+        try:
+            st, body, secs, _ = get("https://efts.sec.gov/LATEST/search-index?q=%22merger%22&forms=425&dateRange=custom"
+                                    "&startdt=2026-10-20&enddt=2026-10-28", {"User-Agent": ua, "Accept": "application/json"})
+            res[label] = dict(status=st, total=(json.loads(body).get("hits") or {}).get("total"))
+        except Exception as e:
+            res[label] = {"error": f"{type(e).__name__}: {e}"}
+    return res
+
+
+def yahoo_earn():
+    import yfinance as yf
+    res = {}
+    for t in ("PLTR", "CCJ"):
+        try:
+            df = yf.Ticker(t).get_earnings_dates(limit=8)
+            res[t] = [dict(when=str(i), **{k: (None if v != v else v) for k, v in r.items()}) for i, r in df.iterrows()]
+        except Exception as e:
+            res[t] = {"error": f"{type(e).__name__}: {e}"}
+    return res
+
+
+def nasdaq_horizon():
+    res = {}
+    for d in ("2026-11-20", "2026-12-09", "2026-12-16", "2027-01-06", "2027-01-13"):
+        try:
+            st, body, secs, _ = get(f"https://api.nasdaq.com/api/calendar/earnings?date={d}", NASDAQ_H)
+            rows = ((json.loads(body).get("data") or {}).get("rows")) or []
+            res[d] = dict(n=len(rows), sample=[(r.get("symbol"), r.get("time")) for r in rows[:6]])
+        except Exception as e:
+            res[d] = {"error": f"{type(e).__name__}: {e}"}
+    return res
+
+
 if __name__ == "__main__":
-    for name, fn in (("cboe", cboe), ("yahoo", yahoo), ("nasdaq_chain", nasdaq_chain), ("nasdaq_earnings", nasdaq_earnings),
-                     ("sec", sec)):
+    for name, fn in (("cboe_fresh", cboe_fresh), ("filings", filings), ("yahoo_earn", yahoo_earn), ("nasdaq_horizon", nasdaq_horizon)):
         attempt(name, fn)
     OUT["finished_utc"] = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     os.makedirs("probe_out", exist_ok=True)
