@@ -258,24 +258,27 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
     etfs = set(load_universe().get("g10_etfs", []))
     refreshed, ref_fail = [], []
     now_utc = now.astimezone(dt.timezone.utc)
-    for t, (meta, contracts) in chains.items():
+
+    def needs_refresh(meta):
         age_h = (now_utc - meta["ts"]).total_seconds() / 3600 if meta.get("ts") else 999
-        if (run_regular and not O.regular_hours(meta.get("ts"), HOLIDAYS)) or age_h > 20:
-            S = latest_price(raw_bars.get(t)) or meta.get("price")
-            try:
-                n = 0
-                for exp in {e for e in O.monthly_targets(contracts, entry, HOLIDAYS) if e}:
-                    n += O.refresh_from_nasdaq(t, contracts, exp, S, r, now, etf=t in etfs)
-                if n:
-                    meta.update(refreshed=True, refreshed_regular=run_regular, source="Nasdaq (Cboe file from " +
-                                (meta["ts"].astimezone(O.ET).strftime("%m-%d %H:%M") if meta.get("ts") else "n/a") + ")",
-                                price=S)
-                    refreshed.append(t)
-                else:
-                    ref_fail.append(t)
-            except Exception:
-                ref_fail.append(t)
-            time.sleep(0.3)
+        return (run_regular and not O.regular_hours(meta.get("ts"), HOLIDAYS)) or age_h > 20
+
+    def refresh(t):
+        meta, contracts = chains[t]
+        S = latest_price(raw_bars.get(t)) or meta.get("price")
+        try:
+            n = sum(O.refresh_from_nasdaq(t, contracts, exp, S, r, now, etf=t in etfs)
+                    for exp in {e for e in O.monthly_targets(contracts, entry, HOLIDAYS) if e})
+        except Exception:
+            n = 0
+        if n:
+            stamp = meta["ts"].astimezone(O.ET).strftime("%m-%d %H:%M") if meta.get("ts") else "n/a"
+            meta.update(refreshed=True, refreshed_regular=run_regular, source=f"Nasdaq (Cboe file from {stamp})", price=S)
+        return t, n
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        for t, n in ex.map(refresh, sorted(t for t, (m, _) in chains.items() if needs_refresh(m))):
+            (refreshed if n else ref_fail).append(t)
     for x in rows:
         t = x["r"]["tk"]
         if t not in chains:
@@ -297,7 +300,7 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
     for x in ok:
         apply_events(x, cal.get(x["r"]["tk"]), entry)
     # provisional pre-event tests (Yahoo report dates + the scan's daily bars + the Cboe straddle)
-    pre = [x for x in ok if (x.get("earn") or {}).get("pre_event") and x["max"] >= NEEDS[x["dir"]]]
+    pre = [x for x in ok if (x.get("earn") or {}).get("pre_event") and x["max"] >= need(x)]
     hist, pre_fail = {}, []
     for t in sorted({x["r"]["tk"] for x in pre}):
         try:
@@ -342,6 +345,11 @@ def _setup_label(s):
     return base + (", holding" if s.endswith("holding") else "")
 
 
+def need(x):
+    """Score a setup must reach: 7 for calls, 10 for puts, and 10 for a call whose contract only fits the High cap."""
+    return 10 if (x.get("opt") or {}).get("status") == "ok-high-only" else NEEDS[x["dir"]]
+
+
 def _fail_reason(x):
     o = x.get("opt") or {}
     if o.get("status") == "no-chain":
@@ -366,8 +374,10 @@ def _opt_cells(x):
         d = dt.date.fromisoformat(e["date"])
         earn = f"{d:%b %d} {e['time']}" + (" (reported)" if e.get("recent") else f" ({e['days']}d)")
     notes = [n for n in o.get("notes") or []]
-    if e.get("exit_by"):
+    if e.get("exit_by") and not e.get("pre_event"):
         notes.append(f"earnings exit {dt.date.fromisoformat(e['exit_by']):%b %d}")
+    if e.get("pre_event"):
+        notes.append("held through the report only as a pre-event play that passes the test")
     if e.get("recent"):
         notes.append("just reported: post-event rule")
     p = x.get("pre")
@@ -449,7 +459,7 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
             L += [f"## Top {lab} by Known", ", ".join(f"{x['r']['tk']} ({x['known']})" for x in xs[:40]) or "none", ""]
     else:
         key = lambda x: (-x["score"], -x["known"], -x["liq"], -x["r"]["vol_ratio"])
-        reach = [x for x in tradeable if x["max"] >= NEEDS[x["dir"]]]
+        reach = [x for x in tradeable if x["max"] >= need(x)]
         deal = sorted([x for x in reach if x.get("deal")], key=key)
         clean = [x for x in reach if not x.get("deal")]
         for d, lab in (("call", "Calls"), ("put", "Puts")):
@@ -466,7 +476,7 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
             L += [""]
         L += [f"## Merger filings in the last 120 days: {len(deal)} (read the filing first; a stock agreed to be acquired "
               "is an automatic reject)"] + hdr + ([line(x) for x in deal] or empty) + [""]
-        low = sorted([x for x in tradeable if x["max"] < NEEDS[x["dir"]]], key=key)
+        low = sorted([x for x in tradeable if x["max"] < need(x)], key=key)
         L += [f"## Contract passes but the score can't reach the bar: {len(low)}",
               "- Calls (Score/Max): " + (", ".join(f"{x['r']['tk']} ({x['score']}/{x['max']})" for x in low if x["dir"] == "call") or "none"),
               "- Puts (Score/Max): " + (", ".join(f"{x['r']['tk']} ({x['score']}/{x['max']})" for x in low if x["dir"] == "put") or "none"), ""]
@@ -797,6 +807,15 @@ def option_selftest(res, rows, miss, etf3, last, now):
     k = up["opt"]["contract"]
     assert up["opt"]["status"] == "ok" and 0.60 <= k["delta"] <= 0.70 and up["cat"] == 1 and up["earn"]["inside_life"], up["opt"]
     assert up["score"] == up["known"] + up["liq"] + up["pricing"] + 1 and up["max"] == up["score"] + 2
+    # the bar: 7 for calls, 10 for puts and for a call that only fits the High cap
+    assert need({"dir": "call", "opt": {"status": "ok"}}) == 7 and need({"dir": "put", "opt": {"status": "ok"}}) == 10
+    assert need({"dir": "call", "opt": {"status": "ok-high-only"}}) == 10
+    # a pre-event row carries no earnings-exit note (a deliberate pre-event play is exempt); a regular row does
+    pe = copy.deepcopy(up)
+    apply_events(pe, (entry + dt.timedelta(days=5), "AMC"), entry)
+    cells = _opt_cells(pe)[-1]
+    assert pe["earn"]["pre_event"] and "earnings exit" not in cells and "pre-event play" in cells, cells
+    assert "earnings exit" in _opt_cells(up)[-1]
     md = report(res, rows2, miss, etf3, last, now, "self-test", screened=True)
     for frag in ("## Calls ready to verify", "## Puts with earnings within 2 weeks", "## Merger filings", "Cut to 75%",
                  "## No contract passes the option rules", "shadow log only): 1", "(30d)"):

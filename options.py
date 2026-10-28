@@ -365,7 +365,7 @@ def choose_at(contracts, exp, cp, S, cap, hv, today, regular, r):
             f"{a['strike']:g}{a['cp']} {a['delta']:+.2f}" for a in near) + f", {exp:%b %d})"], False
     best = sorted(pool, key=lambda a: (len(a["reasons"]), -a["liquidity"], a["spread_pct"]))[0]
     cost_blocked = any(a["oi_ok"] and (a["spread_ok"] or not regular) and not a["fits"] for a in pool)
-    note = f"{'0.60-0.70' if A else '0.50-0.60'} delta: " + ", ".join(best["reasons"] or ["no pass"])
+    note = f"{exp:%b %d} {'0.60-0.70' if A else '0.50-0.60'} delta: " + ", ".join(best["reasons"] or ["no pass"])
     if A and not unlock:
         note += " (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     return None, [note], cost_blocked
