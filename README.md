@@ -18,7 +18,7 @@ passes the plan's option rules.
 
   Cboe leaves some quiet names' files from the night before; when a market-hours run gets one of those, the chosen expiration's quotes are re-read from Nasdaq's option chain.
 - `events.py`: earnings dates (Nasdaq's earnings calendar), which set the catalyst point, the pre-event rule and the earnings-exit date; a provisional pre-event test (implied move from the at-the-money straddle vs the average reaction to the past year's reports, with report dates from Yahoo); and merger filings in the last 120 days (Nasdaq's SEC-filings feed: Form 425, SC 14D9, SC TO-T/TO-C, DEFM14A/PREM14A and similar).
-- `plan.json`: the account figures the caps come from (balance, base, phase, T-bill rate). The trading session updates it when the ledger changes; the report prints the date it was last updated.
+- `plan.json`: the account figures the caps come from (balance, base, phase, T-bill rate) and `min_score`, the lowest score you trade (10 = High conviction only: the tables then list only setups that can reach 10, and calls are sized at the High cap). The trading session updates it when the ledger changes; the report prints the date it was last updated.
 - `scanner.py`: downloads ~13 months of daily bars for the universe, applies the exact filters (price $5-275, 20-day average volume 1M+) and setup rules to final bars, runs the option check, and writes `results/latest.md`, `results/latest.json` (everything, including each setup's chosen contract) and a dated copy.
 - `.github/workflows/scan.yml`: runs twice each weekday and commits the results. Run it any time from the Actions tab ("Run workflow").
 

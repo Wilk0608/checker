@@ -182,6 +182,14 @@ def rank_rows(results, asof):
     return rows
 
 
+def apply_bar(plan):
+    """The score a setup must be able to reach, from plan.json's min_score (default 7 for calls; puts always need 10).
+    A bar of 10 means High conviction only, so calls are also sized against the High cap."""
+    m = int((plan or {}).get("min_score", 7))
+    NEEDS.update(call=max(7, m), put=max(10, m))
+    return NEEDS
+
+
 def load_plan():
     """Account figures the caps come from (balance, base, phase, T-bill rate). Updated by the trading session."""
     try:
@@ -249,7 +257,10 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
     caps = O.plan_caps(plan)
     r = float(plan.get("rate", 0.04))
     entry, short, long_ = plan_expirations(asof)
-    SCREEN.update(caps=caps, plan_updated=plan.get("updated", "n/a"), entry=entry)
+    apply_bar(plan)
+    SCREEN.update(caps=caps, plan_updated=plan.get("updated", "n/a"), entry=entry, calls_at_high=NEEDS["call"] >= 10)
+    if NEEDS["call"] >= 10:                          # High conviction only: a call is sized against the High cap
+        caps = dict(caps, medium=caps["high"])
     tickers = sorted({x["r"]["tk"] for x in rows})
     chains, errs = O.fetch_all(tickers, workers=workers)
     keep_to = entry + dt.timedelta(days=130)          # covers the first monthly 60+ days out on quarterly cycles
@@ -424,7 +435,9 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
     if screened:
         c = SCREEN["caps"]
         L += [f"Option check: caps from plan.json (updated {SCREEN.get('plan_updated')}): balance ${c['balance']:,.2f}, {c['phase']}, "
-              f"{c['mode']} -> Medium ${c['medium']:,.0f}, High ${c['high']:,.0f}, puts ${c['put']:,.0f}. Quotes: Cboe delayed "
+              f"{c['mode']} -> Medium ${c['medium']:,.0f}, High ${c['high']:,.0f}, puts ${c['put']:,.0f}. Bar: calls {NEEDS['call']}+, puts "
+              f"{NEEDS['put']}+" + (" (High conviction only, so calls are sized at the High cap)" if SCREEN.get("calls_at_high") else "")
+              + ". Quotes: Cboe delayed "
               f"(files {SCREEN['oldest']} to {SCREEN['newest']}; {SCREEN['regular_files']} of {SCREEN['chains']} taken in regular hours"
               + (f"; {len(SCREEN['refreshed'])} stale files re-read from Nasdaq" if SCREEN.get("refreshed") else "") + "). "
               "A * on a spread means closing or after-hours quotes: the plan judges spreads on regular-hours quotes only, so "
@@ -435,7 +448,8 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
           "**How to read it.** Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the "
           "1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) of the contract shown + catalyst "
           "(1 when an earnings date, estimated, falls inside the option's life). The session adds the Fed point and raises "
-          "the catalyst to 2 for a confirmed date: Max = Score + 1 + (2 - catalyst). Calls need 7, puts 10; only setups whose "
+          "the catalyst to 2 for a confirmed date: Max = Score + 1 + (2 - catalyst). Calls need " + str(NEEDS["call"]) + ", puts "
+          + str(NEEDS["put"]) + " (plan.json min_score); only setups whose "
           "contract passes the plan's option rules and whose Max reaches the bar are in the tables. Contract = what the plan "
           "would buy (expiration by setup type, delta 0.60-0.70 or 0.50-0.60 as allowed, OI 500+, spread 8% or less, cost "
           "under the cap); Cost = one contract at mid + a quarter of the spread + $1, x lots under the cap. BE sigma = "
@@ -807,6 +821,9 @@ def option_selftest(res, rows, miss, etf3, last, now):
     k = up["opt"]["contract"]
     assert up["opt"]["status"] == "ok" and 0.60 <= k["delta"] <= 0.70 and up["cat"] == 1 and up["earn"]["inside_life"], up["opt"]
     assert up["score"] == up["known"] + up["liq"] + up["pricing"] + 1 and up["max"] == up["score"] + 2
+    # min_score in plan.json: 10 = High conviction only (calls and puts both need 10); default 7 for calls
+    assert apply_bar({"min_score": 10}) == {"call": 10, "put": 10} and apply_bar({}) == {"call": 7, "put": 10}
+    assert apply_bar(None) == {"call": 7, "put": 10}
     # the bar: 7 for calls, 10 for puts and for a call that only fits the High cap
     assert need({"dir": "call", "opt": {"status": "ok"}}) == 7 and need({"dir": "put", "opt": {"status": "ok"}}) == 10
     assert need({"dir": "call", "opt": {"status": "ok-high-only"}}) == 10
@@ -843,6 +860,7 @@ def run_scan():
     results, missing, etf3, dates = run(bars, groups, stocks, now)
     rows = rank_rows(results, expected)
     plan, screened = load_plan(), False
+    apply_bar(plan)
     if plan and rows:
         try:
             run_option_screen(rows, bars, expected, now, plan)
