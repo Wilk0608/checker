@@ -1,9 +1,9 @@
 {
-  "balance": 24737.0,
+  "balance": 25571.0,
   "base": 25000,
   "phase": "Proving",
   "rate": 0.0404,
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "note": "Account figures the option screen sizes against (rules v7.6). balance = current account value from the ledger; base = $25,000 plus deposits minus withdrawals; phase = Proving or Pressing; rate = latest 3-month T-bill rate (FRED DTB3) as a fraction; min_score = the lowest score you will trade (10 = High conviction only, which also sizes calls at the High cap; 7 = the plan's Medium tier). The trading session updates this file when the ledger changes.",
   "min_score": 10
 }
