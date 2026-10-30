@@ -157,24 +157,56 @@
    "ts": "2026-12-24",
    "rr": 2.62,
    "rr_pts": 1,
-   "cap": 34.58,
+   "cap": 32.88,
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 11,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Jan 15 0.50-0.60 delta: spread 15%"
-    ],
-    "cap": 1917.82,
-    "contract": null,
-    "S": 39.38,
+    "status": "ok",
+    "notes": [],
+    "cap": 1917.07,
+    "contract": {
+     "osi": "AA270115P00042000",
+     "exp": "2027-01-15",
+     "cp": "P",
+     "strike": 42.0,
+     "bid": 4.85,
+     "ask": 5.25,
+     "oi": 2549,
+     "src": "Cboe",
+     "dte": 77,
+     "quote": true,
+     "mid": 5.05,
+     "spread_pct": 0.0792,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 516.0,
+     "fits": true,
+     "lim": 5.15,
+     "iv": 0.4524,
+     "delta": -0.6111,
+     "be": 36.84,
+     "be_sd": 0.227,
+     "ivhv": 1.319,
+     "pricing": 0,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 38.66,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
-   }
+    "quote_time": "10-30 15:57 ET"
+   },
+   "liq": 1,
+   "pricing": 0,
+   "cat": 0,
+   "score": 5,
+   "earn": {},
+   "deal": "425 x10 (latest Oct 16)"
   }
  },
  {
@@ -318,7 +350,7 @@
   "pct_above_lo52": 328.1,
   "pct_below_hi52": 66.1,
   "near_low": false,
-  "vol_ratio": 0.8,
+  "vol_ratio": 0.81,
   "hi20": 130.16,
   "lo20": 67.51,
   "setups": [],
@@ -647,7 +679,7 @@
   "pct_above_lo52": 14.0,
   "pct_below_hi52": 40.4,
   "near_low": false,
-  "vol_ratio": 0.78,
+  "vol_ratio": 0.79,
   "hi20": 5.11,
   "lo20": 4.31,
   "setups": [
@@ -979,7 +1011,7 @@
   "pct_above_lo52": 52.4,
   "pct_below_hi52": 91.1,
   "near_low": false,
-  "vol_ratio": 0.73,
+  "vol_ratio": 0.74,
   "hi20": 8.71,
   "lo20": 7.26,
   "setups": [],
@@ -1125,11 +1157,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 12%"
+     "Jan 15 0.60-0.70 delta: spread 21%, cost $1,924 > cap $1,917"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 86.49,
+    "S": 86.88,
     "quotes": "Nasdaq (Cboe file from 10-30 06:01)",
     "regular": true,
     "quote_time": "10-30 06:01 ET"
@@ -1344,7 +1376,7 @@
   "pct_above_lo52": 19.0,
   "pct_below_hi52": 61.9,
   "near_low": false,
-  "vol_ratio": 0.69,
+  "vol_ratio": 0.7,
   "hi20": 5.03,
   "lo20": 3.8,
   "setups": [],
@@ -1940,11 +1972,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 7.5P -0.72, 12.5P -0.92, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 7.5P -0.74, 10P -0.86, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 6.88,
+    "S": 6.55,
     "quotes": "Nasdaq (Cboe file from 10-29 21:09)",
     "regular": true,
     "quote_time": "10-29 21:09 ET"
@@ -2149,11 +2181,11 @@
     "status": "fail",
     "notes": [
      "no listed monthly 60+ days out",
-     "Dec 18 0.60-0.70 delta: OI 198, spread 29%"
+     "Dec 18 0.50-0.60 delta: OI 363, spread 46%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 21.55,
+    "S": 21.39,
     "quotes": "Nasdaq (Cboe file from 10-30 06:02)",
     "regular": true,
     "quote_time": "10-30 06:02 ET"
@@ -2180,12 +2212,12 @@
   "pct_above_lo52": 93.9,
   "pct_below_hi52": 2.8,
   "near_low": false,
-  "vol_ratio": 0.92,
+  "vol_ratio": 0.93,
   "hi20": 428.27,
   "lo20": 385.76,
   "setups": [],
   "watch": [
-   "above 20d high 428.27 but vol 0.92x"
+   "above 20d high 428.27 but vol 0.93x"
   ],
   "note": "",
   "group": "g01_semis_hw",
@@ -2491,11 +2523,11 @@
   "pct_above_lo52": 63.7,
   "pct_below_hi52": 1.3,
   "near_low": false,
-  "vol_ratio": 22.17,
+  "vol_ratio": 22.18,
   "hi20": 7.41,
   "lo20": 6.21,
   "setups": [
-   "Breakout 10-29 (> 7.41, vol 22.17x)",
+   "Breakout 10-29 (> 7.41, vol 22.18x)",
    "Breakout 10-28 (> 6.99, vol 3.42x), holding"
   ],
   "watch": [],
@@ -2590,7 +2622,7 @@
   "rank_call": {
    "dir": "call",
    "setups": [
-    "Breakout 10-29 (> 7.41, vol 22.17x)",
+    "Breakout 10-29 (> 7.41, vol 22.18x)",
     "Breakout 10-28 (> 6.99, vol 3.42x), holding"
    ],
    "exp": "2026-12-18",
@@ -2606,14 +2638,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 6C +0.87, 10C +0.35, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 9C +0.92, 10C +0.38, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 9.86,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:02)",
+    "S": 9.87,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:02 ET"
+    "quote_time": "10-30 15:50 ET"
    }
   }
  },
@@ -2844,7 +2876,7 @@
   "pct_above_lo52": 227.3,
   "pct_below_hi52": 58.5,
   "near_low": false,
-  "vol_ratio": 0.57,
+  "vol_ratio": 0.6,
   "hi20": 107.21,
   "lo20": 55.31,
   "setups": [],
@@ -3043,23 +3075,64 @@
    "ts": "2026-12-08",
    "rr": 0.29,
    "rr_pts": 0,
-   "cap": 22.24,
+   "cap": 24.09,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 7,
    "near_low": false,
    "opt": {
-    "status": "fail",
+    "status": "ok",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 157, spread 8%"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "cap": 3835.65,
-    "contract": null,
-    "S": 20.19,
+    "cap": 3834.15,
+    "contract": {
+     "osi": "AEO261218C00020000",
+     "exp": "2026-12-18",
+     "cp": "C",
+     "strike": 20.0,
+     "bid": 1.58,
+     "ask": 1.65,
+     "oi": 644,
+     "src": "Cboe",
+     "dte": 49,
+     "quote": true,
+     "mid": 1.615,
+     "spread_pct": 0.0433,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 164.25,
+     "fits": true,
+     "lim": 1.632,
+     "iv": 0.6031,
+     "delta": 0.5198,
+     "be": 21.64,
+     "be_sd": 0.463,
+     "ivhv": 1.867,
+     "pricing": 0,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 19.64,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:48 ET"
+    "quote_time": "10-30 15:48 ET"
+   },
+   "liq": 1,
+   "pricing": 0,
+   "cat": 1,
+   "score": 5,
+   "earn": {
+    "date": "2026-12-01",
+    "time": "time n/a",
+    "days": 32,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2026-11-30"
    }
   }
  },
@@ -3419,7 +3492,7 @@
   "pct_above_lo52": 77.8,
   "pct_below_hi52": 17.2,
   "near_low": false,
-  "vol_ratio": 0.67,
+  "vol_ratio": 0.68,
   "hi20": 80.7,
   "lo20": 69.49,
   "setups": [],
@@ -3891,14 +3964,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread 23%"
+     "Dec 18 0.60-0.70 delta: spread 14%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 27.29,
-    "quotes": "Nasdaq (Cboe file from 10-29 21:13)",
+    "S": 27.09,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 21:13 ET"
+    "quote_time": "10-30 14:30 ET"
    }
   }
  },
@@ -4250,7 +4323,7 @@
   "pct_above_lo52": 58.6,
   "pct_below_hi52": 33.0,
   "near_low": false,
-  "vol_ratio": 0.68,
+  "vol_ratio": 0.69,
   "hi20": 12.79,
   "lo20": 11.01,
   "setups": [],
@@ -5082,24 +5155,55 @@
    "ts": "2026-12-24",
    "rr": 0.19,
    "rr_pts": 0,
-   "cap": 30.28,
+   "cap": 29.26,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Jan 15 0.60-0.70 delta: spread 9%"
-    ],
-    "cap": 1917.82,
-    "contract": null,
-    "S": 35.61,
+    "status": "ok",
+    "notes": [],
+    "cap": 1917.07,
+    "contract": {
+     "osi": "ALK270115P00040000",
+     "exp": "2027-01-15",
+     "cp": "P",
+     "strike": 40.0,
+     "bid": 6.0,
+     "ask": 6.3,
+     "oi": 1220,
+     "src": "Cboe",
+     "dte": 77,
+     "quote": true,
+     "mid": 6.15,
+     "spread_pct": 0.0488,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 623.5,
+     "fits": true,
+     "lim": 6.225,
+     "iv": 0.491,
+     "delta": -0.6625,
+     "be": 33.77,
+     "be_sd": 0.188,
+     "ivhv": 1.175,
+     "pricing": 1,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 35.26,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:55 ET"
-   }
+    "quote_time": "10-30 15:38 ET"
+   },
+   "liq": 2,
+   "pricing": 1,
+   "cat": 0,
+   "score": 6,
+   "earn": {}
   }
  },
  {
@@ -5266,11 +5370,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 12.5P -0.47, 17.5P -0.89, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 12.5P -0.48, 25P -0.86, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 12.39,
+    "S": 12.34,
     "quotes": "Nasdaq (Cboe file from 10-29 21:14)",
     "regular": true,
     "quote_time": "10-29 21:14 ET"
@@ -5443,14 +5547,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 30, spread 31%"
+     "Dec 18 0.60-0.70 delta: OI 169, spread 14%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 187.3,
-    "quotes": "Nasdaq (Cboe file from 10-29 21:14)",
+    "S": 186.65,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 21:14 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -5729,60 +5833,19 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 10,
+   "max": 11,
    "near_low": true,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+     "Dec 18 0.60-0.70 delta: spread 15%, cost $2,558 > cap $1,917"
     ],
-    "cap": 1917.82,
-    "contract": {
-     "osi": "ALNY261218P00185000",
-     "exp": "2026-12-18",
-     "cp": "P",
-     "strike": 185.0,
-     "bid": 17.8,
-     "ask": 19.2,
-     "oi": 502,
-     "src": "Nasdaq",
-     "dte": 49,
-     "quote": true,
-     "mid": 18.5,
-     "spread_pct": 0.0757,
-     "spread_ok": true,
-     "spread_provisional": false,
-     "oi_ok": true,
-     "cost": 1886.0,
-     "fits": true,
-     "lim": 18.85,
-     "iv": 0.5151,
-     "delta": -0.5687,
-     "be": 166.14,
-     "be_sd": 0.267,
-     "ivhv": 0.476,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 174.94,
+    "cap": 1917.07,
+    "contract": null,
+    "S": 164.7,
     "quotes": "Nasdaq (Cboe file from 10-29 21:15)",
     "regular": true,
     "quote_time": "10-29 21:15 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 0,
-   "score": 7,
-   "earn": {
-    "date": "2026-10-29",
-    "time": "time n/a",
-    "days": -1,
-    "recent": true,
-    "inside_life": false,
-    "pre_event": false,
-    "exit_by": null
    }
   }
  },
@@ -6157,14 +6220,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 50, spread 19%"
+     "Dec 18 0.60-0.70 delta: OI 50, spread 14%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 21.62,
+    "S": 21.34,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:02 ET"
+    "quote_time": "10-30 15:50 ET"
    }
   }
  },
@@ -6457,11 +6520,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 11, spread 17%"
+     "Jan 15 0.60-0.70 delta: OI 13, spread 22%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 60.15,
+    "S": 63.4,
     "quotes": "Nasdaq (Cboe file from 10-29 21:16)",
     "regular": true,
     "quote_time": "10-29 21:16 ET"
@@ -6668,7 +6731,7 @@
   "pct_above_lo52": 200.9,
   "pct_below_hi52": 14.0,
   "near_low": false,
-  "vol_ratio": 0.85,
+  "vol_ratio": 0.86,
   "hi20": 649.42,
   "lo20": 507.93,
   "setups": [],
@@ -6788,7 +6851,7 @@
   "pct_above_lo52": 38.5,
   "pct_below_hi52": 57.4,
   "near_low": false,
-  "vol_ratio": 0.9,
+  "vol_ratio": 0.91,
   "hi20": 56.02,
   "lo20": 36.81,
   "setups": [],
@@ -7147,9 +7210,9 @@
     "notes": [
      "Dec 18 0.60-0.70 delta: OI 16, spread 41%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 41.22,
+    "S": 41.35,
     "quotes": "Nasdaq (Cboe file from 10-29 21:20)",
     "regular": true,
     "quote_time": "10-29 21:20 ET"
@@ -7433,19 +7496,60 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "fail",
+    "status": "ok",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 416, spread 17%"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "cap": 3835.65,
-    "contract": null,
-    "S": 188.21,
+    "cap": 3834.15,
+    "contract": {
+     "osi": "AMT261218C00190000",
+     "exp": "2026-12-18",
+     "cp": "C",
+     "strike": 190.0,
+     "bid": 7.3,
+     "ask": 7.7,
+     "oi": 911,
+     "src": "Cboe",
+     "dte": 49,
+     "quote": true,
+     "mid": 7.5,
+     "spread_pct": 0.0533,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 761.0,
+     "fits": true,
+     "lim": 7.6,
+     "iv": 0.2868,
+     "delta": 0.5049,
+     "be": 197.61,
+     "be_sd": 0.479,
+     "ivhv": 0.715,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 188.13,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:57 ET"
+    "quote_time": "10-30 15:54 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 0,
+   "score": 6,
+   "earn": {
+    "date": "2026-10-27",
+    "time": "time n/a",
+    "days": -3,
+    "recent": true,
+    "inside_life": false,
+    "pre_event": false,
+    "exit_by": null
    }
   }
  },
@@ -7622,11 +7726,11 @@
   "pct_above_lo52": 24.4,
   "pct_below_hi52": 15.1,
   "near_low": false,
-  "vol_ratio": 2.35,
+  "vol_ratio": 2.4,
   "hi20": 262.63,
   "lo20": 248.0,
   "setups": [
-   "Breakdown 10-29 (< 248.00, vol 2.35x)"
+   "Breakdown 10-29 (< 248.00, vol 2.40x)"
   ],
   "watch": [],
   "note": "",
@@ -7724,7 +7828,7 @@
   "rank_put": {
    "dir": "put",
    "setups": [
-    "Breakdown 10-29 (< 248.00, vol 2.35x)"
+    "Breakdown 10-29 (< 248.00, vol 2.40x)"
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
@@ -7739,40 +7843,40 @@
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
      "osi": "AMZN261218P00250000",
      "exp": "2026-12-18",
      "cp": "P",
      "strike": 250.0,
-     "bid": 16.55,
-     "ask": 17.15,
+     "bid": 16.35,
+     "ask": 16.8,
      "oi": 10220,
      "src": "Cboe",
      "dte": 49,
      "quote": true,
-     "mid": 16.85,
-     "spread_pct": 0.0356,
+     "mid": 16.575,
+     "spread_pct": 0.0271,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1701.0,
+     "cost": 1669.75,
      "fits": true,
-     "lim": 17.0,
-     "iv": 0.3086,
-     "delta": -0.6255,
-     "be": 232.99,
-     "be_sd": 0.211,
-     "ivhv": 0.85,
+     "lim": 16.688,
+     "iv": 0.3208,
+     "delta": -0.6062,
+     "be": 233.3,
+     "be_sd": 0.228,
+     "ivhv": 0.884,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 238.69,
+    "S": 239.73,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:16 ET"
+    "quote_time": "10-30 15:58 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -8109,7 +8213,7 @@
   "pct_above_lo52": 60.9,
   "pct_below_hi52": 15.3,
   "near_low": false,
-  "vol_ratio": 0.93,
+  "vol_ratio": 0.94,
   "hi20": 216.74,
   "lo20": 171.07,
   "setups": [],
@@ -8462,14 +8566,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 60C +0.70, 65C +0.40, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 60C +0.73, 65C +0.44, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 63.38,
+    "S": 63.14,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:02 ET"
+    "quote_time": "10-30 15:56 ET"
    }
   }
  },
@@ -8792,14 +8896,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 0, spread 105%"
+     "Dec 18 0.60-0.70 delta: OI 3, spread 68%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 45.1,
+    "S": 43.96,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:56 ET"
+    "quote_time": "10-30 15:54 ET"
    }
   }
  },
@@ -8823,7 +8927,7 @@
   "pct_above_lo52": 39.1,
   "pct_below_hi52": 8.7,
   "near_low": false,
-  "vol_ratio": 1.32,
+  "vol_ratio": 1.33,
   "hi20": 88.62,
   "lo20": 73.07,
   "setups": [],
@@ -8852,7 +8956,7 @@
   "pct_above_lo52": 10.9,
   "pct_below_hi52": 61.7,
   "near_low": false,
-  "vol_ratio": 0.56,
+  "vol_ratio": 0.57,
   "hi20": 25.38,
   "lo20": 17.83,
   "setups": [],
@@ -8949,12 +9053,12 @@
   "pct_above_lo52": 1.2,
   "pct_below_hi52": 65.5,
   "near_low": true,
-  "vol_ratio": 0.96,
+  "vol_ratio": 0.97,
   "hi20": 281.97,
   "lo20": 259.97,
   "setups": [],
   "watch": [
-   "below 20d low 259.97 but vol 0.96x"
+   "below 20d low 259.97 but vol 0.97x"
   ],
   "note": "",
   "group": "",
@@ -9009,7 +9113,7 @@
   "pct_above_lo52": 285.8,
   "pct_below_hi52": 31.1,
   "near_low": false,
-  "vol_ratio": 1.11,
+  "vol_ratio": 1.12,
   "hi20": 11.55,
   "lo20": 9.52,
   "setups": [],
@@ -9213,14 +9317,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 169, spread 29%"
+     "Dec 18 0.60-0.70 delta: OI 169, spread 20%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 41.67,
+    "S": 41.59,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:56 ET"
+    "quote_time": "10-30 15:41 ET"
    }
   }
  },
@@ -9483,14 +9587,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 131, spread 31%"
+     "Dec 18 0.60-0.70 delta: OI 131, spread 15%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 40.01,
+    "S": 40.12,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:02 ET"
+    "quote_time": "10-30 15:48 ET"
    }
   }
  },
@@ -9658,11 +9762,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 2, spread 59%"
+     "Dec 18 0.50-0.60 delta: OI 2, spread 88%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 12.5,
+    "S": 12.4,
     "quotes": "Nasdaq (Cboe file from 10-30 06:02)",
     "regular": true,
     "quote_time": "10-30 06:02 ET"
@@ -9808,9 +9912,9 @@
     "notes": [
      "no strike at 0.50-0.70 delta (nearest 2.5C +1.00, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 2.38,
+    "S": 2.35,
     "quotes": "Nasdaq (Cboe file from 10-30 05:50)",
     "regular": true,
     "quote_time": "10-30 05:50 ET"
@@ -10016,9 +10120,9 @@
     "notes": [
      "Dec 18 0.60-0.70 delta: OI 0, spread 59%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 14.56,
+    "S": 14.52,
     "quotes": "Nasdaq (Cboe file from 10-29 23:15)",
     "regular": true,
     "quote_time": "10-29 23:15 ET"
@@ -10045,7 +10149,7 @@
   "pct_above_lo52": 128.7,
   "pct_below_hi52": 49.5,
   "near_low": false,
-  "vol_ratio": 1.01,
+  "vol_ratio": 1.02,
   "hi20": 307.49,
   "lo20": 210.1,
   "setups": [],
@@ -10403,11 +10507,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 0, spread 42%"
+     "Dec 18 0.50-0.60 delta: OI 0, spread 50%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 52.37,
+    "S": 50.79,
     "quotes": "Nasdaq (Cboe file from 10-29 21:27)",
     "regular": true,
     "quote_time": "10-29 21:27 ET"
@@ -10854,7 +10958,7 @@
   "pct_above_lo52": 254.8,
   "pct_below_hi52": 27.6,
   "near_low": false,
-  "vol_ratio": 0.72,
+  "vol_ratio": 0.75,
   "hi20": 30.75,
   "lo20": 24.09,
   "setups": [],
@@ -11033,7 +11137,7 @@
   "pct_above_lo52": 6.3,
   "pct_below_hi52": 29.1,
   "near_low": false,
-  "vol_ratio": 3.31,
+  "vol_ratio": 3.48,
   "hi20": 7.89,
   "lo20": 7.04,
   "setups": [],
@@ -11120,7 +11224,7 @@
   "pct_above_lo52": 66.7,
   "pct_below_hi52": 51.2,
   "near_low": false,
-  "vol_ratio": 2.79,
+  "vol_ratio": 2.85,
   "hi20": 11.45,
   "lo20": 9.9,
   "setups": [
@@ -11239,14 +11343,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 31, spread $0.40"
+     "no strike at 0.50-0.70 delta (nearest 5C +0.89, 7.5C +0.43, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 7.63,
-    "quotes": "Nasdaq (Cboe file from 10-29 21:15)",
+    "S": 6.97,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 21:15 ET"
+    "quote_time": "10-30 15:51 ET"
    }
   }
  },
@@ -11727,7 +11831,7 @@
   "pct_above_lo52": 19.2,
   "pct_below_hi52": 67.0,
   "near_low": false,
-  "vol_ratio": 1.22,
+  "vol_ratio": 1.23,
   "hi20": 143.54,
   "lo20": 117.51,
   "setups": [],
@@ -12144,12 +12248,12 @@
     "notes": [
      "Dec 18 0.60-0.70 delta: OI 485, spread 37%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 17.1,
-    "quotes": "Nasdaq (Cboe file from 10-29 21:30)",
+    "S": 17.31,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 21:30 ET"
+    "quote_time": "10-30 15:24 ET"
    }
   }
  },
@@ -12292,9 +12396,9 @@
     "notes": [
      "Feb 19 0.50-0.60 delta: OI 258, spread 124%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 6.15,
+    "S": 6.34,
     "quotes": "Nasdaq (Cboe file from 10-29 21:22)",
     "regular": true,
     "quote_time": "10-29 21:22 ET"
@@ -12494,14 +12598,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread $1.10"
+     "Dec 18 0.50-0.60 delta: spread $0.85"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 7.18,
-    "quotes": "Nasdaq (Cboe file from 10-29 21:30)",
+    "S": 7.1,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 21:30 ET"
+    "quote_time": "10-30 15:52 ET"
    }
   }
  },
@@ -12795,11 +12899,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 2, spread 32%"
+     "Dec 18 0.50-0.60 delta: OI 24, spread 42%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 48.68,
+    "S": 49.42,
     "quotes": "Nasdaq (Cboe file from 10-29 21:31)",
     "regular": true,
     "quote_time": "10-29 21:31 ET"
@@ -13038,7 +13142,7 @@
   "pct_above_lo52": 818.3,
   "pct_below_hi52": 57.5,
   "near_low": false,
-  "vol_ratio": 1.37,
+  "vol_ratio": 1.41,
   "hi20": 86.66,
   "lo20": 51.47,
   "setups": [],
@@ -13301,43 +13405,41 @@
    "near_low": true,
    "opt": {
     "status": "ok",
-    "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
-    ],
-    "cap": 1917.82,
+    "notes": [],
+    "cap": 1917.07,
     "contract": {
-     "osi": "BA261218P00175000",
+     "osi": "BA261218P00180000",
      "exp": "2026-12-18",
      "cp": "P",
-     "strike": 175.0,
-     "bid": 8.4,
-     "ask": 9.0,
-     "oi": 2967,
+     "strike": 180.0,
+     "bid": 12.2,
+     "ask": 12.85,
+     "oi": 4507,
      "src": "Cboe",
      "dte": 49,
      "quote": true,
-     "mid": 8.7,
-     "spread_pct": 0.069,
+     "mid": 12.525,
+     "spread_pct": 0.0519,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 886.0,
+     "cost": 1269.75,
      "fits": true,
-     "lim": 8.85,
-     "iv": 0.2959,
-     "delta": -0.5305,
-     "be": 166.14,
-     "be_sd": 0.31,
-     "ivhv": 0.652,
+     "lim": 12.687,
+     "iv": 0.3208,
+     "delta": -0.6301,
+     "be": 167.3,
+     "be_sd": 0.215,
+     "ivhv": 0.707,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 171.92,
+    "S": 171.64,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:16 ET"
+    "quote_time": "10-30 15:58 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -13648,11 +13750,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 12, spread 44%"
+     "Dec 18 0.60-0.70 delta: OI 12, spread 22%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 18.28,
+    "S": 18.19,
     "quotes": "Nasdaq (Cboe file from 10-30 05:08)",
     "regular": true,
     "quote_time": "10-30 05:08 ET"
@@ -13768,7 +13870,7 @@
   "pct_above_lo52": 194.6,
   "pct_below_hi52": 32.4,
   "near_low": false,
-  "vol_ratio": 0.93,
+  "vol_ratio": 0.94,
   "hi20": 9.58,
   "lo20": 8.06,
   "setups": [],
@@ -13797,7 +13899,7 @@
   "pct_above_lo52": 29.0,
   "pct_below_hi52": 63.9,
   "near_low": false,
-  "vol_ratio": 1.42,
+  "vol_ratio": 1.43,
   "hi20": 2.74,
   "lo20": 2.12,
   "setups": [],
@@ -14277,9 +14379,9 @@
     "notes": [
      "Dec 18 0.50-0.60 delta: OI 2"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 30.69,
+    "S": 30.59,
     "quotes": "Nasdaq (Cboe file from 10-29 21:04)",
     "regular": true,
     "quote_time": "10-29 21:04 ET"
@@ -14819,11 +14921,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 10P -0.44, 12.5P -0.78, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 10P -0.44, 12.5P -0.71, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 8.87,
+    "S": 9.1,
     "quotes": "Nasdaq (Cboe file from 10-29 20:22)",
     "regular": true,
     "quote_time": "10-29 20:22 ET"
@@ -15181,7 +15283,7 @@
   "pct_above_lo52": 193.7,
   "pct_below_hi52": 36.7,
   "near_low": false,
-  "vol_ratio": 0.66,
+  "vol_ratio": 0.67,
   "hi20": 295.78,
   "lo20": 193.3,
   "setups": [],
@@ -15329,11 +15431,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 1, spread 80%"
+     "Dec 18 0.60-0.70 delta: OI 1, spread 49%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 27.47,
+    "S": 27.16,
     "quotes": "Nasdaq (Cboe file from 10-29 20:21)",
     "regular": true,
     "quote_time": "10-29 20:21 ET"
@@ -15479,12 +15581,12 @@
     "notes": [
      "Jan 15 0.60-0.70 delta: spread 21%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 17.69,
-    "quotes": "Nasdaq (Cboe file from 10-29 19:48)",
+    "S": 17.77,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 19:48 ET"
+    "quote_time": "10-30 12:11 ET"
    }
   }
  },
@@ -15774,14 +15876,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 160, spread 15%"
+     "Jan 15 0.60-0.70 delta: OI 160, spread 20%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 28.64,
+    "S": 28.59,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 15:41 ET"
    }
   }
  },
@@ -15952,11 +16054,11 @@
   "pct_above_lo52": 105.8,
   "pct_below_hi52": 1.4,
   "near_low": false,
-  "vol_ratio": 15.01,
+  "vol_ratio": 15.02,
   "hi20": 6.92,
   "lo20": 5.73,
   "setups": [
-   "Breakout 10-29 (> 6.92, vol 15.01x)",
+   "Breakout 10-29 (> 6.92, vol 15.02x)",
    "Breakout 10-28 (> 6.49, vol 4.21x), holding"
   ],
   "watch": [],
@@ -16051,7 +16153,7 @@
   "rank_call": {
    "dir": "call",
    "setups": [
-    "Breakout 10-29 (> 6.92, vol 15.01x)",
+    "Breakout 10-29 (> 6.92, vol 15.02x)",
     "Breakout 10-28 (> 6.49, vol 4.21x), holding"
    ],
    "exp": "2026-12-18",
@@ -16067,14 +16169,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 46, spread 36%"
+     "Dec 18 0.60-0.70 delta: OI 46, spread $0.45"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 8.64,
-    "quotes": "Nasdaq (Cboe file from 10-29 20:20)",
+    "S": 8.27,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 20:20 ET"
+    "quote_time": "10-30 15:53 ET"
    }
   }
  },
@@ -16351,7 +16453,7 @@
    "ts": "2026-12-24",
    "rr": 0.17,
    "rr_pts": 0,
-   "cap": 71.32,
+   "cap": 71.48,
    "trend": 2,
    "rs": 1,
    "known": 3,
@@ -16360,40 +16462,40 @@
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
      "osi": "BHP270115P00085000",
      "exp": "2027-01-15",
      "cp": "P",
      "strike": 85.0,
      "bid": 7.7,
-     "ask": 8.2,
+     "ask": 8.1,
      "oi": 2411,
-     "src": "Nasdaq",
+     "src": "Cboe",
      "dte": 77,
      "quote": true,
-     "mid": 7.95,
-     "spread_pct": 0.0629,
+     "mid": 7.9,
+     "spread_pct": 0.0506,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 808.5,
+     "cost": 801.0,
      "fits": true,
-     "lim": 8.075,
-     "iv": 0.3305,
-     "delta": -0.6334,
-     "be": 76.91,
-     "be_sd": 0.183,
-     "ivhv": 1.136,
+     "lim": 8.0,
+     "iv": 0.3256,
+     "delta": -0.6441,
+     "be": 76.99,
+     "be_sd": 0.194,
+     "ivhv": 1.119,
      "pricing": 1,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 79.11,
-    "quotes": "Nasdaq (Cboe file from 10-29 20:22)",
+    "S": 79.28,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 20:22 ET"
+    "quote_time": "10-30 12:30 ET"
    },
    "liq": 1,
    "pricing": 1,
@@ -16461,7 +16563,7 @@
   "pct_above_lo52": 2.5,
   "pct_below_hi52": 52.4,
   "near_low": true,
-  "vol_ratio": 0.91,
+  "vol_ratio": 0.92,
   "hi20": 87.05,
   "lo20": 77.2,
   "setups": [],
@@ -16997,14 +17099,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 15%"
+     "Jan 15 0.60-0.70 delta: spread 16%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 55.04,
+    "S": 54.88,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:59 ET"
+    "quote_time": "10-30 15:41 ET"
    }
   }
  },
@@ -17414,14 +17516,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 295, spread 16%"
+     "Dec 18 0.60-0.70 delta: OI 295, spread 8%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 64.33,
+    "S": 63.91,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:50 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -17990,7 +18092,7 @@
   "pct_above_lo52": 69.2,
   "pct_below_hi52": 58.5,
   "near_low": false,
-  "vol_ratio": 0.76,
+  "vol_ratio": 0.78,
   "hi20": 26.79,
   "lo20": 20.95,
   "setups": [],
@@ -18316,14 +18418,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 19, spread 33%"
+     "Dec 18 0.60-0.70 delta: OI 19, spread 26%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 39.13,
-    "quotes": "Nasdaq (Cboe file from 10-29 20:26)",
+    "S": 39.09,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 20:26 ET"
+    "quote_time": "10-30 14:04 ET"
    }
   }
  },
@@ -18347,7 +18449,7 @@
   "pct_above_lo52": 194.8,
   "pct_below_hi52": 29.9,
   "near_low": false,
-  "vol_ratio": 0.91,
+  "vol_ratio": 0.95,
   "hi20": 6.07,
   "lo20": 4.49,
   "setups": [],
@@ -19491,14 +19593,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 25C +0.87, 30C +0.37, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 25C +0.87, 30C +0.35, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 29.26,
+    "S": 29.09,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:59 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -19762,7 +19864,7 @@
   "pct_above_lo52": 14.2,
   "pct_below_hi52": 69.1,
   "near_low": false,
-  "vol_ratio": 0.68,
+  "vol_ratio": 0.69,
   "hi20": 11.02,
   "lo20": 6.96,
   "setups": [],
@@ -20618,14 +20720,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 374, spread 42%"
+     "Dec 18 0.60-0.70 delta: OI 374, spread 12%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 52.25,
+    "S": 51.3,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:50 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -21507,14 +21609,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 56, spread 16%"
+     "Jan 15 0.60-0.70 delta: OI 56, spread 10%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 112.23,
-    "quotes": "Nasdaq (Cboe file from 10-29 20:35)",
+    "S": 112.14,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 20:35 ET"
+    "quote_time": "10-30 15:03 ET"
    }
   }
  },
@@ -21685,14 +21787,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 395, spread 46%"
+     "Feb 19 0.60-0.70 delta: OI 395, spread 29%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 63.33,
-    "quotes": "Nasdaq (Cboe file from 10-29 20:28)",
+    "S": 63.77,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 20:28 ET"
+    "quote_time": "10-30 14:40 ET"
    }
   }
  },
@@ -22013,14 +22115,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 351, spread 53%"
+     "Jan 15 0.60-0.70 delta: OI 351, spread 21%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 53.48,
+    "S": 53.45,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 15:47 ET"
    }
   }
  },
@@ -22192,14 +22294,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 50C +0.94, 55C +0.75, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 50C +0.95, 55C +0.72, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 57.04,
+    "S": 56.47,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:56 ET"
    }
   }
  },
@@ -22223,11 +22325,11 @@
   "pct_above_lo52": 20.5,
   "pct_below_hi52": 39.7,
   "near_low": false,
-  "vol_ratio": 2.98,
+  "vol_ratio": 2.99,
   "hi20": 863.44,
   "lo20": 687.0,
   "setups": [
-   "Breakdown 10-29 (< 687.00, vol 2.98x)"
+   "Breakdown 10-29 (< 687.00, vol 2.99x)"
   ],
   "watch": [],
   "note": "",
@@ -22613,14 +22715,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 418, spread 20%"
+     "Jan 15 0.60-0.70 delta: OI 418, spread 16%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 129.73,
-    "quotes": "Nasdaq (Cboe file from 10-29 20:32)",
+    "S": 128.51,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 20:32 ET"
+    "quote_time": "10-30 15:50 ET"
    }
   }
  },
@@ -22886,9 +22988,9 @@
     "notes": [
      "no strike at 0.50-0.70 delta (nearest 30C +1.00, 35C +1.00, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 54.99,
+    "S": 54.97,
     "quotes": "Nasdaq (Cboe file from 10-29 20:32)",
     "regular": true,
     "quote_time": "10-29 20:32 ET"
@@ -23032,14 +23134,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 30%"
+     "Jan 15 0.60-0.70 delta: spread 8%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 13.19,
-    "quotes": "Nasdaq (Cboe file from 10-29 20:36)",
+    "S": 13.26,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 20:36 ET"
+    "quote_time": "10-30 15:08 ET"
    }
   }
  },
@@ -23269,14 +23371,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 20%"
+     "Dec 18 0.60-0.70 delta: OI 347, spread 10%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 89.01,
+    "S": 88.73,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -23416,43 +23518,41 @@
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [
-     "0.50-0.60 delta (no strike at 0.60-0.70)"
-    ],
-    "cap": 1917.82,
+    "notes": [],
+    "cap": 1917.07,
     "contract": {
-     "osi": "CCJ270115P00080000",
+     "osi": "CCJ270115P00085000",
      "exp": "2027-01-15",
      "cp": "P",
-     "strike": 80.0,
-     "bid": 8.85,
-     "ask": 9.4,
-     "oi": 3564,
+     "strike": 85.0,
+     "bid": 10.9,
+     "ask": 11.65,
+     "oi": 986,
      "src": "Cboe",
      "dte": 77,
      "quote": true,
-     "mid": 9.125,
-     "spread_pct": 0.0603,
+     "mid": 11.275,
+     "spread_pct": 0.0665,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 927.25,
+     "cost": 1147.25,
      "fits": true,
-     "lim": 9.262,
-     "iv": 0.4524,
-     "delta": -0.5904,
-     "be": 70.73,
-     "be_sd": 0.245,
-     "ivhv": 0.999,
+     "lim": 11.463,
+     "iv": 0.4474,
+     "delta": -0.6575,
+     "be": 73.53,
+     "be_sd": 0.193,
+     "ivhv": 0.988,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 74.52,
+    "S": 76.56,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 15:54 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -23611,7 +23711,7 @@
   "pct_above_lo52": 3.8,
   "pct_below_hi52": 49.5,
   "near_low": true,
-  "vol_ratio": 1.06,
+  "vol_ratio": 1.07,
   "hi20": 12.07,
   "lo20": 10.24,
   "setups": [
@@ -23619,7 +23719,7 @@
    "Breakdown 10-26 (< 10.26, vol 2.40x), holding"
   ],
   "watch": [
-   "below 20d low 10.24 but vol 1.06x"
+   "below 20d low 10.24 but vol 1.07x"
   ],
   "note": "PUT BLOCKED: near 52-wk low",
   "levels_put": {
@@ -23728,14 +23828,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 3, spread 54%"
+     "Dec 18 0.60-0.70 delta: OI 261, spread 62%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 8.76,
+    "S": 8.31,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:12 ET"
+    "quote_time": "10-30 15:50 ET"
    }
   }
  },
@@ -23817,7 +23917,7 @@
   "pct_above_lo52": 402.8,
   "pct_below_hi52": 2.6,
   "near_low": false,
-  "vol_ratio": 1.25,
+  "vol_ratio": 1.26,
   "hi20": 72.13,
   "lo20": 62.21,
   "setups": [],
@@ -24179,7 +24279,7 @@
   "pct_above_lo52": 151.7,
   "pct_below_hi52": 8.9,
   "near_low": false,
-  "vol_ratio": 1.01,
+  "vol_ratio": 1.02,
   "hi20": 11.48,
   "lo20": 8.64,
   "setups": [],
@@ -24719,14 +24819,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 128, spread 15%"
+     "Feb 19 0.60-0.70 delta: OI 60, spread 18%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 56.93,
+    "S": 55.7,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:57 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -25045,14 +25145,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 279, spread 51%"
+     "Dec 18 0.60-0.70 delta: OI 279, spread 15%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 91.97,
+    "S": 93.67,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:38 ET"
    }
   }
  },
@@ -25344,11 +25444,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 13%"
+     "Dec 18 0.60-0.70 delta: OI 282, spread 20%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 150.83,
+    "S": 151.47,
     "quotes": "Nasdaq (Cboe file from 10-29 20:35)",
     "regular": true,
     "quote_time": "10-29 20:35 ET"
@@ -25550,14 +25650,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 10, spread 28%"
+     "Dec 18 0.60-0.70 delta: OI 8, spread 13%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 127.05,
+    "S": 123.41,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:55 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -25817,7 +25917,7 @@
   "pct_above_lo52": 8.6,
   "pct_below_hi52": 73.1,
   "near_low": false,
-  "vol_ratio": 0.8,
+  "vol_ratio": 0.81,
   "hi20": 15.71,
   "lo20": 7.71,
   "setups": [],
@@ -26144,14 +26244,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 26%"
+     "Jan 15 0.60-0.70 delta: spread 15%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 97.94,
+    "S": 95.75,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:47 ET"
+    "quote_time": "10-30 15:48 ET"
    }
   }
  },
@@ -26295,12 +26395,12 @@
   "pct_above_lo52": 84.5,
   "pct_below_hi52": 7.1,
   "near_low": false,
-  "vol_ratio": 0.72,
+  "vol_ratio": 0.73,
   "hi20": 14.1,
   "lo20": 11.32,
   "setups": [],
   "watch": [
-   "above 20d high 14.10 but vol 0.72x"
+   "above 20d high 14.10 but vol 0.73x"
   ],
   "note": "",
   "group": "g08_energy_materials",
@@ -26589,7 +26689,7 @@
   "pct_above_lo52": 15.6,
   "pct_below_hi52": 40.4,
   "near_low": false,
-  "vol_ratio": 0.8,
+  "vol_ratio": 0.81,
   "hi20": 388.24,
   "lo20": 246.65,
   "setups": [],
@@ -26885,14 +26985,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 85, spread 29%"
+     "Dec 18 0.60-0.70 delta: OI 85 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 89.31,
+    "S": 88.3,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:48 ET"
    }
   }
  },
@@ -27711,23 +27811,64 @@
    "ts": "2026-12-24",
    "rr": 0.08,
    "rr_pts": 0,
-   "cap": 76.66,
+   "cap": 79.23,
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 7,
    "near_low": false,
    "opt": {
-    "status": "fail",
+    "status": "ok",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 19%"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "cap": 3835.65,
-    "contract": null,
-    "S": 69.96,
+    "cap": 3834.15,
+    "contract": {
+     "osi": "CNC270115C00067500",
+     "exp": "2027-01-15",
+     "cp": "C",
+     "strike": 67.5,
+     "bid": 5.5,
+     "ask": 5.7,
+     "oi": 1537,
+     "src": "Cboe",
+     "dte": 77,
+     "quote": true,
+     "mid": 5.6,
+     "spread_pct": 0.0357,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 566.0,
+     "fits": true,
+     "lim": 5.65,
+     "iv": 0.3985,
+     "delta": 0.5778,
+     "be": 73.16,
+     "be_sd": 0.4,
+     "ivhv": 1.32,
+     "pricing": 0,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 68.17,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:02 ET"
+    "quote_time": "10-30 15:55 ET"
+   },
+   "liq": 2,
+   "pricing": 0,
+   "cat": 0,
+   "score": 4,
+   "earn": {
+    "date": "2026-10-27",
+    "time": "time n/a",
+    "days": -3,
+    "recent": true,
+    "inside_life": false,
+    "pre_event": false,
+    "exit_by": null
    }
   }
  },
@@ -28083,14 +28224,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 194, spread 36%"
+     "Dec 18 0.60-0.70 delta: OI 194, spread 14%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 42.45,
+    "S": 42.37,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:05 ET"
+    "quote_time": "10-30 15:56 ET"
    }
   }
  },
@@ -28777,7 +28918,7 @@
   "pct_above_lo52": 91.7,
   "pct_below_hi52": 46.1,
   "near_low": false,
-  "vol_ratio": 0.99,
+  "vol_ratio": 1.0,
   "hi20": 338.36,
   "lo20": 207.82,
   "setups": [],
@@ -28835,7 +28976,7 @@
   "pct_above_lo52": 15.4,
   "pct_below_hi52": 55.6,
   "near_low": false,
-  "vol_ratio": 1.08,
+  "vol_ratio": 1.1,
   "hi20": 189.29,
   "lo20": 159.6,
   "setups": [],
@@ -29014,14 +29155,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 296, spread 24%"
+     "Dec 18 0.60-0.70 delta: OI 296, spread 11%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 30.63,
+    "S": 30.57,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 15:38 ET"
    }
   }
  },
@@ -29577,7 +29718,7 @@
    "ts": "2026-12-24",
    "rr": 0.03,
    "rr_pts": 0,
-   "cap": 9.74,
+   "cap": 9.83,
    "trend": 2,
    "rs": 1,
    "known": 3,
@@ -29588,40 +29729,40 @@
     "notes": [
      "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
      "osi": "CORZ270115P00015000",
      "exp": "2027-01-15",
      "cp": "P",
      "strike": 15.0,
-     "bid": 2.83,
-     "ask": 3.05,
+     "bid": 3.1,
+     "ask": 3.3,
      "oi": 4829,
      "src": "Cboe",
      "dte": 77,
      "quote": true,
-     "mid": 2.94,
-     "spread_pct": 0.0748,
+     "mid": 3.2,
+     "spread_pct": 0.0625,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 300.5,
+     "cost": 326.0,
      "fits": true,
-     "lim": 2.995,
-     "iv": 0.8376,
-     "delta": -0.5369,
-     "be": 11.99,
-     "be_sd": 0.281,
-     "ivhv": 1.066,
+     "lim": 3.25,
+     "iv": 0.8217,
+     "delta": -0.5725,
+     "be": 11.74,
+     "be_sd": 0.241,
+     "ivhv": 1.045,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 13.45,
+    "S": 12.91,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:16 ET"
+    "quote_time": "10-30 15:00 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -29687,12 +29828,12 @@
   "pct_above_lo52": 2.8,
   "pct_below_hi52": 48.2,
   "near_low": true,
-  "vol_ratio": 1.2,
+  "vol_ratio": 1.22,
   "hi20": 5.27,
   "lo20": 4.7,
   "setups": [],
   "watch": [
-   "below 20d low 4.70 but vol 1.20x"
+   "below 20d low 4.70 but vol 1.22x"
   ],
   "note": "",
   "group": "",
@@ -30137,7 +30278,7 @@
   "pct_above_lo52": 60.3,
   "pct_below_hi52": 42.9,
   "near_low": false,
-  "vol_ratio": 0.65,
+  "vol_ratio": 0.7,
   "hi20": 89.71,
   "lo20": 79.55,
   "setups": [],
@@ -30197,7 +30338,7 @@
   "pct_above_lo52": 91.1,
   "pct_below_hi52": 46.5,
   "near_low": false,
-  "vol_ratio": 0.82,
+  "vol_ratio": 0.83,
   "hi20": 220.83,
   "lo20": 147.29,
   "setups": [],
@@ -30515,14 +30656,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no two-sided quotes at Dec 18"
+     "Dec 18 0.60-0.70 delta: OI 258, spread 10%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 90.5,
+    "S": 90.17,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:42 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -30662,7 +30803,7 @@
   "pct_above_lo52": 55.4,
   "pct_below_hi52": 63.6,
   "near_low": false,
-  "vol_ratio": 0.76,
+  "vol_ratio": 0.77,
   "hi20": 8.13,
   "lo20": 6.19,
   "setups": [
@@ -30779,14 +30920,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread $0.20"
+     "no strike at 0.50-0.70 delta (nearest 5C +0.85, 7.5C +0.46, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 7.24,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:04)",
+    "S": 7.05,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:04 ET"
+    "quote_time": "10-30 15:00 ET"
    }
   }
  },
@@ -30952,14 +31093,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 136, spread 20%"
+     "Dec 18 0.60-0.70 delta: OI 136, spread 12%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 153.1,
+    "S": 149.99,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:02 ET"
+    "quote_time": "10-30 15:59 ET"
    }
   }
  },
@@ -31012,7 +31153,7 @@
   "pct_above_lo52": 23.0,
   "pct_below_hi52": 17.8,
   "near_low": false,
-  "vol_ratio": 0.86,
+  "vol_ratio": 0.87,
   "hi20": 57.34,
   "lo20": 49.01,
   "setups": [],
@@ -31276,7 +31417,7 @@
   "pct_above_lo52": 18.5,
   "pct_below_hi52": 56.7,
   "near_low": false,
-  "vol_ratio": 0.81,
+  "vol_ratio": 0.82,
   "hi20": 91.72,
   "lo20": 54.24,
   "setups": [],
@@ -31721,7 +31862,7 @@
   "pct_above_lo52": 55.3,
   "pct_below_hi52": 2.5,
   "near_low": false,
-  "vol_ratio": 1.25,
+  "vol_ratio": 1.26,
   "hi20": 52.27,
   "lo20": 46.54,
   "setups": [],
@@ -31991,11 +32132,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 5, spread 192%"
+     "Dec 18 0.60-0.70 delta: OI 5, spread 191%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 10.59,
+    "S": 10.52,
     "quotes": "Nasdaq (Cboe file from 10-30 00:21)",
     "regular": true,
     "quote_time": "10-30 00:21 ET"
@@ -32168,11 +32309,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 82, spread 15%"
+     "Dec 18 0.60-0.70 delta: OI 82, spread 21%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 21.52,
+    "S": 21.57,
     "quotes": "Nasdaq (Cboe file from 10-29 20:34)",
     "regular": true,
     "quote_time": "10-29 20:34 ET"
@@ -32942,50 +33083,50 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": {
-     "osi": "CVNA261218C00064000",
+     "osi": "CVNA261218C00066000",
      "exp": "2026-12-18",
      "cp": "C",
-     "strike": 64.0,
-     "bid": 6.95,
-     "ask": 7.35,
-     "oi": 909,
+     "strike": 66.0,
+     "bid": 7.4,
+     "ask": 7.75,
+     "oi": 1521,
      "src": "Cboe",
      "dte": 49,
      "quote": true,
-     "mid": 7.15,
-     "spread_pct": 0.0559,
+     "mid": 7.575,
+     "spread_pct": 0.0462,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 726.0,
+     "cost": 767.25,
      "fits": true,
-     "lim": 7.25,
-     "iv": 0.5563,
-     "delta": 0.6381,
-     "be": 71.26,
-     "be_sd": 0.323,
-     "ivhv": 0.819,
+     "lim": 7.662,
+     "iv": 0.5636,
+     "delta": 0.6422,
+     "be": 73.67,
+     "be_sd": 0.305,
+     "ivhv": 0.83,
      "pricing": 2,
-     "liquidity": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 66.86,
+    "S": 69.31,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:18 ET"
+    "quote_time": "10-30 15:59 ET"
    },
-   "liq": 1,
+   "liq": 2,
    "pricing": 2,
    "cat": 0,
-   "score": 5,
+   "score": 6,
    "earn": {
     "date": "2026-10-28",
     "time": "time n/a",
@@ -33075,7 +33216,7 @@
   "pct_above_lo52": 58.0,
   "pct_below_hi52": 1.1,
   "near_low": false,
-  "vol_ratio": 0.77,
+  "vol_ratio": 0.78,
   "hi20": 233.21,
   "lo20": 205.15,
   "setups": [],
@@ -33287,11 +33428,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 42, spread 101%"
+     "no strike at 0.50-0.70 delta (nearest 10C +0.86, 12.5C +0.72, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 13.23,
+    "S": 13.35,
     "quotes": "Nasdaq (Cboe file from 10-29 23:26)",
     "regular": true,
     "quote_time": "10-29 23:26 ET"
@@ -33588,11 +33729,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 60, spread 20%"
+     "Jan 15 0.60-0.70 delta: OI 60, spread 11%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 30.99,
+    "S": 30.75,
     "quotes": "Nasdaq (Cboe file from 10-29 20:43)",
     "regular": true,
     "quote_time": "10-29 20:43 ET"
@@ -33916,11 +34057,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 1, spread 91%"
+     "Dec 18 0.60-0.70 delta: OI 45, spread 50%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 24.31,
+    "S": 23.11,
     "quotes": "Nasdaq (Cboe file from 10-29 22:03)",
     "regular": true,
     "quote_time": "10-29 22:03 ET"
@@ -34064,14 +34205,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 4, spread 52%"
+     "Dec 18 0.60-0.70 delta: OI 6 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 53.95,
+    "S": 55.43,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:50 ET"
+    "quote_time": "10-30 15:54 ET"
    }
   }
  },
@@ -34568,11 +34709,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 5P -0.40, 7.5P -0.83, Jan 15)"
+     "no strike at 0.50-0.70 delta (nearest 5P -0.41, 7.5P -0.78, Jan 15)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 5.11,
+    "S": 5.09,
     "quotes": "Nasdaq (Cboe file from 10-29 22:03)",
     "regular": true,
     "quote_time": "10-29 22:03 ET"
@@ -34866,7 +35007,7 @@
   "pct_above_lo52": 331.4,
   "pct_below_hi52": 20.2,
   "near_low": false,
-  "vol_ratio": 0.52,
+  "vol_ratio": 0.53,
   "hi20": 586.06,
   "lo20": 451.71,
   "setups": [],
@@ -35217,14 +35358,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 11%"
+     "Jan 15 0.60-0.70 delta: spread 9%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 132.52,
+    "S": 132.01,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -35401,7 +35542,7 @@
   "pct_above_lo52": 16.0,
   "pct_below_hi52": 4.4,
   "near_low": false,
-  "vol_ratio": 0.88,
+  "vol_ratio": 0.89,
   "hi20": 527.89,
   "lo20": 508.62,
   "setups": [],
@@ -35642,14 +35783,14 @@
   "pct_above_lo52": 1.8,
   "pct_below_hi52": 66.2,
   "near_low": true,
-  "vol_ratio": 1.2,
+  "vol_ratio": 1.21,
   "hi20": 8.91,
   "lo20": 5.97,
   "setups": [
    "Breakdown 10-28 (< 6.14, vol 1.78x), holding"
   ],
   "watch": [
-   "below 20d low 5.97 but vol 1.20x"
+   "below 20d low 5.97 but vol 1.21x"
   ],
   "note": "PUT BLOCKED: near 52-wk low",
   "levels_put": {
@@ -35746,26 +35887,60 @@
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
-   "rr": 1.33,
-   "rr_pts": 0,
-   "cap": 4.76,
+   "rr": 2.05,
+   "rr_pts": 1,
+   "cap": 4.2,
    "trend": 2,
    "rs": 1,
-   "known": 3,
-   "max": 10,
+   "known": 4,
+   "max": 8,
    "near_low": true,
    "opt": {
-    "status": "fail",
+    "status": "ok",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread $0.16"
+     "0.50-0.60 delta (no strike at 0.60-0.70)"
     ],
-    "cap": 1917.82,
-    "contract": null,
-    "S": 5.49,
+    "cap": 1917.07,
+    "contract": {
+     "osi": "DJT261218P00006000",
+     "exp": "2026-12-18",
+     "cp": "P",
+     "strike": 6.0,
+     "bid": 0.9,
+     "ask": 0.97,
+     "oi": 1035,
+     "src": "Cboe",
+     "dte": 49,
+     "quote": true,
+     "mid": 0.935,
+     "spread_pct": 0.0749,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 96.25,
+     "fits": true,
+     "lim": 0.953,
+     "iv": 0.8344,
+     "delta": -0.5425,
+     "be": 5.04,
+     "be_sd": 0.294,
+     "ivhv": 1.542,
+     "pricing": 0,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 5.54,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:55 ET"
-   }
+    "quote_time": "10-30 15:49 ET"
+   },
+   "liq": 1,
+   "pricing": 0,
+   "cat": 0,
+   "score": 5,
+   "earn": {},
+   "deal": "425 x10 (latest Oct 22)"
   }
  },
  {
@@ -36774,14 +36949,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 19%"
+     "no strike at 0.50-0.70 delta (nearest 32.5C +0.72, 35C +0.50, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 33.84,
+    "S": 34.67,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 15:42 ET"
    }
   }
  },
@@ -37102,11 +37277,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 2, spread 70%"
+     "Dec 18 0.60-0.70 delta: OI 2, spread 54%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 38.35,
+    "S": 37.55,
     "quotes": "Nasdaq (Cboe file from 10-30 06:01)",
     "regular": true,
     "quote_time": "10-30 06:01 ET"
@@ -37674,7 +37849,7 @@
     "notes": [
      "no strike at 0.50-0.70 delta (nearest 7.5C +0.98, 10C +0.97, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
     "S": 13.56,
     "quotes": "Nasdaq (Cboe file from 10-29 22:13)",
@@ -37933,23 +38108,62 @@
    "ts": "2026-12-08",
    "rr": 0.27,
    "rr_pts": 0,
-   "cap": 55.42,
+   "cap": 57.7,
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 6,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Dec 18 0.60-0.70 delta: spread 10%"
-    ],
-    "cap": 3835.65,
-    "contract": null,
-    "S": 51.94,
+    "status": "ok",
+    "notes": [],
+    "cap": 3834.15,
+    "contract": {
+     "osi": "DVN261218C00050000",
+     "exp": "2026-12-18",
+     "cp": "C",
+     "strike": 50.0,
+     "bid": 4.05,
+     "ask": 4.3,
+     "oi": 4097,
+     "src": "Cboe",
+     "dte": 49,
+     "quote": true,
+     "mid": 4.175,
+     "spread_pct": 0.0599,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 424.75,
+     "fits": true,
+     "lim": 4.237,
+     "iv": 0.3902,
+     "delta": 0.6557,
+     "be": 54.25,
+     "be_sd": 0.289,
+     "ivhv": 1.536,
+     "pricing": 0,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 52.09,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:38 ET"
+   },
+   "liq": 1,
+   "pricing": 0,
+   "cat": 1,
+   "score": 4,
+   "earn": {
+    "date": "2026-11-05",
+    "time": "AMC",
+    "days": 6,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": true,
+    "exit_by": "2026-11-05"
    }
   }
  },
@@ -38002,7 +38216,7 @@
   "pct_above_lo52": 92.8,
   "pct_below_hi52": 7.0,
   "near_low": false,
-  "vol_ratio": 0.97,
+  "vol_ratio": 0.98,
   "hi20": 16.3,
   "lo20": 11.1,
   "setups": [],
@@ -38060,12 +38274,12 @@
   "pct_above_lo52": 35.9,
   "pct_below_hi52": 63.2,
   "near_low": false,
-  "vol_ratio": 0.6,
+  "vol_ratio": 0.63,
   "hi20": 32.8,
   "lo20": 26.88,
   "setups": [],
   "watch": [
-   "below 20d low 26.88 but vol 0.60x"
+   "below 20d low 26.88 but vol 0.63x"
   ],
   "note": "",
   "group": "",
@@ -38510,11 +38724,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 315, spread 15%"
+     "Dec 18 0.60-0.70 delta: OI 315, spread 17%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 210.57,
+    "S": 211.98,
     "quotes": "Nasdaq (Cboe file from 10-29 20:26)",
     "regular": true,
     "quote_time": "10-29 20:26 ET"
@@ -39705,14 +39919,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 5, spread 21%"
+     "Dec 18 0.60-0.70 delta: OI 35, spread 15%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 136.52,
+    "S": 135.01,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 15:43 ET"
    }
   }
  },
@@ -40553,7 +40767,7 @@
   "pct_above_lo52": 8.5,
   "pct_below_hi52": 64.9,
   "near_low": false,
-  "vol_ratio": 1.59,
+  "vol_ratio": 1.6,
   "hi20": 33.91,
   "lo20": 24.99,
   "setups": [
@@ -40669,14 +40883,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 25P -0.43, 30P -0.73, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 25P -0.42, 30P -0.72, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 25.2,
+    "S": 25.3,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 15:54 ET"
    }
   }
  },
@@ -41299,11 +41513,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 19%"
+     "Dec 18 0.50-0.60 delta: spread 28%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 38.53,
+    "S": 38.26,
     "quotes": "Nasdaq (Cboe file from 10-29 22:18)",
     "regular": true,
     "quote_time": "10-29 22:18 ET"
@@ -41565,11 +41779,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 237, spread 79%"
+     "Dec 18 0.60-0.70 delta: OI 237, spread 11%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 48.71,
+    "S": 48.79,
     "quotes": "Nasdaq (Cboe file from 10-29 22:19)",
     "regular": true,
     "quote_time": "10-29 22:19 ET"
@@ -42411,7 +42625,7 @@
   "pct_above_lo52": 52.7,
   "pct_below_hi52": 42.3,
   "near_low": false,
-  "vol_ratio": 0.96,
+  "vol_ratio": 1.01,
   "hi20": 61.29,
   "lo20": 52.34,
   "setups": [],
@@ -42772,7 +42986,7 @@
     "notes": [
      "Dec 18 0.60-0.70 delta: spread 27%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
     "S": 92.53,
     "quotes": "Cboe",
@@ -43468,11 +43682,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 0, spread 27%"
+     "Jan 15 0.60-0.70 delta: spread 29%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 38.57,
+    "S": 38.59,
     "quotes": "Nasdaq (Cboe file from 10-29 22:15)",
     "regular": true,
     "quote_time": "10-29 22:15 ET"
@@ -43618,40 +43832,40 @@
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
-     "osi": "EWZ261218P00034000",
+     "osi": "EWZ261218P00035000",
      "exp": "2026-12-18",
      "cp": "P",
-     "strike": 34.0,
-     "bid": 2.6,
-     "ask": 2.72,
-     "oi": 34499,
-     "src": "Cboe",
+     "strike": 35.0,
+     "bid": 3.5,
+     "ask": 3.6,
+     "oi": 66390,
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 2.66,
-     "spread_pct": 0.0451,
+     "mid": 3.55,
+     "spread_pct": 0.0282,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 270.0,
+     "cost": 358.5,
      "fits": true,
-     "lim": 2.69,
-     "iv": 0.337,
-     "delta": -0.6449,
-     "be": 31.3,
-     "be_sd": 0.344,
-     "ivhv": 0.359,
+     "lim": 3.575,
+     "iv": 0.4382,
+     "delta": -0.6413,
+     "be": 31.41,
+     "be_sd": 0.194,
+     "ivhv": 0.467,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 32.69,
-    "quotes": "Cboe",
+    "S": 32.42,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:00)",
     "regular": true,
-    "quote_time": "10-30 10:18 ET"
+    "quote_time": "10-30 16:00 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -43828,14 +44042,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 16, spread 16%"
+     "Jan 15 0.60-0.70 delta: OI 360 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 91.0,
+    "S": 90.08,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:48 ET"
    }
   }
  },
@@ -44307,14 +44521,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 243, spread 34%"
+     "Dec 18 0.50-0.60 delta: OI 243, spread 23%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 151.92,
+    "S": 151.49,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:43 ET"
    }
   }
  },
@@ -44849,11 +45063,11 @@
     "status": "fail",
     "notes": [
      "no listed monthly 60+ days out",
-     "no strike at 0.50-0.70 delta (nearest 6P -0.40, 7P -0.79, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 6P -0.45, 7P -0.87, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 6.16,
+    "S": 5.99,
     "quotes": "Nasdaq (Cboe file from 10-30 02:14)",
     "regular": true,
     "quote_time": "10-30 02:14 ET"
@@ -45781,7 +45995,7 @@
   "pct_above_lo52": 34.5,
   "pct_below_hi52": 57.6,
   "near_low": false,
-  "vol_ratio": 0.87,
+  "vol_ratio": 0.88,
   "hi20": 24.64,
   "lo20": 21.36,
   "setups": [],
@@ -46403,14 +46617,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 49, spread $0.50"
+     "Dec 18 0.60-0.70 delta: OI 49, spread $0.15"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 10.4,
+    "S": 10.46,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:18 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -46669,14 +46883,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 111, spread 14%"
+     "Jan 15 0.60-0.70 delta: OI 111, spread 16%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 46.56,
+    "S": 46.37,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:05 ET"
+    "quote_time": "10-30 15:59 ET"
    }
   }
  },
@@ -46817,14 +47031,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 7, spread 39%"
+     "Dec 18 0.60-0.70 delta: OI 7, spread 13%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 80.21,
+    "S": 79.07,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -47859,12 +48073,12 @@
     "notes": [
      "Dec 18 0.50-0.60 delta: OI 4, spread 139%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 54.48,
+    "S": 54.25,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -48273,7 +48487,7 @@
   "pct_above_lo52": 6.7,
   "pct_below_hi52": 44.9,
   "near_low": false,
-  "vol_ratio": 1.08,
+  "vol_ratio": 1.09,
   "hi20": 186.6,
   "lo20": 168.15,
   "setups": [],
@@ -48506,11 +48720,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 43, spread 20%"
+     "Dec 18 0.60-0.70 delta: OI 111, spread 23%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 188.49,
+    "S": 186.35,
     "quotes": "Nasdaq (Cboe file from 10-30 06:11)",
     "regular": true,
     "quote_time": "10-30 06:11 ET"
@@ -48599,11 +48813,11 @@
   "pct_above_lo52": 89.1,
   "pct_below_hi52": 29.4,
   "near_low": false,
-  "vol_ratio": 4.32,
+  "vol_ratio": 4.33,
   "hi20": 194.75,
   "lo20": 169.13,
   "setups": [
-   "Breakdown 10-29 (< 169.13, vol 4.32x)"
+   "Breakdown 10-29 (< 169.13, vol 4.33x)"
   ],
   "watch": [],
   "note": "",
@@ -48701,7 +48915,7 @@
   "rank_put": {
    "dir": "put",
    "setups": [
-    "Breakdown 10-29 (< 169.13, vol 4.32x)"
+    "Breakdown 10-29 (< 169.13, vol 4.33x)"
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
@@ -48711,19 +48925,58 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Dec 18 0.60-0.70 delta: spread 13%"
-    ],
-    "cap": 1917.82,
-    "contract": null,
-    "S": 136.87,
-    "quotes": "Cboe",
+    "status": "ok",
+    "notes": [],
+    "cap": 1917.07,
+    "contract": {
+     "osi": "FTNT261218P00145000",
+     "exp": "2026-12-18",
+     "cp": "P",
+     "strike": 145.0,
+     "bid": 13.95,
+     "ask": 14.55,
+     "oi": 868,
+     "src": "Nasdaq",
+     "dte": 49,
+     "quote": true,
+     "mid": 14.25,
+     "spread_pct": 0.0421,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 1441.0,
+     "fits": true,
+     "lim": 14.4,
+     "iv": 0.4682,
+     "delta": -0.6014,
+     "be": 130.59,
+     "be_sd": 0.231,
+     "ivhv": 0.511,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 135.98,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:00)",
     "regular": true,
-    "quote_time": "10-30 10:18 ET"
+    "quote_time": "10-30 16:00 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 0,
+   "score": 5,
+   "earn": {
+    "date": "2026-10-28",
+    "time": "time n/a",
+    "days": -2,
+    "recent": true,
+    "inside_life": false,
+    "pre_event": false,
+    "exit_by": null
    }
   }
  },
@@ -48928,14 +49181,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 67, spread 83%"
+     "Dec 18 0.50-0.60 delta: OI 67, spread 86%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 66.44,
+    "S": 65.06,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:43 ET"
    }
   }
  },
@@ -49349,7 +49602,7 @@
   "pct_above_lo52": 99.4,
   "pct_below_hi52": 56.4,
   "near_low": false,
-  "vol_ratio": 0.67,
+  "vol_ratio": 0.68,
   "hi20": 8.16,
   "lo20": 6.61,
   "setups": [],
@@ -49920,14 +50173,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 45C +0.75, 50C +0.44, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 45C +0.74, 50C +0.43, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 48.71,
+    "S": 48.41,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 15:56 ET"
    }
   }
  },
@@ -50335,14 +50588,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 54, spread 27%"
+     "Jan 15 0.60-0.70 delta: OI 85, spread 18%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 109.84,
+    "S": 116.16,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:10 ET"
+    "quote_time": "10-30 15:48 ET"
    }
   }
  },
@@ -50455,11 +50708,11 @@
   "pct_above_lo52": 85.7,
   "pct_below_hi52": 7.1,
   "near_low": false,
-  "vol_ratio": 4.82,
+  "vol_ratio": 4.84,
   "hi20": 8.75,
   "lo20": 7.67,
   "setups": [
-   "Breakout 10-29 (> 8.75, vol 4.82x)",
+   "Breakout 10-29 (> 8.75, vol 4.84x)",
    "Breakout 10-28 (> 8.66, vol 1.53x), holding",
    "Breakout 10-27 (> 8.65, vol 1.93x), holding"
   ],
@@ -50757,14 +51010,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 469, spread 13%"
+     "Dec 18 0.60-0.70 delta: OI 469, spread 16%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 77.84,
+    "S": 76.6,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:56 ET"
+    "quote_time": "10-30 15:48 ET"
    }
   }
  },
@@ -50819,11 +51072,11 @@
   "pct_above_lo52": 43.4,
   "pct_below_hi52": 30.4,
   "near_low": false,
-  "vol_ratio": 1.67,
+  "vol_ratio": 1.68,
   "hi20": 15.38,
   "lo20": 12.09,
   "setups": [
-   "Breakout 10-29 (> 15.38, vol 1.67x)",
+   "Breakout 10-29 (> 15.38, vol 1.68x)",
    "Breakout 10-28 (> 15.02, vol 4.43x), holding"
   ],
   "watch": [],
@@ -50922,7 +51175,7 @@
   "rank_call": {
    "dir": "call",
    "setups": [
-    "Breakout 10-29 (> 15.38, vol 1.67x)",
+    "Breakout 10-29 (> 15.38, vol 1.68x)",
     "Breakout 10-28 (> 15.02, vol 4.43x), holding"
    ],
    "exp": "2026-12-18",
@@ -50938,11 +51191,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 30, spread 36%"
+     "Dec 18 0.50-0.60 delta: OI 30, spread 18%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 14.54,
+    "S": 14.56,
     "quotes": "Nasdaq (Cboe file from 10-29 21:48)",
     "regular": true,
     "quote_time": "10-29 21:48 ET"
@@ -51380,14 +51633,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 13, spread 163%"
+     "Dec 18 0.60-0.70 delta: OI 13, spread 106%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 68.42,
+    "S": 67.16,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:58 ET"
+    "quote_time": "10-30 15:59 ET"
    }
   }
  },
@@ -51682,12 +51935,12 @@
   "pct_above_lo52": 45.2,
   "pct_below_hi52": 0.1,
   "near_low": false,
-  "vol_ratio": 1.46,
+  "vol_ratio": 1.47,
   "hi20": 159.2,
   "lo20": 144.23,
   "setups": [],
   "watch": [
-   "above 20d high 159.20 but vol 1.46x"
+   "above 20d high 159.20 but vol 1.47x"
   ],
   "note": "",
   "group": "g05_healthcare",
@@ -51890,9 +52143,9 @@
     "notes": [
      "Dec 18 0.60-0.70 delta: OI 7, spread 12%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 238.76,
+    "S": 238.44,
     "quotes": "Nasdaq (Cboe file from 10-29 21:50)",
     "regular": true,
     "quote_time": "10-29 21:50 ET"
@@ -52219,7 +52472,7 @@
   "pct_above_lo52": 66.5,
   "pct_below_hi52": 52.6,
   "near_low": false,
-  "vol_ratio": 0.9,
+  "vol_ratio": 0.91,
   "hi20": 168.97,
   "lo20": 123.69,
   "setups": [],
@@ -52248,7 +52501,7 @@
   "pct_above_lo52": 27.8,
   "pct_below_hi52": 52.3,
   "near_low": false,
-  "vol_ratio": 0.9,
+  "vol_ratio": 0.91,
   "hi20": 23.06,
   "lo20": 14.68,
   "setups": [],
@@ -52429,14 +52682,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 71, spread 21%"
+     "Dec 18 0.60-0.70 delta: OI 71, spread 9%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 57.85,
-    "quotes": "Nasdaq (Cboe file from 10-29 21:48)",
+    "S": 58.19,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 21:48 ET"
+    "quote_time": "10-30 11:50 ET"
    }
   }
  },
@@ -52784,14 +53037,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 20P -0.40, 22.5P -0.84, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 20P -0.48, 22.5P -0.87, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 20.31,
+    "S": 19.95,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:48 ET"
    }
   }
  },
@@ -52959,11 +53212,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 419, spread 67%"
+     "Jan 15 0.60-0.70 delta: OI 419, spread 82%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 13.03,
+    "S": 12.91,
     "quotes": "Nasdaq (Cboe file from 10-29 19:03)",
     "regular": true,
     "quote_time": "10-29 19:03 ET"
@@ -53172,11 +53425,11 @@
   "pct_above_lo52": 5.2,
   "pct_below_hi52": 30.2,
   "near_low": false,
-  "vol_ratio": 5.61,
+  "vol_ratio": 5.65,
   "hi20": 349.52,
   "lo20": 314.19,
   "setups": [
-   "Breakdown 10-29 (< 314.19, vol 5.61x)"
+   "Breakdown 10-29 (< 314.19, vol 5.65x)"
   ],
   "watch": [],
   "note": "",
@@ -53292,11 +53545,11 @@
   "pct_above_lo52": 6.0,
   "pct_below_hi52": 30.5,
   "near_low": false,
-  "vol_ratio": 5.43,
+  "vol_ratio": 5.46,
   "hi20": 353.78,
   "lo20": 316.8,
   "setups": [
-   "Breakdown 10-29 (< 316.80, vol 5.43x)"
+   "Breakdown 10-29 (< 316.80, vol 5.46x)"
   ],
   "watch": [],
   "note": "",
@@ -54072,7 +54325,7 @@
   "pct_above_lo52": 30.6,
   "pct_below_hi52": 61.1,
   "near_low": false,
-  "vol_ratio": 0.73,
+  "vol_ratio": 0.75,
   "hi20": 13.58,
   "lo20": 7.44,
   "setups": [],
@@ -54939,11 +55192,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 46%"
+     "Dec 18 0.60-0.70 delta: spread 44%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 15.59,
+    "S": 15.48,
     "quotes": "Nasdaq (Cboe file from 10-29 19:05)",
     "regular": true,
     "quote_time": "10-29 19:05 ET"
@@ -55087,14 +55340,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 89, spread 30%"
+     "Dec 18 0.60-0.70 delta: OI 89, spread 13%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 118.83,
+    "S": 118.77,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:16 ET"
+    "quote_time": "10-30 15:59 ET"
    }
   }
  },
@@ -55297,11 +55550,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 0, spread $0.75"
+     "Dec 18 0.50-0.60 delta: OI 0, spread $0.25"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 15.86,
+    "S": 16.12,
     "quotes": "Nasdaq (Cboe file from 10-29 21:27)",
     "regular": true,
     "quote_time": "10-29 21:27 ET"
@@ -55714,11 +55967,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 0, spread 43%"
+     "Jan 15 0.60-0.70 delta: OI 0, spread 40%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 10.52,
+    "S": 10.61,
     "quotes": "Nasdaq (Cboe file from 10-29 19:06)",
     "regular": true,
     "quote_time": "10-29 19:06 ET"
@@ -55861,11 +56114,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 65, spread 34%"
+     "Feb 19 0.60-0.70 delta: OI 8, spread 25%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 32.74,
+    "S": 32.65,
     "quotes": "Nasdaq (Cboe file from 10-29 19:06)",
     "regular": true,
     "quote_time": "10-29 19:06 ET"
@@ -56070,7 +56323,7 @@
   "pct_above_lo52": 115.9,
   "pct_below_hi52": 38.8,
   "near_low": false,
-  "vol_ratio": 0.76,
+  "vol_ratio": 0.77,
   "hi20": 30.92,
   "lo20": 27.59,
   "setups": [],
@@ -56540,14 +56793,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 10P -0.82, 15P -0.87, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 10P -0.79, 12.5P -0.91, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 8.77,
-    "quotes": "Nasdaq (Cboe file from 10-29 19:04)",
+    "S": 8.66,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 19:04 ET"
+    "quote_time": "10-30 15:22 ET"
    }
   }
  },
@@ -56753,7 +57006,7 @@
   "pct_above_lo52": 9.3,
   "pct_below_hi52": 52.5,
   "near_low": false,
-  "vol_ratio": 0.44,
+  "vol_ratio": 0.45,
   "hi20": 14.81,
   "lo20": 10.99,
   "setups": [],
@@ -57017,14 +57270,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 294, spread 29%"
+     "Dec 18 0.60-0.70 delta: OI 294, spread 21%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 30.24,
+    "S": 30.75,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:58 ET"
+    "quote_time": "10-30 15:47 ET"
    }
   }
  },
@@ -57139,7 +57392,7 @@
   "pct_above_lo52": 44.2,
   "pct_below_hi52": 39.1,
   "near_low": false,
-  "vol_ratio": 0.86,
+  "vol_ratio": 0.87,
   "hi20": 114.11,
   "lo20": 91.43,
   "setups": [
@@ -57249,7 +57502,7 @@
    "ts": "2026-12-08",
    "rr": 0.01,
    "rr_pts": 0,
-   "cap": 74.03,
+   "cap": 74.11,
    "trend": 1,
    "rs": 0,
    "known": 1,
@@ -57258,40 +57511,40 @@
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
      "osi": "HOOD261218P00095000",
      "exp": "2026-12-18",
      "cp": "P",
      "strike": 95.0,
-     "bid": 13.9,
-     "ask": 14.05,
+     "bid": 13.55,
+     "ask": 13.7,
      "oi": 7211,
-     "src": "Cboe",
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 13.975,
-     "spread_pct": 0.0107,
+     "mid": 13.625,
+     "spread_pct": 0.011,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1402.25,
+     "cost": 1367.25,
      "fits": true,
-     "lim": 14.013,
-     "iv": 0.5864,
-     "delta": -0.6689,
-     "be": 80.98,
-     "be_sd": 0.175,
-     "ivhv": 1.163,
+     "lim": 13.662,
+     "iv": 0.5837,
+     "delta": -0.6611,
+     "be": 81.33,
+     "be_sd": 0.176,
+     "ivhv": 1.158,
      "pricing": 1,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 84.14,
-    "quotes": "Cboe",
+    "S": 84.5,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:00)",
     "regular": true,
-    "quote_time": "10-30 10:18 ET"
+    "quote_time": "10-30 16:00 ET"
    },
    "liq": 2,
    "pricing": 1,
@@ -57508,7 +57761,7 @@
   "pct_above_lo52": 196.7,
   "pct_below_hi52": 20.0,
   "near_low": false,
-  "vol_ratio": 0.46,
+  "vol_ratio": 0.47,
   "hi20": 73.46,
   "lo20": 55.13,
   "setups": [],
@@ -57770,14 +58023,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 15C +0.93, 17.5C +0.72, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 15C +0.92, 17.5C +0.71, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 18.51,
+    "S": 18.43,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 15:59 ET"
    }
   }
  },
@@ -58308,14 +58561,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no two-sided quotes at Dec 18"
+     "no strike at 0.50-0.70 delta (nearest 85P -0.47, 90P -0.73, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 85.84,
+    "S": 85.37,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:45 ET"
+    "quote_time": "10-30 10:22 ET"
    }
   }
  },
@@ -58523,7 +58776,7 @@
   "pct_above_lo52": 23.4,
   "pct_below_hi52": 11.7,
   "near_low": false,
-  "vol_ratio": 1.04,
+  "vol_ratio": 1.06,
   "hi20": 16.94,
   "lo20": 16.07,
   "setups": [],
@@ -58788,11 +59041,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.50-0.60 delta: OI 69, spread 34%"
+     "Jan 15 0.50-0.60 delta: OI 69, spread 45%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 26.88,
+    "S": 26.67,
     "quotes": "Nasdaq (Cboe file from 10-29 21:35)",
     "regular": true,
     "quote_time": "10-29 21:35 ET"
@@ -58936,11 +59189,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 84, spread 13%"
+     "Jan 15 0.60-0.70 delta: OI 129, spread 11%, cost $4,011 > cap $3,834"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 239.7,
+    "S": 234.82,
     "quotes": "Nasdaq (Cboe file from 10-30 06:09)",
     "regular": true,
     "quote_time": "10-30 06:09 ET"
@@ -59260,14 +59513,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 10, spread 87%"
+     "Dec 18 0.50-0.60 delta: OI 10, spread 62%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 78.64,
+    "S": 77.68,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:02 ET"
+    "quote_time": "10-30 15:44 ET"
    }
   }
  },
@@ -59440,11 +59693,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 17%"
+     "Jan 15 0.60-0.70 delta: spread 27%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 16.42,
+    "S": 16.36,
     "quotes": "Nasdaq (Cboe file from 10-29 19:08)",
     "regular": true,
     "quote_time": "10-29 19:08 ET"
@@ -59681,14 +59934,14 @@
     "status": "fail",
     "notes": [
      "no listed monthly 60+ days out",
-     "Dec 18 0.60-0.70 delta: OI 2, spread 43%"
+     "no strike at 0.50-0.70 delta (nearest 12.5P -0.44, 15P -0.77, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 12.75,
-    "quotes": "Nasdaq (Cboe file from 10-29 21:50)",
+    "S": 12.55,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 21:50 ET"
+    "quote_time": "10-30 13:10 ET"
    }
   }
  },
@@ -59712,7 +59965,7 @@
   "pct_above_lo52": 39.2,
   "pct_below_hi52": 29.1,
   "near_low": false,
-  "vol_ratio": 0.95,
+  "vol_ratio": 1.02,
   "hi20": 48.56,
   "lo20": 45.22,
   "setups": [],
@@ -60098,11 +60351,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 46, spread 14%"
+     "Dec 18 0.60-0.70 delta: OI 46, spread 15%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 208.28,
+    "S": 211.01,
     "quotes": "Nasdaq (Cboe file from 10-29 23:05)",
     "regular": true,
     "quote_time": "10-29 23:05 ET"
@@ -60339,14 +60592,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 55, spread $0.25"
+     "Dec 18 0.50-0.60 delta: OI 55, spread $0.25"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 5.15,
+    "S": 5.18,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 13:24 ET"
    }
   }
  },
@@ -60996,11 +61249,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 2, spread 116%"
+     "Jan 15 0.60-0.70 delta: OI 15, spread 45%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 18.22,
+    "S": 18.24,
     "quotes": "Nasdaq (Cboe file from 10-29 19:10)",
     "regular": true,
     "quote_time": "10-29 19:10 ET"
@@ -61564,11 +61817,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 25C +0.80, 30C +0.43, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 25C +0.80, 30C +0.40, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 28.71,
+    "S": 28.22,
     "quotes": "Nasdaq (Cboe file from 10-29 21:47)",
     "regular": true,
     "quote_time": "10-29 21:47 ET"
@@ -61746,7 +61999,7 @@
   "pct_above_lo52": 34.9,
   "pct_below_hi52": 63.1,
   "near_low": false,
-  "vol_ratio": 0.84,
+  "vol_ratio": 0.85,
   "hi20": 71.85,
   "lo20": 44.74,
   "setups": [
@@ -61863,11 +62116,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 175, spread 25%"
+     "Dec 18 0.60-0.70 delta: OI 52, spread 10%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 43.11,
+    "S": 43.55,
     "quotes": "Nasdaq (Cboe file from 10-29 19:11)",
     "regular": true,
     "quote_time": "10-29 19:11 ET"
@@ -62011,11 +62264,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 147, spread 10%"
+     "Dec 18 0.60-0.70 delta: OI 147, spread 11%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 113.87,
+    "S": 113.09,
     "quotes": "Nasdaq (Cboe file from 10-29 19:11)",
     "regular": true,
     "quote_time": "10-29 19:11 ET"
@@ -62129,7 +62382,7 @@
   "pct_above_lo52": 179.9,
   "pct_below_hi52": 35.3,
   "near_low": false,
-  "vol_ratio": 1.3,
+  "vol_ratio": 1.39,
   "hi20": 120.0,
   "lo20": 85.49,
   "setups": [],
@@ -62247,7 +62500,7 @@
   "pct_above_lo52": 22.5,
   "pct_below_hi52": 56.9,
   "near_low": false,
-  "vol_ratio": 0.59,
+  "vol_ratio": 0.6,
   "hi20": 43.99,
   "lo20": 30.76,
   "setups": [],
@@ -62334,11 +62587,11 @@
   "pct_above_lo52": 443.2,
   "pct_below_hi52": 37.8,
   "near_low": false,
-  "vol_ratio": 5.03,
+  "vol_ratio": 5.06,
   "hi20": 14.86,
   "lo20": 12.92,
   "setups": [
-   "Breakdown 10-29 (< 12.92, vol 5.03x)"
+   "Breakdown 10-29 (< 12.92, vol 5.06x)"
   ],
   "watch": [],
   "note": "",
@@ -62436,7 +62689,7 @@
   "rank_put": {
    "dir": "put",
    "setups": [
-    "Breakdown 10-29 (< 12.92, vol 5.03x)"
+    "Breakdown 10-29 (< 12.92, vol 5.06x)"
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
@@ -62451,14 +62704,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 413, spread 22%"
+     "Dec 18 0.60-0.70 delta: OI 413, spread 21%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 8.35,
-    "quotes": "Cboe",
+    "S": 8.38,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:00)",
     "regular": true,
-    "quote_time": "10-30 10:19 ET"
+    "quote_time": "10-30 16:00 ET"
    }
   }
  },
@@ -62601,14 +62854,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread 23%"
+     "Dec 18 0.60-0.70 delta: spread 14%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 35.95,
+    "S": 36.19,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 15:43 ET"
    }
   }
  },
@@ -63290,14 +63543,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread 68%"
+     "Dec 18 0.50-0.60 delta: spread 21%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 81.35,
+    "S": 80.44,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 15:45 ET"
    }
   }
  },
@@ -63350,7 +63603,7 @@
   "pct_above_lo52": 10.7,
   "pct_below_hi52": 65.9,
   "near_low": false,
-  "vol_ratio": 0.95,
+  "vol_ratio": 0.96,
   "hi20": 41.76,
   "lo20": 24.91,
   "setups": [],
@@ -63773,14 +64026,14 @@
   "pct_above_lo52": 8.1,
   "pct_below_hi52": 27.7,
   "near_low": false,
-  "vol_ratio": 1.04,
+  "vol_ratio": 1.05,
   "hi20": 10.16,
   "lo20": 7.4,
   "setups": [
    "Breakdown 10-26 (< 7.99, vol 3.31x), holding"
   ],
   "watch": [
-   "below 20d low 7.40 but vol 1.04x"
+   "below 20d low 7.40 but vol 1.05x"
   ],
   "note": "",
   "levels_put": {
@@ -63892,14 +64145,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 29%"
+     "no strike at 0.50-0.70 delta (nearest 7P -0.42, 8P -0.74, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 7.2,
-    "quotes": "Nasdaq (Cboe file from 10-29 19:45)",
+    "S": 7.14,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 19:45 ET"
+    "quote_time": "10-30 15:23 ET"
    }
   }
  },
@@ -63954,7 +64207,7 @@
   "pct_above_lo52": 4.2,
   "pct_below_hi52": 42.7,
   "near_low": true,
-  "vol_ratio": 0.94,
+  "vol_ratio": 0.95,
   "hi20": 5.82,
   "lo20": 5.24,
   "setups": [
@@ -64069,11 +64322,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 32%"
+     "no strike at 0.50-0.70 delta (nearest 6P -0.77, 7P -0.73, Jan 15)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 5.53,
+    "S": 5.32,
     "quotes": "Nasdaq (Cboe file from 10-29 19:17)",
     "regular": true,
     "quote_time": "10-29 19:17 ET"
@@ -65267,14 +65520,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 6, spread $0.45"
+     "Dec 18 0.60-0.70 delta: OI 6, spread 17%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 5.26,
-    "quotes": "Nasdaq (Cboe file from 10-29 19:47)",
+    "S": 5.12,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 19:47 ET"
+    "quote_time": "10-30 13:24 ET"
    }
   }
  },
@@ -65441,23 +65694,62 @@
    "ts": "2026-12-24",
    "rr": 2.46,
    "rr_pts": 1,
-   "cap": 4.05,
+   "cap": 3.72,
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 11,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Jan 15 0.60-0.70 delta: spread 8%"
-    ],
-    "cap": 1917.82,
-    "contract": null,
-    "S": 4.91,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:03)",
+    "status": "ok",
+    "notes": [],
+    "cap": 1917.07,
+    "contract": {
+     "osi": "JOBY270115P00006000",
+     "exp": "2027-01-15",
+     "cp": "P",
+     "strike": 6.0,
+     "bid": 1.31,
+     "ask": 1.39,
+     "oi": 1890,
+     "src": "Cboe",
+     "dte": 77,
+     "quote": true,
+     "mid": 1.35,
+     "spread_pct": 0.0593,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 138.0,
+     "fits": true,
+     "lim": 1.37,
+     "iv": 0.6906,
+     "delta": -0.6842,
+     "be": 4.62,
+     "be_sd": 0.177,
+     "ivhv": 1.326,
+     "pricing": 0,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 4.89,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:03 ET"
+    "quote_time": "10-30 15:52 ET"
+   },
+   "liq": 1,
+   "pricing": 0,
+   "cat": 1,
+   "score": 6,
+   "earn": {
+    "date": "2026-11-04",
+    "time": "AMC",
+    "days": 5,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": true,
+    "exit_by": "2026-11-04"
    }
   }
  },
@@ -66019,12 +66311,12 @@
   "pct_above_lo52": 41.9,
   "pct_below_hi52": 0.3,
   "near_low": false,
-  "vol_ratio": 1.16,
+  "vol_ratio": 1.17,
   "hi20": 35.19,
   "lo20": 30.37,
   "setups": [],
   "watch": [
-   "above 20d high 35.19 but vol 1.16x"
+   "above 20d high 35.19 but vol 1.17x"
   ],
   "note": "",
   "group": "g06_staples_retail",
@@ -66501,14 +66793,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 22%"
+     "Dec 18 0.60-0.70 delta: spread 17%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 20.63,
+    "S": 19.74,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:36 ET"
+    "quote_time": "10-30 15:01 ET"
    }
   }
  },
@@ -66798,7 +67090,7 @@
   "pct_above_lo52": 56.2,
   "pct_below_hi52": 45.5,
   "near_low": false,
-  "vol_ratio": 1.41,
+  "vol_ratio": 1.42,
   "hi20": 206.89,
   "lo20": 145.61,
   "setups": [],
@@ -67780,14 +68072,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 0, spread 75%"
+     "Dec 18 0.60-0.70 delta: OI 0, spread 69%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 36.47,
+    "S": 36.13,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 15:59 ET"
    }
   }
  },
@@ -68292,7 +68584,7 @@
   "pct_above_lo52": 19.9,
   "pct_below_hi52": 67.5,
   "near_low": false,
-  "vol_ratio": 1.39,
+  "vol_ratio": 1.4,
   "hi20": 43.71,
   "lo20": 38.27,
   "setups": [],
@@ -68801,14 +69093,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 2.5C +0.96, 5C +0.93, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 5C +0.96, 7.5C +0.88, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 9.3,
-    "quotes": "Nasdaq (Cboe file from 10-29 22:14)",
+    "S": 9.21,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 22:14 ET"
+    "quote_time": "10-30 15:15 ET"
    }
   }
  },
@@ -68863,11 +69155,11 @@
   "pct_above_lo52": 1.2,
   "pct_below_hi52": 39.9,
   "near_low": true,
-  "vol_ratio": 3.35,
+  "vol_ratio": 3.37,
   "hi20": 9.68,
   "lo20": 8.38,
   "setups": [
-   "Breakdown 10-29 (< 8.38, vol 3.35x)",
+   "Breakdown 10-29 (< 8.38, vol 3.37x)",
    "Breakdown 10-28 (< 8.58, vol 2.38x), holding"
   ],
   "watch": [],
@@ -69280,11 +69572,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 0, spread 31%"
+     "Dec 18 0.60-0.70 delta: OI 0, spread 36%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 38.43,
+    "S": 38.33,
     "quotes": "Nasdaq (Cboe file from 10-29 19:52)",
     "regular": true,
     "quote_time": "10-29 19:52 ET"
@@ -69428,14 +69720,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 26%"
+     "Jan 15 0.60-0.70 delta: spread 24%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 17.16,
-    "quotes": "Nasdaq (Cboe file from 10-29 19:53)",
+    "S": 16.74,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 19:53 ET"
+    "quote_time": "10-30 11:48 ET"
    }
   }
  },
@@ -70357,14 +70649,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 19%"
+     "Jan 15 0.60-0.70 delta: spread 10%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 10.98,
+    "S": 10.97,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:12 ET"
+    "quote_time": "10-30 15:59 ET"
    }
   }
  },
@@ -70714,11 +71006,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 40%"
+     "Dec 18 0.60-0.70 delta: spread 31%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 12.66,
+    "S": 12.48,
     "quotes": "Nasdaq (Cboe file from 10-29 19:54)",
     "regular": true,
     "quote_time": "10-29 19:54 ET"
@@ -70745,7 +71037,7 @@
   "pct_above_lo52": 399.2,
   "pct_below_hi52": 19.6,
   "near_low": false,
-  "vol_ratio": 1.47,
+  "vol_ratio": 1.48,
   "hi20": 1133.4,
   "lo20": 752.54,
   "setups": [],
@@ -70920,14 +71212,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 154, spread 13%"
+     "no strike at 0.50-0.70 delta (nearest 17.5P -0.34, 20P -0.73, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 18.38,
-    "quotes": "Nasdaq (Cboe file from 10-29 19:55)",
+    "S": 18.52,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 19:55 ET"
+    "quote_time": "10-30 15:08 ET"
    }
   }
  },
@@ -72449,7 +72741,7 @@
   "pct_above_lo52": 50.1,
   "pct_below_hi52": 75.0,
   "near_low": false,
-  "vol_ratio": 0.92,
+  "vol_ratio": 0.93,
   "hi20": 15.06,
   "lo20": 10.45,
   "setups": [],
@@ -72749,9 +73041,9 @@
     "notes": [
      "no strike at 0.50-0.70 delta (nearest 55C +0.99, 60C +0.90, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 61.18,
+    "S": 61.17,
     "quotes": "Nasdaq (Cboe file from 10-29 19:56)",
     "regular": true,
     "quote_time": "10-29 19:56 ET"
@@ -74015,14 +74307,14 @@
   "pct_above_lo52": 0.6,
   "pct_below_hi52": 55.3,
   "near_low": true,
-  "vol_ratio": 1.47,
+  "vol_ratio": 1.48,
   "hi20": 7.58,
   "lo20": 6.54,
   "setups": [
    "Breakdown 10-23 (< 6.84, vol 2.16x), holding"
   ],
   "watch": [
-   "below 20d low 6.54 but vol 1.47x"
+   "below 20d low 6.54 but vol 1.48x"
   ],
   "note": "PUT BLOCKED: near 52-wk low",
   "levels_put": {
@@ -74132,14 +74424,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 6P -0.42, 7P -0.78, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 6P -0.49, 7P -0.75, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 6.09,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:02)",
+    "S": 5.86,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:02 ET"
+    "quote_time": "10-30 12:19 ET"
    }
   }
  },
@@ -74194,12 +74486,12 @@
   "pct_above_lo52": 12.3,
   "pct_below_hi52": 24.7,
   "near_low": false,
-  "vol_ratio": 0.82,
+  "vol_ratio": 0.83,
   "hi20": 252.63,
   "lo20": 230.88,
   "setups": [],
   "watch": [
-   "above 20d high 252.63 but vol 0.82x"
+   "above 20d high 252.63 but vol 0.83x"
   ],
   "note": "",
   "group": "g07_discretionary_travel_media",
@@ -74489,14 +74781,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 38, spread 34%"
+     "Dec 18 0.60-0.70 delta: OI 31, spread 29%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 31.54,
-    "quotes": "Nasdaq (Cboe file from 10-29 22:24)",
+    "S": 31.86,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 22:24 ET"
+    "quote_time": "10-30 12:09 ET"
    }
   }
  },
@@ -74520,7 +74812,7 @@
   "pct_above_lo52": 22.1,
   "pct_below_hi52": 6.2,
   "near_low": false,
-  "vol_ratio": 1.06,
+  "vol_ratio": 1.07,
   "hi20": 65.19,
   "lo20": 57.76,
   "setups": [
@@ -74637,14 +74929,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 27%"
+     "Jan 15 0.60-0.70 delta: spread 9%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 64.64,
+    "S": 65.1,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:18 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -75201,11 +75493,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 176, spread 47%"
+     "Jan 15 0.50-0.60 delta: OI 17, spread $0.25"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 6.75,
+    "S": 6.61,
     "quotes": "Nasdaq (Cboe file from 10-30 06:11)",
     "regular": true,
     "quote_time": "10-30 06:11 ET"
@@ -75380,11 +75672,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 12.5P -0.84, 20P -0.93, Jan 15)"
+     "no strike at 0.50-0.70 delta (nearest 12.5P -0.83, 20P -0.91, Jan 15)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 9.69,
+    "S": 9.63,
     "quotes": "Nasdaq (Cboe file from 10-30 02:40)",
     "regular": true,
     "quote_time": "10-30 02:40 ET"
@@ -75530,11 +75822,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 9C +0.77, 10C +0.81, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 9C +0.76, 10C +0.81, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 10.36,
+    "S": 10.34,
     "quotes": "Nasdaq (Cboe file from 10-29 22:26)",
     "regular": true,
     "quote_time": "10-29 22:26 ET"
@@ -75828,11 +76120,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 245, spread 29%"
+     "Jan 15 0.60-0.70 delta: OI 17, spread 15%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 65.17,
+    "S": 63.53,
     "quotes": "Nasdaq (Cboe file from 10-29 19:57)",
     "regular": true,
     "quote_time": "10-29 19:57 ET"
@@ -75974,14 +76266,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 15%"
+     "Jan 15 0.60-0.70 delta: spread 10%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 28.76,
+    "S": 29.81,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:58 ET"
+    "quote_time": "10-30 15:41 ET"
    }
   }
  },
@@ -76573,11 +76865,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 7, spread 19%"
+     "Dec 18 0.60-0.70 delta: OI 45, spread 23%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 131.59,
+    "S": 138.66,
     "quotes": "Nasdaq (Cboe file from 10-29 22:28)",
     "regular": true,
     "quote_time": "10-29 22:28 ET"
@@ -76812,11 +77104,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 17, spread 39%"
+     "Dec 18 0.60-0.70 delta: OI 17, spread 28%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 18.41,
+    "S": 18.24,
     "quotes": "Nasdaq (Cboe file from 10-29 22:27)",
     "regular": true,
     "quote_time": "10-29 22:27 ET"
@@ -77170,11 +77462,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 28, spread 105%"
+     "Dec 18 0.60-0.70 delta: OI 52, spread 119%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 12.18,
+    "S": 11.74,
     "quotes": "Nasdaq (Cboe file from 10-29 22:28)",
     "regular": true,
     "quote_time": "10-29 22:28 ET"
@@ -77316,11 +77608,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.50-0.60 delta: OI 70, spread 30%"
+     "Jan 15 0.60-0.70 delta: OI 70, spread 11%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 20.09,
+    "S": 18.19,
     "quotes": "Nasdaq (Cboe file from 10-29 22:27)",
     "regular": true,
     "quote_time": "10-29 22:27 ET"
@@ -77916,11 +78208,11 @@
   "pct_above_lo52": 40.3,
   "pct_below_hi52": 0.4,
   "near_low": false,
-  "vol_ratio": 1.67,
+  "vol_ratio": 1.68,
   "hi20": 76.07,
   "lo20": 66.95,
   "setups": [
-   "Breakout 10-29 (> 76.07, vol 1.67x)"
+   "Breakout 10-29 (> 76.07, vol 1.68x)"
   ],
   "watch": [],
   "note": "",
@@ -78016,7 +78308,7 @@
   "rank_call": {
    "dir": "call",
    "setups": [
-    "Breakout 10-29 (> 76.07, vol 1.67x)"
+    "Breakout 10-29 (> 76.07, vol 1.68x)"
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
@@ -78033,40 +78325,40 @@
     "notes": [
      "0.50-0.60 delta (no strike at 0.60-0.70)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": {
      "osi": "MO261218C00077500",
      "exp": "2026-12-18",
      "cp": "C",
      "strike": 77.5,
-     "bid": 3.15,
-     "ask": 3.35,
+     "bid": 3.05,
+     "ask": 3.25,
      "oi": 4168,
      "src": "Cboe",
      "dte": 49,
      "quote": true,
-     "mid": 3.25,
-     "spread_pct": 0.0615,
+     "mid": 3.15,
+     "spread_pct": 0.0635,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 331.0,
+     "cost": 321.0,
      "fits": true,
-     "lim": 3.3,
-     "iv": 0.2216,
-     "delta": 0.596,
-     "be": 80.81,
-     "be_sd": 0.392,
-     "ivhv": 0.815,
+     "lim": 3.2,
+     "iv": 0.2337,
+     "delta": 0.5741,
+     "be": 80.71,
+     "be_sd": 0.41,
+     "ivhv": 0.859,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 78.32,
+    "S": 77.97,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 15:43 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -78221,7 +78513,7 @@
   "pct_above_lo52": 12.2,
   "pct_below_hi52": 45.8,
   "near_low": false,
-  "vol_ratio": 0.85,
+  "vol_ratio": 0.86,
   "hi20": 48.53,
   "lo20": 37.47,
   "setups": [
@@ -78328,23 +78620,62 @@
    "ts": "2026-12-24",
    "rr": 1.72,
    "rr_pts": 0,
-   "cap": 32.49,
+   "cap": 31.99,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Jan 15 0.60-0.70 delta: spread 14%"
-    ],
-    "cap": 1917.82,
-    "contract": null,
-    "S": 40.11,
+    "status": "ok",
+    "notes": [],
+    "cap": 1917.07,
+    "contract": {
+     "osi": "MP270115P00045000",
+     "exp": "2027-01-15",
+     "cp": "P",
+     "strike": 45.0,
+     "bid": 7.7,
+     "ask": 8.1,
+     "oi": 5579,
+     "src": "Cboe",
+     "dte": 77,
+     "quote": true,
+     "mid": 7.9,
+     "spread_pct": 0.0506,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 801.0,
+     "fits": true,
+     "lim": 8.0,
+     "iv": 0.5972,
+     "delta": -0.6332,
+     "be": 36.99,
+     "be_sd": 0.195,
+     "ivhv": 1.055,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 39.09,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:18 ET"
+    "quote_time": "10-30 15:57 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 1,
+   "score": 7,
+   "earn": {
+    "date": "2026-11-05",
+    "time": "AMC",
+    "days": 6,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": true,
+    "exit_by": "2026-11-05"
    }
   }
  },
@@ -78544,7 +78875,7 @@
   "pct_above_lo52": 899.8,
   "pct_below_hi52": 12.5,
   "near_low": false,
-  "vol_ratio": 0.54,
+  "vol_ratio": 0.55,
   "hi20": 245.81,
   "lo20": 187.46,
   "setups": [],
@@ -78788,11 +79119,11 @@
   "pct_above_lo52": 208.9,
   "pct_below_hi52": 33.8,
   "near_low": false,
-  "vol_ratio": 2.04,
+  "vol_ratio": 2.05,
   "hi20": 287.01,
   "lo20": 223.47,
   "setups": [
-   "Breakdown 10-29 (< 223.47, vol 2.04x)"
+   "Breakdown 10-29 (< 223.47, vol 2.05x)"
   ],
   "watch": [],
   "note": "",
@@ -78890,7 +79221,7 @@
   "rank_put": {
    "dir": "put",
    "setups": [
-    "Breakdown 10-29 (< 223.47, vol 2.04x)"
+    "Breakdown 10-29 (< 223.47, vol 2.05x)"
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
@@ -78905,14 +79236,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: cost $4,347 > cap $1,918"
+     "Dec 18 0.60-0.70 delta: cost $4,182 > cap $1,917"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 204.42,
-    "quotes": "Cboe",
+    "S": 195.25,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:01)",
     "regular": true,
-    "quote_time": "10-30 10:19 ET"
+    "quote_time": "10-30 16:01 ET"
    }
   }
  },
@@ -79271,7 +79602,7 @@
   "pct_above_lo52": 73.1,
   "pct_below_hi52": 50.5,
   "near_low": false,
-  "vol_ratio": 0.68,
+  "vol_ratio": 0.71,
   "hi20": 164.55,
   "lo20": 136.02,
   "setups": [],
@@ -79568,11 +79899,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 2, spread 39%"
+     "Dec 18 0.60-0.70 delta: OI 9, spread 72%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 63.77,
+    "S": 64.29,
     "quotes": "Nasdaq (Cboe file from 10-29 22:45)",
     "regular": true,
     "quote_time": "10-29 22:45 ET"
@@ -79989,7 +80320,7 @@
   "pct_above_lo52": 385.1,
   "pct_below_hi52": 25.6,
   "near_low": false,
-  "vol_ratio": 0.81,
+  "vol_ratio": 0.83,
   "hi20": 1097.39,
   "lo20": 856.49,
   "setups": [
@@ -80765,11 +81096,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 39%"
+     "Jan 15 0.60-0.70 delta: spread 32%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 20.11,
+    "S": 20.05,
     "quotes": "Nasdaq (Cboe file from 10-29 22:34)",
     "regular": true,
     "quote_time": "10-29 22:34 ET"
@@ -81063,7 +81394,7 @@
   "pct_above_lo52": 133.9,
   "pct_below_hi52": 42.6,
   "near_low": false,
-  "vol_ratio": 0.79,
+  "vol_ratio": 0.8,
   "hi20": 249.87,
   "lo20": 153.27,
   "setups": [],
@@ -81307,11 +81638,11 @@
   "pct_above_lo52": 33.7,
   "pct_below_hi52": 27.5,
   "near_low": false,
-  "vol_ratio": 3.44,
+  "vol_ratio": 3.45,
   "hi20": 16.06,
   "lo20": 14.64,
   "setups": [
-   "Breakout 10-29 (> 16.06, vol 3.44x)"
+   "Breakout 10-29 (> 16.06, vol 3.45x)"
   ],
   "watch": [],
   "note": "",
@@ -81409,7 +81740,7 @@
   "rank_call": {
    "dir": "call",
    "setups": [
-    "Breakout 10-29 (> 16.06, vol 3.44x)"
+    "Breakout 10-29 (> 16.06, vol 3.45x)"
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
@@ -81424,40 +81755,40 @@
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": {
      "osi": "NCLH261218C00017000",
      "exp": "2026-12-18",
      "cp": "C",
      "strike": 17.0,
-     "bid": 1.6,
-     "ask": 1.69,
+     "bid": 1.51,
+     "ask": 1.61,
      "oi": 5867,
-     "src": "Cboe",
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 1.645,
-     "spread_pct": 0.0547,
+     "mid": 1.56,
+     "spread_pct": 0.0641,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 167.75,
+     "cost": 159.5,
      "fits": true,
-     "lim": 1.667,
-     "iv": 0.4921,
-     "delta": 0.6276,
-     "be": 18.68,
-     "be_sd": 0.326,
-     "ivhv": 0.863,
+     "lim": 1.585,
+     "iv": 0.4756,
+     "delta": 0.6214,
+     "be": 18.6,
+     "be_sd": 0.333,
+     "ivhv": 0.834,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 17.64,
-    "quotes": "Cboe",
+    "S": 17.58,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:01)",
     "regular": true,
-    "quote_time": "10-30 10:19 ET"
+    "quote_time": "10-30 16:01 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -81638,14 +81969,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread 24%"
+     "Dec 18 0.50-0.60 delta: spread 20%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 106.0,
+    "S": 106.19,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 15:47 ET"
    }
   }
  },
@@ -81788,14 +82119,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 218, spread 42%"
+     "Dec 18 0.50-0.60 delta: OI 218, spread 18%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 48.66,
-    "quotes": "Nasdaq (Cboe file from 10-29 22:36)",
+    "S": 48.36,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 22:36 ET"
+    "quote_time": "10-30 14:38 ET"
    }
   }
  },
@@ -82438,19 +82769,58 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Dec 18 0.60-0.70 delta: spread $0.35"
-    ],
-    "cap": 3835.65,
-    "contract": null,
-    "S": 7.31,
-    "quotes": "Nasdaq (Cboe file from 10-29 22:35)",
+    "status": "ok",
+    "notes": [],
+    "cap": 3834.15,
+    "contract": {
+     "osi": "NEXT261218C00007000",
+     "exp": "2026-12-18",
+     "cp": "C",
+     "strike": 7.0,
+     "bid": 0.7,
+     "ask": 0.8,
+     "oi": 11228,
+     "src": "Cboe",
+     "dte": 49,
+     "quote": true,
+     "mid": 0.75,
+     "spread_pct": 0.1333,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 78.5,
+     "fits": true,
+     "lim": 0.775,
+     "iv": 0.5458,
+     "delta": 0.629,
+     "be": 7.79,
+     "be_sd": 0.31,
+     "ivhv": 0.817,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 7.33,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 22:35 ET"
+    "quote_time": "10-30 13:16 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 0,
+   "score": 4,
+   "earn": {
+    "date": "2026-10-28",
+    "time": "time n/a",
+    "days": -2,
+    "recent": true,
+    "inside_life": false,
+    "pre_event": false,
+    "exit_by": null
    }
   }
  },
@@ -83077,9 +83447,9 @@
     "notes": [
      "Jan 15 0.50-0.60 delta: OI 0, spread 99%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 14.87,
+    "S": 15.13,
     "quotes": "Nasdaq (Cboe file from 10-29 22:30)",
     "regular": true,
     "quote_time": "10-29 22:30 ET"
@@ -83225,14 +83595,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 40C +0.86, 45C +0.50, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 40C +0.84, 45C +0.48, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 44.67,
+    "S": 44.51,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:20 ET"
+    "quote_time": "10-30 15:53 ET"
    }
   }
  },
@@ -84036,11 +84406,11 @@
   "pct_above_lo52": 35.0,
   "pct_below_hi52": 43.2,
   "near_low": false,
-  "vol_ratio": 6.07,
+  "vol_ratio": 6.09,
   "hi20": 158.96,
   "lo20": 134.38,
   "setups": [
-   "Breakdown 10-29 (< 134.38, vol 6.07x)"
+   "Breakdown 10-29 (< 134.38, vol 6.09x)"
   ],
   "watch": [],
   "note": "",
@@ -84138,7 +84508,7 @@
   "rank_put": {
    "dir": "put",
    "setups": [
-    "Breakdown 10-29 (< 134.38, vol 6.07x)"
+    "Breakdown 10-29 (< 134.38, vol 6.09x)"
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
@@ -84148,50 +84518,50 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
-     "osi": "NOW261218P00120000",
+     "osi": "NOW261218P00115000",
      "exp": "2026-12-18",
      "cp": "P",
-     "strike": 120.0,
-     "bid": 14.45,
-     "ask": 14.8,
-     "oi": 5757,
-     "src": "Cboe",
+     "strike": 115.0,
+     "bid": 13.2,
+     "ask": 13.4,
+     "oi": 823,
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 14.625,
-     "spread_pct": 0.0239,
+     "mid": 13.3,
+     "spread_pct": 0.015,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1472.25,
+     "cost": 1336.0,
      "fits": true,
-     "lim": 14.713,
-     "iv": 0.4764,
-     "delta": -0.6821,
-     "be": 105.28,
-     "be_sd": 0.167,
-     "ivhv": 0.399,
+     "lim": 13.35,
+     "iv": 0.4858,
+     "delta": -0.651,
+     "be": 101.64,
+     "be_sd": 0.183,
+     "ivhv": 0.407,
      "pricing": 2,
-     "liquidity": 2,
+     "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 108.44,
-    "quotes": "Cboe",
+    "S": 105.07,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:01)",
     "regular": true,
-    "quote_time": "10-30 10:20 ET"
+    "quote_time": "10-30 16:01 ET"
    },
-   "liq": 2,
+   "liq": 1,
    "pricing": 2,
    "cat": 0,
-   "score": 6,
+   "score": 5,
    "earn": {
     "date": "2026-10-28",
     "time": "time n/a",
@@ -84638,14 +85008,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 11%"
+     "Jan 15 0.60-0.70 delta: OI 156, spread 8%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 96.86,
+    "S": 95.28,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:12 ET"
+    "quote_time": "10-30 15:38 ET"
    }
   }
  },
@@ -85485,11 +85855,11 @@
   "pct_above_lo52": 1706.3,
   "pct_below_hi52": 96.7,
   "near_low": false,
-  "vol_ratio": 9.92,
+  "vol_ratio": 9.96,
   "hi20": 5.66,
   "lo20": 0.32,
   "setups": [
-   "Breakout 10-29 (> 5.66, vol 9.92x)",
+   "Breakout 10-29 (> 5.66, vol 9.96x)",
    "Breakout 10-28 (> 5.41, vol 1.57x), holding",
    "Breakout 10-27 (> 0.76, vol 129.44x), holding"
   ],
@@ -85589,7 +85959,7 @@
   "rank_call": {
    "dir": "call",
    "setups": [
-    "Breakout 10-29 (> 5.66, vol 9.92x)",
+    "Breakout 10-29 (> 5.66, vol 9.96x)",
     "Breakout 10-28 (> 5.41, vol 1.57x), holding",
     "Breakout 10-27 (> 0.76, vol 129.44x), holding"
    ],
@@ -85778,11 +86148,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 2, spread 141%"
+     "Dec 18 0.60-0.70 delta: OI 0, spread 106%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 12.81,
+    "S": 13.24,
     "quotes": "Nasdaq (Cboe file from 10-30 06:02)",
     "regular": true,
     "quote_time": "10-30 06:02 ET"
@@ -85809,7 +86179,7 @@
   "pct_above_lo52": 30.1,
   "pct_below_hi52": 12.2,
   "near_low": false,
-  "vol_ratio": 0.76,
+  "vol_ratio": 0.77,
   "hi20": 239.24,
   "lo20": 210.96,
   "setups": [],
@@ -86142,7 +86512,7 @@
     "notes": [
      "Dec 18 0.60-0.70 delta: spread 15%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
     "S": 163.01,
     "quotes": "Cboe",
@@ -86231,7 +86601,7 @@
   "pct_above_lo52": 34.3,
   "pct_below_hi52": 73.1,
   "near_low": false,
-  "vol_ratio": 0.48,
+  "vol_ratio": 0.5,
   "hi20": 12.4,
   "lo20": 8.34,
   "setups": [],
@@ -86470,14 +86840,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 184, spread 54%"
+     "Dec 18 0.60-0.70 delta: OI 184, spread 36%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 5.26,
-    "quotes": "Cboe",
+    "S": 5.18,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:01)",
     "regular": true,
-    "quote_time": "10-30 10:20 ET"
+    "quote_time": "10-30 16:01 ET"
    }
   }
  },
@@ -86789,23 +87159,62 @@
    "ts": "2026-12-08",
    "rr": 0.71,
    "rr_pts": 0,
-   "cap": 301.82,
+   "cap": 305.31,
    "trend": 2,
    "rs": 1,
    "known": 3,
    "max": 10,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Dec 18 0.60-0.70 delta: spread 10%"
-    ],
-    "cap": 3835.65,
-    "contract": null,
-    "S": 262.01,
+    "status": "ok",
+    "notes": [],
+    "cap": 3834.15,
+    "contract": {
+     "osi": "NXPI261218C00250000",
+     "exp": "2026-12-18",
+     "cp": "C",
+     "strike": 250.0,
+     "bid": 19.9,
+     "ask": 20.9,
+     "oi": 1233,
+     "src": "Cboe",
+     "dte": 49,
+     "quote": true,
+     "mid": 20.4,
+     "spread_pct": 0.049,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 2066.0,
+     "fits": true,
+     "lim": 20.65,
+     "iv": 0.4521,
+     "delta": 0.6014,
+     "be": 270.66,
+     "be_sd": 0.339,
+     "ivhv": 1.097,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 256.27,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 15:57 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 0,
+   "score": 7,
+   "earn": {
+    "date": "2026-10-27",
+    "time": "time n/a",
+    "days": -3,
+    "recent": true,
+    "inside_life": false,
+    "pre_event": false,
+    "exit_by": null
    }
   }
  },
@@ -87221,9 +87630,9 @@
     "notes": [
      "no strike at 0.50-0.70 delta (nearest 10C +0.95, 12.5C +0.91, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 17.9,
+    "S": 17.89,
     "quotes": "Nasdaq (Cboe file from 10-29 22:40)",
     "regular": true,
     "quote_time": "10-29 22:40 ET"
@@ -87397,11 +87806,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 20C +0.72, 22.5C +0.42, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 20C +0.73, 22.5C +0.44, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 21.46,
+    "S": 21.66,
     "quotes": "Nasdaq (Cboe file from 10-29 22:40)",
     "regular": true,
     "quote_time": "10-29 22:40 ET"
@@ -87696,14 +88105,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 29, spread 32%"
+     "Dec 18 0.60-0.70 delta: OI 209"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 173.49,
+    "S": 172.49,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:50 ET"
+    "quote_time": "10-30 15:45 ET"
    }
   }
  },
@@ -88369,7 +88778,7 @@
   "pct_above_lo52": 5.6,
   "pct_below_hi52": 82.4,
   "near_low": false,
-  "vol_ratio": 0.72,
+  "vol_ratio": 0.73,
   "hi20": 38.55,
   "lo20": 25.94,
   "setups": [],
@@ -88750,7 +89159,7 @@
   "pct_above_lo52": 39.0,
   "pct_below_hi52": 55.0,
   "near_low": false,
-  "vol_ratio": 0.92,
+  "vol_ratio": 0.94,
   "hi20": 7.42,
   "lo20": 6.02,
   "setups": [],
@@ -89014,14 +89423,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 25C +0.96, 27.5C +0.93, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 27.5C +0.93, 30C +0.85, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 31.84,
-    "quotes": "Nasdaq (Cboe file from 10-30 08:33)",
+    "S": 31.88,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 08:33 ET"
+    "quote_time": "10-30 15:27 ET"
    }
   }
  },
@@ -89227,7 +89636,7 @@
   "pct_above_lo52": 5.9,
   "pct_below_hi52": 40.1,
   "near_low": false,
-  "vol_ratio": 0.87,
+  "vol_ratio": 0.88,
   "hi20": 5.23,
   "lo20": 4.77,
   "setups": [],
@@ -89256,7 +89665,7 @@
   "pct_above_lo52": 21.9,
   "pct_below_hi52": 50.4,
   "near_low": false,
-  "vol_ratio": 1.27,
+  "vol_ratio": 1.28,
   "hi20": 144.77,
   "lo20": 125.54,
   "setups": [],
@@ -89433,11 +89842,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 0, spread 74%"
+     "Dec 18 0.60-0.70 delta: OI 0, spread 57%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 8.51,
+    "S": 9.25,
     "quotes": "Nasdaq (Cboe file from 10-29 22:44)",
     "regular": true,
     "quote_time": "10-29 22:44 ET"
@@ -90118,14 +90527,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 5P -0.33, 7.5P -0.85, Dec 18)"
+     "Dec 18 0.60-0.70 delta: OI 0, spread 47%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 5.41,
-    "quotes": "Nasdaq (Cboe file from 10-29 22:42)",
+    "S": 5.05,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 22:42 ET"
+    "quote_time": "10-30 15:34 ET"
    }
   }
  },
@@ -90475,7 +90884,7 @@
   "pct_above_lo52": 96.0,
   "pct_below_hi52": 49.6,
   "near_low": false,
-  "vol_ratio": 0.58,
+  "vol_ratio": 0.59,
   "hi20": 44.91,
   "lo20": 27.98,
   "setups": [],
@@ -90683,14 +91092,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread $0.20"
+     "Dec 18 0.50-0.60 delta: spread $0.20"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 10.43,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:06)",
+    "S": 10.22,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:06 ET"
+    "quote_time": "10-30 15:23 ET"
    }
   }
  },
@@ -90836,7 +91245,7 @@
   "pct_above_lo52": 141.6,
   "pct_below_hi52": 12.9,
   "near_low": false,
-  "vol_ratio": 0.62,
+  "vol_ratio": 0.63,
   "hi20": 156.97,
   "lo20": 121.2,
   "setups": [],
@@ -91075,14 +91484,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 36, spread 54%"
+     "no strike at 0.50-0.70 delta (nearest 8P -0.48, 9P -0.71, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 7.97,
-    "quotes": "Nasdaq (Cboe file from 10-29 22:48)",
+    "S": 7.92,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 22:48 ET"
+    "quote_time": "10-30 15:46 ET"
    }
   }
  },
@@ -91491,11 +91900,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 239, spread 191%"
+     "Dec 18 0.60-0.70 delta: OI 239, spread $1.30"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 9.24,
+    "S": 9.16,
     "quotes": "Nasdaq (Cboe file from 10-29 22:50)",
     "regular": true,
     "quote_time": "10-29 22:50 ET"
@@ -92027,11 +92436,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 7, spread 76%"
+     "Dec 18 0.50-0.60 delta: OI 6, spread 180%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 16.06,
+    "S": 16.25,
     "quotes": "Nasdaq (Cboe file from 10-29 19:23)",
     "regular": true,
     "quote_time": "10-29 19:23 ET"
@@ -92236,14 +92645,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 39, spread 13%"
+     "Dec 18 0.50-0.60 delta: OI 39, spread 12%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 102.08,
+    "S": 102.1,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -92298,11 +92707,11 @@
   "pct_above_lo52": 722.2,
   "pct_below_hi52": 43.4,
   "near_low": false,
-  "vol_ratio": 2204.36,
+  "vol_ratio": 2225.34,
   "hi20": 6.74,
   "lo20": 5.88,
   "setups": [
-   "Breakout 10-29 (> 6.74, vol 2204.36x)"
+   "Breakout 10-29 (> 6.74, vol 2225.34x)"
   ],
   "watch": [],
   "note": "",
@@ -92704,54 +93113,54 @@
    "ts": "2026-12-24",
    "rr": 0.86,
    "rr_pts": 0,
-   "cap": 68.51,
+   "cap": 68.43,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
      "osi": "PDD270115P00085000",
      "exp": "2027-01-15",
      "cp": "P",
      "strike": 85.0,
-     "bid": 7.65,
-     "ask": 7.95,
+     "bid": 8.25,
+     "ask": 8.85,
      "oi": 14019,
      "src": "Cboe",
      "dte": 77,
      "quote": true,
-     "mid": 7.8,
-     "spread_pct": 0.0385,
+     "mid": 8.55,
+     "spread_pct": 0.0702,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 788.5,
+     "cost": 871.0,
      "fits": true,
-     "lim": 7.875,
-     "iv": 0.3499,
-     "delta": -0.6099,
-     "be": 77.11,
-     "be_sd": 0.219,
-     "ivhv": 1.272,
+     "lim": 8.7,
+     "iv": 0.3524,
+     "delta": -0.6431,
+     "be": 76.29,
+     "be_sd": 0.188,
+     "ivhv": 1.281,
      "pricing": 1,
-     "liquidity": 2,
+     "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 79.93,
+    "S": 78.68,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:20 ET"
+    "quote_time": "10-30 15:55 ET"
    },
-   "liq": 2,
+   "liq": 1,
    "pricing": 1,
    "cat": 1,
-   "score": 7,
+   "score": 6,
    "earn": {
     "date": "2026-11-17",
     "time": "time n/a",
@@ -93143,7 +93552,7 @@
   "pct_above_lo52": 26.8,
   "pct_below_hi52": 1.6,
   "near_low": false,
-  "vol_ratio": 1.17,
+  "vol_ratio": 1.18,
   "hi20": 30.42,
   "lo20": 27.41,
   "setups": [],
@@ -93622,14 +94031,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 16, spread 40%"
+     "Dec 18 0.60-0.70 delta: OI 1, spread 25%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 20.48,
+    "S": 19.18,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 15:48 ET"
    }
   }
  },
@@ -93770,9 +94179,9 @@
     "notes": [
      "Dec 18 0.50-0.60 delta: OI 0, spread 192%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 5.95,
+    "S": 5.74,
     "quotes": "Nasdaq (Cboe file from 10-29 23:38)",
     "regular": true,
     "quote_time": "10-29 23:38 ET"
@@ -93980,14 +94389,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 91, spread 17%"
+     "Dec 18 0.60-0.70 delta: OI 91, spread 13%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 125.22,
+    "S": 124.72,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:50 ET"
    }
   }
  },
@@ -94342,7 +94751,7 @@
   "pct_above_lo52": 43.9,
   "pct_below_hi52": 41.6,
   "near_low": false,
-  "vol_ratio": 3.89,
+  "vol_ratio": 3.91,
   "hi20": 22.98,
   "lo20": 19.26,
   "setups": [],
@@ -94495,7 +94904,7 @@
   "pct_above_lo52": 36.0,
   "pct_below_hi52": 72.4,
   "near_low": false,
-  "vol_ratio": 0.76,
+  "vol_ratio": 0.77,
   "hi20": 18.57,
   "lo20": 13.08,
   "setups": [],
@@ -94795,7 +95204,7 @@
   "pct_above_lo52": 6.0,
   "pct_below_hi52": 67.2,
   "near_low": false,
-  "vol_ratio": 1.11,
+  "vol_ratio": 1.12,
   "hi20": 1.9,
   "lo20": 1.37,
   "setups": [],
@@ -95218,14 +95627,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 47, spread 16%"
+     "Dec 18 0.50-0.60 delta: OI 47, spread 22%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 66.23,
+    "S": 66.08,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:12 ET"
+    "quote_time": "10-30 15:54 ET"
    }
   }
  },
@@ -95342,7 +95751,7 @@
   "pct_above_lo52": 46.3,
   "pct_below_hi52": 72.8,
   "near_low": false,
-  "vol_ratio": 0.96,
+  "vol_ratio": 0.98,
   "hi20": 7.81,
   "lo20": 5.33,
   "setups": [],
@@ -95790,14 +96199,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 63, spread 24%"
+     "Dec 18 0.60-0.70 delta: OI 63, spread 11%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 119.65,
+    "S": 119.22,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -96205,11 +96614,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 15%"
+     "Dec 18 0.60-0.70 delta: spread 13%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 20.58,
+    "S": 20.59,
     "quotes": "Nasdaq (Cboe file from 10-29 19:24)",
     "regular": true,
     "quote_time": "10-29 19:24 ET"
@@ -96744,12 +97153,12 @@
     "notes": [
      "Dec 18 0.60-0.70 delta: OI 7, spread $1.00"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 4.8,
-    "quotes": "Nasdaq (Cboe file from 10-29 19:25)",
+    "S": 4.86,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 19:25 ET"
+    "quote_time": "10-30 12:05 ET"
    }
   }
  },
@@ -97336,14 +97745,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 26, spread $0.55"
+     "Dec 18 0.60-0.70 delta: OI 27, spread 20%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 12.92,
-    "quotes": "Nasdaq (Cboe file from 10-29 22:50)",
+    "S": 13.04,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 22:50 ET"
+    "quote_time": "10-30 11:03 ET"
    }
   }
  },
@@ -97696,11 +98105,11 @@
     "status": "fail",
     "notes": [
      "no listed monthly 60+ days out",
-     "Dec 18 0.60-0.70 delta: OI 64, spread 53%"
+     "Dec 18 0.50-0.60 delta: OI 64, spread 55%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 16.3,
+    "S": 16.58,
     "quotes": "Nasdaq (Cboe file from 10-29 23:31)",
     "regular": true,
     "quote_time": "10-29 23:31 ET"
@@ -97845,7 +98254,7 @@
   "pct_above_lo52": 308.3,
   "pct_below_hi52": 16.7,
   "near_low": false,
-  "vol_ratio": 5.08,
+  "vol_ratio": 5.15,
   "hi20": 12.92,
   "lo20": 8.68,
   "setups": [],
@@ -98143,14 +98552,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 0, spread 31%"
+     "Jan 15 0.50-0.60 delta: OI 2, spread 171%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 14.48,
-    "quotes": "Nasdaq (Cboe file from 10-30 00:35)",
+    "S": 14.44,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 00:35 ET"
+    "quote_time": "10-30 15:15 ET"
    }
   }
  },
@@ -98203,7 +98612,7 @@
   "pct_above_lo52": 48.1,
   "pct_below_hi52": 21.7,
   "near_low": false,
-  "vol_ratio": 0.87,
+  "vol_ratio": 0.88,
   "hi20": 57.53,
   "lo20": 52.8,
   "setups": [],
@@ -98715,7 +99124,7 @@
   "pct_above_lo52": 13.6,
   "pct_below_hi52": 56.8,
   "near_low": false,
-  "vol_ratio": 0.5,
+  "vol_ratio": 0.51,
   "hi20": 46.68,
   "lo20": 33.03,
   "setups": [],
@@ -98744,7 +99153,7 @@
   "pct_above_lo52": 28.8,
   "pct_below_hi52": 6.2,
   "near_low": false,
-  "vol_ratio": 1.03,
+  "vol_ratio": 1.05,
   "hi20": 759.66,
   "lo20": 704.4,
   "setups": [],
@@ -99096,14 +99505,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 11%"
+     "Jan 15 0.50-0.60 delta: spread 12%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 6.56,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:03)",
+    "S": 6.38,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:03 ET"
+    "quote_time": "10-30 15:16 ET"
    }
   }
  },
@@ -99485,11 +99894,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 1, spread 24%"
+     "Dec 18 0.60-0.70 delta: OI 5, spread 36%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 24.21,
+    "S": 24.97,
     "quotes": "Nasdaq (Cboe file from 10-29 19:32)",
     "regular": true,
     "quote_time": "10-29 19:32 ET"
@@ -99576,7 +99985,7 @@
   "pct_above_lo52": 54.8,
   "pct_below_hi52": 61.0,
   "near_low": false,
-  "vol_ratio": 2.3,
+  "vol_ratio": 2.32,
   "hi20": 54.47,
   "lo20": 43.0,
   "setups": [],
@@ -99720,14 +100129,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 29"
+     "Dec 18 0.60-0.70 delta: OI 142, spread 13%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 124.15,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:04)",
+    "S": 122.14,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:04 ET"
+    "quote_time": "10-30 15:28 ET"
    }
   }
  },
@@ -100080,9 +100489,9 @@
     "notes": [
      "Dec 18 0.50-0.60 delta: OI 329, spread 151%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 18.23,
+    "S": 18.25,
     "quotes": "Nasdaq (Cboe file from 10-29 23:30)",
     "regular": true,
     "quote_time": "10-29 23:30 ET"
@@ -100109,11 +100518,11 @@
   "pct_above_lo52": 8.7,
   "pct_below_hi52": 50.8,
   "near_low": false,
-  "vol_ratio": 4.14,
+  "vol_ratio": 4.21,
   "hi20": 159.93,
   "lo20": 134.7,
   "setups": [
-   "Breakdown 10-29 (< 134.70, vol 4.14x)",
+   "Breakdown 10-29 (< 134.70, vol 4.21x)",
    "Breakdown 10-26 (< 142.44, vol 1.94x), holding"
   ],
   "watch": [],
@@ -100211,14 +100620,14 @@
   "rank_put": {
    "dir": "put",
    "setups": [
-    "Breakdown 10-29 (< 134.70, vol 4.14x)",
+    "Breakdown 10-29 (< 134.70, vol 4.21x)",
     "Breakdown 10-26 (< 142.44, vol 1.94x), holding"
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
    "rr": 0.12,
    "rr_pts": 0,
-   "cap": 103.54,
+   "cap": 103.14,
    "trend": 2,
    "rs": 1,
    "known": 3,
@@ -100227,40 +100636,40 @@
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
-     "osi": "RDDT261218P00110000",
+     "osi": "RDDT261218P00105000",
      "exp": "2026-12-18",
      "cp": "P",
-     "strike": 110.0,
-     "bid": 15.5,
-     "ask": 16.3,
-     "oi": 1000,
-     "src": "Cboe",
+     "strike": 105.0,
+     "bid": 16.15,
+     "ask": 16.8,
+     "oi": 953,
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 15.9,
-     "spread_pct": 0.0503,
+     "mid": 16.475,
+     "spread_pct": 0.0395,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1611.0,
+     "cost": 1664.75,
      "fits": true,
-     "lim": 16.1,
-     "iv": 0.6152,
-     "delta": -0.6431,
-     "be": 93.89,
-     "be_sd": 0.204,
-     "ivhv": 1.37,
+     "lim": 16.638,
+     "iv": 0.6247,
+     "delta": -0.6693,
+     "be": 88.35,
+     "be_sd": 0.175,
+     "ivhv": 1.391,
      "pricing": 0,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 98.41,
-    "quotes": "Cboe",
+    "S": 92.03,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:03)",
     "regular": true,
-    "quote_time": "10-30 10:21 ET"
+    "quote_time": "10-30 16:03 ET"
    },
    "liq": 1,
    "pricing": 0,
@@ -100450,7 +100859,7 @@
   "pct_above_lo52": 88.1,
   "pct_below_hi52": 65.6,
   "near_low": false,
-  "vol_ratio": 0.77,
+  "vol_ratio": 0.78,
   "hi20": 10.88,
   "lo20": 8.14,
   "setups": [],
@@ -100749,11 +101158,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 27, spread 35%"
+     "Dec 18 0.60-0.70 delta: OI 3, spread 44%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 12.4,
+    "S": 11.96,
     "quotes": "Nasdaq (Cboe file from 10-29 20:45)",
     "regular": true,
     "quote_time": "10-29 20:45 ET"
@@ -101019,11 +101428,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 85%"
+     "Dec 18 0.60-0.70 delta: spread 21%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 16.96,
+    "S": 17.61,
     "quotes": "Nasdaq (Cboe file from 10-29 19:34)",
     "regular": true,
     "quote_time": "10-29 19:34 ET"
@@ -101198,14 +101607,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 35C +0.83, 40C +0.34, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 35C +0.82, 40C +0.35, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 38.4,
+    "S": 38.2,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -101558,7 +101967,7 @@
   "pct_above_lo52": 8.6,
   "pct_below_hi52": 72.9,
   "near_low": false,
-  "vol_ratio": 0.88,
+  "vol_ratio": 0.89,
   "hi20": 15.62,
   "lo20": 11.44,
   "setups": [],
@@ -101735,11 +102144,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 40C +0.73, 45C +0.45, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 40C +0.75, 45C +0.46, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 43.47,
+    "S": 43.72,
     "quotes": "Nasdaq (Cboe file from 10-29 19:36)",
     "regular": true,
     "quote_time": "10-29 19:36 ET"
@@ -101907,7 +102316,7 @@
    "ts": "2026-12-08",
    "rr": 0.56,
    "rr_pts": 0,
-   "cap": 7.82,
+   "cap": 7.89,
    "trend": 2,
    "rs": 1,
    "known": 3,
@@ -101918,43 +102327,43 @@
     "notes": [
      "0.50-0.60 delta (no strike at 0.60-0.70)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": {
      "osi": "RIG261218C00007000",
      "exp": "2026-12-18",
      "cp": "C",
      "strike": 7.0,
-     "bid": 0.46,
-     "ask": 0.54,
+     "bid": 0.52,
+     "ask": 0.53,
      "oi": 40930,
      "src": "Cboe",
      "dte": 49,
      "quote": true,
-     "mid": 0.5,
-     "spread_pct": 0.16,
+     "mid": 0.525,
+     "spread_pct": 0.019,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 53.0,
+     "cost": 53.75,
      "fits": true,
-     "lim": 0.52,
-     "iv": 0.5153,
-     "delta": 0.5257,
-     "be": 7.53,
-     "be_sd": 0.467,
-     "ivhv": 1.295,
-     "pricing": 1,
-     "liquidity": 1,
+     "lim": 0.528,
+     "iv": 0.5488,
+     "delta": 0.5223,
+     "be": 7.54,
+     "be_sd": 0.452,
+     "ivhv": 1.379,
+     "pricing": 0,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 6.92,
+    "S": 6.91,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:18 ET"
+    "quote_time": "10-30 15:12 ET"
    },
-   "liq": 1,
-   "pricing": 1,
+   "liq": 2,
+   "pricing": 0,
    "cat": 1,
    "score": 6,
    "earn": {
@@ -102097,7 +102506,7 @@
    "ts": "2026-12-08",
    "rr": 0.21,
    "rr_pts": 0,
-   "cap": 75.07,
+   "cap": 74.7,
    "trend": 2,
    "rs": 1,
    "known": 3,
@@ -102105,8 +102514,10 @@
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [],
-    "cap": 1917.82,
+    "notes": [
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+    ],
+    "cap": 1917.07,
     "contract": {
      "osi": "RIO261218P00085000",
      "exp": "2026-12-18",
@@ -102126,17 +102537,17 @@
      "cost": 541.0,
      "fits": true,
      "lim": 5.4,
-     "iv": 0.3007,
-     "delta": -0.6045,
+     "iv": 0.3141,
+     "delta": -0.5876,
      "be": 79.59,
-     "be_sd": 0.225,
-     "ivhv": 1.184,
+     "be_sd": 0.242,
+     "ivhv": 1.236,
      "pricing": 1,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 81.61,
+    "S": 81.87,
     "quotes": "Nasdaq (Cboe file from 10-29 19:36)",
     "regular": true,
     "quote_time": "10-29 19:36 ET"
@@ -102168,7 +102579,7 @@
   "pct_above_lo52": 19.5,
   "pct_below_hi52": 54.7,
   "near_low": false,
-  "vol_ratio": 1.01,
+  "vol_ratio": 1.02,
   "hi20": 19.73,
   "lo20": 12.53,
   "setups": [],
@@ -102316,14 +102727,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 8C +0.78, 9C +0.71, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 8C +0.87, 9C +0.70, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
     "S": 9.38,
-    "quotes": "Nasdaq (Cboe file from 10-29 19:36)",
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 19:36 ET"
+    "quote_time": "10-30 10:35 ET"
    }
   }
  },
@@ -102376,7 +102787,7 @@
   "pct_above_lo52": 0.7,
   "pct_below_hi52": 49.5,
   "near_low": true,
-  "vol_ratio": 1.65,
+  "vol_ratio": 1.67,
   "hi20": 14.76,
   "lo20": 11.43,
   "setups": [],
@@ -102524,14 +102935,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 0, spread 31%"
+     "Dec 18 0.60-0.70 delta: OI 0, spread 32%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 158.13,
+    "S": 156.69,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -102555,7 +102966,7 @@
   "pct_above_lo52": 57.3,
   "pct_below_hi52": 60.9,
   "near_low": false,
-  "vol_ratio": 0.7,
+  "vol_ratio": 0.71,
   "hi20": 75.06,
   "lo20": 50.84,
   "setups": [],
@@ -102584,7 +102995,7 @@
   "pct_above_lo52": 17.1,
   "pct_below_hi52": 51.1,
   "near_low": false,
-  "vol_ratio": 0.9,
+  "vol_ratio": 0.91,
   "hi20": 11.97,
   "lo20": 10.53,
   "setups": [],
@@ -102766,7 +103177,7 @@
   "pct_above_lo52": 40.3,
   "pct_below_hi52": 8.9,
   "near_low": false,
-  "vol_ratio": 1.29,
+  "vol_ratio": 1.32,
   "hi20": 253.2,
   "lo20": 218.89,
   "setups": [],
@@ -102943,14 +103354,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 3, spread 19%"
+     "Dec 18 0.50-0.60 delta: OI 36, spread 11%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 81.49,
-    "quotes": "Nasdaq (Cboe file from 10-29 19:35)",
+    "S": 80.96,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 19:35 ET"
+    "quote_time": "10-30 12:19 ET"
    }
   }
  },
@@ -103330,11 +103741,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 255, spread 20%"
+     "Dec 18 0.60-0.70 delta: OI 255, spread 17%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 16.02,
+    "S": 16.51,
     "quotes": "Nasdaq (Cboe file from 10-29 19:32)",
     "regular": true,
     "quote_time": "10-29 19:32 ET"
@@ -103573,12 +103984,12 @@
     "notes": [
      "Dec 18 0.50-0.60 delta: OI 170, spread 127%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 54.62,
+    "S": 54.43,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 15:59 ET"
    }
   }
  },
@@ -103804,11 +104215,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 244, spread 29%"
+     "Dec 18 0.50-0.60 delta: OI 61, spread 60%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 12.74,
+    "S": 12.08,
     "quotes": "Nasdaq (Cboe file from 10-30 06:07)",
     "regular": true,
     "quote_time": "10-30 06:07 ET"
@@ -104012,40 +104423,40 @@
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": {
      "osi": "RTX261218C00195000",
      "exp": "2026-12-18",
      "cp": "C",
      "strike": 195.0,
-     "bid": 12.1,
-     "ask": 12.55,
+     "bid": 10.8,
+     "ask": 11.15,
      "oi": 2240,
-     "src": "Cboe",
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 12.325,
-     "spread_pct": 0.0365,
+     "mid": 10.975,
+     "spread_pct": 0.0319,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1244.75,
+     "cost": 1107.25,
      "fits": true,
-     "lim": 12.438,
-     "iv": 0.258,
-     "delta": 0.6839,
-     "be": 207.45,
-     "be_sd": 0.248,
-     "ivhv": 0.977,
+     "lim": 11.063,
+     "iv": 0.2626,
+     "delta": 0.6436,
+     "be": 206.07,
+     "be_sd": 0.315,
+     "ivhv": 0.995,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 202.69,
-    "quotes": "Cboe",
+    "S": 200.01,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:03)",
     "regular": true,
-    "quote_time": "10-30 09:58 ET"
+    "quote_time": "10-30 16:03 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -104400,11 +104811,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 30, cost $3,876 > cap $1,918"
+     "Jan 15 0.60-0.70 delta: OI 30, spread 9%, cost $3,661 > cap $1,917"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 188.6,
+    "S": 191.34,
     "quotes": "Nasdaq (Cboe file from 10-29 19:34)",
     "regular": true,
     "quote_time": "10-29 19:34 ET"
@@ -104672,11 +105083,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 89, spread 20%"
+     "Dec 18 0.60-0.70 delta: OI 89, spread 13%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 203.9,
+    "S": 203.0,
     "quotes": "Nasdaq (Cboe file from 10-29 19:38)",
     "regular": true,
     "quote_time": "10-29 19:38 ET"
@@ -104821,11 +105232,11 @@
     "status": "fail",
     "notes": [
      "no listed monthly 60+ days out",
-     "Dec 18 0.50-0.60 delta: OI 228, spread 75%"
+     "Dec 18 0.50-0.60 delta: OI 228, spread 72%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 52.98,
+    "S": 53.76,
     "quotes": "Nasdaq (Cboe file from 10-30 05:23)",
     "regular": true,
     "quote_time": "10-30 05:23 ET"
@@ -104969,11 +105380,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 10, spread 46%"
+     "Dec 18 0.50-0.60 delta: OI 239, spread $0.45"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 6.65,
+    "S": 6.59,
     "quotes": "Nasdaq (Cboe file from 10-30 00:00)",
     "regular": true,
     "quote_time": "10-30 00:00 ET"
@@ -105712,58 +106123,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 10,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
-    "cap": 1917.82,
-    "contract": {
-     "osi": "SAN261218P00012000",
-     "exp": "2026-12-18",
-     "cp": "P",
-     "strike": 12.0,
-     "bid": 0.9,
-     "ask": 1.0,
-     "oi": 614,
-     "src": "Nasdaq",
-     "dte": 49,
-     "quote": true,
-     "mid": 0.95,
-     "spread_pct": 0.1053,
-     "spread_ok": true,
-     "spread_provisional": false,
-     "oi_ok": true,
-     "cost": 98.5,
-     "fits": true,
-     "lim": 0.975,
-     "iv": 0.3295,
-     "delta": -0.6596,
-     "be": 11.02,
-     "be_sd": 0.19,
-     "ivhv": 0.941,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 11.27,
-    "quotes": "Nasdaq (Cboe file from 10-29 21:32)",
+    "status": "fail",
+    "notes": [
+     "no strike at 0.50-0.70 delta (nearest 11P -0.41, 12P -0.71, Dec 18)"
+    ],
+    "cap": 1917.07,
+    "contract": null,
+    "S": 11.14,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 21:32 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {
-    "date": "2026-10-28",
-    "time": "time n/a",
-    "days": -2,
-    "recent": true,
-    "inside_life": false,
-    "pre_event": false,
-    "exit_by": null
+    "quote_time": "10-30 15:19 ET"
    }
   }
  },
@@ -106268,12 +106640,12 @@
   "pct_above_lo52": 35.3,
   "pct_below_hi52": 4.5,
   "near_low": false,
-  "vol_ratio": 1.18,
+  "vol_ratio": 1.19,
   "hi20": 103.2,
   "lo20": 90.75,
   "setups": [],
   "watch": [
-   "above 20d high 103.20 but vol 1.18x"
+   "above 20d high 103.20 but vol 1.19x"
   ],
   "note": "",
   "group": "g07_discretionary_travel_media",
@@ -106479,7 +106851,7 @@
   "pct_above_lo52": 174.0,
   "pct_below_hi52": 11.2,
   "near_low": false,
-  "vol_ratio": 0.53,
+  "vol_ratio": 0.54,
   "hi20": 32.6,
   "lo20": 22.6,
   "setups": [],
@@ -107034,11 +107406,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: spread 29%"
+     "Feb 19 0.60-0.70 delta: spread 23%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 12.88,
+    "S": 12.94,
     "quotes": "Nasdaq (Cboe file from 10-29 20:03)",
     "regular": true,
     "quote_time": "10-29 20:03 ET"
@@ -107180,14 +107552,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 50P -0.47, 55P -0.70, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 50P -0.47, 55P -0.71, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 49.71,
+    "S": 49.59,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:58 ET"
+    "quote_time": "10-30 15:57 ET"
    }
   }
  },
@@ -107390,11 +107762,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 71, spread 22%"
+     "Dec 18 0.60-0.70 delta: OI 71, spread 10%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 10.56,
+    "S": 10.7,
     "quotes": "Nasdaq (Cboe file from 10-29 20:15)",
     "regular": true,
     "quote_time": "10-29 20:15 ET"
@@ -107656,14 +108028,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 15C +0.91, 17.5C +0.84, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 17.5C +0.99, 20C +0.97, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 23.23,
-    "quotes": "Nasdaq (Cboe file from 10-30 00:56)",
+    "S": 23.2,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 00:56 ET"
+    "quote_time": "10-30 10:52 ET"
    }
   }
  },
@@ -108045,7 +108417,7 @@
   "pct_above_lo52": 77.5,
   "pct_below_hi52": 8.4,
   "near_low": false,
-  "vol_ratio": 0.58,
+  "vol_ratio": 0.59,
   "hi20": 179.22,
   "lo20": 149.09,
   "setups": [],
@@ -108463,7 +108835,7 @@
   "pct_above_lo52": 16.7,
   "pct_below_hi52": 41.9,
   "near_low": false,
-  "vol_ratio": 1.13,
+  "vol_ratio": 1.15,
   "hi20": 27.4,
   "lo20": 23.15,
   "setups": [],
@@ -108638,14 +109010,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 260, spread 23%"
+     "Dec 18 0.50-0.60 delta: OI 225, spread 39%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 28.88,
-    "quotes": "Cboe",
+    "S": 29.04,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:02)",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 16:02 ET"
    }
   }
  },
@@ -108848,7 +109220,7 @@
   "pct_above_lo52": 29.9,
   "pct_below_hi52": 18.9,
   "near_low": false,
-  "vol_ratio": 1.03,
+  "vol_ratio": 1.06,
   "hi20": 195.13,
   "lo20": 131.69,
   "setups": [],
@@ -109112,17 +109484,48 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Dec 18 0.60-0.70 delta: spread 9%"
-    ],
-    "cap": 3835.65,
-    "contract": null,
+    "status": "ok",
+    "notes": [],
+    "cap": 3834.15,
+    "contract": {
+     "osi": "SLB261218C00052500",
+     "exp": "2026-12-18",
+     "cp": "C",
+     "strike": 52.5,
+     "bid": 3.45,
+     "ask": 3.6,
+     "oi": 1536,
+     "src": "Nasdaq",
+     "dte": 49,
+     "quote": true,
+     "mid": 3.525,
+     "spread_pct": 0.0426,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 357.25,
+     "fits": true,
+     "lim": 3.563,
+     "iv": 0.3396,
+     "delta": 0.6214,
+     "be": 56.07,
+     "be_sd": 0.332,
+     "ivhv": 0.925,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
     "S": 53.85,
-    "quotes": "Cboe",
+    "quotes": "Nasdaq (Cboe file from 10-30 16:04)",
     "regular": true,
-    "quote_time": "10-30 10:12 ET"
-   }
+    "quote_time": "10-30 16:04 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 0,
+   "score": 5,
+   "earn": {}
   }
  },
  {
@@ -109414,14 +109817,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 0, spread 180%"
+     "Dec 18 0.60-0.70 delta: OI 5, spread 11%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 17.86,
-    "quotes": "Cboe",
+    "S": 17.78,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:02)",
     "regular": true,
-    "quote_time": "10-30 10:16 ET"
+    "quote_time": "10-30 16:02 ET"
    }
   }
  },
@@ -109536,12 +109939,12 @@
   "pct_above_lo52": 11.2,
   "pct_below_hi52": 57.0,
   "near_low": false,
-  "vol_ratio": 1.47,
+  "vol_ratio": 1.48,
   "hi20": 55.45,
   "lo20": 48.66,
   "setups": [],
   "watch": [
-   "below 20d low 48.66 but vol 1.47x"
+   "below 20d low 48.66 but vol 1.48x"
   ],
   "note": "",
   "group": "g10_etfs",
@@ -109629,7 +110032,7 @@
   "pct_above_lo52": 76.7,
   "pct_below_hi52": 36.3,
   "near_low": false,
-  "vol_ratio": 0.71,
+  "vol_ratio": 0.72,
   "hi20": 44.94,
   "lo20": 31.63,
   "setups": [],
@@ -109718,7 +110121,7 @@
   "pct_above_lo52": 78.3,
   "pct_below_hi52": 16.4,
   "near_low": false,
-  "vol_ratio": 0.68,
+  "vol_ratio": 0.69,
   "hi20": 633.9,
   "lo20": 523.35,
   "setups": [],
@@ -109976,14 +110379,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 21, spread 9%"
+     "Dec 18 0.60-0.70 delta: OI 21"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 209.99,
+    "S": 207.17,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 15:54 ET"
    }
   }
  },
@@ -110425,7 +110828,7 @@
   "pct_above_lo52": 27.1,
   "pct_below_hi52": 46.2,
   "near_low": false,
-  "vol_ratio": 1.22,
+  "vol_ratio": 1.24,
   "hi20": 17.14,
   "lo20": 14.22,
   "setups": [
@@ -110433,7 +110836,7 @@
    "Breakout 10-27 (> 15.92, vol 3.61x), holding"
   ],
   "watch": [
-   "above 20d high 17.14 but vol 1.22x"
+   "above 20d high 17.14 but vol 1.24x"
   ],
   "note": "",
   "levels_call": {
@@ -110546,40 +110949,40 @@
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": {
      "osi": "SOFI261218C00016000",
      "exp": "2026-12-18",
      "cp": "C",
      "strike": 16.0,
-     "bid": 1.73,
-     "ask": 1.78,
+     "bid": 1.66,
+     "ask": 1.68,
      "oi": 6763,
-     "src": "Cboe",
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 1.755,
-     "spread_pct": 0.0285,
+     "mid": 1.67,
+     "spread_pct": 0.012,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 177.75,
+     "cost": 168.5,
      "fits": true,
-     "lim": 1.767,
-     "iv": 0.4611,
-     "delta": 0.6876,
-     "be": 17.78,
-     "be_sd": 0.278,
-     "ivhv": 0.72,
+     "lim": 1.675,
+     "iv": 0.5045,
+     "delta": 0.6448,
+     "be": 17.69,
+     "be_sd": 0.3,
+     "ivhv": 0.788,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 16.98,
-    "quotes": "Cboe",
+    "S": 16.75,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:04)",
     "regular": true,
-    "quote_time": "10-30 10:22 ET"
+    "quote_time": "10-30 16:04 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -110733,14 +111136,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.50-0.60 delta: OI 373, spread 25%"
+     "Jan 15 0.50-0.60 delta: OI 373, spread 11%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 60.97,
-    "quotes": "Cboe",
+    "S": 60.34,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:02)",
     "regular": true,
-    "quote_time": "10-30 10:22 ET"
+    "quote_time": "10-30 16:02 ET"
    }
   }
  },
@@ -110880,7 +111283,7 @@
   "pct_above_lo52": 3.8,
   "pct_below_hi52": 76.3,
   "near_low": true,
-  "vol_ratio": 0.7,
+  "vol_ratio": 0.71,
   "hi20": 6.05,
   "lo20": 4.24,
   "setups": [],
@@ -110909,7 +111312,7 @@
   "pct_above_lo52": 97.3,
   "pct_below_hi52": 21.7,
   "near_low": false,
-  "vol_ratio": 0.71,
+  "vol_ratio": 0.73,
   "hi20": 589.51,
   "lo20": 475.69,
   "setups": [
@@ -111060,12 +111463,12 @@
   "pct_above_lo52": 37.3,
   "pct_below_hi52": 36.2,
   "near_low": false,
-  "vol_ratio": 0.64,
+  "vol_ratio": 0.66,
   "hi20": 171.92,
   "lo20": 144.75,
   "setups": [],
   "watch": [
-   "below 20d low 144.75 but vol 0.64x"
+   "below 20d low 144.75 but vol 0.66x"
   ],
   "note": "",
   "group": "",
@@ -111509,7 +111912,7 @@
   "pct_above_lo52": 22.3,
   "pct_below_hi52": 1.6,
   "near_low": false,
-  "vol_ratio": 1.05,
+  "vol_ratio": 1.06,
   "hi20": 779.09,
   "lo20": 759.97,
   "setups": [],
@@ -112405,11 +112808,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread $0.35"
+     "Dec 18 0.60-0.70 delta: spread 45%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 10.09,
+    "S": 10.52,
     "quotes": "Nasdaq (Cboe file from 10-30 00:46)",
     "regular": true,
     "quote_time": "10-30 00:46 ET"
@@ -112615,11 +113018,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 310, spread 89%"
+     "Feb 19 0.60-0.70 delta: OI 310, spread 25%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 6.39,
+    "S": 6.51,
     "quotes": "Nasdaq (Cboe file from 10-29 20:13)",
     "regular": true,
     "quote_time": "10-29 20:13 ET"
@@ -112823,14 +113226,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 8P -0.47, 9P -0.71, Dec 18)"
+     "Dec 18 0.50-0.60 delta: OI 360"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 7.93,
+    "S": 7.75,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:47 ET"
+    "quote_time": "10-30 15:47 ET"
    }
   }
  },
@@ -112967,11 +113370,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 101, spread 19%"
+     "Dec 18 0.60-0.70 delta: OI 101, spread 14%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 92.67,
+    "S": 92.62,
     "quotes": "Nasdaq (Cboe file from 10-30 06:03)",
     "regular": true,
     "quote_time": "10-30 06:03 ET"
@@ -113209,9 +113612,9 @@
      "no listed monthly 60+ days out",
      "Dec 18 0.60-0.70 delta: OI 0, spread 192%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 5.45,
+    "S": 5.55,
     "quotes": "Nasdaq (Cboe file from 10-30 00:27)",
     "regular": true,
     "quote_time": "10-30 00:27 ET"
@@ -113413,14 +113816,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.50-0.60 delta: OI 320, spread $0.50"
+     "Jan 15 0.50-0.60 delta: OI 320, spread $0.45"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 12.28,
+    "S": 12.25,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:17 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -113676,11 +114079,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 20, spread 12%"
+     "Dec 18 0.60-0.70 delta: OI 20, spread 24%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 82.6,
+    "S": 83.58,
     "quotes": "Nasdaq (Cboe file from 10-29 20:15)",
     "regular": true,
     "quote_time": "10-29 20:15 ET"
@@ -113979,11 +114382,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 7.5C +0.80, 10C +0.22, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 5C +0.96, 7.5C +0.83, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 9.21,
+    "S": 9.23,
     "quotes": "Nasdaq (Cboe file from 10-29 20:16)",
     "regular": true,
     "quote_time": "10-29 20:16 ET"
@@ -114039,7 +114442,7 @@
   "pct_above_lo52": 39.0,
   "pct_below_hi52": 47.4,
   "near_low": false,
-  "vol_ratio": 1.18,
+  "vol_ratio": 1.19,
   "hi20": 10.63,
   "lo20": 8.22,
   "setups": [],
@@ -114462,11 +114865,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 7.5C +0.94, 10C +0.84, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 7.5C +0.94, 10C +0.87, Dec 18)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 11.03,
+    "S": 11.31,
     "quotes": "Nasdaq (Cboe file from 10-30 02:15)",
     "regular": true,
     "quote_time": "10-30 02:15 ET"
@@ -114553,12 +114956,12 @@
   "pct_above_lo52": 2.5,
   "pct_below_hi52": 57.4,
   "near_low": true,
-  "vol_ratio": 1.2,
+  "vol_ratio": 1.22,
   "hi20": 44.15,
   "lo20": 37.9,
   "setups": [],
   "watch": [
-   "below 20d low 37.90 but vol 1.20x"
+   "below 20d low 37.90 but vol 1.22x"
   ],
   "note": "",
   "group": "",
@@ -114792,40 +115195,40 @@
     "notes": [
      "0.50-0.60 delta (no strike at 0.60-0.70)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
      "osi": "T261218P00022000",
      "exp": "2026-12-18",
      "cp": "P",
      "strike": 22.0,
-     "bid": 1.04,
-     "ask": 1.08,
+     "bid": 1.14,
+     "ask": 1.18,
      "oi": 8532,
-     "src": "Cboe",
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 1.06,
-     "spread_pct": 0.0377,
+     "mid": 1.16,
+     "spread_pct": 0.0345,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 108.0,
+     "cost": 118.0,
      "fits": true,
-     "lim": 1.07,
-     "iv": 0.2668,
-     "delta": -0.5592,
-     "be": 20.92,
-     "be_sd": 0.281,
-     "ivhv": 0.451,
+     "lim": 1.17,
+     "iv": 0.2816,
+     "delta": -0.5677,
+     "be": 20.82,
+     "be_sd": 0.256,
+     "ivhv": 0.476,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 21.51,
-    "quotes": "Cboe",
+    "S": 21.39,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:04)",
     "regular": true,
-    "quote_time": "10-30 10:23 ET"
+    "quote_time": "10-30 16:04 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -114974,11 +115377,11 @@
     "status": "fail",
     "notes": [
      "no listed monthly 60+ days out",
-     "Dec 18 0.50-0.60 delta: OI 326, spread $0.60"
+     "Dec 18 0.50-0.60 delta: OI 326, spread $0.45"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 13.06,
+    "S": 13.02,
     "quotes": "Nasdaq (Cboe file from 10-29 20:54)",
     "regular": true,
     "quote_time": "10-29 20:54 ET"
@@ -115153,11 +115556,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 10P -0.43, 11P -0.74, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 10P -0.49, 12P -0.82, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 10.1,
+    "S": 9.85,
     "quotes": "Nasdaq (Cboe file from 10-29 20:18)",
     "regular": true,
     "quote_time": "10-29 20:18 ET"
@@ -115509,14 +115912,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 37%"
+     "Jan 15 0.60-0.70 delta: spread 39%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 39.91,
+    "S": 39.52,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:10 ET"
+    "quote_time": "10-30 15:53 ET"
    }
   }
  },
@@ -115633,11 +116036,11 @@
   "pct_above_lo52": 98.4,
   "pct_below_hi52": 11.7,
   "near_low": false,
-  "vol_ratio": 5.2,
+  "vol_ratio": 5.21,
   "hi20": 6.88,
   "lo20": 5.52,
   "setups": [
-   "Breakout 10-29 (> 6.88, vol 5.20x)",
+   "Breakout 10-29 (> 6.88, vol 5.21x)",
    "Breakout 10-28 (> 6.45, vol 2.40x), holding"
   ],
   "watch": [],
@@ -115735,7 +116138,7 @@
   "rank_call": {
    "dir": "call",
    "setups": [
-    "Breakout 10-29 (> 6.88, vol 5.20x)",
+    "Breakout 10-29 (> 6.88, vol 5.21x)",
     "Breakout 10-28 (> 6.45, vol 2.40x), holding"
    ],
    "exp": "2026-12-18",
@@ -115751,14 +116154,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 17%"
+     "Dec 18 0.60-0.70 delta: spread $0.39"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 8.52,
-    "quotes": "Nasdaq (Cboe file from 10-29 20:19)",
+    "S": 8.29,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 20:19 ET"
+    "quote_time": "10-30 15:22 ET"
    }
   }
  },
@@ -116018,11 +116421,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.50-0.60 delta: OI 26, spread 27%"
+     "Jan 15 0.50-0.60 delta: OI 26, spread 52%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 60.95,
+    "S": 60.48,
     "quotes": "Nasdaq (Cboe file from 10-29 20:19)",
     "regular": true,
     "quote_time": "10-29 20:19 ET"
@@ -116199,14 +116602,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 86, spread 17%"
+     "Dec 18 0.50-0.60 delta: OI 86, spread 17%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 217.35,
-    "quotes": "Cboe",
+    "S": 213.1,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:04)",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 16:04 ET"
    }
   }
  },
@@ -116230,7 +116633,7 @@
   "pct_above_lo52": 90.9,
   "pct_below_hi52": 15.2,
   "near_low": false,
-  "vol_ratio": 0.76,
+  "vol_ratio": 0.77,
   "hi20": 83.55,
   "lo20": 63.81,
   "setups": [],
@@ -116374,11 +116777,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 143, spread 15%"
+     "Dec 18 0.60-0.70 delta: OI 143, spread 18%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 49.46,
+    "S": 50.74,
     "quotes": "Nasdaq (Cboe file from 10-29 20:43)",
     "regular": true,
     "quote_time": "10-29 20:43 ET"
@@ -116676,12 +117079,12 @@
     "notes": [
      "Jan 15 0.60-0.70 delta: spread 23%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 42.37,
-    "quotes": "Nasdaq (Cboe file from 10-29 20:44)",
+    "S": 42.08,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 20:44 ET"
+    "quote_time": "10-30 11:47 ET"
    }
   }
  },
@@ -117248,9 +117651,9 @@
     "notes": [
      "Dec 18 0.50-0.60 delta: OI 139, spread $0.80"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 10.15,
+    "S": 10.05,
     "quotes": "Nasdaq (Cboe file from 10-29 20:47)",
     "regular": true,
     "quote_time": "10-29 20:47 ET"
@@ -118111,7 +118514,7 @@
   "pct_above_lo52": 2.5,
   "pct_below_hi52": 34.5,
   "near_low": true,
-  "vol_ratio": 1.09,
+  "vol_ratio": 1.1,
   "hi20": 171.31,
   "lo20": 146.54,
   "setups": [],
@@ -118261,11 +118664,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 0, spread 40%"
+     "Dec 18 0.60-0.70 delta: OI 0, spread 65%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 18.95,
+    "S": 19.09,
     "quotes": "Nasdaq (Cboe file from 10-29 20:18)",
     "regular": true,
     "quote_time": "10-29 20:18 ET"
@@ -118594,11 +118997,11 @@
   "pct_above_lo52": 26.7,
   "pct_below_hi52": 73.0,
   "near_low": false,
-  "vol_ratio": 6.03,
+  "vol_ratio": 6.07,
   "hi20": 4.48,
   "lo20": 3.81,
   "setups": [
-   "Breakout 10-29 (> 4.48, vol 6.03x)"
+   "Breakout 10-29 (> 4.48, vol 6.07x)"
   ],
   "watch": [],
   "note": "",
@@ -118860,11 +119263,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 4, spread 29%"
+     "Dec 18 0.60-0.70 delta: OI 4, spread 25%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 47.17,
+    "S": 46.64,
     "quotes": "Nasdaq (Cboe file from 10-29 20:51)",
     "regular": true,
     "quote_time": "10-29 20:51 ET"
@@ -119762,7 +120165,7 @@
   "pct_above_lo52": 35.6,
   "pct_below_hi52": 19.2,
   "near_low": false,
-  "vol_ratio": 0.6,
+  "vol_ratio": 0.61,
   "hi20": 407.46,
   "lo20": 354.11,
   "setups": [],
@@ -120091,7 +120494,7 @@
   "pct_above_lo52": 12.4,
   "pct_below_hi52": 74.7,
   "near_low": false,
-  "vol_ratio": 1.0,
+  "vol_ratio": 1.01,
   "hi20": 13.16,
   "lo20": 11.92,
   "setups": [],
@@ -120476,12 +120879,12 @@
   "pct_above_lo52": 130.4,
   "pct_below_hi52": 21.6,
   "near_low": false,
-  "vol_ratio": 1.22,
+  "vol_ratio": 1.23,
   "hi20": 301.27,
   "lo20": 244.37,
   "setups": [],
   "watch": [
-   "below 20d low 244.37 but vol 1.22x"
+   "below 20d low 244.37 but vol 1.23x"
   ],
   "note": "",
   "group": "g02_software_fintech",
@@ -120596,12 +120999,12 @@
   "pct_above_lo52": 104.9,
   "pct_below_hi52": 6.3,
   "near_low": false,
-  "vol_ratio": 0.84,
+  "vol_ratio": 0.85,
   "hi20": 309.83,
   "lo20": 276.15,
   "setups": [],
   "watch": [
-   "above 20d high 309.83 but vol 0.84x"
+   "above 20d high 309.83 but vol 0.85x"
   ],
   "note": "",
   "group": "g01_semis_hw",
@@ -120778,14 +121181,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 72, spread 15%"
+     "Dec 18 0.60-0.70 delta: OI 107, spread 10%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 184.12,
-    "quotes": "Cboe",
+    "S": 182.39,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:04)",
     "regular": true,
-    "quote_time": "10-30 10:20 ET"
+    "quote_time": "10-30 16:04 ET"
    }
   }
  },
@@ -120926,14 +121329,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 136, spread 52%"
+     "Dec 18 0.60-0.70 delta: OI 155, spread 33%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 87.2,
-    "quotes": "Cboe",
+    "S": 85.57,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:04)",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 16:04 ET"
    }
   }
  },
@@ -121110,7 +121513,7 @@
   "pct_above_lo52": 2.7,
   "pct_below_hi52": 34.5,
   "near_low": true,
-  "vol_ratio": 1.0,
+  "vol_ratio": 1.01,
   "hi20": 71.51,
   "lo20": 65.27,
   "setups": [],
@@ -121434,50 +121837,50 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 10,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": {
      "osi": "UEC270115P00009000",
      "exp": "2027-01-15",
      "cp": "P",
      "strike": 9.0,
-     "bid": 1.66,
-     "ask": 1.77,
+     "bid": 1.65,
+     "ask": 1.7,
      "oi": 1634,
-     "src": "Nasdaq",
+     "src": "Cboe",
      "dte": 77,
      "quote": true,
-     "mid": 1.715,
-     "spread_pct": 0.0641,
+     "mid": 1.675,
+     "spread_pct": 0.0299,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 175.25,
+     "cost": 169.75,
      "fits": true,
-     "lim": 1.742,
-     "iv": 0.6688,
-     "delta": -0.6216,
-     "be": 7.25,
-     "be_sd": 0.207,
-     "ivhv": 0.945,
+     "lim": 1.687,
+     "iv": 0.6436,
+     "delta": -0.6244,
+     "be": 7.3,
+     "be_sd": 0.208,
+     "ivhv": 0.909,
      "pricing": 2,
-     "liquidity": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 7.74,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:07)",
+    "S": 7.78,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:07 ET"
+    "quote_time": "10-30 10:57 ET"
    },
-   "liq": 1,
+   "liq": 2,
    "pricing": 2,
    "cat": 1,
-   "score": 7,
+   "score": 8,
    "earn": {
     "date": "2026-12-09",
     "time": "time n/a",
@@ -121715,14 +122118,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 7.5P -0.85, 12.5P -0.87, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 7.5P -0.79, 10P -0.89, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 5.84,
-    "quotes": "Nasdaq (Cboe file from 10-30 01:26)",
+    "S": 5.83,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 01:26 ET"
+    "quote_time": "10-30 11:36 ET"
    }
   }
  },
@@ -121921,11 +122324,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 375, spread $0.35"
+     "Dec 18 0.60-0.70 delta: OI 375, spread $0.30"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 6.22,
+    "S": 6.43,
     "quotes": "Nasdaq (Cboe file from 10-29 21:45)",
     "regular": true,
     "quote_time": "10-29 21:45 ET"
@@ -122014,7 +122417,7 @@
   "pct_above_lo52": 138.5,
   "pct_below_hi52": 50.5,
   "near_low": false,
-  "vol_ratio": 0.61,
+  "vol_ratio": 0.62,
   "hi20": 22.37,
   "lo20": 16.27,
   "setups": [],
@@ -122074,12 +122477,12 @@
   "pct_above_lo52": 158.8,
   "pct_below_hi52": 37.7,
   "near_low": false,
-  "vol_ratio": 1.09,
+  "vol_ratio": 1.1,
   "hi20": 26.27,
   "lo20": 18.53,
   "setups": [],
   "watch": [
-   "below 20d low 18.53 but vol 1.09x"
+   "below 20d low 18.53 but vol 1.10x"
   ],
   "note": "",
   "group": "g01_semis_hw",
@@ -122429,11 +122832,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread 18%"
+     "Dec 18 0.60-0.70 delta: spread 32%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 20.08,
+    "S": 20.87,
     "quotes": "Nasdaq (Cboe file from 10-29 21:00)",
     "regular": true,
     "quote_time": "10-29 21:00 ET"
@@ -122570,23 +122973,62 @@
    "ts": "2026-12-08",
    "rr": 0.43,
    "rr_pts": 0,
-   "cap": 115.86,
+   "cap": 116.52,
    "trend": 1,
    "rs": 0,
    "known": 1,
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "fail",
-    "notes": [
-     "Dec 18 0.60-0.70 delta: spread 11%"
-    ],
-    "cap": 3835.65,
-    "contract": null,
-    "S": 107.97,
+    "status": "ok",
+    "notes": [],
+    "cap": 3834.15,
+    "contract": {
+     "osi": "UPS261218C00105000",
+     "exp": "2026-12-18",
+     "cp": "C",
+     "strike": 105.0,
+     "bid": 5.2,
+     "ask": 5.45,
+     "oi": 2450,
+     "src": "Cboe",
+     "dte": 49,
+     "quote": true,
+     "mid": 5.325,
+     "spread_pct": 0.0469,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 539.75,
+     "fits": true,
+     "lim": 5.388,
+     "iv": 0.262,
+     "delta": 0.6475,
+     "be": 110.4,
+     "be_sd": 0.208,
+     "ivhv": 1.078,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 108.24,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 15:59 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 0,
+   "score": 5,
+   "earn": {
+    "date": "2026-10-27",
+    "time": "time n/a",
+    "days": -3,
+    "recent": true,
+    "inside_life": false,
+    "pre_event": false,
+    "exit_by": null
    }
   }
  },
@@ -122851,9 +123293,9 @@
     "notes": [
      "Dec 18 0.60-0.70 delta: OI 0, spread 63%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 32.79,
+    "S": 32.63,
     "quotes": "Nasdaq (Cboe file from 10-29 23:44)",
     "regular": true,
     "quote_time": "10-29 23:44 ET"
@@ -122942,7 +123384,7 @@
   "pct_above_lo52": 18.4,
   "pct_below_hi52": 67.9,
   "near_low": false,
-  "vol_ratio": 0.77,
+  "vol_ratio": 0.78,
   "hi20": 13.8,
   "lo20": 8.91,
   "setups": [],
@@ -123002,7 +123444,7 @@
   "pct_above_lo52": 642.9,
   "pct_below_hi52": 45.4,
   "near_low": false,
-  "vol_ratio": 0.63,
+  "vol_ratio": 0.67,
   "hi20": 15.51,
   "lo20": 9.46,
   "setups": [],
@@ -123062,7 +123504,7 @@
   "pct_above_lo52": 154.9,
   "pct_below_hi52": 1.0,
   "near_low": false,
-  "vol_ratio": 0.92,
+  "vol_ratio": 0.93,
   "hi20": 169.53,
   "lo20": 143.91,
   "setups": [],
@@ -123241,11 +123683,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 72, spread 10%"
+     "Dec 18 0.50-0.60 delta: OI 72, spread 9%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 23.13,
+    "S": 22.63,
     "quotes": "Nasdaq (Cboe file from 10-29 21:00)",
     "regular": true,
     "quote_time": "10-29 21:00 ET"
@@ -123304,7 +123746,7 @@
   "pct_above_lo52": 12.6,
   "pct_below_hi52": 70.5,
   "near_low": false,
-  "vol_ratio": 0.81,
+  "vol_ratio": 0.82,
   "hi20": 11.26,
   "lo20": 7.52,
   "setups": [],
@@ -123661,14 +124103,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 11P -0.43, 12P -0.71, Dec 18)"
+     "Dec 18 0.60-0.70 delta: spread $0.18"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 11.12,
+    "S": 11.32,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:48 ET"
+    "quote_time": "10-30 15:36 ET"
    }
   }
  },
@@ -123995,11 +124437,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread 18%"
+     "Dec 18 0.50-0.60 delta: spread 21%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 50.22,
+    "S": 49.97,
     "quotes": "Nasdaq (Cboe file from 10-29 22:57)",
     "regular": true,
     "quote_time": "10-29 22:57 ET"
@@ -124084,7 +124526,7 @@
   "pct_above_lo52": 88.5,
   "pct_below_hi52": 77.7,
   "near_low": false,
-  "vol_ratio": 0.58,
+  "vol_ratio": 0.59,
   "hi20": 11.2,
   "lo20": 6.49,
   "setups": [],
@@ -124350,14 +124792,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: spread 11%"
+     "Dec 18 0.50-0.60 delta: spread 16%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 15.02,
+    "S": 14.72,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 09:34 ET"
+    "quote_time": "10-30 15:24 ET"
    }
   }
  },
@@ -124678,9 +125120,9 @@
     "notes": [
      "Jan 15 0.60-0.70 delta: OI 2, spread 180%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 12.86,
+    "S": 12.9,
     "quotes": "Nasdaq (Cboe file from 10-30 01:41)",
     "regular": true,
     "quote_time": "10-30 01:41 ET"
@@ -124827,7 +125269,7 @@
   "pct_above_lo52": 16.9,
   "pct_below_hi52": 76.0,
   "near_low": false,
-  "vol_ratio": 0.58,
+  "vol_ratio": 0.59,
   "hi20": 9.47,
   "lo20": 8.16,
   "setups": [],
@@ -125855,14 +126297,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 40C +0.93, 45C +0.85, Jan 15)"
+     "no strike at 0.50-0.70 delta (nearest 40C +0.99, 45C +0.96, Jan 15)"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 48.78,
-    "quotes": "Nasdaq (Cboe file from 10-29 22:56)",
+    "S": 48.8,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 22:56 ET"
+    "quote_time": "10-30 10:51 ET"
    }
   }
  },
@@ -125915,7 +126357,7 @@
   "pct_above_lo52": 66.4,
   "pct_below_hi52": 35.3,
   "near_low": false,
-  "vol_ratio": 1.45,
+  "vol_ratio": 1.46,
   "hi20": 253.62,
   "lo20": 194.32,
   "setups": [],
@@ -126063,14 +126505,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 21%"
+     "Dec 18 0.60-0.70 delta: OI 298"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 73.49,
-    "quotes": "Cboe",
+    "S": 77.0,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:00)",
     "regular": true,
-    "quote_time": "10-30 10:16 ET"
+    "quote_time": "10-30 16:00 ET"
    }
   }
  },
@@ -126360,11 +126802,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 47, spread 24%"
+     "Feb 19 0.60-0.70 delta: OI 47, spread 56%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 31.28,
+    "S": 31.34,
     "quotes": "Nasdaq (Cboe file from 10-29 22:59)",
     "regular": true,
     "quote_time": "10-29 22:59 ET"
@@ -126391,7 +126833,7 @@
   "pct_above_lo52": 6.2,
   "pct_below_hi52": 29.8,
   "near_low": false,
-  "vol_ratio": 0.63,
+  "vol_ratio": 0.64,
   "hi20": 166.72,
   "lo20": 139.75,
   "setups": [],
@@ -126630,14 +127072,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 15, spread 27%"
+     "Jan 15 0.60-0.70 delta: OI 4, spread 38%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 85.64,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:02)",
+    "S": 84.88,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:02 ET"
+    "quote_time": "10-30 15:54 ET"
    }
   }
  },
@@ -126820,7 +127262,7 @@
   "pct_above_lo52": 12.9,
   "pct_below_hi52": 15.5,
   "near_low": false,
-  "vol_ratio": 0.73,
+  "vol_ratio": 0.74,
   "hi20": 46.35,
   "lo20": 41.65,
   "setups": [
@@ -126936,41 +127378,43 @@
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [],
-    "cap": 1917.82,
+    "notes": [
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+    ],
+    "cap": 1917.07,
     "contract": {
      "osi": "VZ270115P00047000",
      "exp": "2027-01-15",
      "cp": "P",
      "strike": 47.0,
-     "bid": 3.25,
-     "ask": 3.5,
+     "bid": 3.3,
+     "ask": 3.55,
      "oi": 3958,
-     "src": "Cboe",
+     "src": "Nasdaq",
      "dte": 77,
      "quote": true,
-     "mid": 3.375,
-     "spread_pct": 0.0741,
+     "mid": 3.425,
+     "spread_pct": 0.073,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 344.75,
+     "cost": 349.75,
      "fits": true,
-     "lim": 3.438,
-     "iv": 0.2326,
-     "delta": -0.6726,
-     "be": 43.55,
-     "be_sd": 0.286,
-     "ivhv": 0.486,
+     "lim": 3.487,
+     "iv": 0.2879,
+     "delta": -0.5927,
+     "be": 43.5,
+     "be_sd": 0.217,
+     "ivhv": 0.601,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 44.92,
-    "quotes": "Cboe",
+    "S": 44.78,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:04)",
     "regular": true,
-    "quote_time": "10-30 10:11 ET"
+    "quote_time": "10-30 16:04 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -127120,14 +127564,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 361 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Dec 18 0.60-0.70 delta: OI 361, spread 10%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 115.92,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:02)",
+    "S": 116.74,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:02 ET"
+    "quote_time": "10-30 10:40 ET"
    }
   }
  },
@@ -127524,23 +127968,64 @@
    "ts": "2026-12-24",
    "rr": 0.04,
    "rr_pts": 0,
-   "cap": 222.77,
+   "cap": 230.7,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "fail",
+    "status": "ok",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 13%"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "cap": 3835.65,
-    "contract": null,
-    "S": 201.19,
+    "cap": 3834.15,
+    "contract": {
+     "osi": "WDAY270115C00195000",
+     "exp": "2027-01-15",
+     "cp": "C",
+     "strike": 195.0,
+     "bid": 18.5,
+     "ask": 19.3,
+     "oi": 5326,
+     "src": "Cboe",
+     "dte": 77,
+     "quote": true,
+     "mid": 18.9,
+     "spread_pct": 0.0423,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 1911.0,
+     "fits": true,
+     "lim": 19.1,
+     "iv": 0.4644,
+     "delta": 0.5836,
+     "be": 214.11,
+     "be_sd": 0.393,
+     "ivhv": 1.29,
+     "pricing": 1,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 197.55,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:54 ET"
+   },
+   "liq": 2,
+   "pricing": 1,
+   "cat": 1,
+   "score": 7,
+   "earn": {
+    "date": "2026-11-24",
+    "time": "time n/a",
+    "days": 25,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2026-11-23"
    }
   }
  },
@@ -127770,14 +128255,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 93, spread 26%"
+     "Dec 18 0.60-0.70 delta: OI 93, spread 14%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 115.82,
-    "quotes": "Cboe",
+    "S": 116.07,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:02)",
     "regular": true,
-    "quote_time": "10-30 10:06 ET"
+    "quote_time": "10-30 16:02 ET"
    }
   }
  },
@@ -127949,14 +128434,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread $0.15"
+     "Dec 18 0.60-0.70 delta: spread $0.35"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 7.14,
-    "quotes": "Nasdaq (Cboe file from 10-30 06:02)",
+    "S": 7.24,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 06:02 ET"
+    "quote_time": "10-30 15:24 ET"
    }
   }
  },
@@ -128310,14 +128795,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 77, spread 32%"
+     "Dec 18 0.60-0.70 delta: OI 77, spread 19%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 89.98,
+    "S": 89.63,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:38 ET"
    }
   }
  },
@@ -128609,14 +129094,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 52, spread 10%"
+     "Dec 18 0.60-0.70 delta: OI 52, spread 16%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 149.16,
+    "S": 148.68,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:20 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -129118,14 +129603,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 41, spread 33%"
+     "Jan 15 0.60-0.70 delta: OI 41, spread 24%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 31.02,
+    "S": 30.59,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:20 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -129568,14 +130053,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: OI 206, spread 15%"
+     "Jan 15 0.60-0.70 delta: OI 206, spread 9%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 74.08,
+    "S": 74.01,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:13 ET"
+    "quote_time": "10-30 15:59 ET"
    }
   }
  },
@@ -129811,11 +130296,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 296, spread 12%"
+     "Dec 18 0.60-0.70 delta: OI 296, spread 14%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 18.27,
+    "S": 18.3,
     "quotes": "Nasdaq (Cboe file from 10-29 23:09)",
     "regular": true,
     "quote_time": "10-29 23:09 ET"
@@ -130235,7 +130720,7 @@
   "pct_above_lo52": 20.6,
   "pct_below_hi52": 76.0,
   "near_low": false,
-  "vol_ratio": 1.17,
+  "vol_ratio": 1.18,
   "hi20": 17.93,
   "lo20": 9.52,
   "setups": [],
@@ -130590,14 +131075,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: spread 12%"
+     "Dec 18 0.60-0.70 delta: OI 81, spread 14%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 101.58,
+    "S": 100.63,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:18 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -130886,14 +131371,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 198, spread 26%"
+     "Dec 18 0.60-0.70 delta: OI 76, spread 11%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 100.41,
+    "S": 99.87,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 15:56 ET"
    }
   }
  },
@@ -130948,12 +131433,12 @@
   "pct_above_lo52": 19.4,
   "pct_below_hi52": 2.8,
   "near_low": false,
-  "vol_ratio": 1.0,
+  "vol_ratio": 1.01,
   "hi20": 56.65,
   "lo20": 53.46,
   "setups": [],
   "watch": [
-   "above 20d high 56.65 but vol 1.00x"
+   "above 20d high 56.65 but vol 1.01x"
   ],
   "note": "",
   "group": "g10_etfs",
@@ -131232,9 +131717,9 @@
    ],
    "exp": "2026-12-18",
    "ts": "2026-12-08",
-   "rr": 2.05,
+   "rr": 2.18,
    "rr_pts": 1,
-   "cap": 196.46,
+   "cap": 197.23,
    "trend": 2,
    "rs": 1,
    "known": 4,
@@ -131243,40 +131728,40 @@
    "opt": {
     "status": "ok",
     "notes": [],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": {
-     "osi": "XLV261218C00185000",
+     "osi": "XLV261218C00180000",
      "exp": "2026-12-18",
      "cp": "C",
-     "strike": 185.0,
-     "bid": 7.2,
-     "ask": 7.65,
-     "oi": 4670,
-     "src": "Cboe",
+     "strike": 180.0,
+     "bid": 8.95,
+     "ask": 9.45,
+     "oi": 4369,
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 7.425,
-     "spread_pct": 0.0606,
+     "mid": 9.2,
+     "spread_pct": 0.0543,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 754.75,
+     "cost": 933.5,
      "fits": true,
-     "lim": 7.538,
-     "iv": 0.2064,
-     "delta": 0.6086,
-     "be": 192.55,
-     "be_sd": 0.368,
-     "ivhv": 1.116,
+     "lim": 9.325,
+     "iv": 0.2192,
+     "delta": 0.6697,
+     "be": 189.33,
+     "be_sd": 0.302,
+     "ivhv": 1.185,
      "pricing": 1,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 187.34,
-    "quotes": "Cboe",
+    "S": 184.85,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:01)",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 16:01 ET"
    },
    "liq": 1,
    "pricing": 1,
@@ -131512,11 +131997,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.50-0.60 delta: OI 3, spread 90%"
+     "Dec 18 0.50-0.60 delta: OI 3, spread 93%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 29.19,
+    "S": 29.79,
     "quotes": "Nasdaq (Cboe file from 10-29 23:14)",
     "regular": true,
     "quote_time": "10-29 23:14 ET"
@@ -131720,41 +132205,43 @@
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [],
-    "cap": 1917.82,
+    "notes": [
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+    ],
+    "cap": 1917.07,
     "contract": {
-     "osi": "XP261218P00016000",
+     "osi": "XP261218P00015000",
      "exp": "2026-12-18",
      "cp": "P",
-     "strike": 16.0,
-     "bid": 2.15,
-     "ask": 2.3,
-     "oi": 823,
-     "src": "Cboe",
+     "strike": 15.0,
+     "bid": 1.55,
+     "ask": 1.65,
+     "oi": 567,
+     "src": "Nasdaq",
      "dte": 49,
      "quote": true,
-     "mid": 2.225,
-     "spread_pct": 0.0674,
+     "mid": 1.6,
+     "spread_pct": 0.0625,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 227.25,
+     "cost": 163.5,
      "fits": true,
-     "lim": 2.262,
-     "iv": 0.5551,
-     "delta": -0.6622,
-     "be": 13.73,
-     "be_sd": 0.228,
-     "ivhv": 0.21,
+     "lim": 1.625,
+     "iv": 0.5879,
+     "delta": -0.5387,
+     "be": 13.37,
+     "be_sd": 0.296,
+     "ivhv": 0.223,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 14.39,
-    "quotes": "Cboe",
+    "S": 14.27,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:05)",
     "regular": true,
-    "quote_time": "10-30 10:24 ET"
+    "quote_time": "10-30 16:05 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -131822,7 +132309,7 @@
   "pct_above_lo52": 2.1,
   "pct_below_hi52": 67.5,
   "near_low": true,
-  "vol_ratio": 0.59,
+  "vol_ratio": 0.6,
   "hi20": 9.91,
   "lo20": 9.07,
   "setups": [],
@@ -132006,7 +132493,7 @@
   "pct_above_lo52": 37.8,
   "pct_below_hi52": 72.2,
   "near_low": false,
-  "vol_ratio": 0.46,
+  "vol_ratio": 0.48,
   "hi20": 6.75,
   "lo20": 5.5,
   "setups": [],
@@ -132152,14 +132639,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 0, spread 35%"
+     "Dec 18 0.60-0.70 delta: OI 0, spread 24%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 93.84,
+    "S": 92.44,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-30 10:20 ET"
+    "quote_time": "10-30 15:55 ET"
    }
   }
  },
@@ -132453,14 +132940,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 10P -0.89, 12.5P -0.90, Dec 18)"
+     "no strike at 0.50-0.70 delta (nearest 10P -0.87, 12.5P -0.96, Dec 18)"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
-    "S": 8.23,
-    "quotes": "Nasdaq (Cboe file from 10-29 21:46)",
+    "S": 8.3,
+    "quotes": "Cboe",
     "regular": true,
-    "quote_time": "10-29 21:46 ET"
+    "quote_time": "10-30 12:01 ET"
    }
   }
  },
@@ -132725,11 +133212,11 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Dec 18 0.60-0.70 delta: OI 3, spread 34%"
+     "Dec 18 0.60-0.70 delta: OI 3, spread 31%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 46.11,
+    "S": 45.83,
     "quotes": "Nasdaq (Cboe file from 10-29 23:17)",
     "regular": true,
     "quote_time": "10-29 23:17 ET"
@@ -133231,9 +133718,9 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.50-0.60 delta: spread 26%"
+     "Jan 15 0.50-0.60 delta: spread 16%"
     ],
-    "cap": 1917.82,
+    "cap": 1917.07,
     "contract": null,
     "S": 20.17,
     "quotes": "Nasdaq (Cboe file from 10-30 06:02)",
@@ -133379,14 +133866,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Jan 15 0.60-0.70 delta: spread 15%"
+     "Jan 15 0.60-0.70 delta: spread 9%"
     ],
-    "cap": 3835.65,
+    "cap": 3834.15,
     "contract": null,
-    "S": 79.59,
-    "quotes": "Cboe",
+    "S": 79.57,
+    "quotes": "Nasdaq (Cboe file from 10-30 16:02)",
     "regular": true,
-    "quote_time": "10-30 10:14 ET"
+    "quote_time": "10-30 16:02 ET"
    }
   }
  },
