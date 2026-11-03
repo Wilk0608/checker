@@ -18,7 +18,11 @@ passes the plan's option rules.
 
   Cboe leaves some quiet names' files from the night before; when a market-hours run gets one of those, the chosen expiration's quotes are re-read from Nasdaq's option chain.
 - `events.py`: earnings dates (Nasdaq's earnings calendar), which set the catalyst point, the pre-event rule and the earnings-exit date; a provisional pre-event test (implied move from the at-the-money straddle vs the average reaction to the past year's reports, with report dates from Yahoo); and merger filings in the last 120 days (Nasdaq's SEC-filings feed: Form 425, SC 14D9, SC TO-T/TO-C, DEFM14A/PREM14A and similar).
-- `plan.json`: the account figures the caps come from (balance, base, phase, T-bill rate) and `min_score`, the lowest score you trade (10 = High conviction only: the tables then list only setups that can reach 10, and calls are sized at the High cap). The trading session updates it when the ledger changes; the report prints the date it was last updated.
+- `plan.json`: the account figures the caps come from (balance, base, phase, T-bill rate), plus two settings:
+  - `min_score`: the lowest call score you trade. Puts always need 10, because the plan trades puts at High conviction only. At 9 (the current setting), a 9 is Medium conviction and must fit the Medium cap, a 10+ is sized at the High cap, and a call whose contract fits only the High cap needs 10. At 10 (High conviction only), the tables list only setups that can reach 10 and calls are sized at the High cap. At 7 you get the plan's full Medium tier.
+  - `fed_bias`: the direction the session's Fed Chessboard read supports (`calls`, `puts`, `both` or `none`). Only that direction can get the Fed point in Max, so each setup is held to the bar it can actually reach. If it's left out, both directions get the point.
+
+  The trading session updates the file when the ledger or its Fed read changes, and the report prints the date it was last updated.
 - `scanner.py`: downloads ~13 months of daily bars for the universe, applies the exact filters (price $5-275, 20-day average volume 1M+) and setup rules to final bars, runs the option check, and writes `results/latest.md`, `results/latest.json` (everything, including each setup's chosen contract) and a dated copy.
 - `.github/workflows/scan.yml`: runs twice each weekday and commits the results. Run it any time from the Actions tab ("Run workflow").
 
@@ -31,7 +35,7 @@ GitHub runs scheduled jobs late when it is busy (delays of hours have happened),
 
 ## Reading the report
 
-Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings date, estimated, falls inside the option's life). The trading session adds the Fed point and raises the catalyst to 2 once the date is confirmed, so Max = Score + 1 + (2 - catalyst). Calls need 7 and puts 10; a call whose contract only fits the High cap needs 10 as well.
+Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings date, estimated, falls inside the option's life). The trading session adds the Fed point when its Fed read supports the direction (`fed_bias` in `plan.json`) and raises the catalyst to 2 once the date is confirmed, so Max = Score + Fed point (0 or 1) + (2 - catalyst). Calls need `min_score` (7 when it isn't set) and puts need 10; a call whose contract only fits the High cap needs 10 as well. The report's option-check line prints the bar, how it sizes, and which direction gets the Fed point.
 
 Sections: calls and puts ready to verify; calls and puts with earnings within 2 weeks (the pre-event rule, with the provisional test result); names with merger filings (read the filing: a stock agreed to be acquired is an automatic reject); setups whose contract passes but whose Max can't reach the bar; setups with no passing contract, grouped by reason; puts near the 52-week low (shadow log only); and the watch list.
 

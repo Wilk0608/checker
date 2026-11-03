@@ -38,8 +38,11 @@ GROUP_ETF = {"g01_semis_hw": "XLK", "g02_software_fintech": "XLK", "g03_ai_infra
              "g09_industrials_utilities_reits": "XLI", "g10_etfs": "SPY"}
 SECTOR_ETFS = ["SPY", "XLK", "XLV", "XLF", "XLE", "XLI", "XLY", "XLP", "XLU", "XLRE", "XLB", "XLC"]
 TOP_N, WATCH_N = 20, 20
-OTHER_POINTS = 7          # most the session can add before the option check: Fed 1 + catalyst 2 + pricing 2 + liquidity 2
+OTHER_POINTS = 6          # most the option check and session can add, besides the Fed point: catalyst 2 + pricing 2 + liquidity 2
 NEEDS = {"call": 7, "put": 10}
+FED = {"call": 1, "put": 1}   # the Fed point each direction can still get (plan.json fed_bias); 1 when the bias isn't set
+FED_BIAS = {"calls": {"call": 1, "put": 0}, "puts": {"call": 0, "put": 1}, "both": {"call": 1, "put": 1},
+            "none": {"call": 0, "put": 0}}
 PLAN_FILE = os.path.join(ROOT, "plan.json")
 SCREEN = {}               # summary of the option screen for the report
 
@@ -178,16 +181,38 @@ def rank_rows(results, asof):
             rs = a is not None and b is not None and ((a > 0 and b > 0) if d == "call" else (a < 0 and b < 0))
             known = trend + int(rs) + rr_pts
             rows.append(dict(r=r, dir=d, setups=mine, exp=exp, ts=ts, rr=rr, rr_pts=rr_pts, cap=cap, trend=trend,
-                             rs=int(rs), known=known, max=known + OTHER_POINTS, near_low=d == "put" and r["near_low"]))
+                             rs=int(rs), known=known, max=known + OTHER_POINTS + FED[d],
+                             near_low=d == "put" and r["near_low"]))
     return rows
 
 
 def apply_bar(plan):
-    """The score a setup must be able to reach, from plan.json's min_score (default 7 for calls; puts always need 10).
-    A bar of 10 means High conviction only, so calls are also sized against the High cap."""
+    """The score a setup must be able to reach, from plan.json's min_score (default 7 for calls; puts always need 10,
+    the plan's High-conviction-only rule for puts). min_score sets the call bar: 9 trades a 9 at the Medium cap (a 9 is
+    Medium conviction) and 10+ at the High cap; 10 means High conviction only, so calls are sized against the High cap."""
     m = int((plan or {}).get("min_score", 7))
     NEEDS.update(call=max(7, m), put=max(10, m))
     return NEEDS
+
+
+def apply_fed(plan):
+    """Which directions can get the Fed point (score factor 3), from plan.json's fed_bias: the direction the session's
+    Fed Chessboard read supports ("calls", "puts", "both" or "none"). Not set or not one of those: assume the point is
+    available to both, so no setup is left out of the tables on a guess. Returns the bias name used."""
+    raw = (plan or {}).get("fed_bias")
+    name = str(raw).strip().lower() if raw is not None else ""
+    if name not in FED_BIAS:
+        FED.update(FED_BIAS["both"])
+        return "not set" if not name else f"unrecognized ({raw!r})"
+    FED.update(FED_BIAS[name])
+    return name
+
+
+def sizing_caps(caps):
+    """The caps the option check sizes against. At a call bar of 10+ (High conviction only) a call is sized at the High
+    cap. Below that a call must fit the Medium cap, since a 7-9 is Medium conviction; one that fits only the High cap
+    comes back ok-high-only and needs 10 (see need)."""
+    return dict(caps, medium=caps["high"]) if NEEDS["call"] >= 10 else dict(caps)
 
 
 def load_plan():
@@ -227,7 +252,7 @@ def evaluate_row(x, meta, contracts, S, caps, entry, regular, r):
     x.update(rr=rr, rr_pts=rr_pts, cap=cap_px, known=x["trend"] + x["rs"] + rr_pts, exp=c["exp"], ts=ts,
              liq=c["liquidity"], pricing=c["pricing"], cat=0)
     x["score"] = x["known"] + x["liq"] + x["pricing"]
-    x["max"] = x["score"] + 1 + 2
+    x["max"] = x["score"] + FED[x["dir"]] + 2
     return x
 
 
@@ -240,7 +265,7 @@ def apply_events(x, cal_entry, entry):
     x["earn"] = ctx
     x["cat"] = 1 if ctx.get("inside_life") else 0
     x["score"] = x["known"] + x["liq"] + x["pricing"] + x["cat"]
-    x["max"] = x["score"] + 1 + (2 - x["cat"])
+    x["max"] = x["score"] + FED[x["dir"]] + (2 - x["cat"])
 
 
 def latest_price(raw):
@@ -258,9 +283,9 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
     r = float(plan.get("rate", 0.04))
     entry, short, long_ = plan_expirations(asof)
     apply_bar(plan)
-    SCREEN.update(caps=caps, plan_updated=plan.get("updated", "n/a"), entry=entry, calls_at_high=NEEDS["call"] >= 10)
-    if NEEDS["call"] >= 10:                          # High conviction only: a call is sized against the High cap
-        caps = dict(caps, medium=caps["high"])
+    SCREEN.update(caps=caps, plan_updated=plan.get("updated", "n/a"), entry=entry, calls_at_high=NEEDS["call"] >= 10,
+                  fed_bias=apply_fed(plan))
+    caps = sizing_caps(caps)
     tickers = sorted({x["r"]["tk"] for x in rows})
     chains, errs = O.fetch_all(tickers, workers=workers)
     keep_to = entry + dt.timedelta(days=130)          # covers the first monthly 60+ days out on quarterly cycles
@@ -357,7 +382,8 @@ def _setup_label(s):
 
 
 def need(x):
-    """Score a setup must reach: 7 for calls, 10 for puts, and 10 for a call whose contract only fits the High cap."""
+    """Score a setup must reach: the call bar for calls (plan.json min_score, default 7), 10 for puts, and 10 for a call
+    whose contract only fits the High cap (a 7-9 call is Medium conviction and must fit the Medium cap)."""
     return 10 if (x.get("opt") or {}).get("status") == "ok-high-only" else NEEDS[x["dir"]]
 
 
@@ -406,6 +432,26 @@ def _opt_cells(x):
             "; ".join(notes)]
 
 
+def _bar_text():
+    """How the call bar sizes: a 7-9 call is Medium conviction (Medium cap), 10+ is High (High cap); puts need 10."""
+    lo = NEEDS["call"]
+    if lo >= 10 or SCREEN.get("calls_at_high"):
+        return "High conviction only, so calls are sized at the High cap"
+    tier = ("an " if lo == 8 else "a ") + (f"{lo}" if lo == 9 else f"{lo}-9")
+    return (f"{tier} call is Medium conviction and is sized at the Medium cap; 10+ is High conviction, at the High cap; "
+            "a call whose contract fits only the High cap needs 10")
+
+
+def _fed_text():
+    """Who can get the Fed point in Max, from plan.json fed_bias (see apply_fed)."""
+    b = SCREEN.get("fed_bias", "not set")
+    if b not in FED_BIAS:
+        return f"Fed point: plan.json fed_bias {b}, so Max assumes it for calls and puts"
+    who = {(1, 1): "calls and puts", (1, 0): "calls only, so a put's Max leaves it out",
+           (0, 1): "puts only, so a call's Max leaves it out", (0, 0): "neither, so no Max includes it"}
+    return f"Fed point (plan.json fed_bias '{b}'): {who[(FED['call'], FED['put'])]}"
+
+
 def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
     ok = [r for r in results if "err" not in r]
     live = [r for r in ok if not r["filtered"]]
@@ -436,8 +482,7 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
         c = SCREEN["caps"]
         L += [f"Option check: caps from plan.json (updated {SCREEN.get('plan_updated')}): balance ${c['balance']:,.2f}, {c['phase']}, "
               f"{c['mode']} -> Medium ${c['medium']:,.0f}, High ${c['high']:,.0f}, puts ${c['put']:,.0f}. Bar: calls {NEEDS['call']}+, puts "
-              f"{NEEDS['put']}+" + (" (High conviction only, so calls are sized at the High cap)" if SCREEN.get("calls_at_high") else "")
-              + ". Quotes: Cboe delayed "
+              f"{NEEDS['put']}+ ({_bar_text()}). {_fed_text()}. Quotes: Cboe delayed "
               f"(files {SCREEN['oldest']} to {SCREEN['newest']}; {SCREEN['regular_files']} of {SCREEN['chains']} taken in regular hours"
               + (f"; {len(SCREEN['refreshed'])} stale files re-read from Nasdaq" if SCREEN.get("refreshed") else "") + "). "
               "A * on a spread means closing or after-hours quotes: the plan judges spreads on regular-hours quotes only, so "
@@ -447,8 +492,9 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
     L += ["Free data (Yahoo bars, Cboe/Nasdaq quotes, Nasdaq calendars). Verify every finalist on live broker data before scoring.", "",
           "**How to read it.** Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the "
           "1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) of the contract shown + catalyst "
-          "(1 when an earnings date, estimated, falls inside the option's life). The session adds the Fed point and raises "
-          "the catalyst to 2 for a confirmed date: Max = Score + 1 + (2 - catalyst). Calls need " + str(NEEDS["call"]) + ", puts "
+          "(1 when an earnings date, estimated, falls inside the option's life). The session adds the Fed point when its Fed "
+          "read supports the direction (plan.json fed_bias, above) and raises the catalyst to 2 for a confirmed date: "
+          "Max = Score + Fed point (0 or 1) + (2 - catalyst). Calls need " + str(NEEDS["call"]) + ", puts "
           + str(NEEDS["put"]) + " (plan.json min_score); only setups whose "
           "contract passes the plan's option rules and whose Max reaches the bar are in the tables. Contract = what the plan "
           "would buy (expiration by setup type, delta 0.60-0.70 or 0.50-0.60 as allowed, OI 500+, spread 8% or less, cost "
@@ -629,6 +675,9 @@ def selftest():
     lz = levels(mk(zz, vol), "call")
     assert abs(lz["target"] - 60.6) < 0.05 and abs(lz["rr_before_cap"] - (lz["target"] - 57) / lz["risk"]) < 0.01, lz
     assert R["OLD"]["setups"] and R["OLD"]["date"] != last.isoformat()
+    assert apply_fed({"fed_bias": "puts"}) == "puts" and FED == {"call": 0, "put": 1}
+    no_fed = {(x["r"]["tk"], x["dir"]): x["max"] for x in rank_rows(res, last)}   # Max before the option check, no Fed point
+    assert apply_fed(None) == "not set" and FED == {"call": 1, "put": 1}         # no bias set: both can get the point
     rows = rank_rows(res, last)
     assert "OLD" not in {x["r"]["tk"] for x in rows}                     # stale names stay out of the ranking
     up_row = [x for x in rows if x["r"]["tk"] == "UPP"][0]
@@ -636,6 +685,8 @@ def selftest():
     rr, pts, cap = capped_rr(lc, R["UPP"]["hv20"] / 100, h)
     assert up_row["exp"] == x and (up_row["rr"], up_row["rr_pts"]) == (rr, pts)
     assert up_row["known"] == R["UPP"]["trend_call"] + up_row["rs"] + pts and up_row["max"] == up_row["known"] + 7
+    dnn_put = [x for x in rows if x["r"]["tk"] == "DNN" and x["dir"] == "put"][0]
+    assert no_fed[("UPP", "call")] == up_row["max"] - 1 and no_fed[("DNN", "put")] == dnn_put["max"]   # puts keep it
     assert [x for x in rows if x["r"]["tk"] == "DNN"][0]["near_low"]
     md = report(res, rows, miss, etf3, last, now, "self-test")
     assert "Option check not run" in md and "UPP" in md and "shadow log only): 1" in md and "ranking): 1 (OLD)" in md, md
@@ -827,6 +878,42 @@ def option_selftest(res, rows, miss, etf3, last, now):
     # the bar: 7 for calls, 10 for puts and for a call that only fits the High cap
     assert need({"dir": "call", "opt": {"status": "ok"}}) == 7 and need({"dir": "put", "opt": {"status": "ok"}}) == 10
     assert need({"dir": "call", "opt": {"status": "ok-high-only"}}) == 10
+    # min_score 9: calls at 9+, puts still 10. A 9 is Medium conviction, so a call keeps the Medium cap (no swap to the
+    # High cap) and a call whose contract fits only the High cap still needs 10
+    assert apply_bar({"min_score": 9}) == {"call": 9, "put": 10}
+    assert need({"dir": "call", "opt": {"status": "ok"}}) == 9 and need({"dir": "call", "opt": {"status": "ok-high-only"}}) == 10
+    assert need({"dir": "put", "opt": {"status": "ok"}}) == 10 and need({"dir": "put", "opt": {"status": "fail"}}) == 10
+    c9 = O.plan_caps({"balance": 25561.0, "base": 25000, "phase": "Proving"})     # the Nov 3 2026 ledger balance
+    assert (c9["mode"], c9["medium"], c9["high"], c9["put"]) == ("Normal", 2300.49, 3834.15, 1917.07), c9
+    assert sizing_caps(c9) == c9 and _bar_text().startswith("a 9 call is Medium conviction"), _bar_text()
+    assert apply_bar({"min_score": 8}) == {"call": 8, "put": 10} and _bar_text().startswith("an 8-9 call"), _bar_text()
+    assert apply_bar({"min_score": 10}) == {"call": 10, "put": 10}
+    assert sizing_caps(c9)["medium"] == c9["high"] and _bar_text().startswith("High conviction only"), _bar_text()
+    # one contract too big for the Medium cap but inside the High cap: ok at a bar of 10 (sized at High),
+    # ok-high-only at a bar of 9 (so it needs 10 there too)
+    big9 = synth_chain("BIG9", 440.0, [short, long_], today)
+    at10 = O.choose(big9, "call", True, (short, long_), 440.0, sizing_caps(c9), 0.30, today, True)
+    assert at10["status"] == "ok" and at10["cap"] == c9["high"], at10
+    assert c9["medium"] < at10["contract"]["cost"] <= c9["high"], at10["contract"]["cost"]       # the case being tested
+    apply_bar({"min_score": 9})
+    at9 = O.choose(big9, "call", True, (short, long_), 440.0, sizing_caps(c9), 0.30, today, True)
+    assert at9["status"] == "ok-high-only" and at9["cap"] == c9["high"] and need({"dir": "call", "opt": at9}) == 10, at9
+    assert at9["contract"]["osi"] == at10["contract"]["osi"]
+    # a bit cheaper: the 0.60-0.70 strikes miss the Medium cap but a 0.50-0.60 strike fits it -> ok at a 9, as the
+    # plan allows when 0.60-0.70 doesn't fit the cap (never below 0.50)
+    mid9 = synth_chain("MID9", 420.0, [short, long_], today)
+    got = O.choose(mid9, "call", True, (short, long_), 420.0, sizing_caps(c9), 0.30, today, True)
+    k9 = got["contract"]
+    assert got["status"] == "ok" and got["cap"] == c9["medium"] and 0.50 <= k9["delta"] < 0.60, got
+    assert k9["cost"] <= c9["medium"] and any("0.50-0.60" in n for n in got["notes"]) and need({"dir": "call", "opt": got}) == 9
+    # fed_bias: who can get the Fed point in Max; a typo or no value falls back to both (nothing dropped on a guess)
+    assert apply_fed({"fed_bias": "calls"}) == "calls" and FED == {"call": 1, "put": 0}
+    assert apply_fed({"fed_bias": " Puts "}) == "puts" and FED == {"call": 0, "put": 1}
+    assert apply_fed({"fed_bias": "none"}) == "none" and FED == {"call": 0, "put": 0}
+    assert apply_fed({"fed_bias": "both"}) == "both" and FED == {"call": 1, "put": 1}
+    assert apply_fed({"fed_bias": "hawkish"}).startswith("unrecognized") and FED == {"call": 1, "put": 1}
+    assert apply_fed({}) == "not set" and apply_fed(None) == "not set" and FED == {"call": 1, "put": 1}
+    apply_bar(None)
     # a pre-event row carries no earnings-exit note (a deliberate pre-event play is exempt); a regular row does
     pe = copy.deepcopy(up)
     apply_events(pe, (entry + dt.timedelta(days=5), "AMC"), entry)
@@ -839,6 +926,38 @@ def option_selftest(res, rows, miss, etf3, last, now):
         assert frag in md, (frag, md)
     if up["max"] >= 7:
         assert "| UPP |" in md, md
+    assert "Fed point: plan.json fed_bias not set, so Max assumes it for calls and puts" in md, md
+    # fed_bias 'puts' takes the Fed point out of every call's Max, puts keep it; the tables then hold a call to the bar
+    # without it: in the table at a bar equal to its Max, listed under "can't reach the bar" one point higher
+    SCREEN["fed_bias"] = apply_fed({"fed_bias": "puts"})
+    rows3 = copy.deepcopy(rows2)
+    for x in rows3:
+        apply_events(x, (entry + dt.timedelta(days=30), "AMC") if x["r"]["tk"] == "UPP" else None, entry)
+    up3 = [x for x in rows3 if x["r"]["tk"] == "UPP"][0]
+    assert up3["score"] == up["score"] and up3["max"] == up["max"] - 1 == up3["score"] + 1, (up3["max"], up["max"])
+    for x3, x2 in zip(rows3, rows2):
+        if x2.get("max") is not None and (x2.get("opt") or {}).get("contract"):
+            assert x3["max"] == x2["max"] - (1 if x2["dir"] == "call" else 0), (x3["r"]["tk"], x3["dir"])
+    for x in rows3:                                    # lift UPP's score so its Max (no Fed point) can meet a bar of 9-10
+        if x["r"]["tk"] == "UPP":
+            x.update(known=x["known"] + (9 - x["max"]))
+            apply_events(x, (entry + dt.timedelta(days=30), "AMC"), entry)
+    up3 = [x for x in rows3 if x["r"]["tk"] == "UPP"][0]
+    assert up3["max"] == 9 and up3["opt"]["status"] == "ok", (up3["max"], up3["opt"]["status"])
+    apply_bar({"min_score": 9})
+    md9 = report(res, rows3, miss, etf3, last, now, "self-test", screened=True)
+    ready9 = md9.split("## Calls ready to verify")[1].split("## ")[0]
+    assert "(Max 9+," in md9 and "| UPP |" in ready9, ready9
+    assert "Bar: calls 9+, puts 10+ (a 9 call is Medium conviction" in md9, md9[:1500]
+    assert "Fed point (plan.json fed_bias 'puts'): puts only, so a call's Max leaves it out" in md9, md9[:1500]
+    apply_bar({"min_score": 10})
+    SCREEN["calls_at_high"] = True
+    md10 = report(res, rows3, miss, etf3, last, now, "self-test", screened=True)
+    assert "| UPP |" not in md10.split("## Calls ready to verify")[1].split("## Merger")[0], md10
+    assert "UPP (" + str(up3["score"]) + "/9)" in md10.split("can't reach the bar")[1].split("## ")[0], md10
+    SCREEN["calls_at_high"] = False
+    apply_bar(None)
+    SCREEN["fed_bias"] = apply_fed(None)
     print(md)
     print("option screen ok:", k["osi"], k["delta"], k["cost"], up["score"], up["max"])
 
@@ -858,9 +977,10 @@ def run_scan():
         time.sleep(180)
         bars.update(download(late))
     results, missing, etf3, dates = run(bars, groups, stocks, now)
-    rows = rank_rows(results, expected)
     plan, screened = load_plan(), False
-    apply_bar(plan)
+    apply_bar(plan)                                      # the bar and the Fed point first: rank_rows' Max uses them
+    SCREEN["fed_bias"] = apply_fed(plan)
+    rows = rank_rows(results, expected)
     if plan and rows:
         try:
             run_option_screen(rows, bars, expected, now, plan)
