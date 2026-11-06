@@ -60,6 +60,21 @@ def load_universe():
 BLANK_FILLED = {}
 
 
+def clean_bars(data, t):
+    """One ticker's daily bars from a yfinance batch: the rows that have a close, plus the latest row even when its
+    close is blank (fill_blank_closes repairs it). None when the name is missing from the batch or came back with no
+    rows, so download() retries it instead of the whole scan failing (Nov 6 2026: an empty retry chunk raised an
+    IndexError on df.index[-1] and stopped the midday run)."""
+    try:
+        df = data[t][["Open", "High", "Low", "Close", "Volume"]]
+    except (KeyError, TypeError):
+        return None
+    if df.empty:
+        return None
+    df = df[df["Close"].notna() | (df.index == df.index[-1])].dropna(how="all")
+    return df if len(df) else None
+
+
 def download(tickers, chunk=250, pause=2.0):
     """Daily bars in chunks, with one retry pass for anything that came back empty."""
     import yfinance as yf
@@ -75,13 +90,9 @@ def download(tickers, chunk=250, pause=2.0):
                 print(f"chunk {i // size} failed: {type(e).__name__}: {e}")
                 continue
             for t in part:
-                try:
-                    df = data[t][["Open", "High", "Low", "Close", "Volume"]]
-                    df = df[df["Close"].notna() | (df.index == df.index[-1])].dropna(how="all")
-                    if len(df):
-                        out[t] = df
-                except KeyError:
-                    pass
+                df = clean_bars(data, t)
+                if df is not None:
+                    out[t] = df
             time.sleep(pause)
         return out
 
@@ -603,6 +614,18 @@ def write(md, results, rows, asof):
 def selftest():
     import numpy as np
     from setups import levels
+    # 0) Download cleanup: an empty batch (zero rows) or a missing name returns None instead of raising; the latest
+    #    row is kept even with a blank close; all-blank older rows are dropped
+    cols = pd.MultiIndex.from_product([["AAA", "BBB"], ["Open", "High", "Low", "Close", "Volume"]])
+    empty = pd.DataFrame(columns=cols, index=pd.DatetimeIndex([]))
+    assert clean_bars(empty, "AAA") is None and clean_bars(empty, "ZZZ") is None and clean_bars(pd.DataFrame(), "AAA") is None
+    idx = pd.DatetimeIndex(["2026-11-03", "2026-11-04", "2026-11-05"])
+    raw = pd.DataFrame(np.nan, index=idx, columns=cols)
+    raw.loc[:, ("AAA", "Close")] = [10.0, np.nan, np.nan]
+    raw.loc[:, ("AAA", "Open")] = [9.9, np.nan, 10.2]
+    got = clean_bars(raw, "AAA")
+    assert list(got.index) == [idx[0], idx[2]] and math.isnan(got["Close"].iloc[-1]), got   # blank latest close kept
+    assert clean_bars(raw, "BBB") is None                     # a name with no data at all is left for the retry pass
     # 1) Universe pre-filters: common stocks only, price and volume floors, class shares in Yahoo format, ADRs kept
     js = {"data": {"rows": [
         {"symbol": "AAA", "name": "Alpha Inc. Common Stock", "lastsale": "$50.10", "volume": "2,000,000", "sector": "Technology"},
