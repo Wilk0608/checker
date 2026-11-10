@@ -1,0 +1,20 @@
+name: alert-test
+# Run from the Actions tab to check that scanner alerts reach you: it opens one test issue the same way the scan does.
+on:
+  workflow_dispatch: {}
+permissions:
+  issues: write
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Open a test alert issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          printf '%s\n' "This is a test of the scanner's alert channel, not a trade alert." "" \
+            "If you got an email or a GitHub notification for this issue, alerts work. If you didn't, open the repository page, click Watch, and choose All Activity." "" \
+            "Real alerts have one line per item: CALL AT THE BAR (a call can reach the bar), EXIT DUE or PROFIT STEP (a real position listed in plan.json hit an exit rule). They are notifications, never orders." "" \
+            "@${{ github.repository_owner }}" > "$RUNNER_TEMP/body.md"
+          gh issue create --repo "${{ github.repository }}" --title "Options plan alert test $(date -u +%Y-%m-%d): ignore" --body-file "$RUNNER_TEMP/body.md"
