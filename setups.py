@@ -1,4 +1,4 @@
-"""Setup rules (options plan, rules v7.6), applied to FINAL daily bars.
+"""Setup rules (options plan, rules v7.7), applied to FINAL daily bars.
 
 All tests use closes of completed sessions. `df` columns: Open High Low Close Volume, index = dates, oldest first.
 
@@ -10,7 +10,9 @@ Definitions (from the plan):
 - Near 52-week low (puts blocked): last close within 5% of the lowest low of the past year, or below it.
 
 Levels (for confirmed setups, entry = last close; puts mirror):
-- Invalidation: lowest close of the last 10 sessions, but no closer than 1 x ATR(14) and no farther than 2 x ATR(14) from entry.
+- Invalidation: lowest close of the last 10 sessions, but no closer than 2 x ATR(14) and no farther than 3 x ATR(14) from
+  entry (rules v7.7; it was 1 to 2 ATR. In the 10-year backtest the wider level added about 1 point a trade for calls
+  and was better in 7 of 10 years: fewer trades are stopped by ordinary noise).
 - Target: nearest swing high above entry (a high that is the highest of the 5 sessions on each side) or the prior 52-week
   high, whichever is nearer (the entry bar's own wick doesn't count). None means the close is at new highs, so the session
   uses the 1-sigma cap instead.
@@ -23,6 +25,10 @@ import numpy as np
 import pandas as pd
 
 MIN_PRICE, MAX_PRICE, MIN_AVG_VOL = 5.0, 275.0, 1_000_000
+INV_ATR = (2.0, 3.0)            # the invalidation level stays between these multiples of ATR(14) from the entry price
+EXP_MIN_DAYS = 90               # first monthly expiration at least this many days out (rules v7.7; it was 60)
+EXP_FALLBACK_DAYS = 60          # allowed only when the 90+ day contract doesn't fit the cap
+TIME_STOP_DAYS = 21             # days before expiration
 # NYSE holidays in the plan year (account_mechanics); a rule date that lands on one moves to the trading day before.
 HOLIDAYS = {dt.date(2026, 11, 26), dt.date(2026, 12, 25), dt.date(2027, 1, 1), dt.date(2027, 1, 18), dt.date(2027, 2, 15),
             dt.date(2027, 3, 26), dt.date(2027, 5, 31), dt.date(2027, 6, 18), dt.date(2027, 7, 5), dt.date(2027, 9, 6)}
@@ -55,23 +61,32 @@ def third_friday(y, m):
     return d + dt.timedelta(days=(4 - d.weekday()) % 7)
 
 
-def contract_plan(asof, fresh):
-    """Rules v7.6 contract timing for an entry on the next session after `asof`:
-    a fresh breakout/breakdown uses the monthly 45-59 days out (time stop 10 days before expiration), else the first
-    monthly 60+ days out (time stop 21 days before). Returns (entry, expiration, time_stop, days_to_time_stop)."""
-    entry = next_session(asof)
+def monthlies(entry, n=12):
+    """The next n standard monthly expirations (third Fridays) from the entry month on."""
     exps, y, m = [], entry.year, entry.month
-    for _ in range(8):
+    for _ in range(n):
         exps.append(third_friday(y, m))
         y, m = (y + 1, 1) if m == 12 else (y, m + 1)
-    short = next((e for e in exps if 45 <= (e - entry).days <= 59), None) if fresh else None
-    if short:
-        exp, ts = short, short - dt.timedelta(days=10)
-    else:
-        exp = next(e for e in exps if (e - entry).days >= 60)
-        ts = exp - dt.timedelta(days=21)
-    ts = _trading_day_on_or_before(ts)
+    return exps
+
+
+def contract_plan(asof, fresh=False, min_days=EXP_MIN_DAYS):
+    """Rules v7.7 contract timing for an entry on the next session after `asof`: the first monthly expiration 90+ days
+    out for every setup, time stop 21 days before it. (v7.6 used 60+ days, and 45-59 days for a fresh breakout; in the
+    10-year backtest the longer contract did better in 9 of 10 years.) `fresh` is kept for older callers and ignored.
+    Returns (entry, expiration, time_stop, days_to_time_stop)."""
+    entry = next_session(asof)
+    exp = next(e for e in monthlies(entry) if (e - entry).days >= min_days)
+    ts = _trading_day_on_or_before(exp - dt.timedelta(days=TIME_STOP_DAYS))
     return entry, exp, ts, (ts - entry).days
+
+
+def fallback_plan(asof):
+    """The first monthly 60+ days out, used only when the 90+ day contract doesn't fit the cap. None when it is the
+    same expiration as the main one."""
+    main = contract_plan(asof)
+    fb = contract_plan(asof, min_days=EXP_FALLBACK_DAYS)
+    return None if fb[1] == main[1] else fb
 
 
 def time_stop(exp, entry):
@@ -138,14 +153,14 @@ def levels(df, direction):
     hi52, lo52 = float(yr["High"].max()), float(yr["Low"].min())
     if direction == "call":
         ext10 = float(c.iloc[-10:].min())
-        risk = min(max(last - ext10, a), 2 * a)
+        risk = min(max(last - ext10, INV_ATR[0] * a), INV_ATR[1] * a)
         inv = last - risk
         cands = sorted({p for p in ph if p > last} | ({hi52} if hi52 > last else set()))
         target = cands[0] if cands else None
         nearby = cands[:3]
     else:
         ext10 = float(c.iloc[-10:].max())
-        risk = min(max(ext10 - last, a), 2 * a)
+        risk = min(max(ext10 - last, INV_ATR[0] * a), INV_ATR[1] * a)
         inv = last + risk
         cands = sorted({p for p in pl if p < last} | ({lo52} if lo52 < last else set()), reverse=True)
         target = cands[0] if cands else None

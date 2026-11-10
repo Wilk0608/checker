@@ -40,7 +40,7 @@ REASONS = ["invalidation", "premium stop", "trailing stop", "earnings exit", "ti
 
 DEFAULT = dict(delta=0.65, delta_fallback=0.55, cap_call=2319.21, cap_put=1932.67, spread=0.05, min_spread=0.05, fee=1.0,
                premium_stop=0.60, use_inv=True, profit_step=0.50, trail=0.30, earnings_exit=True, pre_event_block=14,
-               min_days=60, ts_days=21, short_exp=True, iv_mult=1.0, entry="open")
+               min_days=60, ts_days=21, short_exp=True, iv_mult=1.0, entry="open", inv_lo=1.0, inv_hi=2.0)
 
 
 # ------------------------------------------------------------------------------------------------------- math
@@ -441,8 +441,9 @@ class Data:
         P = bs(S, K[:, None], T, ivm, self.r[d], put[:, None])
         # invalidation: 10-session extreme close before entry, kept 1 to 2 ATR from the entry price
         atr = self.F["atr"][ti, st].astype(float)
-        inv = np.where(put, np.minimum(np.maximum(self.F["ext10max"][ti, st], S0 + atr), S0 + 2 * atr),
-                       np.maximum(np.minimum(self.F["ext10min"][ti, st], S0 - atr), S0 - 2 * atr))
+        lo, hi = cfg["inv_lo"] * atr, cfg["inv_hi"] * atr                 # the level stays between these distances
+        inv = np.where(put, np.minimum(np.maximum(self.F["ext10max"][ti, st], S0 + lo), S0 + hi),
+                       np.maximum(np.minimum(self.F["ext10min"][ti, st], S0 - lo), S0 - hi))
         breach = np.where(put[:, None], S > inv[:, None], S < inv[:, None]) & live if cfg["use_inv"] else np.zeros_like(live)
         first = lambda m: np.where(m.any(axis=1), m.argmax(axis=1), BIG)
         prem = (P <= (1 - cfg["premium_stop"]) * F[:, None]) & live if cfg["premium_stop"] else np.zeros_like(live)
@@ -657,7 +658,7 @@ def selftest():
                 lv = SU.levels(df.iloc[:t + 1], "call" if call else "put")
                 assert abs(lv["atr14"] - f["atr"][t]) < 0.002, (lv["atr14"], f["atr"][t])
                 last = c[t]
-                risk = min(max((last - f["ext10min"][t]) if call else (f["ext10max"][t] - last), f["atr"][t]), 2 * f["atr"][t])
+                risk = min(max((last - f["ext10min"][t]) if call else (f["ext10max"][t] - last), SU.INV_ATR[0] * f["atr"][t]), SU.INV_ATR[1] * f["atr"][t])
                 assert abs(lv["risk"] - risk) < 0.002
                 tg = nearest_level(h, l, f["is_ph"], f["is_pl"], f["hi52p"][t], f["lo52p"][t], t, last, call)
                 assert (tg is None) == (lv["target"] is None) and (tg is None or abs(tg - lv["target"]) < 0.006), (seed, t, tg, lv["target"])
@@ -676,6 +677,7 @@ def selftest():
     D = Data(tick, ["g01_semis_hw"] * nT + ["g10_etfs"], dates, O, H, L, C, V * 50, {}, earn)
     D.set_iv(dict(a=-0.25, b60=0.15, b252=0.65, g20=-0.2, m_ref=1.2))
     variants = [{}, dict(premium_stop=None), dict(profit_step=None), dict(use_inv=False), dict(earnings_exit=False, pre_event_block=0),
+                dict(inv_lo=2.0, inv_hi=3.0),
                 dict(min_days=120), dict(delta=0.8, delta_fallback=None, cap_call=1e9, cap_put=1e9), dict(iv_mult=1.2, trail=0.5)]
     tot, hit = 0, set()
     for cfg in variants:

@@ -1,4 +1,4 @@
-"""Daily setup scanner (options plan, rules v7.6).
+"""Daily setup scanner (options plan, rules v7.7).
 
 Universe: every US-listed common stock that passes loose price/volume pre-filters (see universe.py), plus the curated
 list in universe.txt (which also holds the ETFs). Downloads ~13 months of daily bars, applies setups.py to FINAL bars
@@ -9,6 +9,10 @@ score points the scan can compute, and writes:
   results/latest.json    every scanned name, with levels for each setup
   results/<date>.md      dated copy of the report
   results/universe.json  the stock list used (fallback if the screener fails another day)
+  results/regime.json    market trend, VIX and the three Fed signals that decide which side gets the Fed point
+  results/shadow.json/md the automatic shadow ledger (shadow.py), updated once a day on regular-hours quotes
+  results/alert.md       written only when something needs the owner: a call that can reach the bar, or an exit due on
+                         a real position listed in plan.json (the workflow turns it into a GitHub issue)
 
 Run: python scanner.py            (normally from GitHub Actions after the close)
      python scanner.py --test     (offline self-test on synthetic data)
@@ -26,8 +30,10 @@ import pandas as pd
 
 import events as E
 import options as O
+import shadow as SH
 import universe as U
-from setups import analyze, capped_rr, contract_plan, last_completed_session, time_stop, HOLIDAYS, MIN_PRICE, MAX_PRICE
+from setups import (analyze, capped_rr, contract_plan, fallback_plan, last_completed_session, time_stop, HOLIDAYS, MIN_PRICE,
+                    MAX_PRICE)
 
 ET = ZoneInfo("America/New_York")
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -45,6 +51,11 @@ FED_BIAS = {"calls": {"call": 1, "put": 0}, "puts": {"call": 0, "put": 1}, "both
             "none": {"call": 0, "put": 0}}
 PLAN_FILE = os.path.join(ROOT, "plan.json")
 SCREEN = {}               # summary of the option screen for the report
+REAL_PUTS = {"on": True}  # plan.json real_puts: false = puts are shadow-only (rules v7.7), so the report lists them briefly
+REGIME = {}               # market regime of the run (see regime())
+MACRO = {"VIX": "^VIX", "IRX": "^IRX", "TNX": "^TNX", "DXY": "DX-Y.NYB"}   # Yahoo symbols
+EASING_FOR_CALLS = 2      # calls get the Fed point when at least this many of the 3 signals are easing; puts otherwise
+WASHOUT_VIX = 28.0
 
 
 def load_universe():
@@ -150,6 +161,99 @@ def stale_names(bars, now_et, expected):
     return sorted(t for t, df in bars.items() if len(df) and drop_partial(df, now_et).index[-1].date() < expected)
 
 
+def download_macro():
+    """Daily closes of the VIX, the 13-week T-bill yield, the 10-year yield and the dollar index (Yahoo). A missing
+    series is left out; {} when the download fails."""
+    import yfinance as yf
+    out = {}
+    try:
+        data = yf.download(list(MACRO.values()), period="1y", interval="1d", auto_adjust=False, group_by="ticker",
+                           threads=True, progress=False)
+    except Exception as e:
+        print(f"macro download failed: {type(e).__name__}: {e}")
+        return out
+    for name, sym in MACRO.items():
+        try:
+            c = data[sym]["Close"].dropna()
+        except (KeyError, TypeError):
+            continue
+        if len(c):
+            out[name] = c
+    return out
+
+
+def regime(bars, macro, now_et):
+    """Market regime on final bars. The Fed read is three market signals, each "easing" or not:
+      T-bill: the 13-week yield is no more than 0.10 points above its level 63 sessions ago (not rising);
+      10-year: the yield is below its 50-day average;  dollar: the index is below its 50-day average.
+    In the 10-year backtest random calls lost about 7% a trade with 0 of 3 easing and made 4% to 6% with 2 or 3, so
+    calls get the Fed point at 2+ and puts at 0-1. Washout = VIX at 28+ or SPY below its 50- and 200-day averages."""
+    def final(c):
+        c = c.dropna().astype(float)
+        if len(c) and c.index[-1].date() == now_et.date() and now_et.time() < dt.time(16, 15):
+            c = c.iloc[:-1]
+        return c
+    out = {}
+    for t in ("SPY", "QQQ"):
+        df = bars.get(t)
+        c = final(df["Close"]) if df is not None and len(df) else None
+        if c is not None and len(c) >= 200:
+            last, s50, s200 = float(c.iloc[-1]), float(c.iloc[-50:].mean()), float(c.iloc[-200:].mean())
+            out[t] = dict(date=c.index[-1].strftime("%Y-%m-%d"), close=round(last, 2), sma50=round(s50, 2), sma200=round(s200, 2),
+                          above50=bool(last > s50), above200=bool(last > s200))
+    m = {k: final(v) for k, v in (macro or {}).items()}
+    v = m.get("VIX")
+    if v is not None and len(v) >= 6:
+        out["VIX"] = dict(last=round(float(v.iloc[-1]), 2), ago5=round(float(v.iloc[-6]), 2))
+    sig = {}
+    x = m.get("IRX")
+    if x is not None and len(x) >= 64:
+        now_, then = float(x.iloc[-1]), float(x.iloc[-64])
+        sig["tbill"] = dict(now=round(now_, 2), then=round(then, 2), easing=bool(now_ - then <= 0.10))
+    for key, name in (("TNX", "ten_year"), ("DXY", "dollar")):
+        x = m.get(key)
+        if x is not None and len(x) >= 50:
+            now_, avg = float(x.iloc[-1]), float(x.iloc[-50:].mean())
+            sig[name] = dict(now=round(now_, 2), avg50=round(avg, 2), easing=bool(now_ < avg))
+    out["signals"] = sig
+    if len(sig) == 3:
+        out["easing"] = sum(1 for z in sig.values() if z["easing"])
+    if "SPY" in out and "VIX" in out:
+        out["washout"] = bool(out["VIX"]["last"] >= WASHOUT_VIX or (not out["SPY"]["above50"] and not out["SPY"]["above200"]))
+    return out
+
+
+def regime_text(rg):
+    """One paragraph for the report."""
+    if not rg:
+        return "Market regime: not available in this run."
+    parts = []
+    for t in ("SPY", "QQQ"):
+        z = rg.get(t)
+        if z:
+            parts.append(f"{t} {z['close']} is {'above' if z['above50'] else 'below'} its 50-day average ({z['sma50']}) and "
+                         f"{'above' if z['above200'] else 'below'} its 200-day ({z['sma200']})")
+    if rg.get("VIX"):
+        parts.append(f"VIX {rg['VIX']['last']} ({rg['VIX']['ago5']} five sessions earlier)")
+    sig = rg.get("signals") or {}
+    bits = []
+    if "tbill" in sig:
+        z = sig["tbill"]
+        bits.append(f"3-month T-bill {z['now']}% vs {z['then']}% three months ago ({'not rising: easing' if z['easing'] else 'rising: tightening'})")
+    if "ten_year" in sig:
+        z = sig["ten_year"]
+        bits.append(f"10-year {z['now']}% vs its 50-day average {z['avg50']}% ({'below: easing' if z['easing'] else 'above: tightening'})")
+    if "dollar" in sig:
+        z = sig["dollar"]
+        bits.append(f"dollar index {z['now']} vs its 50-day average {z['avg50']} ({'below: easing' if z['easing'] else 'above: tightening'})")
+    e = rg.get("easing")
+    fed = (f"Fed signals: {e} of 3 easing" if e is not None else "Fed signals: incomplete") + (" (" + "; ".join(bits) + ")" if bits else "")
+    out = "**Market regime** (final bars" + (f" of {rg['SPY']['date']}" if rg.get("SPY") else "") + "): " + "; ".join(parts) + ". " + fed + "."
+    if rg.get("washout"):
+        out += " WASHOUT (VIX at 28+ or SPY under both averages): in the backtest calls did best in these periods unless all three Fed signals were tightening."
+    return out
+
+
 def run(bars, groups, stocks, now_et):
     bars = {t: drop_partial(df, now_et) for t, df in bars.items()}
 
@@ -206,12 +310,21 @@ def apply_bar(plan):
     return NEEDS
 
 
-def apply_fed(plan):
-    """Which directions can get the Fed point (score factor 3), from plan.json's fed_bias: the direction the session's
-    Fed Chessboard read supports ("calls", "puts", "both" or "none"). Not set or not one of those: assume the point is
-    available to both, so no setup is left out of the tables on a guess. Returns the bias name used."""
+def apply_fed(plan, rg=None):
+    """Which directions can get the Fed point (score factor 3), from plan.json's fed_bias. "auto" (rules v7.7) reads the
+    three Fed signals in the regime: calls get the point with 2 or 3 easing, puts with 0 or 1; when the signals are
+    missing neither side gets it. A fixed value ("calls", "puts", "both" or "none") overrides the signals. Not set or
+    not one of those: assume the point is available to both, so no setup is left out of the tables on a guess.
+    Returns the bias name used."""
     raw = (plan or {}).get("fed_bias")
     name = str(raw).strip().lower() if raw is not None else ""
+    if name == "auto":
+        e = (rg or {}).get("easing")
+        if e is None:
+            FED.update(call=0, put=0)
+            return "auto (signals unavailable)"
+        FED.update(call=1 if e >= EASING_FOR_CALLS else 0, put=0 if e >= EASING_FOR_CALLS else 1)
+        return f"auto ({e} of 3 easing)"
     if name not in FED_BIAS:
         FED.update(FED_BIAS["both"])
         return "not set" if not name else f"unrecognized ({raw!r})"
@@ -235,12 +348,11 @@ def load_plan():
 
 
 def plan_expirations(asof):
-    """(entry, short, long): short = (expiration, time stop, days to time stop) for the monthly 45-59 days out, or None
-    when no monthly falls in that window; long = the same for the first monthly 60+ days out."""
-    entry, ef, tf, hf = contract_plan(asof, True)
-    _, es, tsl, hl = contract_plan(asof, False)
-    short = (ef, tf, hf) if 45 <= (ef - entry).days <= 59 else None
-    return entry, short, (es, tsl, hl)
+    """(entry, fallback, main): main = (expiration, time stop, days to time stop) for the first monthly 90+ days out;
+    fallback = the same for the first monthly 60+ days out when that is an earlier one, else None."""
+    entry, em, tm, hm = contract_plan(asof)
+    fb = fallback_plan(asof)
+    return entry, (fb[1:] if fb else None), (em, tm, hm)
 
 
 def evaluate_row(x, meta, contracts, S, caps, entry, regular, r):
@@ -295,11 +407,11 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
     entry, short, long_ = plan_expirations(asof)
     apply_bar(plan)
     SCREEN.update(caps=caps, plan_updated=plan.get("updated", "n/a"), entry=entry, calls_at_high=NEEDS["call"] >= 10,
-                  fed_bias=apply_fed(plan))
+                  fed_bias=apply_fed(plan, REGIME))
     caps = sizing_caps(caps)
     tickers = sorted({x["r"]["tk"] for x in rows})
     chains, errs = O.fetch_all(tickers, workers=workers)
-    keep_to = entry + dt.timedelta(days=130)          # covers the first monthly 60+ days out on quarterly cycles
+    keep_to = entry + dt.timedelta(days=200)          # covers the first monthly 90+ days out on quarterly cycles
     chains = {t: (m, [c for c in cs if c["exp"] <= keep_to]) for t, (m, cs) in chains.items()}
     run_regular = O.regular_hours(now.astimezone(dt.timezone.utc), HOLIDAYS)
     etfs = set(load_universe().get("g10_etfs", []))
@@ -376,6 +488,7 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
         if x["r"]["tk"] in flags:
             x["deal"] = flags[x["r"]["tk"]]
     ts = [m["ts"] for m, _ in chains.values() if m.get("ts")]
+    SCREEN.update(_chains=chains, _cal=cal)             # reused by the shadow ledger and the position alerts
     SCREEN.update(chains=len(chains), chain_errors=errs, refreshed=refreshed, refresh_failed=ref_fail, run_regular=run_regular,
                   regular_files=sum(1 for m, _ in chains.values() if O.regular_hours(m.get("ts"), HOLIDAYS)),
                   oldest=min(ts).astimezone(O.ET).strftime("%m-%d %H:%M ET") if ts else "n/a",
@@ -456,6 +569,10 @@ def _bar_text():
 def _fed_text():
     """Who can get the Fed point in Max, from plan.json fed_bias (see apply_fed)."""
     b = SCREEN.get("fed_bias", "not set")
+    if b.startswith("auto"):
+        who = {(1, 0): "calls get the Fed point, puts don't", (0, 1): "puts get the Fed point, calls don't",
+               (0, 0): "neither side gets the Fed point"}
+        return f"Fed point, {b}: {who[(FED['call'], FED['put'])]}"
     if b not in FED_BIAS:
         return f"Fed point: plan.json fed_bias {b}, so Max assumes it for calls and puts"
     who = {(1, 1): "calls and puts", (1, 0): "calls only, so a put's Max leaves it out",
@@ -472,8 +589,8 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
     puts = [x for x in rows if x["dir"] == "put" and not x["near_low"]]
     near = sorted([x for x in rows if x["near_low"]], key=lambda x: x["r"]["tk"])
     spy3 = etf3.get("SPY")
-    exp_f = contract_plan(dt.date.fromisoformat(asof), True)
-    exp_s = contract_plan(dt.date.fromisoformat(asof), False)
+    exp_m = contract_plan(dt.date.fromisoformat(asof))
+    exp_fb = fallback_plan(dt.date.fromisoformat(asof))
     has = lambda x: bool((x.get("opt") or {}).get("contract"))
     tradeable = [x for x in rows if has(x) and not x["near_low"]]
     L = [f"# Setup scan: final bars of {asof}",
@@ -482,6 +599,10 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
          + (f" | contract passes the option rules: {len(tradeable)}" if screened else "") + " | SPY 3M "
          + (f"{spy3:+.1f}%" if spy3 is not None else "n/a"),
          f"Universe: {src}", ""]
+    if SCREEN.get("alerts"):
+        L += ["**ALERTS (notifications, never orders):**"] + [f"- {a}" for a in SCREEN["alerts"]] + [""]
+    if REGIME:
+        L += [regime_text(REGIME), ""]
     if len(stale) > 0.1 * max(len(ok), 1):
         L += [f"**WARNING: {len(stale):,} of {len(ok):,} names have no final bar for {asof} (data-feed lag). They are left "
               "out of the ranking, so this report is incomplete. Use the next run's file.**", ""]
@@ -493,7 +614,8 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
         c = SCREEN["caps"]
         L += [f"Option check: caps from plan.json (updated {SCREEN.get('plan_updated')}): balance ${c['balance']:,.2f}, {c['phase']}, "
               f"{c['mode']} -> Medium ${c['medium']:,.0f}, High ${c['high']:,.0f}, puts ${c['put']:,.0f}. Bar: calls {NEEDS['call']}+, puts "
-              f"{NEEDS['put']}+ ({_bar_text()}). {_fed_text()}. Quotes: Cboe delayed "
+              f"{NEEDS['put']}+ ({_bar_text()}). " + ("" if REAL_PUTS["on"] else "Puts are shadow-only (plan.json real_puts false): "
+              "no real put trades. ") + f"{_fed_text()}. Quotes: Cboe delayed "
               f"(files {SCREEN['oldest']} to {SCREEN['newest']}; {SCREEN['regular_files']} of {SCREEN['chains']} taken in regular hours"
               + (f"; {len(SCREEN['refreshed'])} stale files re-read from Nasdaq" if SCREEN.get("refreshed") else "") + "). "
               "A * on a spread means closing or after-hours quotes: the plan judges spreads on regular-hours quotes only, so "
@@ -508,11 +630,13 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
           "Max = Score + Fed point (0 or 1) + (2 - catalyst). Calls need " + str(NEEDS["call"]) + ", puts "
           + str(NEEDS["put"]) + " (plan.json min_score); only setups whose "
           "contract passes the plan's option rules and whose Max reaches the bar are in the tables. Contract = what the plan "
-          "would buy (expiration by setup type, delta 0.60-0.70 or 0.50-0.60 as allowed, OI 500+, spread 8% or less, cost "
+          "would buy (first monthly 90+ days out, or 60+ when that doesn't fit the cap; delta 0.60-0.70 or 0.50-0.60 as "
+          "allowed, OI 500+, spread 8% or less, cost "
           "under the cap); Cost = one contract at mid + a quarter of the spread + $1, x lots under the cap. BE sigma = "
           "breakeven distance in 1-sigma moves to expiration.", "",
-          f"Contract timing for an entry on {exp_f[0]}: fresh breakout/breakdown -> {exp_f[1]} expiration, time stop "
-          f"{exp_f[2]}; pullback/failed rally -> {exp_s[1]}, time stop {exp_s[2]}.", ""]
+          f"Contract timing for an entry on {exp_m[0]}: {exp_m[1]} expiration (first monthly 90+ days out), time stop "
+          f"{exp_m[2]}" + (f"; if that doesn't fit the cap, {exp_fb[1]} with time stop {exp_fb[2]}" if exp_fb else "")
+          + ". Stop = the stock level that ends the trade on a close (10-session extreme, kept 2 to 3 ATR away).", ""]
     hdr = ["| Ticker | Setup | Close | Stop | Target | R:R | Contract | Delta | Bid/Ask (spread) | OI | Cost | IV/HV | BE sigma | "
            "Score (T+RS+RR+L+P+C) | Max | Earnings | Notes |", "|" + "---|" * 17]
 
@@ -534,6 +658,12 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
         deal = sorted([x for x in reach if x.get("deal")], key=key)
         clean = [x for x in reach if not x.get("deal")]
         for d, lab in (("call", "Calls"), ("put", "Puts")):
+            if d == "put" and not REAL_PUTS["on"]:
+                allp = sorted([x for x in tradeable if x["dir"] == "put"], key=key)
+                L += [f"## Puts: shadow test only, no real put trades (rules v7.7): {len(allp)} with a passing contract",
+                      "- Score in brackets: " + (", ".join(f"{x['r']['tk']} ({x['score']})" for x in allp[:40]) or "none")
+                      + (f", +{len(allp) - 40} more in latest.json" if len(allp) > 40 else ""), ""]
+                continue
             mine = [x for x in clean if x["dir"] == d]
             ready = sorted([x for x in mine if not (x.get("earn") or {}).get("pre_event")], key=key)
             pre = sorted([x for x in mine if (x.get("earn") or {}).get("pre_event")], key=key)
@@ -550,7 +680,8 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
         low = sorted([x for x in tradeable if x["max"] < need(x)], key=key)
         L += [f"## Contract passes but the score can't reach the bar: {len(low)}",
               "- Calls (Score/Max): " + (", ".join(f"{x['r']['tk']} ({x['score']}/{x['max']})" for x in low if x["dir"] == "call") or "none"),
-              "- Puts (Score/Max): " + (", ".join(f"{x['r']['tk']} ({x['score']}/{x['max']})" for x in low if x["dir"] == "put") or "none"), ""]
+              "- Puts (Score/Max): " + ((", ".join(f"{x['r']['tk']} ({x['score']}/{x['max']})" for x in low if x["dir"] == "put") or "none")
+                                         if REAL_PUTS["on"] else "shadow-only, listed above"), ""]
         failed = [x for x in rows if not has(x) and not x["near_low"]]
         groups = {}
         for x in failed:
@@ -566,6 +697,8 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
           "- " + (", ".join(x["r"]["tk"] + ("" if not screened else (" (" + (
               (lambda c: f"{c['exp']:%b %d} {c['strike']:g}P {c['bid']:.2f}/{c['ask']:.2f}, OI {c['oi']:,}")(x["opt"]["contract"])
               if has(x) else _fail_reason(x)[0]) + ")")) for x in near) or "none")]
+    if SCREEN.get("shadow_text"):
+        L += ["", "## Shadow test (automatic; never orders)"] + SCREEN["shadow_text"]
     watch = []
     for r in live:
         if r["setups"]:
@@ -609,6 +742,83 @@ def write(md, results, rows, asof):
             if (r.get("tk"), d) in rank:
                 r[f"rank_{d}"] = rank[(r["tk"], d)]
     json.dump(results, open(os.path.join(ROOT, "results", "latest.json"), "w"), indent=1, default=str)
+    json.dump(dict(REGIME, fed=dict(FED), fed_bias=SCREEN.get("fed_bias"), asof=asof), open(os.path.join(ROOT, "results", "regime.json"), "w"),
+              indent=1)
+
+
+def shadow_step(rows, bars, now, plan, groups, fetch=True):
+    """Run the automatic shadow ledger on this scan (once a day, on regular-hours quotes) and summarize it for the
+    report. The book and its own report live in results/shadow.json and results/shadow.md."""
+    book = SH.load()
+    have = [x for x in rows if (x.get("opt") or {}).get("contract")]
+    out = SH.update(book, now, have, bars, SCREEN.get("_chains") or {}, SCREEN.get("_cal") or {}, float(plan.get("rate", 0.04)),
+                    dict(FED), set(groups.get("g10_etfs", [])), HOLIDAYS, regular=bool(SCREEN.get("run_regular")), fetch=fetch)
+    if out.get("ran"):
+        SH.save(book)
+    open(SH.REPORT, "w").write(SH.report(book, out))
+    SCREEN["shadow_text"] = SH.summary_lines(book, out)
+    return book, out
+
+
+def build_alerts(rows, plan, now, bars, fetch=True):
+    """Lines for results/alert.md: calls that can reach the bar on regular-hours quotes (with the Fed point as set and a
+    confirmed earnings date, the only points a session can still add from facts), and exits due on the real positions
+    listed in plan.json under "open"."""
+    out = []
+    if SCREEN.get("run_regular") and (SCREEN.get("caps") or {}).get("mode") != "Hard stop":
+        hot = []
+        for x in rows:
+            o = x.get("opt") or {}
+            c = o.get("contract")
+            if x["dir"] != "call" or not c or not o.get("regular") or c.get("spread_provisional") or x.get("deal"):
+                continue
+            e = x.get("earn") or {}
+            if e.get("pre_event") and (x.get("pre") or {}).get("result") != "PASS":
+                continue
+            reach = x["score"] + FED["call"] + (1 if x.get("cat") == 1 else 0)
+            if reach >= need(x):
+                hot.append((reach, x))
+        hot.sort(key=lambda p: (-p[0], p[1]["r"]["tk"]))
+        for reach, x in hot[:8]:
+            c = x["opt"]["contract"]
+            out.append(f"CALL AT THE BAR: {x['r']['tk']} {c['exp']:%b %d} {c['strike']:g}C, about ${c['cost']:,.0f} a contract. "
+                       f"Score {x['score']} from the scan, {reach} with the Fed point and a confirmed earnings date (bar {need(x)}).")
+    positions = (plan or {}).get("open") or []
+    if positions:
+        tick = {p["tk"] for p in positions}
+        chains = dict(SCREEN.get("_chains") or {})
+        missing = sorted(tick - set(chains))
+        if missing and fetch:
+            got, _ = O.fetch_all(missing)
+            chains.update(got)
+        final = {t: drop_partial(bars[t], now) for t in tick if t in bars}
+        closes = SH.closes_from_bars(final, tick, "0000-00-00", "9999-12-31")
+        out += SH.position_alerts(positions, now.date().isoformat(), chains, closes, SCREEN.get("_cal") or {}, HOLIDAYS)
+    return out
+
+
+def write_alert(lines, now, folder=None):
+    """results/alert.md exists only while there is a new alert (its first line is the issue title); the same alert is
+    raised once a day at most. Returns True when a new alert file was written."""
+    folder = folder or os.path.join(ROOT, "results")
+    os.makedirs(folder, exist_ok=True)
+    path, state = os.path.join(folder, "alert.md"), os.path.join(folder, "alert_state.json")
+    key = now.date().isoformat() + "|" + "|".join(sorted(lines))
+    try:
+        last = json.load(open(state)).get("key")
+    except Exception:
+        last = None
+    if os.path.exists(path):
+        os.remove(path)
+    if not lines or key == last:
+        return False
+    kinds = sorted({l.split(":")[0] for l in lines})
+    open(path, "w").write(f"Options plan alert {now:%Y-%m-%d}: " + ", ".join(k.lower() for k in kinds) + "\n\n"
+                          + "\n".join(f"- {l}" for l in lines)
+                          + "\n\nThis is a notification, never an order. Verify on live broker quotes in a session before acting. "
+                          "Details: results/latest.md and results/shadow.md.\n")
+    json.dump(dict(key=key, written=now.isoformat()), open(state, "w"))
+    return True
 
 
 def selftest():
@@ -658,12 +868,15 @@ def selftest():
     assert last_completed_session(dt.datetime(2026, 10, 27, 6, 30, tzinfo=ET)) == dt.date(2026, 10, 26)
     assert last_completed_session(dt.datetime(2026, 10, 26, 6, 30, tzinfo=ET)) == dt.date(2026, 10, 23)   # Monday morning
     assert last_completed_session(dt.datetime(2026, 11, 27, 7, 0, tzinfo=ET)) == dt.date(2026, 11, 25)    # day after Thanksgiving
-    # 2) Contract calendar for an Oct 23 2026 scan: entry Mon Oct 26; Dec 18 (53 days) for fresh moves, time stop Dec 8;
-    #    Jan 15 '27 for slower moves, time stop Dec 25 -> Dec 24 (holiday)
+    # 2) Contract calendar (rules v7.7) for an Oct 23 2026 scan: entry Mon Oct 26; Jan 15 is 81 days out, so the first
+    #    monthly 90+ days out is Feb 19 '27, time stop Jan 29; the 60+ day fallback is Jan 15, time stop Dec 25 -> Dec 24
     e, x, ts, h = contract_plan(dt.date(2026, 10, 23), True)
-    assert (e, x, ts, h) == (dt.date(2026, 10, 26), dt.date(2026, 12, 18), dt.date(2026, 12, 8), 43), (e, x, ts, h)
-    e, x, ts, h = contract_plan(dt.date(2026, 10, 23), False)
-    assert (x, ts, h) == (dt.date(2027, 1, 15), dt.date(2026, 12, 24), 59), (x, ts, h)
+    assert (e, x, ts, h) == (dt.date(2026, 10, 26), dt.date(2027, 2, 19), dt.date(2027, 1, 29), 95), (e, x, ts, h)
+    assert contract_plan(dt.date(2026, 10, 23), False) == (e, x, ts, h)                 # one rule for every setup
+    fb = fallback_plan(dt.date(2026, 10, 23))
+    assert fb[1:] == (dt.date(2027, 1, 15), dt.date(2026, 12, 24), 59), fb
+    assert fallback_plan(dt.date(2026, 11, 18)) is None      # entry Nov 19: Jan 15 is 57 days out, so both rules pick Feb 19
+    assert plan_expirations(dt.date(2026, 10, 23)) == (e, fb[1:], (x, ts, h))
     # 3) Setups, levels and ranking on synthetic bars
     idx = pd.bdate_range("2025-10-01", periods=260)
 
@@ -693,7 +906,7 @@ def selftest():
     assert lc["target"] is None and lp["target"] is None, (lc, lp)
     for x, sign in ((lc, -1), (lp, 1)):
         dist = (x["invalidation"] - x["entry"]) * sign
-        assert x["atr14"] - 0.011 <= dist <= 2 * x["atr14"] + 0.011, x
+        assert 2 * x["atr14"] - 0.011 <= dist <= 3 * x["atr14"] + 0.011, x      # the level stays 2 to 3 ATR away
     zz = np.concatenate([np.linspace(50, 60, 120), np.linspace(60, 52, 60), np.linspace(52, 57, 80)])   # peak 60, now 57
     lz = levels(mk(zz, vol), "call")
     assert abs(lz["target"] - 60.6) < 0.05 and abs(lz["rr_before_cap"] - (lz["target"] - 57) / lz["risk"]) < 0.01, lz
@@ -738,13 +951,19 @@ def synth_chain(tk, S, exps, today, iv=0.35, spread_pct=0.03, oi=2000, r=0.04, m
 
 def option_selftest(res, rows, miss, etf3, last, now):
     import copy
-    # caps: Proving High 15% / Medium 9%, x0.75 under the base, x0.5 under 70%, hard stop under 60%; puts half of High
+    # caps (rules v7.7): Proving High 10% / Medium 6%, Pressing 15% / 9%; x0.75 under the base, x0.5 under 70%, hard
+    # stop under 60%; puts half of High. plan.json can override the percentages (V76 = the older, larger sizes).
     c = O.plan_caps({"balance": 24889.50, "base": 25000, "phase": "Proving"})
-    assert c["mode"] == "Cut to 75%" and (c["medium"], c["high"], c["put"]) == (1680.04, 2800.07, 1400.03), c
-    assert O.plan_caps({"balance": 30000, "base": 25000})["medium"] == 2700.0
+    assert c["mode"] == "Cut to 75%" and (c["medium"], c["high"], c["put"]) == (1120.03, 1866.71, 933.36), c
+    assert O.plan_caps({"balance": 30000, "base": 25000})["medium"] == 1800.0
+    V76 = dict(size_medium=0.09, size_high=0.15, press_medium=0.15, press_high=0.25)
+    c = O.plan_caps(dict({"balance": 24889.50, "base": 25000}, **V76))
+    assert (c["medium"], c["high"], c["put"]) == (1680.04, 2800.07, 1400.03), c
     assert O.plan_caps({"balance": 16000, "base": 25000})["mode"] == "Cut to 50%"
     assert O.plan_caps({"balance": 14000, "base": 25000})["mode"] == "Hard stop"
     cp_ = O.plan_caps({"balance": 30000, "base": 25000, "phase": "Pressing since 2027-03-01"})
+    assert (cp_["high"], cp_["medium"], cp_["put"]) == (4500.0, 2700.0, 2250.0), cp_
+    cp_ = O.plan_caps(dict({"balance": 30000, "base": 25000, "phase": "Pressing since 2027-03-01"}, **V76))
     assert (cp_["high"], cp_["medium"], cp_["put"]) == (7500.0, 4500.0, 3750.0), cp_
     # Black-Scholes helpers: put-call parity, IV inversion, delta range
     S, K, T, v, r = 100.0, 95.0, 0.2, 0.4, 0.04
@@ -754,10 +973,11 @@ def option_selftest(res, rows, miss, etf3, last, now):
     assert 0.5 < O.bs_delta(S, K, T, v, r, False) < 1 and -0.5 < O.bs_delta(S, K, T, v, r, True) < 0
     today = dt.date(2026, 10, 29)
     short, long_ = dt.date(2026, 12, 18), dt.date(2027, 1, 15)
-    caps = O.plan_caps({"balance": 24889.50, "base": 25000})
+    caps = O.plan_caps(dict({"balance": 24889.50, "base": 25000}, **V76))     # the mechanics below use these thresholds
     ch = synth_chain("AAA", 50.0, [short, long_], today)
-    # 1) fresh call: 0.60-0.70 delta at the 45-59 day monthly, tight and affordable
-    got = O.choose(ch, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    # choose() takes (fallback, main) expirations and tries the main one first; (None, short) = only `short` is planned
+    # 1) a call: 0.60-0.70 delta at the main expiration, tight and affordable
+    got = O.choose(ch, "call", True, (None, short), 50.0, caps, 0.30, today, True)
     k = got["contract"]
     assert got["status"] == "ok" and k["exp"] == short and 0.60 <= k["delta"] <= 0.70 and k["liquidity"] == 2 and k["fits"], got
     assert abs(k["lim"] - (k["mid"] + (k["ask"] - k["bid"]) / 4)) < 1e-3 and abs(k["cost"] - (k["lim"] * 100 + 1)) < 0.06
@@ -767,10 +987,10 @@ def option_selftest(res, rows, miss, etf3, last, now):
         if x["exp"] == short and x["cp"] == "C" and 0.60 <= x["delta"] <= 0.70:
             m = (x["bid"] + x["ask"]) / 2
             x["bid"], x["ask"] = round(m * 0.9, 2), round(m * 1.1, 2)
-    got = O.choose(wide, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    got = O.choose(wide, "call", True, (None, short), 50.0, caps, 0.30, today, True)
     assert got["status"] == "ok" and 0.50 <= got["contract"]["delta"] < 0.60 and "0.50-0.60" in got["notes"][0], got
     # ... but the same wide quotes outside regular hours are provisional: the 0.60-0.70 strike still passes
-    got = O.choose(wide, "call", True, (short, long_), 50.0, caps, 0.30, today, False)
+    got = O.choose(wide, "call", True, (None, short), 50.0, caps, 0.30, today, False)
     k = got["contract"]
     assert got["status"] == "ok" and 0.60 <= k["delta"] <= 0.70 and k["spread_provisional"] and not k["spread_ok"], got
     assert abs(k["lim"] - (k["mid"] + 0.08 * k["mid"] / 4)) < 1e-3           # cost uses the spread capped at 8%
@@ -779,24 +999,31 @@ def option_selftest(res, rows, miss, etf3, last, now):
     for x in thin:
         if x["exp"] == short and x["cp"] == "C" and 0.60 <= x["delta"] <= 0.70:
             x["oi"] = 120
-    got = O.choose(thin, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    got = O.choose(thin, "call", True, (None, short), 50.0, caps, 0.30, today, True)
     assert got["status"] == "fail" and "open interest only" in got["notes"][0], got
     # 4) too big for the Medium cap but inside the High cap -> ok-high-only
     big = synth_chain("BIG", 340.0, [short, long_], today, iv=0.35)
-    got = O.choose(big, "call", True, (short, long_), 340.0, caps, 0.30, today, True)
+    got = O.choose(big, "call", True, (None, short), 340.0, caps, 0.30, today, True)
     assert got["status"] == "ok-high-only" and got["contract"]["cost"] <= caps["high"] and got["cap"] == caps["high"], got
     # 5) puts mirror, at the put cap (half of High)
-    got = O.choose(ch, "put", True, (short, long_), 50.0, caps, 0.30, today, True)
+    got = O.choose(ch, "put", True, (None, short), 50.0, caps, 0.30, today, True)
     assert got["status"] == "ok" and -0.70 <= got["contract"]["delta"] <= -0.60 and got["cap"] == caps["put"], got
     # 6) options under $1: the spread limit is $0.10
     lo = synth_chain("LOW", 6.0, [short], today, iv=0.30, mults=(0.86, 0.88, 0.90, 0.92, 0.95, 1.0))
     a = O.assess(dict(lo[0], bid=0.60, ask=0.69), 6.0, 1680, 0.3, today, True)
     b = O.assess(dict(lo[0], bid=0.60, ask=0.75), 6.0, 1680, 0.3, today, True)
     assert a["spread_ok"] and not b["spread_ok"] and "spread $0.15" in b["reasons"], (a, b)
-    # 7) pullback: the 60+ day monthly is over the cap, the 45-59 day one fits -> allowed, with a note
+    # 7) the main expiration is over the cap, the nearer fallback fits -> allowed, with a note; with no main expiration
+    #    listed the fallback is used and the note says so
     mid_ = synth_chain("MID", 310.0, [short, long_], today, iv=0.30)
     got = O.choose(mid_, "call", False, (short, long_), 310.0, caps, 0.30, today, True)
-    assert got["status"] == "ok" and got["contract"]["exp"] == short and any("60+ over the cap" in n for n in got["notes"]), got
+    assert got["status"] == "ok" and got["contract"]["exp"] == short and any("90+ over the cap" in n for n in got["notes"]), got
+    got = O.choose(ch, "call", False, (short, None), 50.0, caps, 0.30, today, True)
+    assert got["status"] == "ok" and got["contract"]["exp"] == short and "no listed monthly 90+ days out" in got["notes"][0] \
+        and any("no 90+ monthly listed" in n for n in got["notes"]), got
+    # ... and a main expiration that fails on spread or open interest does not fall back (the fallback is for cost only)
+    got = O.choose(thin_all := [dict(x, oi=100) if x["exp"] == long_ else x for x in ch], "call", False, (short, long_), 50.0, caps, 0.30, today, True)
+    assert got["status"] == "fail", got
     # 8) a planned Friday that is a holiday maps to the listed Thursday
     hol = [dict(x, exp=dt.date(2027, 3, 25)) for x in ch[:4]]
     assert O.listed_expiration(hol, dt.date(2027, 3, 26), "C") == dt.date(2027, 3, 25)
@@ -804,16 +1031,18 @@ def option_selftest(res, rows, miss, etf3, last, now):
     assert O.is_monthly(dt.date(2027, 6, 17), HOLIDAYS) and not O.is_monthly(dt.date(2027, 6, 17))   # Juneteenth Friday
     assert O.is_monthly(dt.date(2026, 12, 18)) and not O.is_monthly(dt.date(2026, 12, 11))
     q = synth_chain("QTR", 50.0, [dt.date(2026, 11, 20), dt.date(2026, 12, 18), dt.date(2027, 2, 19)], today)
-    assert O.monthly_targets(q, today) == (dt.date(2026, 12, 18), dt.date(2027, 2, 19)), O.monthly_targets(q, today)
+    assert O.monthly_targets(q, today) == (None, dt.date(2027, 2, 19)), O.monthly_targets(q, today)   # Dec 18 is only 50 days out
+    q2 = q + synth_chain("QTR", 50.0, [dt.date(2027, 1, 15)], today)
+    assert O.monthly_targets(q2, today) == (dt.date(2027, 1, 15), dt.date(2027, 2, 19))                # 78 and 113 days out
     got = O.choose(q, "call", False, O.monthly_targets(q, today), 50.0, caps, 0.30, today, True)
     assert got["status"] == "ok" and got["contract"]["exp"] == dt.date(2027, 2, 19), got
     assert time_stop(dt.date(2027, 2, 19), today) == dt.date(2027, 1, 29) and time_stop(short, today) == dt.date(2026, 12, 8)
     # 8c) failure notes say why: strike gaps show the nearest deltas; one-sided quotes are named as such
     gap = synth_chain("GAP", 50.0, [short], today, mults=(0.80, 1.20))
-    got = O.choose(gap, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    got = O.choose(gap, "call", True, (None, short), 50.0, caps, 0.30, today, True)
     assert got["status"] == "fail" and got["notes"][0].startswith("no strike at 0.50-0.70 delta (nearest 40C"), got
     dead = [dict(x, bid=0.0) for x in ch]
-    got = O.choose(dead, "call", True, (short, long_), 50.0, caps, 0.30, today, True)
+    got = O.choose(dead, "call", True, (None, short), 50.0, caps, 0.30, today, True)
     assert got["status"] == "fail" and got["notes"][0] == "no two-sided quotes at Dec 18", got
     # 9) Cboe parsing: adjusted roots dropped, timestamp in UTC; regular-hours test
     js = {"timestamp": "2026-10-28 17:28:50", "data": {"current_price": 13.415, "options": [
@@ -906,7 +1135,7 @@ def option_selftest(res, rows, miss, etf3, last, now):
     assert apply_bar({"min_score": 9}) == {"call": 9, "put": 10}
     assert need({"dir": "call", "opt": {"status": "ok"}}) == 9 and need({"dir": "call", "opt": {"status": "ok-high-only"}}) == 10
     assert need({"dir": "put", "opt": {"status": "ok"}}) == 10 and need({"dir": "put", "opt": {"status": "fail"}}) == 10
-    c9 = O.plan_caps({"balance": 25561.0, "base": 25000, "phase": "Proving"})     # the Nov 3 2026 ledger balance
+    c9 = O.plan_caps(dict({"balance": 25561.0, "base": 25000, "phase": "Proving"}, **V76))   # the Nov 3 2026 ledger balance
     assert (c9["mode"], c9["medium"], c9["high"], c9["put"]) == ("Normal", 2300.49, 3834.15, 1917.07), c9
     assert sizing_caps(c9) == c9 and _bar_text().startswith("a 9 call is Medium conviction"), _bar_text()
     assert apply_bar({"min_score": 8}) == {"call": 8, "put": 10} and _bar_text().startswith("an 8-9 call"), _bar_text()
@@ -915,17 +1144,17 @@ def option_selftest(res, rows, miss, etf3, last, now):
     # one contract too big for the Medium cap but inside the High cap: ok at a bar of 10 (sized at High),
     # ok-high-only at a bar of 9 (so it needs 10 there too)
     big9 = synth_chain("BIG9", 440.0, [short, long_], today)
-    at10 = O.choose(big9, "call", True, (short, long_), 440.0, sizing_caps(c9), 0.30, today, True)
+    at10 = O.choose(big9, "call", True, (None, short), 440.0, sizing_caps(c9), 0.30, today, True)
     assert at10["status"] == "ok" and at10["cap"] == c9["high"], at10
     assert c9["medium"] < at10["contract"]["cost"] <= c9["high"], at10["contract"]["cost"]       # the case being tested
     apply_bar({"min_score": 9})
-    at9 = O.choose(big9, "call", True, (short, long_), 440.0, sizing_caps(c9), 0.30, today, True)
+    at9 = O.choose(big9, "call", True, (None, short), 440.0, sizing_caps(c9), 0.30, today, True)
     assert at9["status"] == "ok-high-only" and at9["cap"] == c9["high"] and need({"dir": "call", "opt": at9}) == 10, at9
     assert at9["contract"]["osi"] == at10["contract"]["osi"]
     # a bit cheaper: the 0.60-0.70 strikes miss the Medium cap but a 0.50-0.60 strike fits it -> ok at a 9, as the
     # plan allows when 0.60-0.70 doesn't fit the cap (never below 0.50)
     mid9 = synth_chain("MID9", 420.0, [short, long_], today)
-    got = O.choose(mid9, "call", True, (short, long_), 420.0, sizing_caps(c9), 0.30, today, True)
+    got = O.choose(mid9, "call", True, (None, short), 420.0, sizing_caps(c9), 0.30, today, True)
     k9 = got["contract"]
     assert got["status"] == "ok" and got["cap"] == c9["medium"] and 0.50 <= k9["delta"] < 0.60, got
     assert k9["cost"] <= c9["medium"] and any("0.50-0.60" in n for n in got["notes"]) and need({"dir": "call", "opt": got}) == 9
@@ -981,8 +1210,113 @@ def option_selftest(res, rows, miss, etf3, last, now):
     SCREEN["calls_at_high"] = False
     apply_bar(None)
     SCREEN["fed_bias"] = apply_fed(None)
+    v77_selftest(res, rows2, miss, etf3, last, now, caps, up)
     print(md)
     print("option screen ok:", k["osi"], k["delta"], k["cost"], up["score"], up["max"])
+
+
+def v77_selftest(res, rows2, miss, etf3, last, now, caps, up):
+    """Rules v7.7 additions: the regime and the automatic Fed point, shadow-only puts, the shadow step and the alerts."""
+    import copy
+    import tempfile
+    import numpy as np
+    # 15) market regime on final bars, and the Fed point it sets
+    didx = pd.bdate_range("2025-11-03", periods=260)
+    mk2 = lambda v: pd.DataFrame({"Open": v, "High": v, "Low": v, "Close": v, "Volume": 1e6}, index=didx)
+    macro = {"VIX": pd.Series(np.r_[np.full(254, 15.0), [16.0, 17.0, 18.0, 19.0, 20.0, 30.0]], index=didx),
+             "IRX": pd.Series(np.linspace(4.5, 4.0, 260), index=didx),             # falling: easing
+             "TNX": pd.Series(np.linspace(4.0, 4.6, 260), index=didx),             # above its 50-day average: tightening
+             "DXY": pd.Series(np.linspace(105, 99, 260), index=didx)}              # below its 50-day average: easing
+    bars_r = {"SPY": mk2(np.linspace(80, 120, 260)), "QQQ": mk2(np.linspace(120, 80, 260))}
+    after = dt.datetime.combine(didx[-1].date(), dt.time(18, 0), tzinfo=ET)
+    rg = regime(bars_r, macro, after)
+    sg = rg["signals"]
+    assert rg["easing"] == 2 and sg["tbill"]["easing"] and not sg["ten_year"]["easing"] and sg["dollar"]["easing"], rg
+    assert rg["SPY"]["above50"] and rg["SPY"]["above200"] and not rg["QQQ"]["above50"] and not rg["QQQ"]["above200"]
+    assert rg["VIX"] == dict(last=30.0, ago5=16.0) and rg["washout"] is True
+    early = dt.datetime.combine(didx[-1].date(), dt.time(11, 0), tzinfo=ET)        # before the close: today's values don't count
+    assert regime(bars_r, macro, early)["VIX"]["last"] == 20.0 and regime(bars_r, macro, early)["washout"] is False
+    assert regime({}, {}, after) == {"signals": {}} and regime_text({}).startswith("Market regime: not available")
+    txt = regime_text(rg)
+    assert "2 of 3 easing" in txt and "WASHOUT" in txt and "SPY 120.0 is above its 50-day" in txt, txt
+    assert apply_fed({"fed_bias": "auto"}, rg) == "auto (2 of 3 easing)" and FED == {"call": 1, "put": 0}
+    rg1 = dict(rg, easing=1, washout=False)
+    assert apply_fed({"fed_bias": "auto"}, rg1) == "auto (1 of 3 easing)" and FED == {"call": 0, "put": 1}
+    assert apply_fed({"fed_bias": "auto"}, {}) == "auto (signals unavailable)" and FED == {"call": 0, "put": 0}
+    assert apply_fed({"fed_bias": "calls"}, rg1) == "calls" and FED == {"call": 1, "put": 0}      # a fixed value overrides
+    # 16) puts shadow-only: the put tables collapse to one list, and the report says who gets the Fed point
+    REAL_PUTS["on"] = False
+    SCREEN["fed_bias"] = apply_fed({"fed_bias": "auto"}, rg1)
+    REGIME.update(rg1)
+    mdp = report(res, rows2, miss, etf3, last, now, "self-test", screened=True)
+    assert "## Puts: shadow test only, no real put trades (rules v7.7)" in mdp and "## Puts ready to verify" not in mdp, mdp
+    assert "Puts are shadow-only" in mdp and "**Market regime**" in mdp and "puts get the Fed point, calls don't" in mdp, mdp[:2500]
+    assert "first monthly 90+ days out" in mdp and "shadow-only, listed above" in mdp
+    REAL_PUTS["on"] = True
+    REGIME.clear()
+    # 17) the shadow step: runs once a day on regular-hours quotes, opens shadows from the scan's contracts
+    tmp = tempfile.mkdtemp()
+    saved = (SH.BOOK, SH.REPORT)
+    SH.BOOK, SH.REPORT = os.path.join(tmp, "shadow.json"), os.path.join(tmp, "shadow.md")
+    try:
+        SCREEN.update(run_regular=True, _chains={}, _cal={})
+        apply_fed({"fed_bias": "puts"})
+        t1 = dt.datetime(2026, 10, 26, 10, 30, tzinfo=ET)
+        book, out = shadow_step(copy.deepcopy(rows2), {}, t1, {"rate": 0.04}, {"g10_etfs": ["SPY"]}, fetch=False)
+        names = {(s_["tk"], s_["cp"]) for s_ in book["open"]}
+        assert out["ran"] and ("UPP", "C") in names and len(book["open"]) == len(out["new"]) and os.path.exists(SH.BOOK), out
+        upp = [s_ for s_ in book["open"] if s_["tk"] == "UPP"][0]
+        k = up["opt"]["contract"]
+        assert upp["osi"] == k["osi"] and abs(upp["entry"] - (k["mid"] + (k["ask"] - k["bid"]) / 4 + 0.01)) < 1e-3 and upp["score"] == up["score"]
+        assert any("near low" in s_["setup"] for s_ in book["open"] if s_["cp"] == "P")          # DNN put: logged, tagged
+        assert SCREEN["shadow_text"][0].startswith(f"- {len(book['open'])} open, 0 closed") and "Shadow ledger" in open(SH.REPORT).read()
+        _, again = shadow_step(copy.deepcopy(rows2), {}, t1, {"rate": 0.04}, {}, fetch=False)
+        assert again["ran"] is False and "already" in again["why"] and "no shadow changes" in SCREEN["shadow_text"][1]
+        SCREEN["run_regular"] = False
+        _, closed_ = shadow_step(copy.deepcopy(rows2), {}, t1 + dt.timedelta(days=1), {"rate": 0.04}, {}, fetch=False)
+        assert closed_["ran"] is False and "regular" in closed_["why"]
+    finally:
+        SH.BOOK, SH.REPORT = saved
+    # 18) alerts: a call that can reach the bar on regular-hours quotes, and exits due on real positions
+    apply_bar({"min_score": 9})
+    apply_fed({"fed_bias": "puts"})
+    SCREEN.update(run_regular=True, caps=caps, _cal={})
+    hot = copy.deepcopy(up)
+    hot.update(score=8, cat=1)                                   # 8 + a confirmed earnings date = 9
+    assert [a.split(":")[0] for a in build_alerts([hot], {}, now, {}, fetch=False)] == ["CALL AT THE BAR"]
+    hot["score"] = 7
+    assert build_alerts([hot], {}, now, {}, fetch=False) == []
+    hot.update(score=9, deal="425 x2")
+    assert build_alerts([hot], {}, now, {}, fetch=False) == []     # merger filings: no alert
+    hot.pop("deal")
+    SCREEN["run_regular"] = False
+    assert build_alerts([hot], {}, now, {}, fetch=False) == []     # after-hours quotes: no trade alert
+    SCREEN["run_regular"] = True
+    S0 = up["r"]["close"]
+    chain = synth_chain("UPP", S0, [k["exp"]], dt.date(2026, 9, 30), iv=0.30)
+    SCREEN["_chains"] = {"UPP": (dict(ts=None, price=S0), chain)}
+    ubars = {"UPP": pd.DataFrame({"Open": [S0], "High": [S0], "Low": [S0], "Close": [S0], "Volume": [1e6]}, index=pd.DatetimeIndex(["2026-10-22"]))}
+    pos = dict(tk="UPP", cp="C", strike=k["strike"], exp=k["exp"].isoformat(), qty=2, fill=k["mid"], inv=S0 - 5, time_stop="2026-12-24")
+    today_ = now.date().isoformat()
+    kinds = lambda **kw: [a.split(":")[0] for a in build_alerts([], {"open": [dict(pos, **kw)]}, now, ubars, fetch=False)]
+    assert kinds() == []                                                               # nothing due
+    assert kinds(inv=S0 + 1) == ["EXIT DUE"] and kinds(time_stop=today_) == ["EXIT DUE"]  # stock closed under the level; time stop
+    assert kinds(fill=round(k["mid"] / 1.6, 2)) == ["PROFIT STEP"] and kinds(fill=round(k["mid"] * 3, 2)) == ["EXIT DUE"]   # +50%; -60%
+    assert kinds(fill=round(k["mid"] / 1.2, 2), step_done=True, high=round(k["mid"] * 2, 2)) == ["EXIT DUE"]               # trailing stop
+    SCREEN["_cal"] = {"UPP": (now.date() + dt.timedelta(days=3), "BMO")}              # report Monday before the open
+    assert kinds() == ["EXIT DUE"] and "earnings exit" in build_alerts([], {"open": [pos]}, now, ubars, fetch=False)[0]
+    assert kinds(fill=round(k["mid"] / 1.2, 2), step_done=True, high=k["mid"]) == []   # past the profit step: held through the report
+    SCREEN["_cal"] = {}
+    assert kinds(strike=1.0) == ["NO QUOTE"] and kinds(fill="x") == ["CHECK FAILED"]
+    wrote = write_alert(["EXIT DUE: UPP test"], now, tmp)
+    body = open(os.path.join(tmp, "alert.md")).read()
+    assert wrote and body.startswith(f"Options plan alert {now:%Y-%m-%d}: exit due") and "- EXIT DUE: UPP test" in body and "never an order" in body
+    assert write_alert(["EXIT DUE: UPP test"], now, tmp) is False and not os.path.exists(os.path.join(tmp, "alert.md"))   # once a day
+    assert write_alert([], now, tmp) is False and write_alert(["EXIT DUE: UPP test"], now + dt.timedelta(days=1), tmp) is True
+    apply_bar(None)
+    SCREEN["fed_bias"] = apply_fed(None)
+    SCREEN.pop("_chains", None)
+    SCREEN.pop("alerts", None)
 
 
 def run_scan():
@@ -1001,8 +1335,11 @@ def run_scan():
         bars.update(download(late))
     results, missing, etf3, dates = run(bars, groups, stocks, now)
     plan, screened = load_plan(), False
+    REAL_PUTS["on"] = bool((plan or {}).get("real_puts", True))
+    REGIME.clear()
+    REGIME.update(regime(bars, download_macro(), now))
     apply_bar(plan)                                      # the bar and the Fed point first: rank_rows' Max uses them
-    SCREEN["fed_bias"] = apply_fed(plan)
+    SCREEN["fed_bias"] = apply_fed(plan, REGIME)
     rows = rank_rows(results, expected)
     if plan and rows:
         try:
@@ -1012,10 +1349,26 @@ def run_scan():
             import traceback
             traceback.print_exc()
             SCREEN["error"] = f"{type(e).__name__}: {e}"
+    import traceback
+    if screened:
+        try:
+            shadow_step(rows, bars, now, plan, groups)
+        except Exception as e:                               # the scan still ships; the shadow book is left as it was
+            traceback.print_exc()
+            SCREEN["shadow_text"] = [f"- Shadow ledger step failed ({type(e).__name__}: {str(e)[:120]}); the book was not changed."]
+    alerts = []
+    try:
+        alerts = build_alerts(rows, plan, now, bars) if plan else []
+    except Exception as e:
+        traceback.print_exc()
+        alerts = [f"ALERT CHECK FAILED: {type(e).__name__}: {str(e)[:120]}. Check open positions by hand."]
+    SCREEN["alerts"] = alerts
     md = report(results, rows, missing, etf3, expected, now, src, screened=screened)
     if SCREEN.get("error"):
         md = md.replace("**Option check not run**", f"**Option check failed ({SCREEN['error'][:150]})**")
     write(md, results, rows, expected.isoformat())
+    if write_alert(alerts, now):
+        print("ALERT written:", alerts)
     print(md)
 
 

@@ -25,6 +25,8 @@ import math
 import os
 import sys
 
+from setups import INV_ATR
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BOOK = os.path.join(ROOT, "results", "shadow.json")
 REPORT = os.path.join(ROOT, "results", "shadow.md")
@@ -43,14 +45,15 @@ def new_book():
     return dict(version=1, updated=None, next_id=1, open=[], closed=[], notes=[])
 
 
-def load(path=BOOK):
+def load(path=None):
     try:
-        return json.load(open(path))
+        return json.load(open(path or BOOK))
     except FileNotFoundError:
         return new_book()
 
 
-def save(book, path=BOOK):
+def save(book, path=None):
+    path = path or BOOK
     os.makedirs(os.path.dirname(path), exist_ok=True)
     json.dump(book, open(path, "w"), indent=1)
 
@@ -119,6 +122,7 @@ def process(book, today, quotes, closes_by, earn=None, holidays=()):
         if reason:
             xv = exit_value(mid, spread)
             rec = {k: s[k] for k in ("id", "src", "tk", "cp", "strike", "exp", "score", "tier", "setup", "entry_date", "entry")}
+            rec["rules"] = s.get("rules", "7.6")          # exits and contract rules the shadow was opened under
             rec.update(exit_date=today, exit=round(xv, 4), ret=round(xv / s["entry"] - 1, 4),
                        reason=reason + (" (late)" if late else ""), stepped=s["step_done"])
             book["closed"].append(rec)
@@ -180,12 +184,13 @@ def open_shadow(book, score, x, today, src="scan"):
     lv = x["r"]["levels_" + x["dir"]]
     S, atr, e10 = float(o["S"]), float(lv["atr14"]), float(lv["ext10_close"])
     put = x["dir"] == "put"
-    inv = min(max(e10, S + atr), S + 2 * atr) if put else max(min(e10, S - atr), S - 2 * atr)
+    lo, hi = INV_ATR[0] * atr, INV_ATR[1] * atr          # the level stays 2 to 3 ATR from the price (rules v7.7)
+    inv = min(max(e10, S + lo), S + hi) if put else max(min(e10, S - lo), S - hi)
     mid = (c["bid"] + c["ask"]) / 2
     entry = round(mid + (c["ask"] - c["bid"]) / 4 + FEE, 4)
     iso = lambda d: d.isoformat() if isinstance(d, dt.date) else str(d)
     e = x.get("earn") or {}
-    s = dict(id=f"A{book['next_id']}", src=src, entry_date=today, tk=x["r"]["tk"], cp="P" if put else "C",
+    s = dict(id=f"A{book['next_id']}", src=src, rules="7.7", entry_date=today, tk=x["r"]["tk"], cp="P" if put else "C",
              strike=c["strike"], exp=iso(c["exp"]), osi=c["osi"], score=score, tier=tier(score), setup=setup_name(x),
              entry=entry, inv=round(inv, 2), step=round(1.5 * entry, 4), step_done=False, high_mid=round(mid, 4),
              time_stop=iso(x["ts"]), earn_exit=e.get("exit_by") if not e.get("recent") else None,
@@ -258,7 +263,74 @@ def update(book, now, rows, bars, chains, earn, r, fed, etfs=(), holidays=(), re
     return dict(ran=True, events=events, new=new, quotes=len(quotes))
 
 
+# ------------------------------------------------------------------------------------------------------- real positions
+def osi_symbol(tk, exp, cp, strike):
+    return f"{tk}{exp[2:4]}{exp[5:7]}{exp[8:10]}{cp}{int(round(float(strike) * 1000)):08d}"
+
+
+def position_alerts(positions, today, chains, closes_by, earn=None, holidays=()):
+    """Exit checks for the REAL positions the session lists in plan.json under "open", with the same rules as the
+    shadows. Each position: tk, cp, strike, exp, qty, fill, inv (stock exit level), time_stop, and optionally step_done,
+    high (highest option close since entry) and earn_exit. Returns alert lines; the option-price checks use delayed
+    quotes, so the owner still judges them at 3:00 PM ET."""
+    import events as E
+    out = []
+    for p in positions:
+        label = f"{p.get('tk')} {float(p.get('strike', 0)):g}{p.get('cp')} {p.get('exp')} x{p.get('qty', 1)}"
+        try:
+            fill = float(p["fill"])
+            s = dict(cp=p["cp"], entry=fill, inv=float(p["inv"]), step=1.5 * fill, step_done=bool(p.get("step_done")),
+                     high_mid=float(p.get("high") or fill), time_stop=p["time_stop"], earn_exit=p.get("earn_exit"))
+            nxt = (earn or {}).get(p["tk"])
+            if nxt and nxt[0].isoformat() >= today:
+                ctx = E.earnings_context(nxt[0], nxt[1], dt.date.fromisoformat(today), dt.date.fromisoformat(p["exp"]),
+                                         dt.date.fromisoformat(p["time_stop"]), holidays)
+                s["earn_exit"] = ctx.get("exit_by") or s["earn_exit"]
+            osi = p.get("osi") or osi_symbol(p["tk"], p["exp"], p["cp"], p["strike"])
+            q = None
+            if p["tk"] in chains:
+                c = next((k for k in chains[p["tk"]][1] if k["osi"] == osi), None)
+                if c and c["bid"] > 0 and c["ask"] >= c["bid"]:
+                    q = (c["bid"] + c["ask"]) / 2
+            was = s["step_done"]
+            reason, late = check(s, today, q if q is not None else fill, closes_by.get(p["tk"], [])[-1:])
+            if reason and (q is not None or not reason.startswith(("-60%", "trailing"))):
+                how = ("sell today; a stop exit steps down to the bid until filled" if reason.startswith(("invalidation", "-60%", "trailing"))
+                       else "sell before today's close; this exit is mandatory, so step down to the bid until filled")
+                out.append(f"EXIT DUE: {label}: {reason}{' (late)' if late else ''}" + (f", option mid {q:.2f}" if q is not None else "")
+                           + f". Action: {how}.")
+            elif s["step_done"] and not was:
+                out.append(f"PROFIT STEP: {label}: option mid {q:.2f} is at or above +50% ({s['step']:.2f}). Sell half (rounded up) and "
+                           "move the stop on the rest to breakeven; with one contract just move the stop.")
+            elif q is None:
+                out.append(f"NO QUOTE: {label}: no two-sided quote found, so the option-price exits were not checked.")
+        except Exception as e:
+            out.append(f"CHECK FAILED: {label}: {type(e).__name__}: {e}. Check this position by hand.")
+    return out
+
+
 # ------------------------------------------------------------------------------------------------------- report
+def summary_lines(book, summary=None):
+    """A few lines for the scan report."""
+    cl, op = book["closed"], book["open"]
+    n, m, se, win = stat([c["ret"] for c in cl])
+    L = [f"- {len(op)} open, {len(cl)} closed" + (f" (average {m:+.1%} a trade, {sum(1 for c in cl if c['ret'] > 0)} wins)" if n else "")
+         + f". Last updated {book.get('updated') or 'never'}. Full tables: results/shadow.md"]
+    if summary and summary.get("ran"):
+        ev = summary.get("events") or []
+        done = [e for e in ev if e["kind"] == "closed"]
+        L.append(f"- This run: {len(done)} closed" + (" (" + ", ".join(f"{e['tk']} {e['ret']:+.0%}" for e in done) + ")" if done else "")
+                 + f", {len(summary.get('new') or [])} opened"
+                 + (" (" + ", ".join(f"{s['tk']} {s['cp']} {s['score']}" for s in summary['new']) + ")" if summary.get("new") else "")
+                 + f", {sum(1 for e in ev if e['kind'] == 'no quote')} without a quote.")
+    elif summary:
+        L.append(f"- This run made no shadow changes ({summary.get('why')}).")
+    for label, cp, nl in (("Calls", "C", False), ("Puts", "P", False)):
+        ok, text = gate(cl, cp, nl)
+        L.append(f"- {label} scoring 7+ vs the random benchmark: {'PASSED' if ok else 'not yet'} ({text})")
+    return L
+
+
 def tally(closed):
     """{(cp, setup, tier): [count, wins, sum, sum of squares]} of returns as a fraction of the entry cost."""
     T = {}
@@ -329,6 +401,13 @@ def report(book, summary=None):
     for label, cp, nl in (("Calls", "C", False), ("Puts", "P", False), ("Puts near a 52-week low", "P", True)):
         ok, text = gate(cl, cp, nl)
         L += [f"- {label}: {'PASSED' if ok else 'not yet'} ({text})"]
+    L += ["", "## Calls by the trading bar (the plan trades calls at 9+; 7 and 8 are logged to test that bar)", "",
+          "| Score | Closed | Wins | Average | 95% interval |", "|---|---|---|---|---|"]
+    for name, lo_, hi_ in (("9+", 9, 99), ("7-8", 7, 8), ("under 7", -99, 6)):
+        rets = [c["ret"] for c in cl if c["cp"] == "C" and lo_ <= c["score"] <= hi_]
+        k, mm, s2, w = stat(rets)
+        iv = f"{pct(mm - 1.96 * s2)} to {pct(mm + 1.96 * s2)}" if s2 is not None else "n/a"
+        L += [f"| {name} | {k} | {sum(1 for x in rets if x > 0)} | {pct(mm)} | {iv} |"]
     L += ["", "## By setup", "", "| Direction | Setup | Tier | Closed | Wins | Average |", "|---|---|---|---|---|---|"]
     T = tally(cl)
     for (cp, setup, t), v in sorted(T.items()):
@@ -440,7 +519,7 @@ def selftest():
     p = open_shadow(book, 7, row("PUT", "put", 6, near_low=True), "2026-11-09")
     assert p["inv"] == 55.0 and p["setup"] == "Failed rally near low" and p["id"] == "A2"
     p2 = open_shadow(book, 7, row("PUT2", "put", 6, opt=dict(status="ok", regular=True, S=40.0, contract=rows[8]["opt"]["contract"])), "2026-11-09")
-    assert p2["inv"] == 44.0                                                                        # no farther than 2 ATR
+    assert p2["inv"] == 46.0                                                                        # no farther than 3 ATR
     # update(): runs once a day, only with regular-hours quotes
     book = new_book()
     book["open"] = [mk()]

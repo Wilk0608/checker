@@ -6,6 +6,7 @@ on:
   workflow_dispatch: {}
 permissions:
   contents: write
+  issues: write            # the alert step opens an issue, which emails the repository owner
 concurrency:                  # one scan at a time: an overlapping run waits, so two runs never race to push results
   group: daily-setup-scan
   cancel-in-progress: false
@@ -29,3 +30,12 @@ jobs:
           git diff --cached --quiet || git commit -m "Setup scan $(date -u +%Y-%m-%d)"
           git pull --rebase -q origin main
           git push
+      - name: Raise an alert (GitHub issue) when the scan wrote one
+        if: hashFiles('results/alert.md') != ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="$(head -n 1 results/alert.md)"
+          { tail -n +2 results/alert.md; echo; echo "@${{ github.repository_owner }}"; } > "$RUNNER_TEMP/alert_body.md"
+          gh issue create --repo "${{ github.repository }}" --title "$title" --body-file "$RUNNER_TEMP/alert_body.md"

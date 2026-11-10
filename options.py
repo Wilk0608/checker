@@ -1,4 +1,4 @@
-"""Option screen (rules v7.6): for every setup, find the contract the plan would buy and apply the plan's option rules.
+"""Option screen (rules v7.7): for every setup, find the contract the plan would buy and apply the plan's option rules.
 
 Quotes: Cboe's free delayed quotes (cdn.cboe.com, about 15 minutes late), one file per underlying holding every listed
 contract's bid, ask, open interest, IV and delta. Cboe refreshes busy names every few minutes but can leave a quiet name's
@@ -6,15 +6,16 @@ file from the night before; when a run during regular hours gets a file stamped 
 open interest for the chosen expiration are re-read from Nasdaq's option chain and IV and delta are rebuilt from them.
 
 Rules applied (from <contract_selection>, <idea_generation> and <risk_rules>):
-- Expiration: a fresh breakout/breakdown uses the monthly 45-59 days out; a pullback/failed rally uses the first monthly
-  60+ days out, or the 45-59 day monthly when no 60+ contract fits the cap.
+- Expiration: the first monthly 90+ days out for every setup, or the first monthly 60+ days out when no 90+ day contract
+  fits the cap (or none is listed).
 - Delta 0.60-0.70 (puts -0.60 to -0.70). When no strike in that band passes and at least one failed the spread rule or
   the cap (or the band has no strike), 0.50-0.60 is allowed. Never below 0.50.
 - Liquidity: open interest 500+ and a bid-ask spread no wider than 8% of the mid ($0.10 if the mid is under $1). The plan
   judges spreads on regular-hours quotes only, so a spread read from closing or after-hours quotes is marked provisional:
   it is shown, but it doesn't fail the contract.
 - Cost: one contract at the most the plan pays (mid + a quarter of the spread) plus the $1 fee must fit the cap: Medium
-  for calls (High noted when only that fits), half of High for puts. Caps come from plan.json.
+  for calls (High noted when only that fits), half of High for puts (puts are shadow-only under v7.7; the cap keeps
+  their shadow contracts comparable). Caps come from plan.json.
 - Points the scan can now score: liquidity (2 = spread <= 5% and OI 1,000+; 1 = <= 8% and 500+) and pricing (2 = IV/HV
   <= 1.1 and breakeven within 0.5 sigma; 1 = IV/HV <= 1.3 and within 1.0 sigma). The breakeven uses the max limit price
   plus the fee, as the session does.
@@ -42,13 +43,17 @@ BAND_A, BAND_B = (0.60, 0.70), (0.50, 0.60)
 
 
 # ----------------------------------------------------------------------------------------------------- plan and math
+SIZES = dict(size_medium=0.06, size_high=0.10, press_medium=0.09, press_high=0.15)   # rules v7.7 defaults
+
+
 def plan_caps(plan):
-    """Size mode and dollar caps from plan.json, exactly as <risk_rules>: Proving High 15% / Medium 9% (Pressing 25% /
-    15%) of the current balance; x0.75 below the base, x0.5 below 70% of it, nothing below 60% (hard stop); puts trade at
-    half the High size."""
+    """Size mode and dollar caps from plan.json, as <risk_rules> v7.7: Proving High 10% / Medium 6% of the current
+    balance, Pressing 15% / 9% (plan.json can override: size_medium, size_high, press_medium, press_high); x0.75 below
+    the base, x0.5 below 70% of it, nothing below 60% (hard stop). The put cap is half the High size."""
     bal, base = float(plan["balance"]), float(plan["base"])
     pressing = str(plan.get("phase", "Proving")).lower().startswith("pressing")
-    hi, med = (0.25, 0.15) if pressing else (0.15, 0.09)
+    z = {k: float(plan.get(k, v)) for k, v in SIZES.items()}
+    hi, med = (z["press_high"], z["press_medium"]) if pressing else (z["size_high"], z["size_medium"])
     if bal >= base:
         mode, mult = "Normal", 1.0
     elif bal >= 0.7 * base:
@@ -58,7 +63,8 @@ def plan_caps(plan):
     else:
         mode, mult = "Hard stop", 0.0
     return dict(mode=mode, high=round(bal * hi * mult, 2), medium=round(bal * med * mult, 2),
-                put=round(bal * hi / 2 * mult, 2), balance=bal, phase="Pressing" if pressing else "Proving")
+                put=round(bal * hi / 2 * mult, 2), balance=bal, phase="Pressing" if pressing else "Proving",
+                pct_high=hi, pct_medium=med)
 
 
 def _ncdf(x):
@@ -265,13 +271,14 @@ def is_monthly(d, holidays=()):
     return d.weekday() == 3 and 15 <= nxt.day <= 21 and nxt in holidays
 
 
-def monthly_targets(contracts, entry, holidays=()):
-    """(short, long) from the expirations this chain actually lists: the monthly 45-59 days after entry and the first
-    monthly 60+ days out. Stocks on quarterly cycles skip months, so these can differ from the market-wide calendar."""
+def monthly_targets(contracts, entry, holidays=(), main_days=90, fallback_days=60):
+    """(fallback, main) from the expirations this chain actually lists: main = the first monthly 90+ days after entry;
+    fallback = the first monthly 60+ days out when that is an earlier one (else None). Stocks on quarterly cycles skip
+    months, so these can differ from the market-wide calendar."""
     exps = sorted({c["exp"] for c in contracts if is_monthly(c["exp"], holidays)})
-    short = next((e for e in exps if 45 <= (e - entry).days <= 59), None)
-    long_ = next((e for e in exps if (e - entry).days >= 60), None)
-    return short, long_
+    main = next((e for e in exps if (e - entry).days >= main_days), None)
+    fb = next((e for e in exps if (e - entry).days >= fallback_days), None)
+    return (fb if fb != main else None), main
 
 
 def listed_expiration(contracts, planned, cp):
@@ -372,17 +379,18 @@ def choose_at(contracts, exp, cp, S, cap, hv, today, regular, r):
 
 
 def choose(contracts, direction, fresh, plan_exps, S, caps, hv, today, regular, r=0.04):
-    """Contract the plan would buy for one setup. plan_exps = (expiration_45_59_or_None, expiration_60_plus).
-    Returns a dict with status: ok | ok-high-only | fail, the chosen contract (if any) and notes."""
+    """Contract the plan would buy for one setup. plan_exps = (fallback_expiration_or_None, main_expiration): the main
+    one is tried first; the fallback is allowed when the main one is over the cap or isn't listed. `fresh` is unused
+    (rules v7.7 use one expiration rule for every setup). Returns a dict with status: ok | ok-high-only | fail, the
+    chosen contract (if any) and notes."""
     cp = "C" if direction == "call" else "P"
     cap = caps["medium"] if direction == "call" else caps["put"]
-    short, long_ = plan_exps
-    order = [("45-59", short)] if (fresh and short) else [("60+", long_)]
-    if not fresh and short:
-        order.append(("45-59", short))                  # allowed only when no 60+ contract fits the cap
-    notes, tried = [], []
-    if long_ is None and not (fresh and short):
-        notes.append("no listed monthly 60+ days out")
+    fb, main = plan_exps
+    order = [("main", main), ("fallback", fb)]
+    notes = []
+    if main is None:
+        notes.append("no listed monthly 90+ days out")
+    main_tried = False
     for label, planned in order:
         if planned is None:
             continue
@@ -391,14 +399,15 @@ def choose(contracts, direction, fresh, plan_exps, S, caps, hv, today, regular, 
             notes.append(f"no listed {planned:%b %d} expiration")
             continue
         pick, n, cost_blocked = choose_at(contracts, exp, cp, S, cap, hv, today, regular, r)
-        tried.append(label)
         if pick:
-            if label == "45-59" and not fresh:
-                n = n + ["45-59 day expiration (60+ over the cap)"]
+            if label == "fallback":
+                n = n + ["60+ day expiration (" + ("90+ over the cap" if main_tried else "no 90+ monthly listed") + ")"]
             return dict(status="ok", contract=pick, notes=notes + n, cap=cap)
         notes += n
-        if label == "60+" and not cost_blocked:
-            break                                       # the 45-59 fallback is for cost only
+        if label == "main":
+            main_tried = True
+            if not cost_blocked:
+                break                                   # the fallback is for cost only
     # calls: would it fit at High conviction (10+)?
     if direction == "call" and caps["high"] > cap:
         hi_caps = dict(caps, medium=caps["high"])
