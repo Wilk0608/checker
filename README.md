@@ -1,42 +1,53 @@
 # checker
 
-Daily options-setup scanner for the RAHHH plan (rules v7.6). Every weekday it scans the whole US market for the plan's
-chart setups, prices the option contract the plan would buy for each one, and lists only the setups whose contract
-passes the plan's option rules.
+Daily options-setup scanner for the RAHHH plan (rules v7.7, in `RULES.md`). Every weekday it scans the whole US market
+for the plan's chart setups, prices the option contract the plan would buy for each one, lists the setups whose contract
+passes the plan's option rules, reads the market regime, runs the shadow test, and raises an alert when something needs
+the owner.
 
 ## Files
 
+- `RULES.md`: the plan's rules (the text of the Claude project instructions).
 - `universe.py`: the full-market universe. Every US-listed common stock from Nasdaq's stock screener (NASDAQ, NYSE and NYSE American) with a last price of $4.50-$300 and 300,000+ shares on its latest day, with its sector (GICS from the iShares Russell 3000 file, else Nasdaq's label), which picks the sector ETF for relative strength. If the screener can't be reached, the last saved list in `results/universe.json` is used and the report says so.
 - `universe.txt`: a curated list (including the ETFs) that is always scanned on top of the full market. Edit freely.
-- `setups.py`: the setup rules (breakout, breakdown, pullback, failed rally, trend score, 52-week-low block), each setup's stop (thesis invalidation), nearest swing-level target and reward-to-risk, and the contract calendar (expiration and time stop by setup type).
+- `setups.py`: the setup rules (breakout, breakdown, pullback, failed rally, trend score, 52-week-low block), each setup's stop (the 10-session extreme close, kept 2 to 3 ATR from the price), nearest swing-level target and reward-to-risk, and the contract calendar (first monthly expiration 90+ days out, time stop 21 days before it).
 - `options.py`: the option check. For each setup it reads the full option chain (Cboe's free delayed quotes), picks the contract the plan would buy and applies the plan's rules:
-  - expiration: the monthly 45-59 days out for a fresh breakout/breakdown; the first monthly 60+ days out for a pullback/failed rally, or the 45-59 day one when no 60+ contract fits the cap;
+  - expiration: the first monthly 90+ days out, or the first monthly 60+ days out when the 90+ day contract doesn't fit the cap;
   - delta 0.60-0.70, or 0.50-0.60 when the 0.60-0.70 strikes fail the spread rule or the cap (never below 0.50);
   - open interest 500+, bid-ask spread 8% of the mid or less ($0.10 under $1), judged on regular-hours quotes only;
-  - one contract at mid + a quarter of the spread + the $1 fee must fit the cap (Medium for calls, half of High for puts);
+  - one contract at mid + a quarter of the spread + the $1 fee must fit the cap (Medium 6% of the balance for calls, High 10% for a call that can score 10);
   - liquidity and pricing points (IV/HV and breakeven in sigma), the two score factors that need option data.
 
   Cboe leaves some quiet names' files from the night before; when a market-hours run gets one of those, the chosen expiration's quotes are re-read from Nasdaq's option chain.
-- `events.py`: earnings dates (Nasdaq's earnings calendar), which set the catalyst point, the pre-event rule and the earnings-exit date; a provisional pre-event test (implied move from the at-the-money straddle vs the average reaction to the past year's reports, with report dates from Yahoo); and merger filings in the last 120 days (Nasdaq's SEC-filings feed: Form 425, SC 14D9, SC TO-T/TO-C, DEFM14A/PREM14A and similar).
-- `plan.json`: the account figures the caps come from (balance, base, phase, T-bill rate), plus two settings:
-  - `min_score`: the lowest call score you trade. Puts always need 10, because the plan trades puts at High conviction only. At 9 (the current setting), a 9 is Medium conviction and must fit the Medium cap, a 10+ is sized at the High cap, and a call whose contract fits only the High cap needs 10. At 10 (High conviction only), the tables list only setups that can reach 10 and calls are sized at the High cap. At 7 you get the plan's full Medium tier.
-  - `fed_bias`: the direction the session's Fed Chessboard read supports (`calls`, `puts`, `both` or `none`). Only that direction can get the Fed point in Max, so each setup is held to the bar it can actually reach. If it's left out, both directions get the point.
-
-  The trading session updates the file when the ledger or its Fed read changes, and the report prints the date it was last updated.
-- `scanner.py`: downloads ~13 months of daily bars for the universe, applies the exact filters (price $5-275, 20-day average volume 1M+) and setup rules to final bars, runs the option check, and writes `results/latest.md`, `results/latest.json` (everything, including each setup's chosen contract) and a dated copy.
-- `.github/workflows/scan.yml`: runs twice each weekday and commits the results. Run it any time from the Actions tab ("Run workflow").
+- `events.py`: earnings dates (Nasdaq's earnings calendar), which set the catalyst point, the pre-event rule and the earnings-exit date; a provisional pre-event test; and merger filings in the last 120 days.
+- `shadow.py`: the automatic shadow ledger. Once each trading day, on regular-hours quotes, it opens one-contract paper trades for the day's best setups in every score tier (calls and puts), applies the plan's exits to the open ones, and writes `results/shadow.json` and `results/shadow.md`. It also checks the exits of the real positions listed in `plan.json`.
+- `scanner.py`: downloads ~13 months of daily bars, applies the filters and setup rules to final bars, runs the option check, the market regime, the shadow ledger and the alerts, and writes the files in `results/`.
+- `plan.json`: the account figures and settings (public, like everything here):
+  - `balance`, `base`, `phase`, `rate`: what the dollar caps come from.
+  - `min_score`: the lowest call score traded (9: a 9 is Medium conviction, 10+ is High).
+  - `real_puts`: false means puts are shadow-only, so the report lists them in one line.
+  - `fed_bias`: `auto` lets the three Fed signals decide who gets the Fed point; `calls`, `puts`, `both` or `none` overrides them.
+  - `open`: the real positions (`tk, cp, strike, exp, qty, fill, inv, time_stop, step_done, high`), so the scan can raise exit alerts.
+- `session/acct.py`, `session/score.py`: the math a trading session needs (ledger stats and caps; live scoring, sizing, exits, outcome map and alert levels). Both have a `--test`.
+- `backtest/`: the 10-year backtest behind rules v7.7 (`fetch.py` downloads the data in a GitHub Action, `engine.py` simulates the plan's exits with an IV model fitted on quotes the scanner collected).
+- `.github/workflows/scan.yml`: runs twice each weekday, commits the results, and opens a GitHub issue when the scan wrote an alert. Run it any time from the Actions tab ("Run workflow").
 
 ## Schedule
 
-- **After the close** (scheduled 5:17 PM EDT / 4:17 PM EST): setups on the day's final bars. Option quotes at this hour are closing quotes, so spreads are shown but marked provisional (a `*`) and don't fail a contract.
-- **During the session** (scheduled 11:07 AM EDT / 10:07 AM EST): the same setups on official closes, re-checked with regular-hours option quotes. This is the file a trading session should read.
+- **After the close** (scheduled 5:17 PM EDT / 4:17 PM EST): setups on the day's final bars. Option quotes at this hour are closing quotes, so spreads are shown but marked provisional (a `*`) and don't fail a contract. No shadow update and no call alerts.
+- **During the session** (scheduled 11:07 AM EDT / 10:07 AM EST): the same setups on official closes, re-checked with regular-hours option quotes. This run updates the shadow ledger and can raise call alerts. This is the file a trading session should read.
 
-GitHub runs scheduled jobs late when it is busy (delays of hours have happened), so the report header shows when it actually ran and when the quotes were taken.
+GitHub runs scheduled jobs late when it is busy, so the report header shows when it actually ran and when the quotes were taken.
+
+## Results
+
+- `results/latest.md` (and a dated copy): alerts, the market regime, calls ready to verify, calls with earnings within 2 weeks, puts (shadow-only), merger filings, setups that can't reach the bar, setups with no passing contract, and the shadow summary. `results/latest.json` has everything, including each setup's chosen contract.
+- `results/regime.json`: SPY and QQQ against their 50- and 200-day averages, VIX, and the three Fed signals: the 3-month T-bill yield no more than 0.10 points above its level 63 sessions ago, the 10-year yield below its 50-day average, the dollar index below its 50-day average. With 2 or 3 easing, calls get the Fed point.
+- `results/shadow.md`: the shadow ledger: P/L, each score tier against the random benchmark, calls at 9+ against calls at 7 and 8, and results by setup.
+- `results/alert.md`: exists only while there is a new alert. `CALL AT THE BAR` = a call that reaches the bar with the Fed point and a confirmed earnings date; `EXIT DUE` and `PROFIT STEP` = a real position in `plan.json` hit an exit rule on delayed quotes. Alerts are notifications, never orders.
 
 ## Reading the report
 
-Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings date, estimated, falls inside the option's life). The trading session adds the Fed point when its Fed read supports the direction (`fed_bias` in `plan.json`) and raises the catalyst to 2 once the date is confirmed, so Max = Score + Fed point (0 or 1) + (2 - catalyst). Calls need `min_score` (7 when it isn't set) and puts need 10; a call whose contract only fits the High cap needs 10 as well. The report's option-check line prints the bar, how it sizes, and which direction gets the Fed point.
+Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings date, estimated, falls inside the option's life). Max = Score + Fed point (0 or 1) + (2 - catalyst): the session confirms the earnings date. Calls need `min_score`; a call whose contract only fits the High cap needs 10.
 
-Sections: calls and puts ready to verify; calls and puts with earnings within 2 weeks (the pre-event rule, with the provisional test result); names with merger filings (read the filing: a stock agreed to be acquired is an automatic reject); setups whose contract passes but whose Max can't reach the bar; setups with no passing contract, grouped by reason; puts near the 52-week low (shadow log only); and the watch list.
-
-Each trading session reads `results/latest.md`, then verifies finalists on live broker data before scoring. The free data sources can differ slightly from the broker's (quotes are about 15 minutes late), so nothing here is an entry signal on its own.
+The free data sources can differ slightly from the broker's (quotes are about 15 minutes late), so nothing here is an entry signal on its own. A session verifies every finalist on live broker data.
