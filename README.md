@@ -48,6 +48,6 @@ GitHub runs scheduled jobs late when it is busy, so the report header shows when
 
 ## Reading the report
 
-Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings date, estimated, falls inside the option's life). Max = Score + Fed point (0 or 1) + (2 - catalyst): the session confirms the earnings date. Calls need `min_score`; a call whose contract only fits the High cap needs 10.
+Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings date falls inside the option's life: a date on the calendar, or a stock's next quarterly report when the contract has 95+ days left and the date isn't scheduled yet). Max = Score + Fed point (0 or 1) + (2 - catalyst): the session confirms the earnings date. Nothing is added for the catalyst when there is no date to confirm (an unscheduled report, or an ETF). Calls need `min_score`; a call whose contract only fits the High cap needs 10.
 
 The free data sources can differ slightly from the broker's (quotes are about 15 minutes late), so nothing here is an entry signal on its own. A session verifies every finalist on live broker data.

@@ -379,16 +379,26 @@ def evaluate_row(x, meta, contracts, S, caps, entry, regular, r):
     return x
 
 
-def apply_events(x, cal_entry, entry):
-    """Earnings context, the estimated catalyst point and the final Score / Max for a row with a contract."""
+EST_REPORT_DAYS = 95      # a contract with this many days left always contains a stock's next quarterly report
+
+
+def apply_events(x, cal_entry, entry, is_etf=False):
+    """Earnings context, the catalyst point and the final Score / Max for a row with a contract.
+    Catalyst 1 = an earnings date inside the option's life: a date on the calendar (the session can confirm it, which
+    makes it 2), or, when the calendar has none yet (it lists about 40 days), the next quarterly report of a stock whose
+    contract has 95+ days left (cat_est: an estimated date with nothing to confirm, so Max adds nothing). An ETF has no
+    report, so its Max adds nothing either."""
     c = (x.get("opt") or {}).get("contract")
     if not c:
         return
     ctx = E.earnings_context(cal_entry[0], cal_entry[1], entry, c["exp"], x["ts"], HOLIDAYS) if cal_entry else {}
     x["earn"] = ctx
     x["cat"] = 1 if ctx.get("inside_life") else 0
+    x["cat_est"] = bool(not x["cat"] and not is_etf and (c["exp"] - entry).days >= EST_REPORT_DAYS)
+    if x["cat_est"]:
+        x["cat"] = 1
     x["score"] = x["known"] + x["liq"] + x["pricing"] + x["cat"]
-    x["max"] = x["score"] + FED[x["dir"]] + (2 - x["cat"])
+    x["max"] = x["score"] + FED[x["dir"]] + (0 if (x["cat_est"] or is_etf) else 2 - x["cat"])
 
 
 def latest_price(raw):
@@ -457,7 +467,7 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
         except Exception as e:
             SCREEN["earn_error"] = f"{type(e).__name__}: {e}"
     for x in ok:
-        apply_events(x, cal.get(x["r"]["tk"]), entry)
+        apply_events(x, cal.get(x["r"]["tk"]), entry, x["r"]["tk"] in etfs)
     # provisional pre-event tests (Yahoo report dates + the scan's daily bars + the Cboe straddle)
     pre = [x for x in ok if (x.get("earn") or {}).get("pre_event") and x["max"] >= need(x)]
     hist, pre_fail = {}, []
@@ -530,7 +540,7 @@ def _opt_cells(x):
     spr = f"{c['spread_pct']:.1%}" + ("*" if c.get("spread_provisional") else "")
     e = x.get("earn") or {}
     if not e:
-        earn = "none found"
+        earn = "not scheduled yet (next report falls inside this contract)" if x.get("cat_est") else "none found"
     else:
         d = dt.date.fromisoformat(e["date"])
         earn = f"{d:%b %d} {e['time']}" + (" (reported)" if e.get("recent") else f" ({e['days']}d)")
@@ -625,9 +635,11 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
     L += ["Free data (Yahoo bars, Cboe/Nasdaq quotes, Nasdaq calendars). Verify every finalist on live broker data before scoring.", "",
           "**How to read it.** Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the "
           "1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) of the contract shown + catalyst "
-          "(1 when an earnings date, estimated, falls inside the option's life). The session adds the Fed point when its Fed "
+          "(1 when an earnings date falls inside the option's life: a date on the calendar, or a stock's next quarterly report when "
+          "the contract has 95+ days left and the date isn't scheduled yet). The session adds the Fed point when its Fed "
           "read supports the direction (plan.json fed_bias, above) and raises the catalyst to 2 for a confirmed date: "
-          "Max = Score + Fed point (0 or 1) + (2 - catalyst). Calls need " + str(NEEDS["call"]) + ", puts "
+          "Max = Score + Fed point (0 or 1) + (2 - catalyst), with nothing added for the catalyst when there is no date to confirm "
+          "(an unscheduled report, or an ETF). Calls need " + str(NEEDS["call"]) + ", puts "
           + str(NEEDS["put"]) + " (plan.json min_score); only setups whose "
           "contract passes the plan's option rules and whose Max reaches the bar are in the tables. Contract = what the plan "
           "would buy (first monthly 90+ days out, or 60+ when that doesn't fit the cap; delta 0.60-0.70 or 0.50-0.60 as "
@@ -775,7 +787,7 @@ def build_alerts(rows, plan, now, bars, fetch=True):
             e = x.get("earn") or {}
             if e.get("pre_event") and (x.get("pre") or {}).get("result") != "PASS":
                 continue
-            reach = x["score"] + FED["call"] + (1 if x.get("cat") == 1 else 0)
+            reach = x["score"] + FED["call"] + (1 if x.get("cat") == 1 and not x.get("cat_est") else 0)   # +1 only for a date that can be confirmed
             if reach >= need(x):
                 hot.append((reach, x))
         hot.sort(key=lambda p: (-p[0], p[1]["r"]["tk"]))
@@ -1277,6 +1289,22 @@ def v77_selftest(res, rows2, miss, etf3, last, now, caps, up):
         assert closed_["ran"] is False and "regular" in closed_["why"]
     finally:
         SH.BOOK, SH.REPORT = saved
+    # 17b) the catalyst point without a calendar date: a stock's contract with 95+ days left contains its next report
+    ent = dt.date(2026, 10, 26)
+    far = copy.deepcopy(up)
+    far["opt"]["contract"]["exp"] = ent + dt.timedelta(days=100)
+    apply_fed({"fed_bias": "puts"})
+    apply_events(far, None, ent)
+    base = far["known"] + far["liq"] + far["pricing"]
+    assert far["cat"] == 1 and far["cat_est"] and far["score"] == base + 1 and far["max"] == base + 1, far       # nothing to confirm
+    assert _opt_cells(far)[-2].startswith("not scheduled yet"), _opt_cells(far)
+    apply_events(far, None, ent, is_etf=True)
+    assert far["cat"] == 0 and not far["cat_est"] and far["score"] == base and far["max"] == base                # an ETF has no report
+    far["opt"]["contract"]["exp"] = ent + dt.timedelta(days=94)
+    apply_events(far, None, ent)
+    assert far["cat"] == 0 and far["max"] == base + 2                                                            # a shorter contract may miss it
+    apply_events(far, (ent + dt.timedelta(days=30), "AMC"), ent)
+    assert far["cat"] == 1 and not far["cat_est"] and far["max"] == base + 2                                     # a listed date can be confirmed
     # 18) alerts: a call that can reach the bar on regular-hours quotes, and exits due on real positions
     apply_bar({"min_score": 9})
     apply_fed({"fed_bias": "puts"})
@@ -1286,6 +1314,11 @@ def v77_selftest(res, rows2, miss, etf3, last, now, caps, up):
     assert [a.split(":")[0] for a in build_alerts([hot], {}, now, {}, fetch=False)] == ["CALL AT THE BAR"]
     hot["score"] = 7
     assert build_alerts([hot], {}, now, {}, fetch=False) == []
+    hot.update(score=8, cat_est=True)                            # the report isn't scheduled: no date to confirm, 8 stays 8
+    assert build_alerts([hot], {}, now, {}, fetch=False) == []
+    hot.update(score=9)
+    assert [a.split(":")[0] for a in build_alerts([hot], {}, now, {}, fetch=False)] == ["CALL AT THE BAR"]
+    hot.pop("cat_est")
     hot.update(score=9, deal="425 x2")
     assert build_alerts([hot], {}, now, {}, fetch=False) == []     # merger filings: no alert
     hot.pop("deal")

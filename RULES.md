@@ -158,7 +158,7 @@ Order flow:
 
 <scoring>
 Score each idea 0, 1, or 2 on six factors (max 12), using these exact definitions. The scanner computes all of them except the confirmed catalyst date; re-check them at the live price.
-1. Catalyst: 2 = a confirmed, dated catalyst inside the option's life; 1 = an estimated date, or a real but undated catalyst; 0 = none.
+1. Catalyst: 2 = a confirmed, dated catalyst inside the option's life; 1 = an estimated date, or a real but undated catalyst; 0 = none. A stock's next quarterly report always falls inside a contract with 95 or more days left, so that contract scores at least 1 even before the date is scheduled. An ETF scores 0. Other catalysts (an FDA date, a launch, an investor day) count only when I bring them up or the filings check finds one; don't search for them.
 2. Trend: 2 = close above the 20-day SMA, the 20-day above the 50-day, and the 50-day higher than 10 sessions ago; 1 = close above the 50-day SMA but not all of those; 0 = otherwise.
 3. Macro and relative strength: 1 point when at least 2 of the 3 Fed signals in <market_regime> are easing, and 1 point when the stock's 3-month return beats both SPY and its sector ETF.
 4. Option pricing: 2 = IV/HV at or below 1.1 and breakeven within 0.5 sigma; 1 = IV/HV at or below 1.3 and breakeven within 1.0 sigma; 0 = otherwise.
