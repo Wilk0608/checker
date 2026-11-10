@@ -1201,7 +1201,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -1572,7 +1573,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "ok",
@@ -1614,9 +1615,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 7,
-   "earn": {}
+   "cat": 1,
+   "score": 8,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -4927,7 +4929,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -4969,9 +4971,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -6447,7 +6450,8 @@
     "inside_life": true,
     "pre_event": false,
     "exit_by": "2026-12-01"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -9805,7 +9809,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 5,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -17841,7 +17846,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -17883,8 +17888,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
+   "cat": 1,
+   "score": 6,
    "earn": {
     "date": "2026-11-09",
     "time": "BMO",
@@ -17893,7 +17898,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -18882,7 +18888,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-18"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -19888,7 +19895,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -19932,8 +19939,8 @@
    },
    "liq": 1,
    "pricing": 1,
-   "cat": 0,
-   "score": 6,
+   "cat": 1,
+   "score": 7,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -19942,7 +19949,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -20187,7 +20195,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-13"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -20884,7 +20893,8 @@
     "inside_life": true,
     "pre_event": false,
     "exit_by": "2026-12-02"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -25823,7 +25833,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -25865,9 +25875,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -28114,7 +28125,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-16"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -28394,7 +28406,8 @@
     "inside_life": true,
     "pre_event": false,
     "exit_by": "2026-12-17"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -30709,7 +30722,8 @@
     "inside_life": true,
     "pre_event": false,
     "exit_by": "2026-12-17"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -33277,7 +33291,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 5,
+   "max": 4,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -33319,9 +33333,10 @@
    },
    "liq": 1,
    "pricing": 0,
-   "cat": 0,
-   "score": 3,
-   "earn": {}
+   "cat": 1,
+   "score": 4,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -33631,7 +33646,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -33673,9 +33688,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -35238,7 +35254,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-23"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -35377,7 +35394,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -35419,9 +35436,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
-   "earn": {}
+   "cat": 1,
+   "score": 5,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -37652,7 +37670,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -37694,8 +37712,8 @@
    },
    "liq": 1,
    "pricing": 1,
-   "cat": 0,
-   "score": 4,
+   "cat": 1,
+   "score": 5,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -37704,7 +37722,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -37992,7 +38011,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -38034,8 +38053,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
+   "cat": 1,
+   "score": 5,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -38044,7 +38063,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -39687,7 +39707,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 6,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -41216,7 +41237,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-12"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -42877,7 +42899,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -42919,9 +42941,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
-   "earn": {}
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -44512,7 +44535,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -44554,9 +44577,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
+   "cat": 1,
+   "score": 5,
    "earn": {},
+   "cat_est": true,
    "deal": "425 x53 (latest Nov 06); DEFM14A x1 (latest Jul 28)"
   }
  },
@@ -44693,7 +44717,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -44735,9 +44759,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
-   "earn": {}
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -47467,7 +47492,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -47509,8 +47534,8 @@
    },
    "liq": 1,
    "pricing": 1,
-   "cat": 0,
-   "score": 3,
+   "cat": 1,
+   "score": 4,
    "earn": {
     "date": "2026-11-09",
     "time": "AMC",
@@ -47519,7 +47544,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -47945,7 +47971,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-16"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -51880,7 +51907,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 4,
+   "max": 3,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -51922,8 +51949,8 @@
    },
    "liq": 1,
    "pricing": 0,
-   "cat": 0,
-   "score": 2,
+   "cat": 1,
+   "score": 3,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -51932,7 +51959,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -53390,7 +53418,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -53434,7 +53462,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 6,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -54336,7 +54365,8 @@
    "pricing": 1,
    "cat": 0,
    "score": 5,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -56985,7 +57015,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -57027,9 +57057,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -58846,7 +58877,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -58890,7 +58921,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 6,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -62461,7 +62493,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -62503,9 +62535,10 @@
    },
    "liq": 2,
    "pricing": 2,
-   "cat": 0,
-   "score": 7,
-   "earn": {}
+   "cat": 1,
+   "score": 8,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -62909,7 +62942,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -62953,9 +62986,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -65233,7 +65267,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-11"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -65575,7 +65610,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-19"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -66211,7 +66247,8 @@
    "pricing": 1,
    "cat": 0,
    "score": 3,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -70008,7 +70045,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-23"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -76791,7 +76829,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -76833,8 +76871,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
+   "cat": 1,
+   "score": 7,
    "earn": {
     "date": "2026-11-09",
     "time": "AMC",
@@ -76843,7 +76881,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -77186,7 +77225,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -77228,9 +77267,10 @@
    },
    "liq": 1,
    "pricing": 1,
-   "cat": 0,
-   "score": 5,
-   "earn": {}
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -78676,7 +78716,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 7,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -79193,6 +79234,7 @@
     "pre_event": true,
     "exit_by": "2026-11-23"
    },
+   "cat_est": false,
    "pre": {
     "reactions": [
      [
@@ -81455,7 +81497,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 4,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -81499,7 +81541,8 @@
    "pricing": 1,
    "cat": 0,
    "score": 3,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -85608,7 +85651,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -85652,9 +85695,10 @@
    },
    "liq": 2,
    "pricing": 2,
-   "cat": 0,
-   "score": 7,
-   "earn": {}
+   "cat": 1,
+   "score": 8,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -86826,7 +86870,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -86868,8 +86912,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
+   "cat": 1,
+   "score": 7,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -86878,7 +86922,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -87013,7 +87058,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -87057,8 +87102,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
+   "cat": 1,
+   "score": 7,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -87067,7 +87112,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -89179,7 +89225,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-16"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -89377,7 +89424,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 4,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -89421,7 +89468,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 4,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -90068,7 +90116,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -90110,9 +90158,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
-   "earn": {}
+   "cat": 1,
+   "score": 5,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -93385,7 +93434,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -93427,8 +93476,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
+   "cat": 1,
+   "score": 5,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -93437,7 +93486,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -94613,7 +94663,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-10"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -95946,7 +95997,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -95990,9 +96041,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
-   "earn": {}
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -97466,7 +97518,8 @@
     "inside_life": true,
     "pre_event": false,
     "exit_by": "2026-11-24"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -100053,7 +100106,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-17"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -103523,7 +103577,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -104374,7 +104429,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -104416,9 +104471,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -107178,7 +107234,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -107220,9 +107276,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
-   "earn": {}
+   "cat": 1,
+   "score": 5,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -107356,7 +107413,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -107400,8 +107457,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
+   "cat": 1,
+   "score": 7,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -107410,7 +107467,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -111686,7 +111744,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -111728,9 +111786,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -111867,7 +111926,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -111911,9 +111970,10 @@
    },
    "liq": 2,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -112253,7 +112313,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -112295,9 +112355,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -112580,7 +112641,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": true,
    "opt": {
     "status": "ok",
@@ -112622,9 +112683,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -116319,7 +116381,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -116361,9 +116423,10 @@
    },
    "liq": 2,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
-   "earn": {}
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -117982,7 +118045,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 6,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -120953,7 +121017,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -120997,9 +121061,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -121362,7 +121427,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-09"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -126932,7 +126998,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -126976,9 +127042,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 7,
-   "earn": {}
+   "cat": 1,
+   "score": 8,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -127203,7 +127270,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -127245,9 +127312,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -134605,7 +134673,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -134647,8 +134715,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
+   "cat": 1,
+   "score": 5,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -134657,7 +134725,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -136032,7 +136101,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -136074,9 +136143,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 7,
-   "earn": {}
+   "cat": 1,
+   "score": 8,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -138910,7 +138980,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -138952,9 +139022,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
-   "earn": {}
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -139596,7 +139667,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -139638,9 +139709,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 7,
+   "cat": 1,
+   "score": 8,
    "earn": {},
+   "cat_est": true,
    "deal": "425 x14 (latest Nov 05)"
   }
  },
@@ -140169,7 +140241,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -140211,9 +140283,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
-   "earn": {}
+   "cat": 1,
+   "score": 5,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -141185,7 +141258,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -141229,9 +141302,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
-   "earn": {}
+   "cat": 1,
+   "score": 5,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -141576,7 +141650,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -141618,9 +141692,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -142353,7 +142428,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -142395,8 +142470,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
+   "cat": 1,
+   "score": 6,
    "earn": {
     "date": "2026-11-06",
     "time": "time n/a",
@@ -142405,7 +142480,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -148017,7 +148093,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -148061,7 +148137,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 7,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -148320,7 +148397,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -148362,9 +148439,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
-   "earn": {}
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -148532,7 +148610,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -148574,9 +148652,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -149424,7 +149503,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -149468,9 +149547,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
-   "earn": {}
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -151805,7 +151885,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -151847,9 +151927,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -154439,7 +154520,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": true,
    "opt": {
     "status": "ok",
@@ -154483,8 +154564,8 @@
    },
    "liq": 1,
    "pricing": 1,
-   "cat": 0,
-   "score": 5,
+   "cat": 1,
+   "score": 6,
    "earn": {
     "date": "2026-11-06",
     "time": "time n/a",
@@ -154493,7 +154574,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -156802,7 +156884,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -156844,9 +156926,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -157012,7 +157095,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -157054,9 +157137,10 @@
    },
    "liq": 1,
    "pricing": 1,
-   "cat": 0,
-   "score": 5,
-   "earn": {}
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -157457,7 +157541,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -157499,9 +157583,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 7,
-   "earn": {}
+   "cat": 1,
+   "score": 8,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -165401,7 +165486,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -165445,8 +165530,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
+   "cat": 1,
+   "score": 6,
    "earn": {
     "date": "2026-11-09",
     "time": "AMC",
@@ -165455,7 +165540,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -165675,7 +165761,8 @@
     "inside_life": true,
     "pre_event": true,
     "exit_by": "2026-11-11"
-   }
+   },
+   "cat_est": false
   }
  },
  {
@@ -166855,7 +166942,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -166897,8 +166984,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
+   "cat": 1,
+   "score": 5,
    "earn": {
     "date": "2026-11-06",
     "time": "time n/a",
@@ -166907,7 +166994,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -168185,7 +168273,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -168227,9 +168315,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -168928,7 +169017,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -168970,9 +169059,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -169163,7 +169253,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -169207,7 +169297,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 6,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -170507,7 +170598,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -170549,9 +170640,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -172047,7 +172139,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -172091,9 +172183,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 4,
-   "earn": {}
+   "cat": 1,
+   "score": 5,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -172311,7 +172404,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -172353,9 +172446,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 7,
-   "earn": {}
+   "cat": 1,
+   "score": 8,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -175676,7 +175770,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -175720,8 +175814,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
+   "cat": 1,
+   "score": 7,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -175730,7 +175824,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -177068,7 +177163,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -177112,8 +177207,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
+   "cat": 1,
+   "score": 6,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -177122,7 +177217,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {
@@ -180669,7 +180765,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -180713,7 +180809,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 4,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -180848,7 +180945,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 7,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -180892,7 +180989,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 5,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -181058,7 +181156,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -181106,7 +181204,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 6,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -181484,7 +181583,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -181528,7 +181627,8 @@
    "pricing": 2,
    "cat": 0,
    "score": 6,
-   "earn": {}
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -183008,7 +183108,7 @@
    "trend": 1,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -183050,9 +183150,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -183425,7 +183526,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -183469,9 +183570,10 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {}
+   "cat": 1,
+   "score": 7,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -184805,7 +184907,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -184847,8 +184949,8 @@
    },
    "liq": 1,
    "pricing": 2,
-   "cat": 0,
-   "score": 5,
+   "cat": 1,
+   "score": 6,
    "earn": {
     "date": "2026-11-05",
     "time": "time n/a",
@@ -184857,7 +184959,8 @@
     "inside_life": false,
     "pre_event": false,
     "exit_by": null
-   }
+   },
+   "cat_est": true
   }
  },
  {

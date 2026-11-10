@@ -1,5 +1,5 @@
 # Setup scan: final bars of 2026-11-09
-Run 2026-11-10 01:54 ET | scanned 2,525 | passed price $5-275 and 20-day avg vol 1M+: 1,554 | setups 583 (calls 334, puts 249) | contract passes the option rules: 99 | SPY 3M -2.3%
+Run 2026-11-10 02:22 ET | scanned 2,525 | passed price $5-275 and 20-day avg vol 1M+: 1,554 | setups 583 (calls 334, puts 249) | contract passes the option rules: 99 | SPY 3M -2.3%
 Universe: Nasdaq stock screener, 7,127 US listings, 2,441 passed the loose pre-filters. Sectors: GICS sectors (iShares Russell 3000) for 1,863, Nasdaq labels for the other 578
 
 **Market regime** (final bars of 2026-11-09): SPY 752.69 is below its 50-day average (765.35) and above its 200-day (730.7); QQQ 679.35 is below its 50-day average (720.23) and below its 200-day (681.17); VIX 19.92 (21.15 five sessions earlier). Fed signals: 1 of 3 easing (3-month T-bill 4.03% vs 3.73% three months ago (rising: tightening); 10-year 4.86% vs its 50-day average 5.04% (below: easing); dollar index 101.65 vs its 50-day average 101.13 (above: tightening)).
@@ -8,18 +8,14 @@ Option check: caps from plan.json (updated 2026-11-09): balance $25,769.00, Prov
 
 Free data (Yahoo bars, Cboe/Nasdaq quotes, Nasdaq calendars). Verify every finalist on live broker data before scoring.
 
-**How to read it.** Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) of the contract shown + catalyst (1 when an earnings date, estimated, falls inside the option's life). The session adds the Fed point when its Fed read supports the direction (plan.json fed_bias, above) and raises the catalyst to 2 for a confirmed date: Max = Score + Fed point (0 or 1) + (2 - catalyst). Calls need 9, puts 10 (plan.json min_score); only setups whose contract passes the plan's option rules and whose Max reaches the bar are in the tables. Contract = what the plan would buy (first monthly 90+ days out, or 60+ when that doesn't fit the cap; delta 0.60-0.70 or 0.50-0.60 as allowed, OI 500+, spread 8% or less, cost under the cap); Cost = one contract at mid + a quarter of the spread + $1, x lots under the cap. BE sigma = breakeven distance in 1-sigma moves to expiration.
+**How to read it.** Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) of the contract shown + catalyst (1 when an earnings date falls inside the option's life: a date on the calendar, or a stock's next quarterly report when the contract has 95+ days left and the date isn't scheduled yet). The session adds the Fed point when its Fed read supports the direction (plan.json fed_bias, above) and raises the catalyst to 2 for a confirmed date: Max = Score + Fed point (0 or 1) + (2 - catalyst), with nothing added for the catalyst when there is no date to confirm (an unscheduled report, or an ETF). Calls need 9, puts 10 (plan.json min_score); only setups whose contract passes the plan's option rules and whose Max reaches the bar are in the tables. Contract = what the plan would buy (first monthly 90+ days out, or 60+ when that doesn't fit the cap; delta 0.60-0.70 or 0.50-0.60 as allowed, OI 500+, spread 8% or less, cost under the cap); Cost = one contract at mid + a quarter of the spread + $1, x lots under the cap. BE sigma = breakeven distance in 1-sigma moves to expiration.
 
 Contract timing for an entry on 2026-11-10: 2027-02-19 expiration (first monthly 90+ days out), time stop 2027-01-29; if that doesn't fit the cap, 2027-01-15 with time stop 2026-12-24. Stop = the stock level that ends the trade on a close (10-session extreme, kept 2 to 3 ATR away).
 
-## Calls ready to verify (Max 9+, no earnings within 2 weeks): 5
+## Calls ready to verify (Max 9+, no earnings within 2 weeks): 0
 | Ticker | Setup | Close | Stop | Target | R:R | Contract | Delta | Bid/Ask (spread) | OI | Cost | IV/HV | BE sigma | Score (T+RS+RR+L+P+C) | Max | Earnings | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| VIR | Breakout 11-09 | 13.65 | 11.21 | cap | 2.67 | Apr 16 12C | +0.68 | 2.50/4.10 (48.5%*) | 594 | $338 x4 | 0.96 | 0.28 | 7 (2+1+1+1+2+0) | 9 | none found |  |
-| PGNY | Breakout 11-09; Breakout 11-06, holding; Breakout 11-05, holding | 35.95 | 32.18 | cap | 2.49 | Feb 19 35C | +0.57 | 2.85/4.80 (51.0%*) | 1,063 | $391 x3 | 0.85 | 0.35 | 7 (2+1+1+1+2+0) | 9 | none found | 0.50-0.60 delta (no strike at 0.60-0.70) |
-| REPL | Breakout 11-03, holding | 22.26 | 18.5 | cap | 2.98 | Feb 19 20C | +0.68 | 4.60/5.80 (23.1%*) | 2,593 | $531 x2 | 0.84 | 0.29 | 7 (2+1+1+1+2+0) | 9 | none found |  |
-| TBBB | Breakout 11-03, holding | 67.58 | 61.64 | cap | 2.28 | Feb 19 65C | +0.64 | 7.00/7.40 (5.6%*) | 1,161 | $731 x2 | 0.90 | 0.30 | 7 (2+1+1+1+2+0) | 9 | none found |  |
-| FISV | Breakout 11-05, holding; Breakout 11-04, holding; Breakout 11-03, holding | 63.52 | 57.3 | 64.03 | 0.08 | Mar 19 60C | +0.67 | 8.20/8.50 (3.6%*) | 2,621 | $844 x1 | 0.75 | 0.35 | 7 (2+1+0+2+2+0) | 9 | none found |  |
+| none | | | | | | | | | | | | | | | | |
 
 ## Calls with earnings within 2 weeks (pre-event rule; the test result is provisional): 0
 | Ticker | Setup | Close | Stop | Target | R:R | Contract | Delta | Bid/Ask (spread) | OI | Cost | IV/HV | BE sigma | Score (T+RS+RR+L+P+C) | Max | Earnings | Notes |
@@ -27,15 +23,15 @@ Contract timing for an entry on 2026-11-10: 2027-02-19 expiration (first monthly
 | none | | | | | | | | | | | | | | | | |
 
 ## Puts: shadow test only, no real put trades (rules v7.7): 37 with a passing contract
-- Score in brackets: HPE (8), INTC (7), HOOD (7), SLV (7), CLSK (7), CSCO (7), FPS (7), KURA (7), HIMS (6), UMC (6), MCHP (6), IRM (6), AESI (6), IREN (6), XLK (6), ON (6), MP (6), ET (6), URA (6), EWJ (6), EEM (6), SMCI (6), SAN (6), CIFR (6), NEXT (6), BSX (6), T (6), FLG (6), CRCL (6), VALE (6), SBET (5), SM (5), SNAP (5), FRO (5), XLE (4), DHT (3), IBIT (3)
+- Score in brackets: INTC (8), HPE (8), HOOD (7), SLV (7), HIMS (7), UMC (7), IRM (7), AESI (7), IREN (7), CLSK (7), ON (7), MP (7), ET (7), CSCO (7), FPS (7), SMCI (7), SAN (7), KURA (7), CIFR (7), NEXT (7), BSX (7), T (7), FLG (7), VALE (7), MCHP (6), XLK (6), URA (6), EWJ (6), EEM (6), CRCL (6), SBET (6), SM (6), SNAP (6), FRO (5), DHT (4), XLE (4), IBIT (3)
 
-## Merger filings in the last 120 days: 1 (read the filing first; a stock agreed to be acquired is an automatic reject)
+## Merger filings in the last 120 days: 0 (read the filing first; a stock agreed to be acquired is an automatic reject)
 | Ticker | Setup | Close | Stop | Target | R:R | Contract | Delta | Bid/Ask (spread) | OI | Cost | IV/HV | BE sigma | Score (T+RS+RR+L+P+C) | Max | Earnings | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| RRC | Pullback | 48.85 | 45.02 | 56.9 | 2.1 | Mar 19 47C | +0.65 | 4.00/6.50 (47.6%*) | 520 | $536 x2 | 0.47 | 0.37 | 7 (2+1+1+1+2+0) | 9 | none found | MERGER FILINGS: 425 x14 (latest Nov 05) |
+| none | | | | | | | | | | | | | | | | |
 
-## Contract passes but the score can't reach the bar: 89
-- Calls (Score/Max): DIS (7/8), ONON (7/8), BBWI (7/8), LOW (7/8), CCL (7/8), BF-B (7/8), BDX (6/8), XYZ (6/8), VYX (6/8), YOU (6/8), MET (6/8), SRAD (6/8), PHG (6/8), NXT (6/8), XLY (6/8), BEKE (6/7), NEE (6/8), UPS (6/8), BZ (6/7), AI (6/7), ABNB (6/8), NEM (6/8), ELF (5/7), TTEK (5/6), HLF (5/7), TAK (5/7), TTD (5/7), B (5/7), ZTS (5/7), ROL (5/7), DAL (5/7), XLF (5/7), WEN (5/7), CVNA (5/7), LBTYA (5/7), AMZN (5/7), NVO (5/7), CAG (5/6), COLD (4/6), QXO (4/6), COMP (4/6), CLX (4/6), JOBY (4/6), UA (4/6), D (4/6), RUN (4/6), JETS (4/6), KRMN (4/6), VICI (4/6), JD (4/5), MOS (4/6), LI (4/5), RYTM (4/6), CHYM (3/5), FSLR (3/5), DYN (2/4)
+## Contract passes but the score can't reach the bar: 97
+- Calls (Score/Max): VIR (8/8), RRC (8/8), PGNY (8/8), REPL (8/8), TBBB (8/8), FISV (8/8), BDX (7/7), DIS (7/8), ONON (7/8), XYZ (7/7), VYX (7/7), YOU (7/7), MET (7/7), SRAD (7/7), PHG (7/7), BBWI (7/8), NEE (7/7), LOW (7/8), CCL (7/8), UPS (7/7), BF-B (7/8), NEM (7/7), NXT (6/8), XLY (6/6), BEKE (6/7), HLF (6/6), BZ (6/7), TAK (6/6), AI (6/7), ABNB (6/8), TTD (6/6), B (6/6), ZTS (6/6), ROL (6/6), DAL (6/6), WEN (6/6), CVNA (6/6), LBTYA (6/6), NVO (6/6), ELF (5/7), TTEK (5/6), COLD (5/5), XLF (5/5), AMZN (5/7), QXO (5/5), COMP (5/5), CLX (5/5), JOBY (5/5), UA (5/5), D (5/5), CAG (5/6), RUN (5/5), KRMN (5/5), VICI (5/5), MOS (5/5), RYTM (5/5), CHYM (4/4), JETS (4/4), JD (4/5), LI (4/5), FSLR (3/5), DYN (3/3)
 - Puts (Score/Max): shadow-only, listed above
 
 ## No contract passes the option rules: 467 of 566 setups
@@ -80,7 +76,7 @@ Contract timing for an entry on 2026-11-10: 2027-02-19 expiration (first monthly
 - No data: 1 (UHAL.B)
 - No final bar for 2026-11-09 (left out of the ranking): 0
 - Too little history: 15 (ACCV (only 25 bars), ADRX (only 32 bars), AIOK (only 22 bars), BRVE (only 67 bars), CTY (only 17 bars), ETRA (only 37 bars), HYAC (only 1 bars), IAM (only 18 bars), KVUE (only 1 bars), LTGO (only 66 bars), LYCA (only 12 bars), LYNX (only 58 bars), ROKU (only 2 bars), VYLR (only 28 bars), XIII (only 37 bars))
-- Option chains: 576 read from Cboe, 7 missing (AEHL, GFR, OMH, OTF, OXLC, PTY, TLK); Cboe rate-limit retries 4; option step took 1242s
+- Option chains: 576 read from Cboe, 7 missing (AEHL, GFR, OMH, OTF, OXLC, PTY, TLK); Cboe rate-limit retries 4; option step took 1228s
 - Earnings calendar (Nasdaq): 111 days read; listings run through 2026-12-30, so later reports show as 'none found'
 - Pre-event tests: 1 run
 - Merger filings: 103 names checked
