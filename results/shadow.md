@@ -1,5 +1,7 @@
 # Shadow ledger (automatic): updated 2026-11-09
 
+This run made no changes (run outside regular hours: exits and entries wait for regular-hours quotes).
+
 One contract each. Open shadows are valued at their last regular-hours quote, at the plan's exit price (mid minus a quarter of the spread minus the $1 fee).
 
 | | Trades | Cost | P/L |
@@ -25,6 +27,14 @@ Evidence gates (20+ closed trades scoring 7+ that beat the random benchmark by m
 - Calls: not yet (4 of 20 closed trades scoring 7+, average -19.7%)
 - Puts: not yet (7 of 20 closed trades scoring 7+, average -25.6%)
 - Puts near a 52-week low: not yet (1 of 20 closed trades scoring 7+, average +16.7%)
+
+## Calls by the trading bar (the plan trades calls at 9+; 7 and 8 are logged to test that bar)
+
+| Score | Closed | Wins | Average | 95% interval |
+|---|---|---|---|---|
+| 9+ | 1 | 1 | +28.8% | n/a |
+| 7-8 | 3 | 0 | -35.8% | -59.9% to -11.7% |
+| under 7 | 1 | 0 | -4.2% | n/a |
 
 ## By setup
 
