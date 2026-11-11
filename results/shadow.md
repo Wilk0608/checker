@@ -1,6 +1,6 @@
 # Shadow ledger (automatic): updated 2026-11-11
 
-This run made no changes (already processed today).
+This run made no changes (run outside regular hours: exits and entries wait for regular-hours quotes).
 
 One contract each. Open shadows are valued at their last regular-hours quote, at the plan's exit price (mid minus a quarter of the spread minus the $1 fee).
 
