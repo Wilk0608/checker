@@ -21,6 +21,7 @@ the owner.
   Cboe leaves some quiet names' files from the night before; when a market-hours run gets one of those, the chosen expiration's quotes are re-read from Nasdaq's option chain.
 - `events.py`: earnings dates (Nasdaq's earnings calendar), which set the catalyst point, the pre-event rule and the earnings-exit date; a provisional pre-event test; and merger filings in the last 120 days.
 - `shadow.py`: the automatic shadow ledger. Once each trading day, on regular-hours quotes, it opens one-contract paper trades for the day's best setups in every score tier (calls and puts), applies the plan's exits to the open ones, and writes `results/shadow.json` and `results/shadow.md`. It also checks the exits of the real positions listed in `plan.json`.
+- `gate.py`, `market_days.py`: the workflow's gate (which hourly run scans) and the NYSE holidays and early closes. Standard library only.
 - `scanner.py`: downloads ~13 months of daily bars, applies the filters and setup rules to final bars, runs the option check, the market regime, the shadow ledger and the alerts, and writes the files in `results/`.
 - `plan.json`: the account figures and settings (public, like everything here):
   - `balance`, `base`, `phase`, `rate`: what the dollar caps come from.
@@ -34,10 +35,14 @@ the owner.
 
 ## Schedule
 
-- **After the close** (scheduled 5:17 PM EDT / 4:17 PM EST): setups on the day's final bars. Option quotes at this hour are closing quotes, so spreads are shown but marked provisional (a `*`) and don't fail a contract. No shadow update and no call alerts.
-- **During the session** (scheduled 11:07 AM EDT / 10:07 AM EST): the same setups on official closes, re-checked with regular-hours option quotes. This run updates the shadow ledger and can raise call alerts. This is the file a trading session should read.
+GitHub starts scheduled workflows hours late (5 to 9 hours on this repository), so one well-timed cron never lands
+inside the trading day. The workflow fires every hour on weekdays and `gate.py` lets two scans a day through; the other
+runs stop in a few seconds. A scan that fails isn't recorded (`results/run_state.json`), so the next hourly run retries it.
 
-GitHub runs scheduled jobs late when it is busy, so the report header shows when it actually ran and when the quotes were taken.
+- **During the session** (the first run that starts between 10:00 AM and 3:25 PM New York time): setups on official closes, priced with regular-hours option quotes. This run updates the shadow ledger and can raise call alerts. This is the file a trading session should read.
+- **After the close** (the first run at least 15 minutes after the close): setups on the day's final bars. Option quotes at this hour are closing quotes, so spreads are shown but marked provisional (a `*`) and don't fail a contract. No shadow update and no call alerts.
+
+A run started by hand from the Actions tab ("Run workflow") always scans. The report header shows when the scan actually ran and when its quotes were taken.
 
 ## Results
 

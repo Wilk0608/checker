@@ -1,8 +1,10 @@
 name: daily-setup-scan
 on:
   schedule:
-    - cron: "17 21 * * 1-5"   # 21:17 UTC = 5:17 PM EDT / 4:17 PM EST, after every close (option spreads provisional)
-    - cron: "7 15 * * 1-5"    # 15:07 UTC = 11:07 AM EDT / 10:07 AM EST: re-run on official closes with regular-hours option quotes
+    # GitHub starts scheduled runs hours late (5 to 9 hours here in November 2026), so a single well-timed cron never
+    # lands inside the trading day. This fires every hour and gate.py lets two scans a day through: the first run that
+    # starts inside the regular session and the first run after the close. The other runs stop in a few seconds.
+    - cron: "7 6-22 * * 1-5"
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -16,13 +18,26 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main           # the branch tip when the job starts, so the gate sees what an earlier run recorded
+      - name: Gate (does this run scan?)
+        id: gate
+        run: python3 gate.py --event "${{ github.event_name }}" | tee -a "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.mode != 'skip'
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt
-      - run: python scanner.py --test
-      - run: python scanner.py
+      - if: steps.gate.outputs.mode != 'skip'
+        run: pip install -r requirements.txt
+      - if: steps.gate.outputs.mode != 'skip'
+        run: python scanner.py --test
+      - if: steps.gate.outputs.mode != 'skip'
+        run: python scanner.py
+      - name: Record the scan (a failed scan is not recorded, so the next hourly run retries it)
+        if: steps.gate.outputs.mode == 'regular' || steps.gate.outputs.mode == 'close'
+        run: python3 gate.py --record "${{ steps.gate.outputs.mode }}" "${{ steps.gate.outputs.day }}"
       - name: Commit results
+        if: steps.gate.outputs.mode != 'skip'
         run: |
           git config user.name "setup-scanner"
           git config user.email "actions@users.noreply.github.com"
@@ -31,7 +46,7 @@ jobs:
           git pull --rebase -q origin main
           git push
       - name: Raise an alert (GitHub issue) when the scan wrote one
-        if: hashFiles('results/alert.md') != ''
+        if: steps.gate.outputs.mode != 'skip' && hashFiles('results/alert.md') != ''
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}

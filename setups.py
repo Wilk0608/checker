@@ -30,8 +30,7 @@ EXP_MIN_DAYS = 90               # first monthly expiration at least this many da
 EXP_FALLBACK_DAYS = 60          # allowed only when the 90+ day contract doesn't fit the cap
 TIME_STOP_DAYS = 21             # days before expiration
 # NYSE holidays in the plan year (account_mechanics); a rule date that lands on one moves to the trading day before.
-HOLIDAYS = {dt.date(2026, 11, 26), dt.date(2026, 12, 25), dt.date(2027, 1, 1), dt.date(2027, 1, 18), dt.date(2027, 2, 15),
-            dt.date(2027, 3, 26), dt.date(2027, 5, 31), dt.date(2027, 6, 18), dt.date(2027, 7, 5), dt.date(2027, 9, 6)}
+from market_days import EARLY_CLOSES, HOLIDAYS  # noqa: E402 (kept here so setups.HOLIDAYS still works)
 
 
 def _trading_day_on_or_before(d):

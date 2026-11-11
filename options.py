@@ -30,6 +30,8 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from zoneinfo import ZoneInfo
 
+from market_days import EARLY_CLOSES
+
 ET = ZoneInfo("America/New_York")
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 CBOE_URL = "https://cdn.cboe.com/api/global/delayed_quotes/options/{}.json"
@@ -150,11 +152,13 @@ def parse_cboe(js, ticker):
 
 
 def regular_hours(ts, holidays=()):
-    """True when a UTC timestamp falls inside a regular session (9:30 AM-4:00 PM New York time on a trading day)."""
+    """True when a UTC timestamp falls inside a regular session (9:30 AM-4:00 PM New York time on a trading day,
+    1:00 PM on an early-close day)."""
     if ts is None:
         return False
     e = ts.astimezone(ET)
-    return e.weekday() < 5 and e.date() not in holidays and dt.time(9, 30) <= e.time() <= dt.time(16, 0)
+    close = dt.time(13, 0) if e.date() in EARLY_CLOSES else dt.time(16, 0)
+    return e.weekday() < 5 and e.date() not in holidays and dt.time(9, 30) <= e.time() <= close
 
 
 class Pacer:
