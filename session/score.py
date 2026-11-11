@@ -1,11 +1,11 @@
-"""Live scoring, sizing, exits, outcome map and alert levels for a session (rules v7.7).
+"""Live scoring, sizing, exits, outcome map and alert levels for a session (rules v7.8).
 
   python3 session/score.py CANDS.json      score finalists on live quotes
   python3 session/score.py --levels POS.json   alert levels for open positions
   python3 session/score.py --test
 
 CANDS.json: a list of {tk, dir ("call"), S, K, exp (YYYY-MM-DD), bid, ask, oi, delta, iv (fraction), theta (optional),
-cat (2 once the earnings date is confirmed; else the scan's value is used), q (dividend yield, optional)}, all copied
+cat (optional: 1 when an earnings report falls inside the option's life; else the scan's value is used), q (dividend yield, optional)}, all copied
 from this session's live quotes. The scan's fields (trend, relative strength, ATR, 10-session extreme close, levels,
 HV20) come from results/latest.json, the Fed point from results/regime.json, sizes and the rate from plan.json.
 POS.json: a list of {tk, cp, K, exp, S, iv, fill, step_done (optional), high (optional), q (optional)}."""
@@ -82,7 +82,7 @@ def score(c, row, fed, caps, bar, today, rate):
     tgt = cap if not beyond else (min(beyond[0], cap) if d == "call" else max(beyond[0], cap))
     rr = abs(tgt - S) / abs(S - inv)
     R = 2 if rr >= 3 else 1 if rr >= 2 else 0
-    C = int(c.get("cat", rk["cat"]))
+    C = min(1, int(c.get("cat", rk["cat"])))                              # one point at most: a confirmed date adds nothing (v7.8)
     total = C + T + M + P + (L or 0) + R
     tier = "High" if total >= 10 else "Medium" if total >= bar else None
     capd = caps["high"] if tier == "High" else caps["medium"]
@@ -143,7 +143,7 @@ def main(argv):
         x = score(c, scan[c["tk"]], fed, caps, bar, today, rate)
         res.append(x)
         p = x["parts"]
-        print(f"\n{x['tk']} {x['dir'].upper()} {c['exp']} {c['K']:g} | SCORE {x['score']}/12 (catalyst {p['catalyst']} trend {p['trend']} macro {p['macro']} "
+        print(f"\n{x['tk']} {x['dir'].upper()} {c['exp']} {c['K']:g} | SCORE {x['score']}/11 (catalyst {p['catalyst']} trend {p['trend']} macro {p['macro']} "
               f"pricing {p['pricing']} liquidity {p['liquidity']} reward-to-risk {p['reward_risk']}) | " + ("TRADE at " + x["tier"] if x["trade"] else "NO TRADE: " + "; ".join(x["why"])))
         print(f"  mid {x['mid']} spread {x['spread_pct']}% | cost ${x['cost'] * 100:,.2f} x {x['qty']} (cap ${x['cap']:,.0f}) | IV/HV {x['ivhv']} | breakeven {x['breakeven']} = "
               f"{x['breakeven_sigma']} sigma of {x['sigma_move']} | DTE {x['dte']} time stop {x['time_stop']}" + (f" | theta {x['theta_pct']}%/day" if x["theta_pct"] is not None else ""))

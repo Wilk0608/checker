@@ -1,6 +1,6 @@
 # checker
 
-Daily options-setup scanner for the RAHHH plan (rules v7.7, in `RULES.md`). Every weekday it scans the whole US market
+Daily options-setup scanner for the RAHHH plan (rules v7.8, in `RULES.md`). Every weekday it scans the whole US market
 for the plan's chart setups, prices the option contract the plan would buy for each one, lists the setups whose contract
 passes the plan's option rules, reads the market regime, runs the shadow test, and raises an alert when something needs
 the owner.
@@ -30,7 +30,7 @@ the owner.
   - `fed_bias`: `auto` lets the three Fed signals decide who gets the Fed point; `calls`, `puts`, `both` or `none` overrides them.
   - `open`: the real positions (`tk, cp, strike, exp, qty, fill, inv, time_stop, step_done, high`), so the scan can raise exit alerts.
 - `session/acct.py`, `session/score.py`: the math a trading session needs (ledger stats and caps; live scoring, sizing, exits, outcome map and alert levels). Both have a `--test`.
-- `backtest/`: the 10-year backtest behind rules v7.7 (`fetch.py` downloads the data in a GitHub Action, `engine.py` simulates the plan's exits with an IV model fitted on quotes the scanner collected).
+- `backtest/`: the 10-year backtest behind rules v7.7 and v7.8 (`fetch.py` downloads the data in a GitHub Action, `engine.py` simulates the plan's exits with an IV model fitted on quotes the scanner collected).
 - `.github/workflows/scan.yml`: runs twice each weekday, commits the results, and opens a GitHub issue when the scan wrote an alert. Run it any time from the Actions tab ("Run workflow").
 
 ## Schedule
@@ -53,6 +53,6 @@ A run started by hand from the Actions tab ("Run workflow") always scans. The re
 
 ## Reading the report
 
-Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings date falls inside the option's life: a date on the calendar, or a stock's next quarterly report when the contract has 95+ days left and the date isn't scheduled yet). Max = Score + Fed point (0 or 1) + (2 - catalyst): the session confirms the earnings date. Nothing is added for the catalyst when there is no date to confirm (an unscheduled report, or an ETF). Calls need `min_score`; a call whose contract only fits the High cap needs 10.
+Score = trend (0-2) + relative strength (0-1) + reward-to-risk (0-2, target capped at the 1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) + catalyst (1 when an earnings report falls inside the option's life: a date on the calendar, or a stock's next quarterly report when the contract has 95+ days left and the date isn't scheduled yet; a confirmed date adds no second point). Max = Score + Fed point (0 or 1), plus 1 only for a stock whose shorter contract may still contain a report the calendar doesn't list yet. Calls need `min_score`; a call whose contract only fits the High cap needs 10.
 
 The free data sources can differ slightly from the broker's (quotes are about 15 minutes late), so nothing here is an entry signal on its own. A session verifies every finalist on live broker data.

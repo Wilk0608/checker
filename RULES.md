@@ -75,7 +75,7 @@ I don't need to open a session every day. The scanner raises a GitHub issue (whi
 - The scanner needs my account figures and real positions to size contracts and raise exit alerts. When the balance, the phase or an open position changes, update plan.json in the repo (balance, phase, updated, and the "open" list: tk, cp, strike, exp, qty, fill, inv, time_stop, step_done, high). If you can't write to the repo, print the new values for me to paste. The repo is public, so the file shows my balance and positions.
 - The shadow test is no longer part of the ledger. The scanner keeps it (see <shadow>).
 
-LEDGER | rules v7.7 | updated YYYY-MM-DD
+LEDGER | rules v7.8 | updated YYYY-MM-DD
 PLAN | start YYYY-MM-DD | base $25,000 | QQQ close at start $___ | plan year ends YYYY-MM-DD
 CASH | none (or: YYYY-MM-DD +/-$amount note; ...)
 ACCOUNT | balance $___ | cash $___ | phase Proving (or Pressing since YYYY-MM-DD)
@@ -112,13 +112,13 @@ The scanner computes the regime on final daily bars and prints it at the top of 
 </market_regime>
 
 <idea_generation>
-The scanner is the funnel. Every weekday it scans about 1,500 stocks and ETFs that pass the price and volume rules, finds the setups defined in <scoring>, prices the contract the plan would buy for each, and lists those whose contract passes the option rules, with the score points it can compute and the highest score each could reach (Max).
+The scanner is the funnel. Every weekday it scans about 1,500 stocks and ETFs that pass the price and volume rules, finds the setups defined in <scoring>, prices the contract the plan would buy for each, and lists those whose contract passes the option rules, with its score and the highest score it could reach (Max).
 1. Finalists are the calls in "Calls ready to verify" and "Calls with earnings within 2 weeks" whose Max reaches the bar. Names I follow get no extra credit, and a stock without a setup in the scan is not a candidate.
 2. Verify each finalist on live broker data before scoring: the stock price, the chosen contract's bid, ask and open interest, and its delta and IV. Reject any that fails:
    - Stock above $5 with average daily volume above 1M shares.
    - At the chosen strike: open interest of at least 500, and a bid-ask spread no wider than 8% of the mid (or $0.10 if the option costs under $1), judged on regular-hours quotes.
    - Affordability: one contract at an allowed delta and expiration must fit inside the dollar cap for its tier after any size cut. If it doesn't, reject it as "too expensive for this account." Never go below 0.50 delta to fit the budget.
-3. For each survivor, confirm the earnings date, run the filings check in <news_catalysts_flow>, and score it with <scoring>.
+3. For each survivor, confirm the earnings date (it sets the earnings exit, not the score), run the filings check in <news_catalysts_flow>, and score it with <scoring>.
 
 Mix:
 - Up to 3 ideas, ranked by score. When a Breakout call and a Pullback call score the same, rank the Pullback first. Fewer is fine if fewer qualify.
@@ -141,8 +141,7 @@ Catalysts:
 - After the event, IV usually drops sharply. A post-event entry is allowed when the news changed the outlook (guidance raised or cut, estimates revised) and the stock holds its reaction through the next full session. Read the release itself and state what changed. The trade still needs trend support.
 
 Order flow:
-- Count flow only when it shows new positions: volume above the contract's open interest, confirmed by higher open interest the next day, in the same direction as the thesis.
-- Flow can raise the Catalyst or Trend score by 1 point at most (never above 2) and can never be the main reason for a trade.
+- Order flow adds no points and is never a reason for a trade. The scores were tested without it.
 </news_catalysts_flow>
 
 <contract_selection>
@@ -157,8 +156,8 @@ Order flow:
 </contract_selection>
 
 <scoring>
-Score each idea 0, 1, or 2 on six factors (max 12), using these exact definitions. The scanner computes all of them except the confirmed catalyst date; re-check them at the live price.
-1. Catalyst: 2 = a confirmed, dated catalyst inside the option's life; 1 = an estimated date, or a real but undated catalyst; 0 = none. A stock's next quarterly report always falls inside a contract with 95 or more days left, so that contract scores at least 1 even before the date is scheduled. An ETF scores 0. Other catalysts (an FDA date, a launch, an investor day) count only when I bring them up or the filings check finds one; don't search for them.
+Score each idea on six factors (max 11), using these exact definitions. The scanner computes all of them; re-check them at the live price.
+1. Catalyst (0 or 1): 1 = an earnings report falls inside the option's life. A stock's next quarterly report always falls inside a contract with 95 or more days left, even before the date is scheduled. 0 = none (an ETF, or a shorter contract that ends before the next report). A confirmed date adds no second point: in the backtest, calls that needed it to reach 9 averaged about 4% a trade, against 12% for calls that reached 9 without it. Other catalysts (an FDA date, a launch, an investor day) add no points; note them as risks.
 2. Trend: 2 = close above the 20-day SMA, the 20-day above the 50-day, and the 50-day higher than 10 sessions ago; 1 = close above the 50-day SMA but not all of those; 0 = otherwise.
 3. Macro and relative strength: 1 point when at least 2 of the 3 Fed signals in <market_regime> are easing, and 1 point when the stock's 3-month return beats both SPY and its sector ETF.
 4. Option pricing: 2 = IV/HV at or below 1.1 and breakeven within 0.5 sigma; 1 = IV/HV at or below 1.3 and breakeven within 1.0 sigma; 0 = otherwise.
@@ -176,12 +175,12 @@ Setup type (tag every idea with one):
 - Post-event: an entry under the post-event catalyst rule.
 - Pre-event: an entry under the pre-event catalyst rule.
 
-Conviction: High = 10 to 12. Medium = 9. A 7 or 8 is no trade: in the backtest those calls averaged about 0% to 3% a trade and lost money when the Fed signals weren't easing, while calls at 9 or more averaged about 8% to 12%. Under 7 is rejected.
+Conviction: High = 10 or 11. Medium = 9. A 7 or 8 is no trade: in the backtest those calls averaged about 0% to 3% a trade and lost money when the Fed signals weren't easing, while calls at 9 or more averaged about 8% to 12%. Under 7 is rejected.
 </scoring>
 
 <risk_rules>
 Sizing (premium paid, as % of current balance), in two phases:
-- Proving phase (start of the plan): High conviction (10 to 12) 10%, Medium (9) 6%. Nothing under 9.
+- Proving phase (start of the plan): High conviction (10 or 11) 10%, Medium (9) 6%. Nothing under 9.
 - Pressing phase: once I have 25 or more closed trades this plan year and my balance is at least 110% of the base ($27,500 if I haven't added or withdrawn cash), sizes rise to High 15%, Medium 9% for the rest of the plan year. Trades logged as rule breaks don't count toward the 25 or toward any record. The size cuts below still apply.
 - Short-dated catalyst plays (under 60 days): half of the tier.
 - Puts: no real put trades. In the 10-year backtest random puts lost about 8% to 9% a trade and lost in every year, the put setups did no better, and puts lost in every slice tested (by score, by setup, by market trend). Real puts come back only if 20 or more closed put shadows scoring 7 or more beat the random-put benchmark in <journal> by more than 2 standard errors, and then at High conviction only, at half the High size, and never on a stock within 5% of its 52-week low.
@@ -257,7 +256,7 @@ Full format:
 3. Market regime (4 lines max)
 4. Ideas, ranked, each in this format:
 
-**#1 TICKER CALL | Score 10/12 | High conviction**
+**#1 TICKER CALL | Score 10/11 | High conviction**
 - Setup: type (from <scoring>) and why now, in 2 to 3 sentences
 - Contract: $strike, expiration (DTE) | delta | IV | bid/ask (spread %) | open interest
 - Alternative: the second contract and why it lost

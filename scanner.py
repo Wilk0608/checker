@@ -1,4 +1,4 @@
-"""Daily setup scanner (options plan, rules v7.7).
+"""Daily setup scanner (options plan, rules v7.8).
 
 Universe: every US-listed common stock that passes loose price/volume pre-filters (see universe.py), plus the curated
 list in universe.txt (which also holds the ETFs). Downloads ~13 months of daily bars, applies setups.py to FINAL bars
@@ -44,14 +44,14 @@ GROUP_ETF = {"g01_semis_hw": "XLK", "g02_software_fintech": "XLK", "g03_ai_infra
              "g09_industrials_utilities_reits": "XLI", "g10_etfs": "SPY"}
 SECTOR_ETFS = ["SPY", "XLK", "XLV", "XLF", "XLE", "XLI", "XLY", "XLP", "XLU", "XLRE", "XLB", "XLC"]
 TOP_N, WATCH_N = 20, 20
-OTHER_POINTS = 6          # most the option check and session can add, besides the Fed point: catalyst 2 + pricing 2 + liquidity 2
+OTHER_POINTS = 5          # most the option check can add, besides the Fed point: catalyst 1 + pricing 2 + liquidity 2
 NEEDS = {"call": 7, "put": 10}
 FED = {"call": 1, "put": 1}   # the Fed point each direction can still get (plan.json fed_bias); 1 when the bias isn't set
 FED_BIAS = {"calls": {"call": 1, "put": 0}, "puts": {"call": 0, "put": 1}, "both": {"call": 1, "put": 1},
             "none": {"call": 0, "put": 0}}
 PLAN_FILE = os.path.join(ROOT, "plan.json")
 SCREEN = {}               # summary of the option screen for the report
-REAL_PUTS = {"on": True}  # plan.json real_puts: false = puts are shadow-only (rules v7.7), so the report lists them briefly
+REAL_PUTS = {"on": True}  # plan.json real_puts: false = puts are shadow-only (rules v7.8), so the report lists them briefly
 REGIME = {}               # market regime of the run (see regime())
 MACRO = {"VIX": "^VIX", "IRX": "^IRX", "TNX": "^TNX", "DXY": "DX-Y.NYB"}   # Yahoo symbols
 EASING_FOR_CALLS = 2      # calls get the Fed point when at least this many of the 3 signals are easing; puts otherwise
@@ -311,7 +311,7 @@ def apply_bar(plan):
 
 
 def apply_fed(plan, rg=None):
-    """Which directions can get the Fed point (score factor 3), from plan.json's fed_bias. "auto" (rules v7.7) reads the
+    """Which directions can get the Fed point (score factor 3), from plan.json's fed_bias. "auto" (rules v7.8) reads the
     three Fed signals in the regime: calls get the point with 2 or 3 easing, puts with 0 or 1; when the signals are
     missing neither side gets it. A fixed value ("calls", "puts", "both" or "none") overrides the signals. Not set or
     not one of those: assume the point is available to both, so no setup is left out of the tables on a guess.
@@ -375,7 +375,7 @@ def evaluate_row(x, meta, contracts, S, caps, entry, regular, r):
     x.update(rr=rr, rr_pts=rr_pts, cap=cap_px, known=x["trend"] + x["rs"] + rr_pts, exp=c["exp"], ts=ts,
              liq=c["liquidity"], pricing=c["pricing"], cat=0)
     x["score"] = x["known"] + x["liq"] + x["pricing"]
-    x["max"] = x["score"] + FED[x["dir"]] + 2
+    x["max"] = x["score"] + FED[x["dir"]] + 1
     return x
 
 
@@ -384,10 +384,11 @@ EST_REPORT_DAYS = 95      # a contract with this many days left always contains 
 
 def apply_events(x, cal_entry, entry, is_etf=False):
     """Earnings context, the catalyst point and the final Score / Max for a row with a contract.
-    Catalyst 1 = an earnings date inside the option's life: a date on the calendar (the session can confirm it, which
-    makes it 2), or, when the calendar has none yet (it lists about 40 days), the next quarterly report of a stock whose
-    contract has 95+ days left (cat_est: an estimated date with nothing to confirm, so Max adds nothing). An ETF has no
-    report, so its Max adds nothing either."""
+    Catalyst 1 = an earnings report inside the option's life: a date on the calendar, or, when the calendar has none yet
+    (it lists about 40 days), the next quarterly report of a stock whose contract has 95+ days left (cat_est). A
+    confirmed date adds no second point (rules v7.8): in the backtest, calls that needed it to reach 9 averaged about
+    +4% a trade against +12% for calls that reached 9 without it. Max = Score + the Fed point, plus 1 only for a stock
+    whose shorter contract may still contain a report the calendar doesn't list yet. An ETF has no report."""
     c = (x.get("opt") or {}).get("contract")
     if not c:
         return
@@ -398,7 +399,7 @@ def apply_events(x, cal_entry, entry, is_etf=False):
     if x["cat_est"]:
         x["cat"] = 1
     x["score"] = x["known"] + x["liq"] + x["pricing"] + x["cat"]
-    x["max"] = x["score"] + FED[x["dir"]] + (0 if (x["cat_est"] or is_etf) else 2 - x["cat"])
+    x["max"] = x["score"] + FED[x["dir"]] + (1 if (x["cat"] == 0 and not is_etf) else 0)
 
 
 def latest_price(raw):
@@ -637,9 +638,9 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
           "1-sigma move using the higher of IV and HV20) + liquidity (0-2) + pricing (0-2) of the contract shown + catalyst "
           "(1 when an earnings date falls inside the option's life: a date on the calendar, or a stock's next quarterly report when "
           "the contract has 95+ days left and the date isn't scheduled yet). The session adds the Fed point when its Fed "
-          "read supports the direction (plan.json fed_bias, above) and raises the catalyst to 2 for a confirmed date: "
-          "Max = Score + Fed point (0 or 1) + (2 - catalyst), with nothing added for the catalyst when there is no date to confirm "
-          "(an unscheduled report, or an ETF). Calls need " + str(NEEDS["call"]) + ", puts "
+          "read supports the direction (plan.json fed_bias, above); a confirmed date adds no second catalyst point: "
+          "Max = Score + Fed point (0 or 1), plus 1 only for a stock whose shorter contract may still contain a report the "
+          "calendar doesn't list yet. Calls need " + str(NEEDS["call"]) + ", puts "
           + str(NEEDS["put"]) + " (plan.json min_score); only setups whose "
           "contract passes the plan's option rules and whose Max reaches the bar are in the tables. Contract = what the plan "
           "would buy (first monthly 90+ days out, or 60+ when that doesn't fit the cap; delta 0.60-0.70 or 0.50-0.60 as "
@@ -672,7 +673,7 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
         for d, lab in (("call", "Calls"), ("put", "Puts")):
             if d == "put" and not REAL_PUTS["on"]:
                 allp = sorted([x for x in tradeable if x["dir"] == "put"], key=key)
-                L += [f"## Puts: shadow test only, no real put trades (rules v7.7): {len(allp)} with a passing contract",
+                L += [f"## Puts: shadow test only, no real put trades (rules v7.8): {len(allp)} with a passing contract",
                       "- Score in brackets: " + (", ".join(f"{x['r']['tk']} ({x['score']})" for x in allp[:40]) or "none")
                       + (f", +{len(allp) - 40} more in latest.json" if len(allp) > 40 else ""), ""]
                 continue
@@ -774,7 +775,7 @@ def shadow_step(rows, bars, now, plan, groups, fetch=True):
 
 def build_alerts(rows, plan, now, bars, fetch=True):
     """Lines for results/alert.md: calls that can reach the bar on regular-hours quotes (with the Fed point as set and a
-    confirmed earnings date, the only points a session can still add from facts), and exits due on the real positions
+    Fed point), and exits due on the real positions
     listed in plan.json under "open"."""
     out = []
     if SCREEN.get("run_regular") and (SCREEN.get("caps") or {}).get("mode") != "Hard stop":
@@ -787,14 +788,14 @@ def build_alerts(rows, plan, now, bars, fetch=True):
             e = x.get("earn") or {}
             if e.get("pre_event") and (x.get("pre") or {}).get("result") != "PASS":
                 continue
-            reach = x["score"] + FED["call"] + (1 if x.get("cat") == 1 and not x.get("cat_est") else 0)   # +1 only for a date that can be confirmed
+            reach = x["score"] + FED["call"]                      # the scan's score plus the Fed point: nothing else can be added
             if reach >= need(x):
                 hot.append((reach, x))
         hot.sort(key=lambda p: (-p[0], p[1]["r"]["tk"]))
         for reach, x in hot[:8]:
             c = x["opt"]["contract"]
             out.append(f"CALL AT THE BAR: {x['r']['tk']} {c['exp']:%b %d} {c['strike']:g}C, about ${c['cost']:,.0f} a contract. "
-                       f"Score {x['score']} from the scan, {reach} with the Fed point and a confirmed earnings date (bar {need(x)}).")
+                       f"Score {x['score']} from the scan, {reach} with the Fed point (bar {need(x)}).")
     positions = (plan or {}).get("open") or []
     if positions:
         tick = {p["tk"] for p in positions}
@@ -880,7 +881,7 @@ def selftest():
     assert last_completed_session(dt.datetime(2026, 10, 27, 6, 30, tzinfo=ET)) == dt.date(2026, 10, 26)
     assert last_completed_session(dt.datetime(2026, 10, 26, 6, 30, tzinfo=ET)) == dt.date(2026, 10, 23)   # Monday morning
     assert last_completed_session(dt.datetime(2026, 11, 27, 7, 0, tzinfo=ET)) == dt.date(2026, 11, 25)    # day after Thanksgiving
-    # 2) Contract calendar (rules v7.7) for an Oct 23 2026 scan: entry Mon Oct 26; Jan 15 is 81 days out, so the first
+    # 2) Contract calendar (rules v7.8) for an Oct 23 2026 scan: entry Mon Oct 26; Jan 15 is 81 days out, so the first
     #    monthly 90+ days out is Feb 19 '27, time stop Jan 29; the 60+ day fallback is Jan 15, time stop Dec 25 -> Dec 24
     e, x, ts, h = contract_plan(dt.date(2026, 10, 23), True)
     assert (e, x, ts, h) == (dt.date(2026, 10, 26), dt.date(2027, 2, 19), dt.date(2027, 1, 29), 95), (e, x, ts, h)
@@ -932,7 +933,7 @@ def selftest():
     e, x, ts, h = contract_plan(last, True)
     rr, pts, cap = capped_rr(lc, R["UPP"]["hv20"] / 100, h)
     assert up_row["exp"] == x and (up_row["rr"], up_row["rr_pts"]) == (rr, pts)
-    assert up_row["known"] == R["UPP"]["trend_call"] + up_row["rs"] + pts and up_row["max"] == up_row["known"] + 7
+    assert up_row["known"] == R["UPP"]["trend_call"] + up_row["rs"] + pts and up_row["max"] == up_row["known"] + 6
     dnn_put = [x for x in rows if x["r"]["tk"] == "DNN" and x["dir"] == "put"][0]
     assert no_fed[("UPP", "call")] == up_row["max"] - 1 and no_fed[("DNN", "put")] == dnn_put["max"]   # puts keep it
     assert [x for x in rows if x["r"]["tk"] == "DNN"][0]["near_low"]
@@ -963,7 +964,7 @@ def synth_chain(tk, S, exps, today, iv=0.35, spread_pct=0.03, oi=2000, r=0.04, m
 
 def option_selftest(res, rows, miss, etf3, last, now):
     import copy
-    # caps (rules v7.7): Proving High 10% / Medium 6%, Pressing 15% / 9%; x0.75 under the base, x0.5 under 70%, hard
+    # caps (rules v7.8): Proving High 10% / Medium 6%, Pressing 15% / 9%; x0.75 under the base, x0.5 under 70%, hard
     # stop under 60%; puts half of High. plan.json can override the percentages (V76 = the older, larger sizes).
     c = O.plan_caps({"balance": 24889.50, "base": 25000, "phase": "Proving"})
     assert c["mode"] == "Cut to 75%" and (c["medium"], c["high"], c["put"]) == (1120.03, 1866.71, 933.36), c
@@ -1135,7 +1136,7 @@ def option_selftest(res, rows, miss, etf3, last, now):
     up = [x for x in rows2 if x["r"]["tk"] == "UPP"][0]
     k = up["opt"]["contract"]
     assert up["opt"]["status"] == "ok" and 0.60 <= k["delta"] <= 0.70 and up["cat"] == 1 and up["earn"]["inside_life"], up["opt"]
-    assert up["score"] == up["known"] + up["liq"] + up["pricing"] + 1 and up["max"] == up["score"] + 2
+    assert up["score"] == up["known"] + up["liq"] + up["pricing"] + 1 and up["max"] == up["score"] + 1
     # min_score in plan.json: 10 = High conviction only (calls and puts both need 10); default 7 for calls
     assert apply_bar({"min_score": 10}) == {"call": 10, "put": 10} and apply_bar({}) == {"call": 7, "put": 10}
     assert apply_bar(None) == {"call": 7, "put": 10}
@@ -1198,7 +1199,7 @@ def option_selftest(res, rows, miss, etf3, last, now):
     for x in rows3:
         apply_events(x, (entry + dt.timedelta(days=30), "AMC") if x["r"]["tk"] == "UPP" else None, entry)
     up3 = [x for x in rows3 if x["r"]["tk"] == "UPP"][0]
-    assert up3["score"] == up["score"] and up3["max"] == up["max"] - 1 == up3["score"] + 1, (up3["max"], up["max"])
+    assert up3["score"] == up["score"] and up3["max"] == up["max"] - 1 == up3["score"], (up3["max"], up["max"])
     for x3, x2 in zip(rows3, rows2):
         if x2.get("max") is not None and (x2.get("opt") or {}).get("contract"):
             assert x3["max"] == x2["max"] - (1 if x2["dir"] == "call" else 0), (x3["r"]["tk"], x3["dir"])
@@ -1261,7 +1262,7 @@ def v77_selftest(res, rows2, miss, etf3, last, now, caps, up):
     SCREEN["fed_bias"] = apply_fed({"fed_bias": "auto"}, rg1)
     REGIME.update(rg1)
     mdp = report(res, rows2, miss, etf3, last, now, "self-test", screened=True)
-    assert "## Puts: shadow test only, no real put trades (rules v7.7)" in mdp and "## Puts ready to verify" not in mdp, mdp
+    assert "## Puts: shadow test only, no real put trades (rules v7.8)" in mdp and "## Puts ready to verify" not in mdp, mdp
     assert "Puts are shadow-only" in mdp and "**Market regime**" in mdp and "puts get the Fed point, calls don't" in mdp, mdp[:2500]
     assert "first monthly 90+ days out" in mdp and "shadow-only, listed above" in mdp
     REAL_PUTS["on"] = True
@@ -1302,23 +1303,23 @@ def v77_selftest(res, rows2, miss, etf3, last, now, caps, up):
     assert far["cat"] == 0 and not far["cat_est"] and far["score"] == base and far["max"] == base                # an ETF has no report
     far["opt"]["contract"]["exp"] = ent + dt.timedelta(days=94)
     apply_events(far, None, ent)
-    assert far["cat"] == 0 and far["max"] == base + 2                                                            # a shorter contract may miss it
+    assert far["cat"] == 0 and far["max"] == base + 1                                                            # a shorter contract may still hold a report
     apply_events(far, (ent + dt.timedelta(days=30), "AMC"), ent)
-    assert far["cat"] == 1 and not far["cat_est"] and far["max"] == base + 2                                     # a listed date can be confirmed
+    assert far["cat"] == 1 and not far["cat_est"] and far["score"] == far["max"] == base + 1                     # a listed date: 1 point, confirmed or not
     # 18) alerts: a call that can reach the bar on regular-hours quotes, and exits due on real positions
     apply_bar({"min_score": 9})
     apply_fed({"fed_bias": "puts"})
     SCREEN.update(run_regular=True, caps=caps, _cal={})
     hot = copy.deepcopy(up)
-    hot.update(score=8, cat=1)                                   # 8 + a confirmed earnings date = 9
-    assert [a.split(":")[0] for a in build_alerts([hot], {}, now, {}, fetch=False)] == ["CALL AT THE BAR"]
-    hot["score"] = 7
-    assert build_alerts([hot], {}, now, {}, fetch=False) == []
-    hot.update(score=8, cat_est=True)                            # the report isn't scheduled: no date to confirm, 8 stays 8
+    hot.update(score=8, cat=1)                                   # an 8 stays an 8: a confirmed date adds nothing
     assert build_alerts([hot], {}, now, {}, fetch=False) == []
     hot.update(score=9)
     assert [a.split(":")[0] for a in build_alerts([hot], {}, now, {}, fetch=False)] == ["CALL AT THE BAR"]
-    hot.pop("cat_est")
+    apply_fed({"fed_bias": "calls"})                             # with the Fed point an 8 reaches the bar
+    hot.update(score=8)
+    assert [a.split(":")[0] for a in build_alerts([hot], {}, now, {}, fetch=False)] == ["CALL AT THE BAR"]
+    apply_fed({"fed_bias": "puts"})
+    hot.update(score=9)
     hot.update(score=9, deal="425 x2")
     assert build_alerts([hot], {}, now, {}, fetch=False) == []     # merger filings: no alert
     hot.pop("deal")
