@@ -19,6 +19,7 @@ The scanner runs this on every scan made with regular-hours option quotes, at mo
 State: results/shadow.json (open and closed trades). Report: results/shadow.md. Shadows are never orders and never
 affect sizing. `python shadow.py --test` runs the self-tests.
 """
+import copy
 import datetime as dt
 import json
 import math
@@ -93,6 +94,9 @@ def stop_level(s):
     return max(s["entry"], 0.7 * s["high_mid"]) if s["step_done"] else 0.4 * s["entry"]
 
 
+MAX_MISSES = 10        # runs in a row without a two-sided quote before a shadow is dropped (kept out of the results)
+
+
 def process(book, today, quotes, closes_by, earn=None, holidays=()):
     """Check every open shadow. quotes = {osi: (bid, ask)} regular-hours quotes; closes_by = {ticker: [(date_iso,
     close), ...]} completed sessions (any range; only those after a shadow's last check are used); earn = {ticker:
@@ -109,9 +113,16 @@ def process(book, today, quotes, closes_by, earn=None, holidays=()):
         q = quotes.get(s["osi"])
         if not q or not (q[0] > 0 and q[1] >= q[0]):
             s["misses"] = s.get("misses", 0) + 1
+            if s["misses"] >= MAX_MISSES or today >= s["exp"]:
+                # it can't be priced honestly, so it leaves the test without a result instead of sitting open forever
+                book.setdefault("dropped", []).append(dict(id=s["id"], tk=s["tk"], osi=s["osi"], entry_date=s["entry_date"], date=today,
+                                                           reason=f"no two-sided quote on {s['misses']} runs in a row"))
+                events.append(dict(kind="dropped", id=s["id"], tk=s["tk"]))
+                continue
             still.append(s)
             events.append(dict(kind="no quote", id=s["id"], tk=s["tk"]))
             continue
+        s["misses"] = 0
         mid, spread = (q[0] + q[1]) / 2, q[1] - q[0]
         new_closes = [(d, c) for d, c in closes_by.get(s["tk"], []) if s["checked"] < d < today]
         was_stepped = s["step_done"]
@@ -322,7 +333,10 @@ def summary_lines(book, summary=None):
         L.append(f"- This run: {len(done)} closed" + (" (" + ", ".join(f"{e['tk']} {e['ret']:+.0%}" for e in done) + ")" if done else "")
                  + f", {len(summary.get('new') or [])} opened"
                  + (" (" + ", ".join(f"{s['tk']} {s['cp']} {s['score']}" for s in summary['new']) + ")" if summary.get("new") else "")
-                 + f", {sum(1 for e in ev if e['kind'] == 'no quote')} without a quote.")
+                 + f", {sum(1 for e in ev if e['kind'] == 'no quote')} without a quote"
+                 + (" (" + ", ".join(e["tk"] for e in ev if e["kind"] == "no quote") + ")" if any(e["kind"] == "no quote" for e in ev) else "")
+                 + (f", {sum(1 for e in ev if e['kind'] == 'dropped')} dropped after {MAX_MISSES} runs without a quote"
+                    if any(e["kind"] == "dropped" for e in ev) else "") + ".")
     elif summary:
         L.append(f"- This run made no shadow changes ({summary.get('why')}).")
     for label, cp, nl in (("Calls", "C", False), ("Puts", "P", False)):
@@ -434,6 +448,9 @@ def report(book, summary=None):
     L += ["", f"## Last {len(recent)} closed", "", "| Id | Contract | Score | Setup | In | Out | Return | Why |", "|---|---|---|---|---|---|---|---|"]
     L += [f"| {c['id']} | {c['tk']} {c['strike']:g}{c['cp']} {c['exp']} | {c['score']} | {c['setup']} | {c['entry_date']} | {c['exit_date']} | "
           f"{c['ret']:+.1%} | {c['reason']} |" for c in reversed(recent)]
+    if book.get("dropped"):
+        L += ["", f"## Dropped: no two-sided quote on {MAX_MISSES} runs in a row (not in any result above)", ""]
+        L += [f"- {d['id']} {d['osi']}, opened {d['entry_date']}, dropped {d['date']}" for d in book["dropped"]]
     return "\n".join(L) + "\n"
 
 
@@ -485,6 +502,13 @@ def selftest():
     closes = {"XYZ": [("2026-11-03", 51.0)], "ABC": [("2026-11-03", 60.0), ("2026-11-04", 51.0)]}
     ev = process(book, "2026-11-05", q, closes, {"ABC": (D(2026, 11, 20), "BMO")})
     assert [e["kind"] for e in ev] == ["closed", "no quote"] and len(book["open"]) == 2 and len(book["closed"]) == 1
+    noq = copy.deepcopy(book)                                     # a shadow that never gets a quote is dropped, not counted
+    for _ in range(MAX_MISSES - 2):
+        process(noq, "2026-11-06", {"ABC270115P00050000": (4.0, 4.4)}, {})
+    assert [x["id"] for x in noq["open"]] == ["A2", "A3"] and noq["open"][1]["misses"] == MAX_MISSES - 1 and noq["open"][0]["misses"] == 0
+    evd = process(noq, "2026-11-06", {"ABC270115P00050000": (4.0, 4.4)}, {})
+    assert [e["kind"] for e in evd] == ["dropped"] and [x["id"] for x in noq["open"]] == ["A2"] and noq["dropped"][0]["id"] == "A3"
+    assert len(noq["closed"]) == 1                                # the drop adds no result
     c = book["closed"][0]
     assert c["id"] == "A1" and c["reason"] == "-60% stop" and abs(c["ret"] - ((1.55 - 0.025 - 0.01) / 4.0 - 1)) < 1e-4
     a2 = book["open"][0]

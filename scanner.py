@@ -774,9 +774,8 @@ def shadow_step(rows, bars, now, plan, groups, fetch=True):
 
 
 def build_alerts(rows, plan, now, bars, fetch=True):
-    """Lines for results/alert.md: calls that can reach the bar on regular-hours quotes (with the Fed point as set and a
-    Fed point), and exits due on the real positions
-    listed in plan.json under "open"."""
+    """Lines for results/alert.md: calls that reach the bar on regular-hours quotes (the scan's score plus the Fed
+    point), and exits due on the real positions listed in plan.json under "open"."""
     out = []
     if SCREEN.get("run_regular") and (SCREEN.get("caps") or {}).get("mode") != "Hard stop":
         hot = []
