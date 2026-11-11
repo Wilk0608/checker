@@ -129,19 +129,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 26, spread 13%, cost $2,036 > cap $1,546"
+     "Feb 19 0.60-0.70 delta: OI 26, spread 14%, cost $2,031 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 178.92,
+    "S": 178.45,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -607,19 +607,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 331, cost $2,416 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 331, cost $2,346 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 56.06,
+    "S": 57.2,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:27 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -784,7 +784,7 @@
    "trend": 2,
    "rs": 0,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -1143,19 +1143,19 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 217, spread 9%, cost $2,023 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 217, cost $2,005 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 180.32,
+    "S": 179.15,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -1529,7 +1529,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -1897,7 +1897,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -2231,7 +2231,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -2410,7 +2410,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -2419,10 +2419,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 70.0,
+    "S": 70.17,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -2948,7 +2948,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -3158,7 +3158,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -3167,10 +3167,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 69.89,
+    "S": 69.98,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -3306,7 +3306,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -3520,19 +3520,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 70, spread 13%, cost $4,068 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 70, spread 15%, cost $4,054 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 256.05,
+    "S": 255.74,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:16 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -3668,7 +3668,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -3680,7 +3680,7 @@
     "S": 9.9,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 10:58 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -3847,7 +3847,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -3856,10 +3856,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 113.27,
+    "S": 113.02,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -4204,7 +4204,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -4417,7 +4417,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -4715,19 +4715,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.50-0.60 delta: OI 370, spread 32%"
+     "Feb 19 0.60-0.70 delta: OI 98, spread 35%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 126.05,
+    "S": 125.85,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -4865,19 +4865,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 32, cost $1,527 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 32, cost $1,531 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 68.86,
+    "S": 68.68,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:32 ET"
+    "quote_time": "11-11 11:46 ET"
    }
   }
  },
@@ -5582,7 +5582,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -5728,7 +5728,7 @@
    "trend": 1,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -5737,10 +5737,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 59.42,
+    "S": 59.34,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -5936,19 +5936,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 53, spread 22%"
+     "Feb 19 0.60-0.70 delta: OI 53, spread 24%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 82.07,
+    "S": 82.17,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:23 ET"
+    "quote_time": "11-11 11:49 ET"
    }
   }
  },
@@ -6238,19 +6238,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 56, spread 11%, cost $2,281 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 56, spread 11%, cost $2,248 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 87.33,
+    "S": 88.08,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -6450,7 +6450,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -6597,19 +6597,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: spread 10%, cost $1,899 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: spread 10%, cost $1,900 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 96.88,
+    "S": 96.66,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -6745,7 +6745,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -6928,7 +6928,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -6937,10 +6937,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 170.61,
+    "S": 170.63,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 11:49 ET"
    }
   }
  },
@@ -7531,7 +7531,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -7679,19 +7679,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 136, spread 11%, cost $2,341 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 136, spread 10%, cost $2,334 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 258.86,
+    "S": 258.51,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -7942,7 +7942,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -8388,19 +8388,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 122, spread 25%"
+     "Mar 19 0.60-0.70 delta: OI 122, spread 28%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 19.91,
+    "S": 19.92,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:26 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -8743,19 +8743,19 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 17, spread 8%, cost $2,638 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 17, spread 9%, cost $2,661 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 240.75,
+    "S": 241.06,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 11:47 ET"
    }
   }
  },
@@ -9162,7 +9162,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -9761,12 +9761,12 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [
-     "Feb 19 0.60-0.70 delta: cost $2,491 > cap $1,546",
+     "Feb 19 0.60-0.70 delta: cost $3,164 > cap $1,546",
      "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)",
      "60+ day expiration (90+ over the cap)"
     ],
@@ -9776,34 +9776,34 @@
      "exp": "2027-01-15",
      "cp": "C",
      "strike": 270.0,
-     "bid": 13.45,
-     "ask": 13.7,
+     "bid": 13.75,
+     "ask": 13.9,
      "oi": 24351,
      "src": "Cboe",
      "dte": 65,
      "quote": true,
-     "mid": 13.575,
-     "spread_pct": 0.0184,
+     "mid": 13.825,
+     "spread_pct": 0.0108,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1364.75,
+     "cost": 1387.25,
      "fits": true,
-     "lim": 13.637,
-     "iv": 0.3143,
-     "delta": 0.5142,
-     "be": 283.65,
-     "be_sd": 0.488,
-     "ivhv": 0.741,
+     "lim": 13.862,
+     "iv": 0.3155,
+     "delta": 0.5185,
+     "be": 283.87,
+     "be_sd": 0.481,
+     "ivhv": 0.744,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 266.42,
+    "S": 266.77,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:38 ET"
+    "quote_time": "11-11 11:59 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -10904,7 +10904,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -10913,10 +10913,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 43.55,
+    "S": 43.66,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -11110,7 +11110,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -11260,7 +11260,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -11269,10 +11269,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 124.57,
+    "S": 124.25,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -11466,7 +11466,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -11475,10 +11475,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 7.61,
+    "S": 7.6,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:24 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -11614,7 +11614,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -11623,10 +11623,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 39.45,
+    "S": 39.39,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 11:43 ET"
    }
   }
  },
@@ -12100,7 +12100,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -12277,7 +12277,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -12286,10 +12286,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 79.54,
+    "S": 79.66,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:15 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -12456,20 +12456,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: cost $5,964 > cap $1,288",
-     "Jan 15 0.60-0.70 delta: cost $3,934 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: cost $5,035 > cap $1,288",
+     "Jan 15 0.60-0.70 delta: cost $3,772 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 202.24,
+    "S": 205.09,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -12605,7 +12605,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -12614,10 +12614,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 54.15,
+    "S": 54.1,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -12752,7 +12752,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -12957,7 +12957,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -13375,7 +13375,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -13384,10 +13384,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 48.97,
+    "S": 48.94,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -13522,7 +13522,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -14366,7 +14366,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -14514,7 +14514,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -14975,24 +14975,24 @@
      "cp": "P",
      "strike": 45.0,
      "bid": 12.2,
-     "ask": 12.8,
+     "ask": 12.75,
      "oi": 1434,
      "src": "Cboe",
      "dte": 100,
      "quote": true,
-     "mid": 12.5,
-     "spread_pct": 0.048,
+     "mid": 12.475,
+     "spread_pct": 0.0441,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1266.0,
+     "cost": 1262.25,
      "fits": true,
-     "lim": 12.65,
-     "iv": 0.9167,
-     "delta": -0.5756,
-     "be": 32.34,
+     "lim": 12.613,
+     "iv": 0.911,
+     "delta": -0.5768,
+     "be": 32.38,
      "be_sd": 0.228,
-     "ivhv": 0.784,
+     "ivhv": 0.779,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
@@ -15001,7 +15001,7 @@
     "S": 36.32,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:38 ET"
+    "quote_time": "11-11 11:59 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -15143,7 +15143,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -16702,7 +16702,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -16852,7 +16852,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -17242,19 +17242,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 154"
+     "Mar 19 0.60-0.70 delta: OI 154 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 148.3,
+    "S": 148.38,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:55 ET"
    }
   }
  },
@@ -17541,7 +17541,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -17860,7 +17860,7 @@
    "ts": "2027-01-29",
    "rr": 0.76,
    "rr_pts": 0,
-   "cap": 82.21,
+   "cap": 82.08,
    "trend": 2,
    "rs": 1,
    "known": 3,
@@ -17891,20 +17891,20 @@
      "cost": 1064.75,
      "fits": true,
      "lim": 10.637,
-     "iv": 0.4292,
-     "delta": -0.5059,
+     "iv": 0.4319,
+     "delta": -0.504,
      "be": 94.35,
-     "be_sd": 0.304,
-     "ivhv": 1.189,
+     "be_sd": 0.306,
+     "ivhv": 1.196,
      "pricing": 1,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 101.26,
+    "S": 101.36,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:38 ET"
+    "quote_time": "11-11 11:59 ET"
    },
    "liq": 2,
    "pricing": 1,
@@ -18104,7 +18104,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -18113,10 +18113,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 65.62,
+    "S": 65.36,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -18521,7 +18521,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -18816,7 +18816,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -18825,10 +18825,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 21.56,
+    "S": 21.53,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 11:48 ET"
    }
   }
  },
@@ -19111,7 +19111,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -19412,7 +19412,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -19835,7 +19835,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -19844,10 +19844,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 211.91,
+    "S": 211.65,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -19983,20 +19983,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: cost $8,149 > cap $1,288",
-     "Jan 15 0.60-0.70 delta: cost $5,216 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: cost $8,164 > cap $1,288",
+     "Jan 15 0.60-0.70 delta: cost $5,150 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 213.39,
+    "S": 213.85,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -20161,7 +20161,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -20336,19 +20336,19 @@
    "trend": 1,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 104, spread 32%"
+     "Apr 16 0.60-0.70 delta: OI 104, spread 24%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 36.37,
+    "S": 36.31,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:46 ET"
    }
   }
  },
@@ -20484,7 +20484,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -20634,7 +20634,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -20813,7 +20813,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -20822,10 +20822,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 29.82,
+    "S": 29.83,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:30 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -21142,7 +21142,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -21151,10 +21151,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 99.59,
+    "S": 99.68,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -21292,7 +21292,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -21887,19 +21887,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 120, spread 44%"
+     "Feb 19 0.60-0.70 delta: OI 120, spread 51%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 54.28,
+    "S": 53.92,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:32 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -22068,7 +22068,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -22427,7 +22427,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -22693,7 +22693,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -22702,10 +22702,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 86.47,
+    "S": 86.39,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -22871,7 +22871,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -23021,7 +23021,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -23169,7 +23169,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -23315,7 +23315,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -23463,7 +23463,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -24054,7 +24054,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -24410,7 +24410,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -24419,10 +24419,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 19.29,
+    "S": 19.17,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:40 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -24827,7 +24827,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -25062,7 +25062,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -25305,7 +25305,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -25314,10 +25314,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 191.32,
+    "S": 191.08,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -25513,7 +25513,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -25522,10 +25522,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 63.29,
+    "S": 63.14,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -25688,7 +25688,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -25697,10 +25697,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 34.88,
+    "S": 34.87,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:32 ET"
+    "quote_time": "11-11 11:48 ET"
    }
   }
  },
@@ -25834,7 +25834,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -26019,7 +26019,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -26028,10 +26028,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 30.07,
+    "S": 30.0,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -26287,7 +26287,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -26296,10 +26296,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 44.83,
+    "S": 44.79,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -26670,7 +26670,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -27268,7 +27268,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -27539,7 +27539,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -27548,10 +27548,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 127.7,
+    "S": 127.19,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:55 ET"
    }
   }
  },
@@ -27987,7 +27987,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -28135,19 +28135,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: spread 15%"
+     "no strike at 0.50-0.70 delta (nearest 15C +0.72, 17.5C +0.49, Apr 16)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 16.86,
+    "S": 16.73,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 10:56 ET"
+    "quote_time": "11-11 11:57 ET"
    }
   }
  },
@@ -28374,19 +28374,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 282, spread 26%"
+     "Mar 19 0.60-0.70 delta: OI 282, spread 24%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 14.77,
+    "S": 14.68,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 10:57 ET"
+    "quote_time": "11-11 11:57 ET"
    }
   }
  },
@@ -28646,7 +28646,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -29003,7 +29003,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -29271,7 +29271,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -29539,7 +29539,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -29689,19 +29689,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 91, spread 31%"
+     "Mar 19 0.60-0.70 delta: OI 91, spread 30%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 54.01,
+    "S": 54.02,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -30169,7 +30169,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -30735,7 +30735,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -30747,38 +30747,38 @@
      "cp": "C",
      "strike": 30.0,
      "bid": 3.55,
-     "ask": 3.75,
+     "ask": 3.7,
      "oi": 6442,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 3.65,
-     "spread_pct": 0.0548,
+     "mid": 3.625,
+     "spread_pct": 0.0414,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 371.0,
+     "cost": 367.25,
      "fits": true,
-     "lim": 3.7,
-     "iv": 0.4261,
-     "delta": 0.6086,
-     "be": 33.71,
-     "be_sd": 0.373,
-     "ivhv": 0.868,
+     "lim": 3.663,
+     "iv": 0.4296,
+     "delta": 0.6047,
+     "be": 33.67,
+     "be_sd": 0.377,
+     "ivhv": 0.875,
      "pricing": 2,
-     "liquidity": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 30.81,
+    "S": 30.72,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:54 ET"
    },
-   "liq": 1,
+   "liq": 2,
    "pricing": 2,
    "cat": 1,
-   "score": 7,
+   "score": 8,
    "earn": {},
    "cat_est": true
   }
@@ -31215,19 +31215,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 5, cost $2,294 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 5, cost $2,291 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 173.41,
+    "S": 173.25,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:48 ET"
    }
   }
  },
@@ -31363,7 +31363,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -31663,7 +31663,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -31675,7 +31675,7 @@
     "S": 12.08,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -32053,19 +32053,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 127 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 127, spread 8%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 41.54,
+    "S": 41.58,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -32413,7 +32413,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -32422,10 +32422,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 52.57,
+    "S": 52.66,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 12:00 ET"
    }
   }
  },
@@ -32563,7 +32563,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -33195,7 +33195,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -33204,10 +33204,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 132.57,
+    "S": 133.99,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:48 ET"
    }
   }
  },
@@ -33675,7 +33675,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -33684,10 +33684,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 298.81,
+    "S": 300.0,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:49 ET"
    }
   }
  },
@@ -33821,7 +33821,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -33833,38 +33833,38 @@
      "cp": "P",
      "strike": 12.0,
      "bid": 5.35,
-     "ask": 5.65,
+     "ask": 5.6,
      "oi": 1107,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 5.5,
-     "spread_pct": 0.0545,
+     "mid": 5.475,
+     "spread_pct": 0.0457,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 558.5,
+     "cost": 554.75,
      "fits": true,
-     "lim": 5.575,
-     "iv": 1.1316,
-     "delta": -0.6596,
-     "be": 6.42,
-     "be_sd": 0.152,
-     "ivhv": 0.704,
+     "lim": 5.537,
+     "iv": 1.1531,
+     "delta": -0.6547,
+     "be": 6.45,
+     "be_sd": 0.156,
+     "ivhv": 0.718,
      "pricing": 2,
-     "liquidity": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 7.14,
+    "S": 7.22,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:40 ET"
+    "quote_time": "11-11 12:01 ET"
    },
-   "liq": 1,
+   "liq": 2,
    "pricing": 2,
    "cat": 1,
-   "score": 7,
+   "score": 8,
    "earn": {},
    "cat_est": true
   }
@@ -34001,7 +34001,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -34486,7 +34486,7 @@
    "trend": 0,
    "rs": 0,
    "known": 0,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -34818,7 +34818,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -35236,7 +35236,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -35384,7 +35384,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -35395,39 +35395,39 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 10.0,
-     "bid": 3.5,
+     "bid": 3.55,
      "ask": 3.7,
      "oi": 2705,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 3.6,
-     "spread_pct": 0.0556,
+     "mid": 3.625,
+     "spread_pct": 0.0414,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 366.0,
+     "cost": 367.25,
      "fits": true,
-     "lim": 3.65,
-     "iv": 0.934,
-     "delta": -0.6363,
-     "be": 6.34,
-     "be_sd": 0.175,
-     "ivhv": 0.685,
+     "lim": 3.663,
+     "iv": 0.9482,
+     "delta": -0.6382,
+     "be": 6.33,
+     "be_sd": 0.172,
+     "ivhv": 0.695,
      "pricing": 2,
-     "liquidity": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 7.02,
+    "S": 7.0,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:40 ET"
+    "quote_time": "11-11 12:01 ET"
    },
-   "liq": 1,
+   "liq": 2,
    "pricing": 2,
    "cat": 1,
-   "score": 7,
+   "score": 8,
    "earn": {},
    "cat_est": true
   }
@@ -35579,34 +35579,34 @@
      "exp": "2027-03-19",
      "cp": "C",
      "strike": 100.0,
-     "bid": 9.4,
-     "ask": 9.9,
+     "bid": 9.5,
+     "ask": 10.1,
      "oi": 677,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 9.65,
-     "spread_pct": 0.0518,
+     "mid": 9.8,
+     "spread_pct": 0.0612,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 978.5,
+     "cost": 996.0,
      "fits": true,
-     "lim": 9.775,
-     "iv": 0.3325,
-     "delta": 0.6108,
-     "be": 109.79,
-     "be_sd": 0.347,
-     "ivhv": 0.866,
+     "lim": 9.95,
+     "iv": 0.3322,
+     "delta": 0.616,
+     "be": 109.96,
+     "be_sd": 0.336,
+     "ivhv": 0.865,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 102.76,
+    "S": 103.14,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 11:59 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -35839,7 +35839,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -35848,10 +35848,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 64.06,
+    "S": 63.99,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:31 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -36345,7 +36345,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -36354,10 +36354,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 70.49,
+    "S": 70.67,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:44 ET"
    }
   }
  },
@@ -36493,19 +36493,19 @@
    "trend": 0,
    "rs": 1,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 262, spread 12%"
+     "Mar 19 0.50-0.60 delta: OI 262"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 12.47,
+    "S": 12.54,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -36701,7 +36701,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -36710,10 +36710,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 45.66,
+    "S": 45.61,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -37059,7 +37059,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -37068,10 +37068,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 40.89,
+    "S": 40.8,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:49 ET"
    }
   }
  },
@@ -37209,7 +37209,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -37477,7 +37477,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -37486,10 +37486,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 36.89,
+    "S": 36.53,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -37832,7 +37832,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -38169,7 +38169,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -38495,7 +38495,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -38705,7 +38705,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 11,
+   "max": 10,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -39003,7 +39003,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -39180,19 +39180,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 74, spread 9%"
+     "Feb 19 0.60-0.70 delta: OI 74, spread 11%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 16.11,
+    "S": 16.07,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -39571,19 +39571,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 13, spread 27%"
+     "Apr 16 0.60-0.70 delta: OI 13, spread 25%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 35.85,
+    "S": 35.81,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -39718,7 +39718,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -39868,12 +39868,12 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $2,205 > cap $1,288",
+     "Mar 19 0.60-0.70 delta: cost $2,221 > cap $1,288",
      "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)",
      "60+ day expiration (90+ over the cap)"
     ],
@@ -39883,39 +39883,39 @@
      "exp": "2027-01-15",
      "cp": "P",
      "strike": 75.0,
-     "bid": 11.75,
-     "ask": 11.95,
+     "bid": 11.55,
+     "ask": 12.2,
      "oi": 2475,
      "src": "Cboe",
      "dte": 65,
      "quote": true,
-     "mid": 11.85,
-     "spread_pct": 0.0169,
+     "mid": 11.875,
+     "spread_pct": 0.0547,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1191.0,
+     "cost": 1204.75,
      "fits": true,
-     "lim": 11.9,
-     "iv": 0.7081,
-     "delta": -0.5547,
-     "be": 63.09,
-     "be_sd": 0.257,
-     "ivhv": 0.911,
+     "lim": 12.037,
+     "iv": 0.6882,
+     "delta": -0.5649,
+     "be": 62.95,
+     "be_sd": 0.256,
+     "ivhv": 0.886,
      "pricing": 2,
-     "liquidity": 2,
+     "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 68.34,
+    "S": 68.01,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:40 ET"
+    "quote_time": "11-11 12:00 ET"
    },
-   "liq": 2,
+   "liq": 1,
    "pricing": 2,
    "cat": 0,
-   "score": 7,
+   "score": 6,
    "earn": {},
    "cat_est": false
   }
@@ -40050,7 +40050,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -40198,7 +40198,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -40437,7 +40437,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -41368,19 +41368,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 55, cost $5,751 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 55, cost $5,792 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 235.06,
+    "S": 234.03,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -41545,12 +41545,12 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $1,767 > cap $1,288",
+     "Mar 19 0.60-0.70 delta: cost $1,760 > cap $1,288",
      "60+ day expiration (90+ over the cap)"
     ],
     "cap": 1288.45,
@@ -41559,34 +41559,34 @@
      "exp": "2027-01-15",
      "cp": "P",
      "strike": 110.0,
-     "bid": 11.8,
-     "ask": 12.2,
+     "bid": 11.4,
+     "ask": 11.8,
      "oi": 4639,
      "src": "Cboe",
      "dte": 65,
      "quote": true,
-     "mid": 12.0,
-     "spread_pct": 0.0333,
+     "mid": 11.6,
+     "spread_pct": 0.0345,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1211.0,
+     "cost": 1171.0,
      "fits": true,
-     "lim": 12.1,
-     "iv": 0.4104,
-     "delta": -0.6396,
-     "be": 97.89,
-     "be_sd": 0.212,
-     "ivhv": 0.931,
+     "lim": 11.7,
+     "iv": 0.4021,
+     "delta": -0.6307,
+     "be": 98.29,
+     "be_sd": 0.218,
+     "ivhv": 0.912,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 101.62,
+    "S": 102.06,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:41 ET"
+    "quote_time": "11-11 12:01 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -41786,7 +41786,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -42141,7 +42141,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -42150,10 +42150,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 51.76,
+    "S": 51.7,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:32 ET"
+    "quote_time": "11-11 11:49 ET"
    }
   }
  },
@@ -42318,7 +42318,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -42675,7 +42675,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -42684,10 +42684,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 11.94,
+    "S": 11.96,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:32 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -42949,7 +42949,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -43101,7 +43101,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -43282,43 +43282,41 @@
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
-    ],
+    "notes": [],
     "cap": 1546.14,
     "contract": {
-     "osi": "CVNA270219C00075000",
+     "osi": "CVNA270219C00070000",
      "exp": "2027-02-19",
      "cp": "C",
-     "strike": 75.0,
-     "bid": 7.3,
-     "ask": 7.8,
-     "oi": 583,
+     "strike": 70.0,
+     "bid": 9.4,
+     "ask": 10.05,
+     "oi": 3880,
      "src": "Cboe",
      "dte": 100,
      "quote": true,
-     "mid": 7.55,
-     "spread_pct": 0.0662,
+     "mid": 9.725,
+     "spread_pct": 0.0668,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 768.5,
+     "cost": 989.75,
      "fits": true,
-     "lim": 7.675,
-     "iv": 0.5538,
-     "delta": 0.5222,
-     "be": 82.69,
-     "be_sd": 0.49,
-     "ivhv": 0.703,
+     "lim": 9.888,
+     "iv": 0.5559,
+     "delta": 0.6131,
+     "be": 79.9,
+     "be_sd": 0.367,
+     "ivhv": 0.705,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 72.4,
+    "S": 72.18,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:57 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -43460,7 +43458,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -43472,7 +43470,7 @@
     "S": 87.77,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -44323,7 +44321,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -44469,19 +44467,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 8, spread 12%"
+     "Feb 19 0.60-0.70 delta: OI 8, spread 14%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 58.27,
+    "S": 58.09,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -44648,7 +44646,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -44657,10 +44655,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 68.04,
+    "S": 67.94,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -44797,50 +44795,50 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [],
     "cap": 1546.14,
     "contract": {
-     "osi": "DAL270319C00090000",
+     "osi": "DAL270319C00085000",
      "exp": "2027-03-19",
      "cp": "C",
-     "strike": 90.0,
-     "bid": 9.8,
-     "ask": 10.3,
-     "oi": 1158,
+     "strike": 85.0,
+     "bid": 12.25,
+     "ask": 13.0,
+     "oi": 682,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 10.05,
-     "spread_pct": 0.0498,
+     "mid": 12.625,
+     "spread_pct": 0.0594,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1018.5,
+     "cost": 1282.25,
      "fits": true,
-     "lim": 10.175,
-     "iv": 0.3996,
-     "delta": 0.6029,
-     "be": 100.19,
-     "be_sd": 0.398,
-     "ivhv": 0.811,
+     "lim": 12.812,
+     "iv": 0.3984,
+     "delta": 0.6888,
+     "be": 97.82,
+     "be_sd": 0.297,
+     "ivhv": 0.808,
      "pricing": 2,
-     "liquidity": 2,
+     "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 91.57,
+    "S": 91.42,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:31 ET"
+    "quote_time": "11-11 11:50 ET"
    },
-   "liq": 2,
+   "liq": 1,
    "pricing": 2,
    "cat": 1,
-   "score": 8,
+   "score": 7,
    "earn": {},
    "cat_est": true
   }
@@ -45006,7 +45004,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -45015,10 +45013,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 53.38,
+    "S": 53.25,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -45307,7 +45305,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -45486,7 +45484,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -45495,10 +45493,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 32.33,
+    "S": 32.31,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:55 ET"
    }
   }
  },
@@ -45634,7 +45632,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -45997,19 +45995,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 174, cost $6,256 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 174, cost $6,230 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 187.08,
+    "S": 187.62,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:49 ET"
    }
   }
  },
@@ -46417,7 +46415,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -46623,19 +46621,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 40, spread 10%, cost $1,567 > cap $1,546"
+     "Feb 19 0.60-0.70 delta: OI 40, spread 10%, cost $1,568 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 136.86,
+    "S": 136.82,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -46922,7 +46920,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -47070,7 +47068,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -47079,10 +47077,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 147.34,
+    "S": 146.9,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:32 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -47491,7 +47489,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -47500,10 +47498,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 101.27,
+    "S": 101.36,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -47664,7 +47662,7 @@
    "ts": "2027-02-26",
    "rr": 0.21,
    "rr_pts": 0,
-   "cap": 137.9,
+   "cap": 137.88,
    "trend": 2,
    "rs": 1,
    "known": 3,
@@ -47679,34 +47677,34 @@
      "exp": "2027-03-19",
      "cp": "C",
      "strike": 115.0,
-     "bid": 10.65,
-     "ask": 10.9,
+     "bid": 10.6,
+     "ask": 10.8,
      "oi": 3187,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 10.775,
-     "spread_pct": 0.0232,
+     "mid": 10.7,
+     "spread_pct": 0.0187,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1084.75,
+     "cost": 1076.0,
      "fits": true,
-     "lim": 10.838,
-     "iv": 0.2896,
-     "delta": 0.6369,
-     "be": 125.85,
-     "be_sd": 0.332,
-     "ivhv": 1.265,
+     "lim": 10.75,
+     "iv": 0.2892,
+     "delta": 0.6349,
+     "be": 125.76,
+     "be_sd": 0.333,
+     "ivhv": 1.263,
      "pricing": 1,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 119.06,
+    "S": 118.97,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:59 ET"
    },
    "liq": 2,
    "pricing": 1,
@@ -47970,7 +47968,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -47979,10 +47977,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 13.98,
+    "S": 13.99,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:14 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -48146,7 +48144,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -48596,7 +48594,7 @@
    "trend": 0,
    "rs": 0,
    "known": 0,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -48864,7 +48862,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -49198,19 +49196,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 44, cost $2,936 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 44, cost $2,926 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 87.89,
+    "S": 88.73,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -49408,7 +49406,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -49618,7 +49616,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -50281,7 +50279,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -50290,10 +50288,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 44.73,
+    "S": 44.77,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -50431,7 +50429,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -50440,10 +50438,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 138.51,
+    "S": 138.34,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -50699,7 +50697,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -50708,10 +50706,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 119.34,
+    "S": 119.86,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -50849,7 +50847,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -50858,10 +50856,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 127.94,
+    "S": 127.98,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -50997,19 +50995,19 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 82, spread 10%, cost $2,024 > cap $1,546"
+     "Feb 19 0.60-0.70 delta: OI 82, spread 11%, cost $2,018 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 153.48,
+    "S": 152.81,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:40 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -51235,7 +51233,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -51441,7 +51439,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -51450,10 +51448,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 79.14,
+    "S": 79.82,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 12:00 ET"
    }
   }
  },
@@ -51916,7 +51914,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -52068,7 +52066,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -52640,7 +52638,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -53123,7 +53121,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -53132,10 +53130,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 62.34,
+    "S": 62.38,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:43 ET"
+    "quote_time": "11-11 12:02 ET"
    }
   }
  },
@@ -53541,7 +53539,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -53812,19 +53810,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 22"
+     "Apr 16 0.60-0.70 delta: OI 22, spread 22%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 26.35,
+    "S": 26.34,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -53991,19 +53989,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 262, spread 9%, cost $1,787 > cap $1,546"
+     "Feb 19 0.60-0.70 delta: OI 262, spread 9%, cost $1,788 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 116.84,
+    "S": 117.13,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:48 ET"
    }
   }
  },
@@ -54349,7 +54347,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -54644,7 +54642,7 @@
    "trend": 1,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -55512,7 +55510,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -55813,7 +55811,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -55822,10 +55820,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 55.38,
+    "S": 55.41,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -55990,7 +55988,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -56378,7 +56376,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -56525,7 +56523,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -56702,19 +56700,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 193, spread 9%"
+     "Apr 16 0.50-0.60 delta: OI 193"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 69.5,
+    "S": 69.79,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -56850,7 +56848,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -56998,7 +56996,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -57293,7 +57291,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -57822,7 +57820,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -57831,10 +57829,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 22.78,
+    "S": 22.84,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 11:55 ET"
    }
   }
  },
@@ -57972,19 +57970,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 41, spread 9%"
+     "Mar 19 0.50-0.60 delta: OI 41"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 111.62,
+    "S": 111.48,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -58337,7 +58335,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -58606,7 +58604,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -58615,10 +58613,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 88.34,
+    "S": 88.08,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:47 ET"
    }
   }
  },
@@ -58814,7 +58812,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -58823,10 +58821,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 104.7,
+    "S": 104.68,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -59173,7 +59171,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -59381,7 +59379,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -59390,10 +59388,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 88.27,
+    "S": 88.14,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:49 ET"
    }
   }
  },
@@ -59709,7 +59707,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -59718,10 +59716,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 254.97,
+    "S": 254.52,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -59950,7 +59948,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -60156,7 +60154,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -60337,7 +60335,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -60346,10 +60344,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 179.28,
+    "S": 179.31,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -60518,7 +60516,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -60527,10 +60525,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 49.26,
+    "S": 49.18,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -60966,7 +60964,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -60980,38 +60978,38 @@
      "cp": "P",
      "strike": 65.0,
      "bid": 7.0,
-     "ask": 7.45,
+     "ask": 7.3,
      "oi": 1035,
      "src": "Cboe",
      "dte": 100,
      "quote": true,
-     "mid": 7.225,
-     "spread_pct": 0.0623,
+     "mid": 7.15,
+     "spread_pct": 0.042,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 734.75,
+     "cost": 723.5,
      "fits": true,
-     "lim": 7.337,
-     "iv": 0.4469,
-     "delta": -0.5221,
-     "be": 57.65,
-     "be_sd": 0.294,
-     "ivhv": 0.897,
+     "lim": 7.225,
+     "iv": 0.4531,
+     "delta": -0.5144,
+     "be": 57.77,
+     "be_sd": 0.301,
+     "ivhv": 0.91,
      "pricing": 2,
-     "liquidity": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 61.91,
+    "S": 62.2,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 12:04 ET"
    },
-   "liq": 1,
+   "liq": 2,
    "pricing": 2,
    "cat": 1,
-   "score": 7,
+   "score": 8,
    "earn": {},
    "cat_est": true
   }
@@ -61479,7 +61477,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -61629,7 +61627,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -62077,7 +62075,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -62318,7 +62316,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -62327,10 +62325,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 18.99,
+    "S": 19.06,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:30 ET"
+    "quote_time": "11-11 12:02 ET"
    }
   }
  },
@@ -62530,7 +62528,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -62539,10 +62537,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 29.57,
+    "S": 29.72,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:31 ET"
+    "quote_time": "11-11 11:45 ET"
    }
   }
  },
@@ -62707,20 +62705,20 @@
      "cost": 821.0,
      "fits": true,
      "lim": 8.2,
-     "iv": 0.381,
-     "delta": 0.67,
+     "iv": 0.3895,
+     "delta": 0.6677,
      "be": 68.21,
-     "be_sd": 0.321,
-     "ivhv": 0.72,
+     "be_sd": 0.339,
+     "ivhv": 0.736,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 63.61,
+    "S": 63.26,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 12:04 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -62926,7 +62924,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -63105,19 +63103,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 22, spread 14%, cost $3,026 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 136, spread 11%, cost $2,376 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 80.81,
+    "S": 81.16,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -63251,7 +63249,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -63260,10 +63258,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 10.39,
+    "S": 10.44,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -63915,7 +63913,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -64061,7 +64059,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -64358,7 +64356,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -64367,10 +64365,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 49.72,
+    "S": 49.66,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -64508,7 +64506,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -64517,10 +64515,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 43.37,
+    "S": 43.5,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -64657,7 +64655,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -65076,7 +65074,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -65915,7 +65913,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -66156,7 +66154,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -66333,7 +66331,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -66481,7 +66479,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -67131,7 +67129,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -67140,10 +67138,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 67.95,
+    "S": 67.99,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -67277,7 +67275,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -67874,7 +67872,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -68080,7 +68078,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -68089,10 +68087,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 33.94,
+    "S": 33.92,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -68231,7 +68229,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -68240,10 +68238,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 42.83,
+    "S": 42.8,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -68792,7 +68790,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -68801,10 +68799,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 112.94,
+    "S": 113.16,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -69091,7 +69089,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -69506,19 +69504,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 32, spread 64%"
+     "Mar 19 0.60-0.70 delta: OI 32, spread 60%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 42.62,
+    "S": 42.87,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:44 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -69654,7 +69652,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "no-chain",
@@ -69797,7 +69795,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -69806,10 +69804,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 42.91,
+    "S": 43.06,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -70152,7 +70150,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -70449,7 +70447,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -70624,7 +70622,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -70859,7 +70857,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -71280,7 +71278,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -71486,19 +71484,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 291, cost $2,605 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 291, cost $2,568 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 121.37,
+    "S": 122.06,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -71632,19 +71630,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 14, spread 35%"
+     "Feb 19 0.60-0.70 delta: OI 14 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 15.8,
+    "S": 16.09,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 10:56 ET"
+    "quote_time": "11-11 11:47 ET"
    }
   }
  },
@@ -71954,7 +71952,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -72102,19 +72100,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 89, cost $4,686 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 89, cost $4,646 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 191.92,
+    "S": 193.29,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -72283,7 +72281,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -72427,7 +72425,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -72934,7 +72932,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -73142,7 +73140,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -73350,7 +73348,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -73918,7 +73916,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -74065,7 +74063,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -74757,7 +74755,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -74939,7 +74937,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -75207,19 +75205,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 344, spread 20%"
+     "Feb 19 0.60-0.70 delta: OI 344, spread 19%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 54.72,
+    "S": 54.82,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -75687,19 +75685,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 391, spread 14%, cost $1,831 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 391, spread 14%, cost $1,828 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 101.58,
+    "S": 101.74,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -75895,7 +75893,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -76467,7 +76465,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -76617,7 +76615,7 @@
    "trend": 0,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -77156,19 +77154,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 29, spread 60%"
+     "Apr 16 0.50-0.60 delta: OI 29, spread 63%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 45.01,
+    "S": 44.84,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:55 ET"
    }
   }
  },
@@ -77411,34 +77409,34 @@
      "exp": "2027-02-19",
      "cp": "P",
      "strike": 25.0,
-     "bid": 6.2,
-     "ask": 6.5,
+     "bid": 6.25,
+     "ask": 6.35,
      "oi": 1209,
      "src": "Cboe",
      "dte": 100,
      "quote": true,
-     "mid": 6.35,
-     "spread_pct": 0.0472,
+     "mid": 6.3,
+     "spread_pct": 0.0159,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 643.5,
+     "cost": 633.5,
      "fits": true,
-     "lim": 6.425,
-     "iv": 0.7595,
-     "delta": -0.6415,
-     "be": 18.56,
-     "be_sd": 0.188,
-     "ivhv": 0.706,
+     "lim": 6.325,
+     "iv": 0.7253,
+     "delta": -0.6409,
+     "be": 18.66,
+     "be_sd": 0.183,
+     "ivhv": 0.674,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 20.07,
+    "S": 20.05,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:05 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -77580,7 +77578,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -78209,7 +78207,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -78929,7 +78927,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -79230,12 +79228,12 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [
-     "Feb 19 0.60-0.70 delta: cost $2,388 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $2,404 > cap $1,288",
      "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)",
      "60+ day expiration (90+ over the cap)"
     ],
@@ -79245,34 +79243,34 @@
      "exp": "2027-01-15",
      "cp": "P",
      "strike": 90.0,
-     "bid": 11.15,
-     "ask": 11.35,
+     "bid": 11.2,
+     "ask": 11.4,
      "oi": 7216,
      "src": "Cboe",
      "dte": 65,
      "quote": true,
-     "mid": 11.25,
-     "spread_pct": 0.0178,
+     "mid": 11.3,
+     "spread_pct": 0.0177,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1131.0,
+     "cost": 1136.0,
      "fits": true,
-     "lim": 11.3,
-     "iv": 0.597,
-     "delta": -0.5339,
-     "be": 78.69,
+     "lim": 11.35,
+     "iv": 0.5996,
+     "delta": -0.535,
+     "be": 78.64,
      "be_sd": 0.284,
-     "ivhv": 0.875,
+     "ivhv": 0.879,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 84.75,
+    "S": 84.73,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:46 ET"
+    "quote_time": "11-11 12:06 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -79449,7 +79447,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -79597,7 +79595,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -79756,34 +79754,34 @@
      "exp": "2027-02-19",
      "cp": "P",
      "strike": 60.0,
-     "bid": 12.2,
-     "ask": 12.65,
+     "bid": 12.15,
+     "ask": 12.45,
      "oi": 1921,
      "src": "Cboe",
      "dte": 100,
      "quote": true,
-     "mid": 12.425,
-     "spread_pct": 0.0362,
+     "mid": 12.3,
+     "spread_pct": 0.0244,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1254.75,
+     "cost": 1238.5,
      "fits": true,
-     "lim": 12.538,
-     "iv": 0.6501,
-     "delta": -0.61,
-     "be": 47.45,
-     "be_sd": 0.215,
-     "ivhv": 0.784,
+     "lim": 12.375,
+     "iv": 0.6493,
+     "delta": -0.6044,
+     "be": 47.62,
+     "be_sd": 0.219,
+     "ivhv": 0.783,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 51.19,
+    "S": 51.45,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:04 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -80254,7 +80252,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -80704,7 +80702,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -80713,10 +80711,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 87.33,
+    "S": 87.55,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -80910,7 +80908,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -81060,7 +81058,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -81427,7 +81425,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -81842,7 +81840,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -81851,10 +81849,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 80.88,
+    "S": 81.13,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 11:52 ET"
    }
   }
  },
@@ -82300,7 +82298,7 @@
    "ts": "2027-01-29",
    "rr": 1.2,
    "rr_pts": 0,
-   "cap": 33.99,
+   "cap": 34.0,
    "trend": 1,
    "rs": 0,
    "known": 1,
@@ -82329,20 +82327,20 @@
      "cost": 643.5,
      "fits": true,
      "lim": 6.425,
-     "iv": 0.3965,
-     "delta": -0.6676,
+     "iv": 0.3961,
+     "delta": -0.6668,
      "be": 40.57,
-     "be_sd": 0.164,
-     "ivhv": 1.123,
+     "be_sd": 0.166,
+     "ivhv": 1.122,
      "pricing": 1,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 41.99,
+    "S": 42.02,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:46 ET"
+    "quote_time": "11-11 12:06 ET"
    },
    "liq": 2,
    "pricing": 1,
@@ -82542,7 +82540,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -82721,7 +82719,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -82733,7 +82731,7 @@
     "S": 6.64,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 10:26 ET"
+    "quote_time": "11-11 11:50 ET"
    }
   }
  },
@@ -83433,7 +83431,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -84005,19 +84003,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 25, cost $5,586 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 25, cost $5,558 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 218.0,
+    "S": 218.06,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -84484,7 +84482,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -84806,7 +84804,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -85256,7 +85254,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -85498,7 +85496,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -85901,34 +85899,34 @@
      "exp": "2027-02-19",
      "cp": "P",
      "strike": 70.0,
-     "bid": 11.7,
-     "ask": 12.0,
+     "bid": 11.5,
+     "ask": 11.75,
      "oi": 12244,
      "src": "Cboe",
      "dte": 100,
      "quote": true,
-     "mid": 11.85,
-     "spread_pct": 0.0253,
+     "mid": 11.625,
+     "spread_pct": 0.0215,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1193.5,
+     "cost": 1169.75,
      "fits": true,
-     "lim": 11.925,
-     "iv": 0.6268,
-     "delta": -0.5442,
-     "be": 58.07,
-     "be_sd": 0.259,
-     "ivhv": 0.449,
+     "lim": 11.688,
+     "iv": 0.6301,
+     "delta": -0.5336,
+     "be": 58.3,
+     "be_sd": 0.266,
+     "ivhv": 0.451,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 63.46,
+    "S": 63.91,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:46 ET"
+    "quote_time": "11-11 12:06 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -86311,7 +86309,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -87005,25 +87003,25 @@
      "exp": "2027-02-19",
      "cp": "P",
      "strike": 30.0,
-     "bid": 10.3,
+     "bid": 10.25,
      "ask": 11.05,
      "oi": 3033,
      "src": "Cboe",
      "dte": 100,
      "quote": true,
-     "mid": 10.675,
-     "spread_pct": 0.0703,
+     "mid": 10.65,
+     "spread_pct": 0.0751,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1087.25,
+     "cost": 1086.0,
      "fits": true,
-     "lim": 10.863,
-     "iv": 1.0626,
-     "delta": -0.644,
-     "be": 19.13,
-     "be_sd": 0.195,
-     "ivhv": 0.728,
+     "lim": 10.85,
+     "iv": 1.0645,
+     "delta": -0.6435,
+     "be": 19.14,
+     "be_sd": 0.194,
+     "ivhv": 0.73,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
@@ -87032,7 +87030,7 @@
     "S": 21.45,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:46 ET"
+    "quote_time": "11-11 12:06 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -87174,7 +87172,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -87183,10 +87181,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 112.8,
+    "S": 113.19,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -87831,7 +87829,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -88257,7 +88255,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -88758,19 +88756,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 52, cost $6,751 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 52, cost $6,716 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 263.27,
+    "S": 264.24,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:31 ET"
+    "quote_time": "11-11 12:02 ET"
    }
   }
  },
@@ -89089,7 +89087,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -89233,7 +89231,7 @@
    "ts": "2027-02-26",
    "rr": 0.2,
    "rr_pts": 0,
-   "cap": 33.76,
+   "cap": 33.75,
    "trend": 1,
    "rs": 0,
    "known": 1,
@@ -89251,33 +89249,33 @@
      "cp": "C",
      "strike": 28.0,
      "bid": 2.43,
-     "ask": 2.49,
+     "ask": 2.5,
      "oi": 2770,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 2.46,
-     "spread_pct": 0.0244,
+     "mid": 2.465,
+     "spread_pct": 0.0284,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 248.5,
+     "cost": 249.25,
      "fits": true,
-     "lim": 2.475,
-     "iv": 0.3554,
-     "delta": 0.5632,
+     "lim": 2.482,
+     "iv": 0.3552,
+     "delta": 0.564,
      "be": 30.49,
      "be_sd": 0.475,
-     "ivhv": 1.205,
+     "ivhv": 1.204,
      "pricing": 1,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 27.71,
+    "S": 27.72,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 11:59 ET"
    },
    "liq": 2,
    "pricing": 1,
@@ -89482,7 +89480,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -89494,7 +89492,7 @@
     "S": 30.07,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -89660,7 +89658,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -89955,7 +89953,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -90163,7 +90161,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -90487,7 +90485,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -90786,7 +90784,7 @@
    "trend": 2,
    "rs": 1,
    "known": 5,
-   "max": 11,
+   "max": 10,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -90795,10 +90793,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 17.1,
+    "S": 17.13,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -91209,7 +91207,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -91780,7 +91778,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -91959,7 +91957,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -91968,10 +91966,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 25.52,
+    "S": 25.45,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:06 ET"
    }
   }
  },
@@ -92498,7 +92496,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -93457,19 +93455,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 20C +0.87, 22.5C +0.79, Feb 19)"
+     "no strike at 0.50-0.70 delta (nearest 20C +0.87, 22.5C +0.78, Feb 19)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 25.56,
+    "S": 25.5,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 12:07 ET"
    }
   }
  },
@@ -94507,7 +94505,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -94516,10 +94514,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 36.91,
+    "S": 37.2,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:46 ET"
+    "quote_time": "11-11 12:05 ET"
    }
   }
  },
@@ -94843,7 +94841,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -95617,7 +95615,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -95946,7 +95944,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -96311,7 +96309,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -96997,7 +96995,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -97266,7 +97264,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -97447,19 +97445,19 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: spread 14%"
+     "Mar 19 0.60-0.70 delta: spread 13%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 12.21,
+    "S": 12.19,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -97624,7 +97622,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -97892,7 +97890,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -98250,7 +98248,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -99303,7 +99301,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -99312,10 +99310,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 72.96,
+    "S": 72.77,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 12:06 ET"
    }
   }
  },
@@ -99483,7 +99481,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -99827,34 +99825,34 @@
      "exp": "2027-03-19",
      "cp": "C",
      "strike": 230.0,
-     "bid": 17.2,
-     "ask": 17.6,
+     "bid": 17.0,
+     "ask": 17.7,
      "oi": 1222,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 17.4,
-     "spread_pct": 0.023,
+     "mid": 17.35,
+     "spread_pct": 0.0403,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1751.0,
+     "cost": 1753.5,
      "fits": true,
-     "lim": 17.5,
-     "iv": 0.3149,
-     "delta": 0.5475,
-     "be": 247.51,
-     "be_sd": 0.443,
-     "ivhv": 0.761,
+     "lim": 17.525,
+     "iv": 0.3086,
+     "delta": 0.5523,
+     "be": 247.53,
+     "be_sd": 0.44,
+     "ivhv": 0.745,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 228.61,
+    "S": 229.13,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 11:55 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -101110,7 +101108,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -103124,10 +103122,10 @@
      "cost": 1233.5,
      "fits": true,
      "lim": 12.325,
-     "iv": 0.5584,
-     "delta": -0.554,
+     "iv": 0.5583,
+     "delta": -0.5533,
      "be": 57.66,
-     "be_sd": 0.271,
+     "be_sd": 0.272,
      "ivhv": 0.699,
      "pricing": 2,
      "liquidity": 2,
@@ -103137,7 +103135,7 @@
     "S": 63.35,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 11:52 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -103581,7 +103579,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -103997,7 +103995,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -104006,10 +104004,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 102.58,
+    "S": 102.56,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -104447,7 +104445,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -104655,7 +104653,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -105676,7 +105674,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -105685,10 +105683,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 188.95,
+    "S": 189.33,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:43 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -105884,7 +105882,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -106034,7 +106032,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -106418,7 +106416,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -106717,19 +106715,19 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: spread 28%"
+     "Mar 19 0.60-0.70 delta: spread 25%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 22.45,
+    "S": 22.43,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -106863,12 +106861,12 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $1,391 > cap $1,288",
+     "Mar 19 0.60-0.70 delta: cost $1,399 > cap $1,288",
      "60+ day expiration (90+ over the cap)"
     ],
     "cap": 1288.45,
@@ -106878,33 +106876,33 @@
      "cp": "P",
      "strike": 45.0,
      "bid": 8.25,
-     "ask": 8.7,
+     "ask": 8.75,
      "oi": 5515,
      "src": "Cboe",
      "dte": 65,
      "quote": true,
-     "mid": 8.475,
-     "spread_pct": 0.0531,
+     "mid": 8.5,
+     "spread_pct": 0.0588,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 859.75,
+     "cost": 863.5,
      "fits": true,
-     "lim": 8.587,
-     "iv": 0.6067,
-     "delta": -0.6926,
-     "be": 36.4,
-     "be_sd": 0.159,
-     "ivhv": 0.912,
+     "lim": 8.625,
+     "iv": 0.6039,
+     "delta": -0.695,
+     "be": 36.37,
+     "be_sd": 0.158,
+     "ivhv": 0.908,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 37.95,
+    "S": 37.89,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:06 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -107669,20 +107667,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: cost $5,590 > cap $1,288",
-     "Jan 15 0.60-0.70 delta: cost $4,450 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: cost $5,560 > cap $1,288",
+     "Jan 15 0.60-0.70 delta: cost $3,648 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 173.07,
+    "S": 173.79,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:48 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -107934,7 +107932,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -107943,10 +107941,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 120.93,
+    "S": 120.94,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:06 ET"
    }
   }
  },
@@ -108113,7 +108111,7 @@
    "trend": 0,
    "rs": 0,
    "known": 0,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -108350,7 +108348,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -108359,10 +108357,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 51.4,
+    "S": 51.3,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -108498,7 +108496,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -108507,10 +108505,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 27.61,
+    "S": 27.6,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:48 ET"
+    "quote_time": "11-11 12:07 ET"
    }
   }
  },
@@ -109365,7 +109363,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -109374,10 +109372,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 35.42,
+    "S": 35.28,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -109633,7 +109631,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -109812,7 +109810,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -109960,7 +109958,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -110404,7 +110402,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -110697,7 +110695,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -110905,20 +110903,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: cost $6,717 > cap $1,288",
-     "Jan 15 0.60-0.70 delta: cost $5,368 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: cost $6,608 > cap $1,288",
+     "Jan 15 0.60-0.70 delta: cost $4,527 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 156.16,
+    "S": 157.91,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:48 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -111056,7 +111054,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -111065,10 +111063,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 171.61,
+    "S": 172.1,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -111530,20 +111528,20 @@
      "cost": 461.0,
      "fits": true,
      "lim": 4.6,
-     "iv": 0.2208,
-     "delta": 0.5732,
+     "iv": 0.2214,
+     "delta": 0.5727,
      "be": 89.61,
-     "be_sd": 0.393,
-     "ivhv": 0.78,
+     "be_sd": 0.394,
+     "ivhv": 0.782,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 85.72,
+    "S": 85.7,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:03 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -111710,20 +111708,20 @@
      "cost": 1497.25,
      "fits": true,
      "lim": 14.963,
-     "iv": 0.4189,
-     "delta": 0.63,
+     "iv": 0.418,
+     "delta": 0.6305,
      "be": 129.97,
-     "be_sd": 0.356,
-     "ivhv": 0.767,
+     "be_sd": 0.353,
+     "ivhv": 0.766,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 119.42,
+    "S": 119.52,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 12:00 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -112099,7 +112097,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -112108,10 +112106,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 75.21,
+    "S": 75.14,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 12:09 ET"
    }
   }
  },
@@ -113412,7 +113410,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -113918,7 +113916,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -114337,7 +114335,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -115081,19 +115079,19 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 1, spread 13%, cost $1,571 > cap $1,288"
+     "Apr 16 0.60-0.70 delta: OI 2, spread 10%, cost $1,739 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 60.3,
+    "S": 60.54,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -115322,7 +115320,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -115620,7 +115618,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -115770,20 +115768,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
     "notes": [
      "Feb 19 0.60-0.70 delta: cost $3,107 > cap $1,288",
-     "Jan 15 0.60-0.70 delta: cost $2,224 > cap $1,288"
+     "Jan 15 0.60-0.70 delta: cost $2,567 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 175.82,
+    "S": 175.89,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:49 ET"
+    "quote_time": "11-11 12:09 ET"
    }
   }
  },
@@ -116064,11 +116062,11 @@
    "ts": "2027-02-26",
    "rr": 0.29,
    "rr_pts": 0,
-   "cap": 48.19,
+   "cap": 48.24,
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 5,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -116079,39 +116077,39 @@
      "exp": "2027-03-19",
      "cp": "C",
      "strike": 40.0,
-     "bid": 3.8,
-     "ask": 4.05,
+     "bid": 3.9,
+     "ask": 4.0,
      "oi": 5640,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 3.925,
-     "spread_pct": 0.0637,
+     "mid": 3.95,
+     "spread_pct": 0.0253,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 399.75,
+     "cost": 398.5,
      "fits": true,
-     "lim": 3.987,
-     "iv": 0.34,
-     "delta": 0.6061,
-     "be": 44.0,
-     "be_sd": 0.414,
-     "ivhv": 1.021,
+     "lim": 3.975,
+     "iv": 0.3423,
+     "delta": 0.6063,
+     "be": 43.98,
+     "be_sd": 0.409,
+     "ivhv": 1.028,
      "pricing": 2,
-     "liquidity": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
     "S": 40.62,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:08 ET"
    },
-   "liq": 1,
+   "liq": 2,
    "pricing": 2,
    "cat": 1,
-   "score": 5,
+   "score": 6,
    "earn": {},
    "cat_est": true
   }
@@ -116400,19 +116398,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 70, spread 43%"
+     "Mar 19 0.60-0.70 delta: OI 70, spread 47%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 25.33,
+    "S": 25.26,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -116550,19 +116548,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 233, spread 10%, cost $3,221 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 233, cost $3,118 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 118.7,
+    "S": 119.6,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 12:05 ET"
    }
   }
  },
@@ -117057,19 +117055,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 30P -0.45, 35P -0.72, Apr 16)"
+     "no strike at 0.50-0.70 delta (nearest 30P -0.46, 35P -0.73, Apr 16)"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 30.0,
+    "S": 29.86,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -117207,7 +117205,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -117216,10 +117214,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 26.73,
+    "S": 26.64,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -117384,7 +117382,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -117716,7 +117714,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -117725,10 +117723,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 99.78,
+    "S": 100.58,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -117988,7 +117986,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -119030,7 +119028,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -119042,7 +119040,7 @@
     "S": 50.92,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -119177,7 +119175,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -119447,19 +119445,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 63, spread 20%"
+     "Mar 19 0.60-0.70 delta: OI 63, spread 12%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 47.92,
+    "S": 47.82,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 12:05 ET"
    }
   }
  },
@@ -120076,7 +120074,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -120286,7 +120284,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "no-chain",
@@ -120429,19 +120427,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 46, spread 10%, cost $2,074 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 46, spread 10%, cost $2,055 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 73.51,
+    "S": 73.99,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:34 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -120998,7 +120996,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -121974,7 +121972,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -122598,7 +122596,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -122607,10 +122605,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 56.99,
+    "S": 57.07,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:46 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -122775,7 +122773,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -122784,10 +122782,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 109.41,
+    "S": 110.03,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -123260,7 +123258,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -123952,19 +123950,19 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 4, cost $2,128 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 25, spread 11%, cost $2,641 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 69.3,
+    "S": 68.89,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:44 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -124525,7 +124523,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -124673,7 +124671,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -125091,7 +125089,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -125423,7 +125421,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -125759,19 +125757,19 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 8, spread 22%"
+     "Mar 19 0.60-0.70 delta: OI 8, spread 20%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 110.32,
+    "S": 110.28,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:32 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -126741,19 +126739,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 15C +0.72, 17.5C +0.43, Apr 16)"
+     "no strike at 0.50-0.70 delta (nearest 15C +0.72, 17.5C +0.42, Apr 16)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 16.48,
+    "S": 16.45,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -127336,20 +127334,20 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: cost $3,200 > cap $1,288",
-     "Jan 15 0.60-0.70 delta: cost $2,348 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: cost $3,205 > cap $1,288",
+     "Jan 15 0.60-0.70 delta: cost $2,385 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 173.02,
+    "S": 172.67,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:50 ET"
+    "quote_time": "11-11 12:10 ET"
    }
   }
  },
@@ -128473,7 +128471,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -128650,7 +128648,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -128659,10 +128657,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 22.11,
+    "S": 22.17,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -129039,7 +129037,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -129189,7 +129187,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -129198,10 +129196,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 22.91,
+    "S": 23.06,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:31 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -129846,7 +129844,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -130000,7 +129998,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -130298,7 +130296,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -130307,10 +130305,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 122.49,
+    "S": 122.32,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -130450,7 +130448,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -131119,19 +131117,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 22, cost $4,429 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 35, cost $3,681 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 255.7,
+    "S": 254.82,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:50 ET"
+    "quote_time": "11-11 12:09 ET"
    }
   }
  },
@@ -131327,7 +131325,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -131595,7 +131593,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -131745,7 +131743,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -132308,7 +132306,7 @@
    "trend": 1,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -132572,7 +132570,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -133020,7 +133018,7 @@
    "trend": 0,
    "rs": 0,
    "known": 0,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -133375,20 +133373,20 @@
      "cost": 326.0,
      "fits": true,
      "lim": 3.25,
-     "iv": 0.762,
-     "delta": -0.6815,
+     "iv": 0.7501,
+     "delta": -0.6826,
      "be": 5.74,
-     "be_sd": 0.184,
-     "ivhv": 0.758,
+     "be_sd": 0.182,
+     "ivhv": 0.746,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 6.32,
+    "S": 6.3,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:41 ET"
+    "quote_time": "11-11 12:01 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -133561,7 +133559,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -133570,10 +133568,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 13.72,
+    "S": 13.73,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:43 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -133798,19 +133796,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 12, spread 28%"
+     "Mar 19 0.60-0.70 delta: OI 20, spread 26%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 95.45,
+    "S": 95.09,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 12:00 ET"
    }
   }
  },
@@ -134482,7 +134480,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -134837,7 +134835,7 @@
    "trend": 0,
    "rs": 1,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -135018,7 +135016,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -135197,7 +135195,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -136392,7 +136390,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -136602,19 +136600,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 27, cost $2,443 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 27, cost $2,406 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 86.68,
+    "S": 87.39,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 12:09 ET"
    }
   }
  },
@@ -136991,7 +136989,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -137292,7 +137290,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -137301,10 +137299,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 41.73,
+    "S": 41.68,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -137599,19 +137597,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 31, cost $2,248 > cap $1,546"
+     "Feb 19 0.60-0.70 delta: OI 31, spread 9%, cost $2,278 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 238.98,
+    "S": 239.54,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 11:54 ET"
    }
   }
  },
@@ -137928,7 +137926,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -138404,7 +138402,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -138852,19 +138850,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 19, spread 12%, cost $2,526 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 19, spread 13%, cost $2,541 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 161.23,
+    "S": 160.96,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -139241,7 +139239,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -139418,7 +139416,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -139427,10 +139425,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 21.31,
+    "S": 21.32,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:49 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -140140,19 +140138,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 25C +0.74, 30C +0.49, Apr 16)"
+     "no strike at 0.50-0.70 delta (nearest 25C +0.74, 30C +0.48, Apr 16)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 28.32,
+    "S": 28.36,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -140408,7 +140406,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -140417,10 +140415,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 191.12,
+    "S": 190.65,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:31 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -140980,7 +140978,7 @@
    "trend": 2,
    "rs": 1,
    "known": 4,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -141157,19 +141155,19 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 17.5C +0.88, 20C +0.73, Apr 16)"
+     "Apr 16 0.60-0.70 delta: OI 151, spread 21%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 20.95,
+    "S": 20.9,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -141452,7 +141450,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -141461,10 +141459,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 74.81,
+    "S": 74.77,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:50 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -141955,7 +141953,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -142281,7 +142279,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -142850,7 +142848,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -142862,7 +142860,7 @@
     "S": 73.27,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:36 ET"
+    "quote_time": "11-11 12:06 ET"
    }
   }
  },
@@ -143029,7 +143027,7 @@
    "trend": 0,
    "rs": 0,
    "known": 0,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -143179,7 +143177,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -143381,28 +143379,62 @@
     "Breakout 11-09 (> 12.01, vol 1.57x), holding",
     "Breakout 11-06 (> 11.80, vol 2.89x), holding"
    ],
-   "exp": "2027-02-19",
-   "ts": "2027-01-29",
+   "exp": "2027-04-16",
+   "ts": "2027-03-25",
    "rr": 0.1,
    "rr_pts": 0,
-   "cap": 17.37,
+   "cap": 19.1,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 6,
    "near_low": false,
    "opt": {
-    "status": "fail",
+    "status": "ok",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 111, spread 9%"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
     "cap": 1546.14,
-    "contract": null,
-    "S": 13.39,
+    "contract": {
+     "osi": "SG270416C00015000",
+     "exp": "2027-04-16",
+     "cp": "C",
+     "strike": 15.0,
+     "bid": 1.95,
+     "ask": 2.1,
+     "oi": 629,
+     "src": "Cboe",
+     "dte": 156,
+     "quote": true,
+     "mid": 2.025,
+     "spread_pct": 0.0741,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 207.25,
+     "fits": true,
+     "lim": 2.062,
+     "iv": 0.7304,
+     "delta": 0.5132,
+     "be": 17.07,
+     "be_sd": 0.57,
+     "ivhv": 1.09,
+     "pricing": 1,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 13.42,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:51 ET"
-   }
+    "quote_time": "11-11 12:07 ET"
+   },
+   "liq": 1,
+   "pricing": 1,
+   "cat": 1,
+   "score": 6,
+   "earn": {},
+   "cat_est": true
   }
  },
  {
@@ -143778,7 +143810,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -144253,7 +144285,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -144521,7 +144553,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -144999,7 +145031,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -145146,19 +145178,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 499, spread 10%"
+     "Mar 19 0.60-0.70 delta: OI 499 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 31.77,
+    "S": 31.76,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:29 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -145382,19 +145414,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 56, spread 9%, cost $4,477 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 56, spread 10%, cost $4,458 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 145.14,
+    "S": 145.37,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:51 ET"
+    "quote_time": "11-11 12:11 ET"
    }
   }
  },
@@ -146073,7 +146105,7 @@
    "trend": 0,
    "rs": 0,
    "known": 0,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -146914,52 +146946,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Feb 19 0.60-0.70 delta: spread 9%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "SMCI270219P00038000",
-     "exp": "2027-02-19",
-     "cp": "P",
-     "strike": 38.0,
-     "bid": 9.2,
-     "ask": 9.95,
-     "oi": 639,
-     "src": "Cboe",
-     "dte": 100,
-     "quote": true,
-     "mid": 9.575,
-     "spread_pct": 0.0783,
-     "spread_ok": true,
-     "spread_provisional": false,
-     "oi_ok": true,
-     "cost": 977.25,
-     "fits": true,
-     "lim": 9.762,
-     "iv": 0.779,
-     "delta": -0.6289,
-     "be": 28.23,
-     "be_sd": 0.207,
-     "ivhv": 0.894,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 30.82,
+    "contract": null,
+    "S": 30.96,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {},
-   "cat_est": true
+    "quote_time": "11-11 12:11 ET"
+   }
   }
  },
  {
@@ -147421,19 +147421,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 11, spread 10%, cost $3,656 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 11, cost $3,673 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 227.31,
+    "S": 227.29,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:43 ET"
+    "quote_time": "11-11 12:00 ET"
    }
   }
  },
@@ -147571,7 +147571,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -147582,39 +147582,39 @@
      "exp": "2027-04-16",
      "cp": "P",
      "strike": 7.0,
-     "bid": 1.97,
+     "bid": 1.93,
      "ask": 2.04,
      "oi": 2341,
      "src": "Cboe",
      "dte": 156,
      "quote": true,
-     "mid": 2.005,
-     "spread_pct": 0.0349,
+     "mid": 1.985,
+     "spread_pct": 0.0554,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 203.25,
+     "cost": 202.25,
      "fits": true,
-     "lim": 2.022,
-     "iv": 0.6395,
-     "delta": -0.6845,
-     "be": 4.97,
-     "be_sd": 0.148,
-     "ivhv": 0.845,
+     "lim": 2.012,
+     "iv": 0.6497,
+     "delta": -0.6763,
+     "be": 4.98,
+     "be_sd": 0.16,
+     "ivhv": 0.858,
      "pricing": 2,
-     "liquidity": 2,
+     "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 5.29,
+    "S": 5.34,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:48 ET"
+    "quote_time": "11-11 12:08 ET"
    },
-   "liq": 2,
+   "liq": 1,
    "pricing": 2,
    "cat": 1,
-   "score": 6,
+   "score": 5,
    "earn": {},
    "cat_est": true
   }
@@ -147811,7 +147811,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -147988,7 +147988,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -148348,7 +148348,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -148357,10 +148357,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 88.94,
+    "S": 88.98,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 11:55 ET"
    }
   }
  },
@@ -148553,7 +148553,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -148852,19 +148852,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 43, spread 13%, cost $3,064 > cap $1,288"
+     "Feb 19 0.60-0.70 delta: OI 105, cost $2,391 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 156.94,
+    "S": 157.55,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 12:12 ET"
    }
   }
  },
@@ -149839,7 +149839,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -149848,10 +149848,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 78.5,
+    "S": 78.49,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -150136,7 +150136,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -150290,7 +150290,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -150471,7 +150471,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -150650,7 +150650,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -150856,7 +150856,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -150868,7 +150868,7 @@
     "S": 40.8,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 12:09 ET"
    }
   }
  },
@@ -151549,7 +151549,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -151726,7 +151726,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -152321,7 +152321,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -152653,7 +152653,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -152830,7 +152830,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -153011,7 +153011,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -153306,19 +153306,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 17, spread 28%"
+     "Apr 16 0.60-0.70 delta: OI 17, spread 25%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 43.94,
+    "S": 43.97,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -153692,7 +153692,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -153701,10 +153701,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 115.25,
+    "S": 115.5,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -153985,7 +153985,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -153994,10 +153994,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 70.99,
+    "S": 71.24,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:32 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -154132,7 +154132,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -154312,7 +154312,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -154501,34 +154501,34 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 23.0,
-     "bid": 1.98,
-     "ask": 2.03,
+     "bid": 1.99,
+     "ask": 2.04,
      "oi": 5837,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 2.005,
-     "spread_pct": 0.0249,
+     "mid": 2.015,
+     "spread_pct": 0.0248,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 202.75,
+     "cost": 203.75,
      "fits": true,
-     "lim": 2.018,
-     "iv": 0.2752,
-     "delta": -0.5901,
-     "be": 20.97,
+     "lim": 2.028,
+     "iv": 0.2749,
+     "delta": -0.5921,
+     "be": 20.96,
      "be_sd": 0.272,
-     "ivhv": 0.624,
+     "ivhv": 0.623,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 21.95,
+    "S": 21.93,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 12:12 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -155270,7 +155270,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -155279,10 +155279,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 43.4,
+    "S": 43.39,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:43 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -155536,7 +155536,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -155808,7 +155808,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -155817,10 +155817,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 152.29,
+    "S": 152.2,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:39 ET"
+    "quote_time": "11-11 12:06 ET"
    }
   }
  },
@@ -156048,7 +156048,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -156057,10 +156057,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 222.71,
+    "S": 222.96,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 12:06 ET"
    }
   }
  },
@@ -156254,19 +156254,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 18, cost $9,974 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 28, cost $10,671 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 269.5,
+    "S": 271.15,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:49 ET"
+    "quote_time": "11-11 12:07 ET"
    }
   }
  },
@@ -156914,7 +156914,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -157210,7 +157210,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -157362,7 +157362,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -157689,7 +157689,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -158230,7 +158230,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -158239,10 +158239,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 201.37,
+    "S": 201.41,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -158496,7 +158496,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "no-chain",
@@ -159060,7 +159060,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -159069,10 +159069,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 92.94,
+    "S": 92.67,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 12:09 ET"
    }
   }
  },
@@ -159716,7 +159716,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -160228,7 +160228,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -160237,10 +160237,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 131.61,
+    "S": 131.69,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:50 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -160556,19 +160556,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 3, spread 9%"
+     "Apr 16 0.60-0.70 delta: OI 3"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 54.32,
+    "S": 54.55,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 11:59 ET"
    }
   }
  },
@@ -160855,7 +160855,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -161005,7 +161005,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -161014,10 +161014,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 7.03,
+    "S": 7.04,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 12:13 ET"
    }
   }
  },
@@ -161182,19 +161182,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.50-0.60 delta: OI 13"
+     "Feb 19 0.50-0.60 delta: OI 13, spread 9%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 56.92,
+    "S": 56.78,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -161811,7 +161811,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -162021,19 +162021,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 27, cost $8,186 > cap $1,288"
+     "Apr 16 0.60-0.70 delta: OI 17, cost $8,881 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 160.19,
+    "S": 162.57,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:30 ET"
+    "quote_time": "11-11 12:00 ET"
    }
   }
  },
@@ -162260,19 +162260,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 164, spread 21%"
+     "Mar 19 0.60-0.70 delta: OI 164, spread 26%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 59.68,
+    "S": 58.97,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:35 ET"
+    "quote_time": "11-11 12:13 ET"
    }
   }
  },
@@ -162615,7 +162615,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 6,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -162627,38 +162627,38 @@
      "cp": "C",
      "strike": 15.0,
      "bid": 2.82,
-     "ask": 2.98,
+     "ask": 2.93,
      "oi": 6066,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 2.9,
-     "spread_pct": 0.0552,
+     "mid": 2.875,
+     "spread_pct": 0.0383,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 295.0,
+     "cost": 291.25,
      "fits": true,
-     "lim": 2.94,
-     "iv": 0.6189,
-     "delta": 0.6567,
-     "be": 17.95,
+     "lim": 2.902,
+     "iv": 0.6163,
+     "delta": 0.6554,
+     "be": 17.91,
      "be_sd": 0.339,
-     "ivhv": 0.847,
+     "ivhv": 0.843,
      "pricing": 2,
-     "liquidity": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 15.96,
+    "S": 15.94,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:53 ET"
+    "quote_time": "11-11 12:13 ET"
    },
-   "liq": 1,
+   "liq": 2,
    "pricing": 2,
    "cat": 1,
-   "score": 6,
+   "score": 7,
    "earn": {},
    "cat_est": true
   }
@@ -162826,7 +162826,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -162835,10 +162835,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 39.45,
+    "S": 39.47,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:50 ET"
+    "quote_time": "11-11 12:06 ET"
    }
   }
  },
@@ -163003,7 +163003,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -163012,10 +163012,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 80.92,
+    "S": 81.12,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:05 ET"
    }
   }
  },
@@ -163147,17 +163147,16 @@
    "ts": "2026-12-24",
    "rr": 0.09,
    "rr_pts": 0,
-   "cap": 261.26,
+   "cap": 261.61,
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok-high-only",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $3,071 > cap $2,577",
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)",
+     "Mar 19 0.60-0.70 delta: cost $3,088 > cap $2,577",
      "60+ day expiration (90+ over the cap)",
      "fits only the High cap ($2,577): needs 10+"
     ],
@@ -163167,39 +163166,39 @@
      "exp": "2027-01-15",
      "cp": "C",
      "strike": 230.0,
-     "bid": 21.8,
-     "ask": 22.5,
+     "bid": 22.0,
+     "ask": 23.2,
      "oi": 1895,
      "src": "Cboe",
      "dte": 65,
      "quote": true,
-     "mid": 22.15,
-     "spread_pct": 0.0316,
+     "mid": 22.6,
+     "spread_pct": 0.0531,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 2233.5,
+     "cost": 2291.0,
      "fits": true,
-     "lim": 22.325,
-     "iv": 0.475,
-     "delta": 0.5985,
-     "be": 252.33,
-     "be_sd": 0.371,
-     "ivhv": 1.017,
+     "lim": 22.9,
+     "iv": 0.4795,
+     "delta": 0.602,
+     "be": 252.91,
+     "be_sd": 0.369,
+     "ivhv": 1.027,
      "pricing": 2,
-     "liquidity": 2,
+     "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 234.87,
+    "S": 235.34,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:53 ET"
+    "quote_time": "11-11 12:13 ET"
    },
-   "liq": 2,
+   "liq": 1,
    "pricing": 2,
    "cat": 0,
-   "score": 5,
+   "score": 4,
    "earn": {},
    "cat_est": false
   }
@@ -164021,19 +164020,19 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 299, spread 22%"
+     "Feb 19 0.60-0.70 delta: OI 456"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 50.57,
+    "S": 50.53,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:49 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -164619,7 +164618,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -165784,7 +165783,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -165793,10 +165792,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 81.35,
+    "S": 81.34,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -166003,34 +166002,34 @@
      "exp": "2027-03-19",
      "cp": "C",
      "strike": 105.0,
-     "bid": 10.05,
+     "bid": 10.15,
      "ask": 10.75,
      "oi": 1870,
      "src": "Cboe",
      "dte": 128,
      "quote": true,
-     "mid": 10.4,
-     "spread_pct": 0.0673,
+     "mid": 10.45,
+     "spread_pct": 0.0574,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1058.5,
+     "cost": 1061.0,
      "fits": true,
-     "lim": 10.575,
-     "iv": 0.2782,
-     "delta": 0.679,
-     "be": 115.59,
-     "be_sd": 0.205,
-     "ivhv": 0.861,
+     "lim": 10.6,
+     "iv": 0.2769,
+     "delta": 0.6813,
+     "be": 115.61,
+     "be_sd": 0.201,
+     "ivhv": 0.857,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 111.81,
+    "S": 111.93,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:04 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -166168,7 +166167,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "fail",
@@ -166405,7 +166404,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -166725,20 +166724,20 @@
      "cost": 504.75,
      "fits": true,
      "lim": 5.037,
-     "iv": 0.9436,
-     "delta": -0.6618,
+     "iv": 0.9425,
+     "delta": -0.6631,
      "be": 7.95,
-     "be_sd": 0.163,
-     "ivhv": 0.837,
+     "be_sd": 0.161,
+     "ivhv": 0.836,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 8.75,
+    "S": 8.74,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:54 ET"
+    "quote_time": "11-11 12:14 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -166912,7 +166911,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -167062,7 +167061,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -167071,10 +167070,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 109.28,
+    "S": 109.32,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -168168,7 +168167,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -168405,7 +168404,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -168766,7 +168765,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -169208,7 +169207,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -169512,7 +169511,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -169995,7 +169994,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -170143,7 +170142,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -170152,10 +170151,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 35.21,
+    "S": 35.23,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:49 ET"
+    "quote_time": "11-11 12:00 ET"
    }
   }
  },
@@ -170293,7 +170292,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -170302,10 +170301,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 40.94,
+    "S": 40.85,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:03 ET"
    }
   }
  },
@@ -170443,7 +170442,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -170452,10 +170451,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 43.69,
+    "S": 43.63,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:28 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -170593,7 +170592,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -171195,7 +171194,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -171377,7 +171376,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -171525,7 +171524,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -171534,10 +171533,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 202.24,
+    "S": 201.71,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:37 ET"
+    "quote_time": "11-11 12:05 ET"
    }
   }
  },
@@ -171673,20 +171672,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
      "Mar 19 0.60-0.70 delta: cost $6,338 > cap $1,288",
-     "Jan 15 0.60-0.70 delta: cost $3,287 > cap $1,288"
+     "Jan 15 0.60-0.70 delta: cost $4,035 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 208.48,
+    "S": 209.25,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },
@@ -171913,7 +171912,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -172051,29 +172050,64 @@
    "setups": [
     "Breakdown 11-04 (< 134.61, vol 3.17x), holding"
    ],
-   "exp": "2027-02-19",
-   "ts": "2027-01-29",
+   "exp": "2027-01-15",
+   "ts": "2026-12-24",
    "rr": 1.21,
    "rr_pts": 0,
-   "cap": 76.13,
+   "cap": 90.57,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "fail",
+    "status": "ok",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $2,702 > cap $1,288",
-     "Jan 15 0.60-0.70 delta: cost $1,612 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $2,674 > cap $1,288",
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)",
+     "60+ day expiration (90+ over the cap)"
     ],
     "cap": 1288.45,
-    "contract": null,
-    "S": 134.91,
+    "contract": {
+     "osi": "VST270115P00140000",
+     "exp": "2027-01-15",
+     "cp": "P",
+     "strike": 140.0,
+     "bid": 12.35,
+     "ask": 12.9,
+     "oi": 2174,
+     "src": "Cboe",
+     "dte": 65,
+     "quote": true,
+     "mid": 12.625,
+     "spread_pct": 0.0436,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 1277.25,
+     "fits": true,
+     "lim": 12.762,
+     "iv": 0.4598,
+     "delta": -0.5203,
+     "be": 127.23,
+     "be_sd": 0.312,
+     "ivhv": 0.51,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 135.42,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:48 ET"
-   }
+    "quote_time": "11-11 12:14 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 0,
+   "score": 7,
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -172324,7 +172358,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -172995,7 +173029,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -173533,7 +173567,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -174139,7 +174173,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -175121,7 +175155,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -175313,34 +175347,34 @@
      "exp": "2027-02-19",
      "cp": "P",
      "strike": 70.0,
-     "bid": 4.6,
-     "ask": 4.9,
+     "bid": 4.5,
+     "ask": 4.8,
      "oi": 12036,
      "src": "Cboe",
      "dte": 100,
      "quote": true,
-     "mid": 4.75,
-     "spread_pct": 0.0632,
+     "mid": 4.65,
+     "spread_pct": 0.0645,
      "spread_ok": true,
      "spread_provisional": false,
      "oi_ok": true,
-     "cost": 483.5,
+     "cost": 473.5,
      "fits": true,
-     "lim": 4.825,
-     "iv": 0.2948,
-     "delta": -0.5143,
-     "be": 65.16,
-     "be_sd": 0.345,
-     "ivhv": 0.6,
+     "lim": 4.725,
+     "iv": 0.2914,
+     "delta": -0.5097,
+     "be": 65.27,
+     "be_sd": 0.35,
+     "ivhv": 0.593,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 68.83,
+    "S": 68.94,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:33 ET"
+    "quote_time": "11-11 12:01 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -175720,7 +175754,7 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -175928,7 +175962,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -176105,7 +176139,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -176253,7 +176287,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -176428,7 +176462,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -176437,10 +176471,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 44.61,
+    "S": 44.64,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:14 ET"
    }
   }
  },
@@ -176578,7 +176612,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -176730,7 +176764,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -177173,7 +177207,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -177325,19 +177359,19 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 17, spread 15%"
+     "Feb 19 0.60-0.70 delta: OI 17, spread 13%"
     ],
     "cap": 1546.14,
     "contract": null,
     "S": 85.5,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:04 ET"
    }
   }
  },
@@ -177533,7 +177567,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -177542,10 +177576,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 80.3,
+    "S": 80.25,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:46 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -177681,7 +177715,7 @@
    "trend": 0,
    "rs": 0,
    "known": 0,
-   "max": 6,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -177833,7 +177867,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -178253,20 +178287,20 @@
      "cost": 593.5,
      "fits": true,
      "lim": 5.925,
-     "iv": 0.2519,
-     "delta": -0.6283,
+     "iv": 0.245,
+     "delta": -0.6354,
      "be": 61.07,
-     "be_sd": 0.218,
-     "ivhv": 0.813,
+     "be_sd": 0.206,
+     "ivhv": 0.79,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 63.12,
+    "S": 62.95,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:55 ET"
+    "quote_time": "11-11 12:15 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -178434,19 +178468,19 @@
      "fits": true,
      "lim": 3.512,
      "iv": 0.1754,
-     "delta": 0.649,
+     "delta": 0.6492,
      "be": 60.52,
-     "be_sd": 0.366,
+     "be_sd": 0.369,
      "ivhv": 0.805,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 58.3,
+    "S": 58.29,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:55 ET"
+    "quote_time": "11-11 12:15 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -178617,19 +178651,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 360, cost $1,760 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $1,960 > cap $1,288",
+     "Jan 15 0.60-0.70 delta: spread 9%, cost $1,546 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 175.44,
+    "S": 175.93,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 12:14 ET"
    }
   }
  },
@@ -178883,20 +178918,20 @@
      "cost": 1437.25,
      "fits": true,
      "lim": 14.363,
-     "iv": 0.1971,
-     "delta": 0.694,
+     "iv": 0.1957,
+     "delta": 0.6952,
      "be": 194.37,
-     "be_sd": 0.316,
-     "ivhv": 0.876,
+     "be_sd": 0.318,
+     "ivhv": 0.87,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 187.46,
+    "S": 187.47,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:50 ET"
+    "quote_time": "11-11 12:05 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -179065,20 +179100,20 @@
      "cost": 1088.5,
      "fits": true,
      "lim": 10.875,
-     "iv": 0.2295,
-     "delta": 0.6997,
+     "iv": 0.2316,
+     "delta": 0.6978,
      "be": 125.89,
-     "be_sd": 0.323,
-     "ivhv": 0.823,
+     "be_sd": 0.319,
+     "ivhv": 0.83,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 120.59,
+    "S": 120.61,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:55 ET"
+    "quote_time": "11-11 12:04 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -179344,7 +179379,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -179353,10 +179388,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 179.3,
+    "S": 178.78,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:50 ET"
+    "quote_time": "11-11 12:07 ET"
    }
   }
  },
@@ -179854,7 +179889,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -180032,7 +180067,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -180041,10 +180076,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 91.56,
+    "S": 91.68,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 12:15 ET"
    }
   }
  },
@@ -180360,19 +180395,19 @@
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Feb 19 0.60-0.70 delta: OI 0, spread 10%"
+     "Feb 19 0.60-0.70 delta: OI 0, spread 30%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 86.53,
+    "S": 86.48,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 12:08 ET"
    }
   }
  },
@@ -180568,7 +180603,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -180577,10 +180612,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 44.01,
+    "S": 44.02,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:45 ET"
+    "quote_time": "11-11 11:58 ET"
    }
   }
  },
@@ -181051,7 +181086,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 10,
+   "max": 9,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -181230,19 +181265,19 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 19, spread 10%"
+     "Mar 19 0.60-0.70 delta: OI 19, spread 14%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 158.37,
+    "S": 159.15,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:44 ET"
+    "quote_time": "11-11 12:06 ET"
    }
   }
  },
@@ -181382,7 +181417,7 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -181557,7 +181592,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -181566,10 +181601,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 106.31,
+    "S": 106.47,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:52 ET"
+    "quote_time": "11-11 12:14 ET"
    }
   }
  },
@@ -182154,7 +182189,7 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -182393,7 +182428,7 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": false,
    "opt": {
     "status": "fail",
@@ -182402,10 +182437,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 81.31,
+    "S": 81.34,
     "quotes": "Cboe",
     "regular": true,
-    "quote_time": "11-11 11:47 ET"
+    "quote_time": "11-11 12:01 ET"
    }
   }
  },

@@ -1,5 +1,7 @@
 # Shadow ledger (automatic): updated 2026-11-11
 
+This run made no changes (already processed today).
+
 One contract each. Open shadows are valued at their last regular-hours quote, at the plan's exit price (mid minus a quarter of the spread minus the $1 fee).
 
 | | Trades | Cost | P/L |
@@ -45,21 +47,6 @@ Evidence gates (20+ closed trades scoring 7+ that beat the random benchmark by m
 | P | Breakdown | 7-9 | 8 | 2 | -24.0% |
 | P | Breakdown near low | 7-9 | 1 | 1 | +16.7% |
 | P | Failed rally | 7-9 | 3 | 2 | +4.9% |
-
-## This run: 3 closed, 10 opened, 0 reached +50%, 1 without a quote
-- Closed S3 MP 45P 2026-12-18: +5.3% (trailing stop (mid 7.850 <= 8.295))
-- Closed S21 STM 55P 2027-01-15: +12.1% (trailing stop (mid 9.850 <= 10.220))
-- Closed S22 INTC 67.5P 2026-12-18: -22.9% (trailing stop (mid 7.275 <= 10.269))
-- Opened A11 ASTS 45P 2027-02-19 at 12.66: score 9, Breakdown
-- Opened A12 HIMS 25P 2027-02-19 at 6.43: score 9, Breakdown
-- Opened A13 HPE 60P 2027-02-19 at 12.55: score 9, Breakdown
-- Opened A14 INTC 70P 2027-02-19 at 11.94: score 9, Breakdown
-- Opened A15 BABA 105P 2027-02-19 at 10.65: score 8, Failed rally
-- Opened A16 DAL 90C 2027-03-19 at 10.19: score 8, Breakout
-- Opened A17 KLAR 15P 2027-03-19 at 2.82: score 6, Failed rally
-- Opened A18 XLV 180C 2027-03-19 at 14.37: score 6, Breakout
-- Opened A19 XLF 57C 2027-03-19 at 3.52: score 6, Breakout
-- Opened A20 AMZN 270C 2027-01-15 at 13.65: score 5, Breakout
 
 ## Open: 40
 
