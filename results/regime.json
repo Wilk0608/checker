@@ -1,7 +1,7 @@
 {
  "SPY": {
   "date": "2026-11-10",
-  "close": 749.92,
+  "close": 749.94,
   "sma50": 765.0,
   "sma200": 730.99,
   "above50": false,
@@ -9,14 +9,14 @@
  },
  "QQQ": {
   "date": "2026-11-10",
-  "close": 674.76,
+  "close": 674.81,
   "sma50": 719.39,
   "sma200": 681.42,
   "above50": false,
   "above200": false
  },
  "VIX": {
-  "last": 19.56,
+  "last": 19.46,
   "ago5": 20.83
  },
  "signals": {
@@ -31,7 +31,7 @@
    "easing": true
   },
   "dollar": {
-   "now": 102.26,
+   "now": 102.24,
    "avg50": 101.19,
    "easing": false
   }
