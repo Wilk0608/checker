@@ -5,7 +5,12 @@ on:
     # lands inside the trading day. This fires every hour and gate.py lets two scans a day through: the first run that
     # starts inside the regular session and the first run after the close. The other runs stop in a few seconds.
     - cron: "7 6-22 * * 1-5"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      as_schedule:
+        description: "Treat this run like a scheduled one (the gate may skip it). Leave off to always scan."
+        type: boolean
+        default: false
 permissions:
   contents: write
   issues: write            # the alert step opens an issue, which emails the repository owner
@@ -22,7 +27,7 @@ jobs:
           ref: main           # the branch tip when the job starts, so the gate sees what an earlier run recorded
       - name: Gate (does this run scan?)
         id: gate
-        run: python3 gate.py --event "${{ github.event_name }}" | tee -a "$GITHUB_OUTPUT"
+        run: python3 gate.py --event "${{ (github.event_name == 'workflow_dispatch' && inputs.as_schedule) && 'schedule' || github.event_name }}" | tee -a "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
         if: steps.gate.outputs.mode != 'skip'
         with:
