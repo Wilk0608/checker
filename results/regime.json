@@ -21,7 +21,7 @@
  },
  "signals": {
   "tbill": {
-   "now": 4.12,
+   "now": 4.11,
    "then": 3.7,
    "easing": false
   },
@@ -31,7 +31,7 @@
    "easing": true
   },
   "dollar": {
-   "now": 102.84,
+   "now": 102.91,
    "avg50": 101.25,
    "easing": false
   }
