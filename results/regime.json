@@ -1,38 +1,38 @@
 {
  "SPY": {
-  "date": "2026-11-12",
-  "close": 757.12,
-  "sma50": 764.8,
-  "sma200": 731.62,
+  "date": "2026-11-13",
+  "close": 754.37,
+  "sma50": 764.43,
+  "sma200": 731.92,
   "above50": false,
   "above200": true
  },
  "QQQ": {
-  "date": "2026-11-12",
-  "close": 688.17,
-  "sma50": 718.62,
-  "sma200": 681.99,
+  "date": "2026-11-13",
+  "close": 679.89,
+  "sma50": 717.87,
+  "sma200": 682.24,
   "above50": false,
-  "above200": true
+  "above200": false
  },
  "VIX": {
-  "last": 18.7,
-  "ago5": 28.18
+  "last": 19.3,
+  "ago5": 25.64
  },
  "signals": {
   "tbill": {
-   "now": 4.13,
+   "now": 4.12,
    "then": 3.7,
    "easing": false
   },
   "ten_year": {
-   "now": 5.1,
-   "avg50": 5.05,
+   "now": 5.15,
+   "avg50": 5.06,
    "easing": false
   },
   "dollar": {
-   "now": 103.17,
-   "avg50": 101.33,
+   "now": 103.43,
+   "avg50": 101.41,
    "easing": false
   }
  },
@@ -43,5 +43,5 @@
   "put": 1
  },
  "fed_bias": "auto (0 of 3 easing)",
- "asof": "2026-11-12"
+ "asof": "2026-11-13"
 }
