@@ -239,10 +239,21 @@ def parse_nasdaq_chain(js, exp):
     return out
 
 
+NASDAQ_BLOCKED = {"on": False}    # set by the first 403 of a run
+
+
 def refresh_from_nasdaq(ticker, contracts, exp, S, r, now, etf=False):
-    """Replace bid/ask/OI for one expiration with Nasdaq's quotes and rebuild IV and delta from the new mids."""
-    js = _get_json(NASDAQ_CHAIN.format(t=ticker.upper().replace("-", "."), cls="etf" if etf else "stocks",
-                                       d=exp.isoformat()), NASDAQ_H)
+    """Replace bid/ask/OI for one expiration with Nasdaq's quotes and rebuild IV and delta from the new mids.
+    After one 403 the rest of the run's Nasdaq requests are skipped: a refusal is an answer, not something to retry around."""
+    if NASDAQ_BLOCKED["on"]:
+        raise RuntimeError("Nasdaq refused an earlier request in this run")
+    try:
+        js = _get_json(NASDAQ_CHAIN.format(t=ticker.upper().replace("-", "."), cls="etf" if etf else "stocks",
+                                           d=exp.isoformat()), NASDAQ_H)
+    except urllib.error.HTTPError as e:
+        if e.code == 403:
+            NASDAQ_BLOCKED["on"] = True
+        raise
     q = parse_nasdaq_chain(js, exp)
     if not q:
         return 0

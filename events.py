@@ -30,8 +30,14 @@ DEAL_FORMS = {"425", "SC 14D9", "SC TO-T", "SC TO-C", "DEFM14A", "PREM14A", "DEF
 TIME_LABEL = {"time-pre-market": "BMO", "time-after-hours": "AMC", "time-not-supplied": "time n/a"}
 
 
+NASDAQ = {"blocked": False}      # set by the first 403 of a run: Nasdaq is refusing this runner, so the run stops asking
+
+
 def _get_json(url, timeout=30, tries=3):
-    """GET + JSON with retries; a 429 (rate limit) waits 15/30 s, a 403/404 is not retried."""
+    """GET + JSON with retries; a 429 (rate limit) waits 15/30 s, a 403/404 is not retried. After one 403 the rest of
+    the run's Nasdaq requests are skipped: a refusal is an answer, not something to retry around."""
+    if NASDAQ["blocked"]:
+        raise RuntimeError("Nasdaq refused an earlier request in this run")
     last = None
     for i in range(tries):
         try:
@@ -39,6 +45,8 @@ def _get_json(url, timeout=30, tries=3):
                 return json.loads(r.read().decode("utf-8", errors="replace"))
         except urllib.error.HTTPError as e:
             last = e
+            if e.code == 403:
+                NASDAQ["blocked"] = True
             if e.code in (403, 404):
                 raise
             time.sleep(15.0 * (i + 1) if e.code == 429 else 2.0 * (i + 1))
@@ -85,6 +93,63 @@ def earnings_calendar(start, end, holidays=(), workers=3):
                 if sym not in cal or v[0] < cal[sym][0]:
                     cal[sym] = v
     return cal, len(days) - len(failed), failed, last_rows
+
+
+def _yahoo_reports(ticker):
+    """Report datetimes (New York time) from Yahoo, past and upcoming, oldest first. Raises on failure."""
+    import yfinance as yf
+    df = yf.Ticker(ticker).get_earnings_dates(limit=8)
+    out = []
+    for ts in (df.index if df is not None else []):
+        t = ts.to_pydatetime()
+        out.append(t.astimezone(ET) if t.tzinfo else t.replace(tzinfo=ET))
+    return sorted(out)
+
+
+def when_label(t):
+    """BMO or AMC from a report's clock time; Yahoo shows midnight when it has no time."""
+    if t.time() == dt.time(0, 0):
+        return "time n/a"
+    return "BMO" if t.time() < dt.time(9, 30) else "AMC" if t.time() >= dt.time(16, 0) else "time n/a"
+
+
+def earnings_yahoo(tickers, start, today, cache=None, fetch=_yahoo_reports, workers=3, fresh_days=2, pause=0.2):
+    """{ticker: (date, when)} for each ticker's first report on or after `start`, from Yahoo, one request a name: the
+    fallback when Nasdaq's calendar doesn't answer. `cache` ({ticker: {"date", "when", "fetched"}}) is updated in place;
+    an entry fetched in the last `fresh_days` whose date hasn't passed is reused, and a failed lookup keeps an older
+    date that is still ahead. Dates that Yahoo projects for later quarters are estimates until the company confirms
+    them. Returns (map, names asked of Yahoo, names that failed)."""
+    cache = cache if cache is not None else {}
+    day = dt.date.fromisoformat
+    cal, ask = {}, []
+    for t in sorted(set(tickers)):
+        c = cache.get(t)
+        if c and (today - day(c["fetched"])).days <= fresh_days and (c["date"] is None or day(c["date"]) >= today):
+            if c["date"]:
+                cal[t] = (day(c["date"]), c["when"])
+            continue
+        ask.append(t)
+
+    def one(t):
+        try:
+            time.sleep(pause)
+            return t, next((x for x in fetch(t) if x.date() >= start), None), None
+        except Exception as e:
+            return t, None, type(e).__name__
+    failed = []
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for t, nxt, err in ex.map(one, ask):
+            if err:
+                failed.append(t)
+                c = cache.get(t)
+                if c and c["date"] and day(c["date"]) >= start:
+                    cal[t] = (day(c["date"]), c["when"])
+                continue
+            cache[t] = dict(date=nxt.date().isoformat() if nxt else None, when=when_label(nxt) if nxt else None,
+                            fetched=today.isoformat())
+            if nxt:
+                cal[t] = (nxt.date(), when_label(nxt))
+    return cal, len(ask), failed
 
 
 def last_session_before(d, holidays=()):

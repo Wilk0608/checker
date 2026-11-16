@@ -473,6 +473,24 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
             cal, cal_days, cal_failed, horizon = E.earnings_calendar(entry - dt.timedelta(days=5), last_exp, HOLIDAYS)
         except Exception as e:
             SCREEN["earn_error"] = f"{type(e).__name__}: {e}"
+    SCREEN.pop("cal_yahoo", None)
+    if not cal_days:
+        # Nasdaq's calendar didn't answer: ask Yahoo, one name at a time, for the names that need a date (setups with
+        # a contract, open shadows, real positions). Without dates there is no earnings exit and no pre-event rule.
+        want = ({x["r"]["tk"] for x in ok} | {s["tk"] for s in SH.load().get("open", [])}
+                | {str(p.get("tk", "")).upper() for p in (plan.get("open") or [])}) - etfs - {""}
+        path = os.path.join(ROOT, "results", "earnings.json")
+        try:
+            cache = json.load(open(path))
+        except Exception:
+            cache = {}
+        try:
+            cal, asked, yfail = E.earnings_yahoo(want, entry - dt.timedelta(days=5), now.date(), cache)
+            json.dump(cache, open(path, "w"), indent=0, sort_keys=True)
+            SCREEN["cal_yahoo"] = dict(names=len(want), asked=asked, failed=yfail, found=len(cal))
+            SCREEN.pop("earn_error", None)
+        except Exception as e:
+            SCREEN["earn_error"] = f"{type(e).__name__}: {e}"
     for x in ok:
         apply_events(x, cal.get(x["r"]["tk"]), entry, x["r"]["tk"] in etfs)
     # provisional pre-event tests (Yahoo report dates + the scan's daily bars + the Cboe straddle)
@@ -739,8 +757,15 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
         L += [f"- Option chains: {SCREEN['chains']} read from Cboe" + (f", {len(ce)} missing ({', '.join(sorted(ce)[:15])}"
               f"{', ...' if len(ce) > 15 else ''})" if ce else "") + (f"; Nasdaq re-read failed for {len(SCREEN['refresh_failed'])}"
               f" ({', '.join(SCREEN['refresh_failed'][:15])})" if SCREEN.get("refresh_failed") else "") + f"; Cboe rate-limit retries {SCREEN.get('cboe_429', 0)}; option step took {SCREEN['secs']}s",
-              f"- Earnings calendar (Nasdaq): {SCREEN['cal_days']} days read"
-              + (f", {len(SCREEN['cal_failed'])} failed" if SCREEN.get("cal_failed") else "")
+              (f"- Earnings dates: Nasdaq's calendar refused the request, so Yahoo was asked, one name at a time: "
+               f"{SCREEN['cal_yahoo']['names']} names needed a date, {SCREEN['cal_yahoo']['asked']} looked up today (the rest reused "
+               f"from the last 2 days), {len(SCREEN['cal_yahoo']['failed'])} failed"
+               + (f" ({', '.join(SCREEN['cal_yahoo']['failed'][:15])})" if SCREEN['cal_yahoo']['failed'] else "")
+               + f", {SCREEN['cal_yahoo']['found']} with a report date. Yahoo's dates for later quarters are estimates"
+               if SCREEN.get("cal_yahoo") else
+               f"- Earnings calendar (Nasdaq): {SCREEN['cal_days']} days read"
+               + (f", {len(SCREEN['cal_failed'])} failed: NO EARNINGS DATES, so no earnings exits and no pre-event rule in this scan" if SCREEN.get("cal_failed") and not SCREEN['cal_days'] else
+                  f", {len(SCREEN['cal_failed'])} failed" if SCREEN.get("cal_failed") else ""))
               + (f"; listings run through {SCREEN['cal_horizon']}, so later reports show as 'none found'" if SCREEN.get("cal_horizon") else "")
               + (f"; ERROR {SCREEN['earn_error']}" if SCREEN.get("earn_error") else ""),
               f"- Pre-event tests: {SCREEN['pre_tests']} run" + (f"; Yahoo dates unavailable for {', '.join(SCREEN['pre_failed'])}"
@@ -1302,6 +1327,32 @@ def v77_selftest(res, rows2, miss, etf3, last, now, caps, up):
                                    index=pd.DatetimeIndex([pd.Timestamp(x) for x in days]))
     assert stale_names({"NEW": mk(["2026-11-16"]), "OLD": mk(["2026-11-12", "2026-11-16"]), "OK": mk(["2026-11-13", "2026-11-16"]),
                         "EMPTY": mk(["2026-11-16"]).iloc[:0]}, t0, dt.date(2026, 11, 13)) == ["OLD"]
+    # 17a2) earnings dates from Yahoo when Nasdaq refuses: first report on or after the start, cache reuse, failures
+    d0, tz = dt.date(2026, 11, 16), ET
+    reps = {"AAA": [dt.datetime(2026, 8, 5, 16, 5, tzinfo=tz), dt.datetime(2026, 11, 18, 7, 0, tzinfo=tz), dt.datetime(2027, 2, 10, 0, 0, tzinfo=tz)],
+            "BBB": [dt.datetime(2026, 11, 12, 16, 5, tzinfo=tz), dt.datetime(2027, 2, 11, 16, 5, tzinfo=tz)],
+            "CCC": []}
+    calls = []
+    def fake(t):
+        calls.append(t)
+        if t == "DDD":
+            raise ValueError("no data")
+        return reps[t]
+    cache = {"DDD": dict(date="2026-12-01", when="AMC", fetched="2026-11-10")}
+    got, asked, failed = E.earnings_yahoo(["AAA", "BBB", "CCC", "DDD"], d0 - dt.timedelta(days=5), d0, cache, fetch=fake, pause=0)
+    assert got == {"AAA": (dt.date(2026, 11, 18), "BMO"), "BBB": (dt.date(2026, 11, 12), "AMC"), "DDD": (dt.date(2026, 12, 1), "AMC")}, got
+    assert asked == 4 and failed == ["DDD"] and cache["CCC"]["date"] is None and cache["AAA"]["fetched"] == "2026-11-16"
+    calls.clear()
+    got2, asked2, _ = E.earnings_yahoo(["AAA", "BBB", "CCC"], d0 - dt.timedelta(days=5), d0 + dt.timedelta(days=1), cache, fetch=fake, pause=0)
+    assert sorted(calls) == ["BBB"] and asked2 == 1 and got2["AAA"] == got["AAA"]        # AAA and CCC reused; BBB's date has passed
+    assert E.when_label(dt.datetime(2027, 2, 10, 0, 0, tzinfo=tz)) == "time n/a" and E.when_label(dt.datetime(2027, 2, 10, 12, 0, tzinfo=tz)) == "time n/a"
+    E.NASDAQ["blocked"] = True                                   # after one refusal the run stops asking Nasdaq
+    try:
+        E._get_json("https://example.invalid/")
+        raise AssertionError("a blocked run must not send the request")
+    except RuntimeError:
+        pass
+    E.NASDAQ["blocked"] = False
     # 17b) the catalyst point without a calendar date: a stock's contract with 95+ days left contains its next report
     ent = dt.date(2026, 10, 26)
     far = copy.deepcopy(up)
