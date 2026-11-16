@@ -5,7 +5,7 @@ can raise call alerts) and one after the close (final bars). A run that arrives 
 window waits inside the job until it opens. A scan that fails is not recorded, so the next run retries it.
 Standard library only: it runs before any package is installed.
 
-  python3 gate.py --event schedule|workflow_dispatch   prints mode=regular|close|manual|skip, day=..., reason=... and sleep=seconds
+  python3 gate.py --event schedule|workflow_dispatch   prints mode=regular|close|manual|skip, day=..., reason=..., sleep=seconds and relay=0|1
   python3 gate.py --record regular|close YYYY-MM-DD     writes results/run_state.json after a successful scan
   python3 gate.py --test"""
 import datetime as dt
@@ -88,6 +88,21 @@ def decide(now, state, event="schedule"):
     return "close", day, f"close scan for {day}", 0
 
 
+def relay_at(now):
+    """When a run that arrived too early should start the follow-up run: MAX_WAIT_MINUTES before the regular window."""
+    now = now.astimezone(ET)
+    return dt.datetime.combine(now.date(), OPEN_AFTER, ET) - dt.timedelta(minutes=MAX_WAIT_MINUTES)
+
+
+def relay_needed(now, state, event="schedule"):
+    """True when a scheduled run arrives on a session day before even a waiting run could reach the regular window
+    (between midnight and 5:00 AM New York time) and today's regular scan isn't done. The run then sleeps until 5:00 AM
+    and starts a follow-up run, which waits for the window: GitHub's next scheduled run may arrive after the close."""
+    now = now.astimezone(ET)
+    d = now.date()
+    return bool(event == "schedule" and is_session(d) and state.get("regular") != d.isoformat() and now < relay_at(now))
+
+
 def load():
     try:
         return json.load(open(STATE))
@@ -145,6 +160,16 @@ def selftest():
         for m in (0, 30):
             mode, day, why, sl = decide(at(2026, 11, 11, h, m), {})
             assert mode in ("regular", "close", "skip") and 0 <= sl <= MAX_WAIT_MINUTES * 60, (h, m, mode, sl)
+    # the relay: a run that arrives between midnight and 5:00 AM on a session day starts a follow-up at 5:00 AM
+    r = lambda now, st=None, ev="schedule": relay_needed(now, st or {}, ev)
+    assert r(at(2026, 11, 16, 1, 8), {"close": "2026-11-13"}) and r(at(2026, 11, 16, 0, 0)) and r(at(2026, 11, 16, 4, 59))
+    assert not r(at(2026, 11, 16, 5, 0)) and not r(at(2026, 11, 16, 9, 0)) and not r(at(2026, 11, 16, 12, 0))   # these wait or scan themselves
+    assert not r(at(2026, 11, 16, 1, 8), {"regular": "2026-11-16"})                                 # nothing left to do
+    assert not r(at(2026, 11, 14, 1, 8)) and not r(at(2026, 11, 26, 1, 8))                           # Saturday, Thanksgiving
+    assert not r(at(2026, 11, 15, 23, 0)) and not r(at(2026, 11, 16, 1, 8), ev="workflow_dispatch")
+    assert relay_at(at(2026, 11, 16, 1, 8)) == at(2026, 11, 16, 5, 0)
+    assert decide(relay_at(at(2026, 11, 16, 1, 8)), {})[:2] == ("regular", dt.date(2026, 11, 16))   # the follow-up run waits and scans
+    assert decide(relay_at(at(2026, 11, 16, 1, 8)), {})[3] == MAX_WAIT_MINUTES * 60
     print("gate self-test passed")
 
 
@@ -152,10 +177,14 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     if "--test" in a:
         selftest()
+    elif "--relay-sleep" in a:                                   # seconds from now until the follow-up run should start
+        now = dt.datetime.now(dt.timezone.utc)
+        print(max(0, int((relay_at(now) - now.astimezone(ET)).total_seconds())))
     elif "--record" in a:
         i = a.index("--record")
         print(record(a[i + 1], a[i + 2]))
     else:
         ev = a[a.index("--event") + 1] if "--event" in a else "schedule"
-        mode, day, why, sleep = decide(dt.datetime.now(dt.timezone.utc), load(), ev)
-        print(f"mode={mode}\nday={day or ''}\nreason={why}\nsleep={sleep}")
+        now = dt.datetime.now(dt.timezone.utc)
+        mode, day, why, sleep = decide(now, load(), ev)
+        print(f"mode={mode}\nday={day or ''}\nreason={why}\nsleep={sleep}\nrelay={int(relay_needed(now, load(), ev))}")

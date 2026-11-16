@@ -4,7 +4,8 @@ on:
     # GitHub starts scheduled runs hours late (5 to 9 hours here in November 2026) and delivers only one every 5 to 9
     # hours, so a single well-timed cron never lands inside the trading day. This asks for a run every hour and gate.py
     # lets two scans a day through: one inside the regular session and one after the close. A run that arrives up to
-    # 5 hours before the regular window waits inside the job until it opens. The other runs stop in a few seconds.
+    # 5 hours before the regular window waits inside the job until it opens; one that arrives earlier that morning
+    # sleeps until 5:00 AM New York time and starts a follow-up run, which then waits. The other runs stop in seconds.
     - cron: "7 * * * 1-5"
     - cron: "7 0-8 * * 6"
   workflow_dispatch:
@@ -13,8 +14,13 @@ on:
         description: "Treat this run like a scheduled one (the gate may skip it). Leave off to always scan."
         type: boolean
         default: false
+      relay_test:
+        description: "Test the relay: after this run, start a follow-up run 5 seconds later."
+        type: boolean
+        default: false
 permissions:
   contents: write
+  actions: write           # the relay step starts a follow-up run of this workflow
   issues: write            # the alert step opens an issue, which emails the repository owner
 concurrency:                  # one scan at a time: an overlapping run waits, so two runs never race to push results
   group: daily-setup-scan
@@ -66,3 +72,13 @@ jobs:
           title="$(head -n 1 results/alert.md)"
           { tail -n +2 results/alert.md; echo; echo "@${{ github.repository_owner }}"; } > "$RUNNER_TEMP/alert_body.md"
           gh issue create --repo "${{ github.repository }}" --title "$title" --body-file "$RUNNER_TEMP/alert_body.md"
+
+      - name: Relay (start the follow-up run that will wait for the session window)
+        if: always() && (steps.gate.outputs.relay == '1' || inputs.relay_test)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ inputs.relay_test }}" = "true" ]; then s=5; else s="$(python3 gate.py --relay-sleep)"; fi
+          echo "sleeping $s seconds, then starting the follow-up run"
+          sleep "$s"
+          gh workflow run scan.yml --repo "${{ github.repository }}" --ref main -f as_schedule=true

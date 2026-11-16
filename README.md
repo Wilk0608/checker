@@ -40,7 +40,7 @@ hours, so one well-timed cron never lands inside the trading day. The workflow a
 lets two scans a day through; the other runs stop in a few seconds. A scan that fails isn't recorded
 (`results/run_state.json`), so the next run retries it.
 
-- **During the session** (10:00 AM to 3:25 PM New York time): setups on official closes, priced with regular-hours option quotes. This run updates the shadow ledger and can raise call alerts. This is the file a trading session should read. A run that arrives up to 5 hours before 10:00 AM waits inside the job until the window opens, because the next one may arrive too late.
+- **During the session** (10:00 AM to 3:25 PM New York time): setups on official closes, priced with regular-hours option quotes. This run updates the shadow ledger and can raise call alerts. This is the file a trading session should read. A run that arrives up to 5 hours before 10:00 AM waits inside the job until the window opens, because the next one may arrive too late. One that arrives earlier that morning (midnight to 5:00 AM) sleeps until 5:00 AM and starts a follow-up run, which then waits.
 - **After the close** (at least 15 minutes after it): setups on the day's final bars. Option quotes at this hour are closing quotes, so spreads are shown but marked provisional (a `*`) and don't fail a contract. No shadow update and no call alerts.
 
 A run started by hand from the Actions tab ("Run workflow") always scans at once. If no scheduled run reaches the
