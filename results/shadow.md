@@ -5,8 +5,8 @@ One contract each. Open shadows are valued at their last regular-hours quote, at
 | | Trades | Cost | P/L |
 |---|---|---|---|
 | Closed | 19 | $17,054 | -3,067 (-18.0%) |
-| Open | 56 | $48,763 | +8,114 (+16.6%) |
-| Total | 75 | $65,817 | +5,047 |
+| Open | 52 | $44,118 | +7,744 (+17.6%) |
+| Total | 71 | $61,172 | +4,677 |
 
 Closed trades: 6 wins in 19, average -18.1% per trade (95% interval -41.6% to +5.5%).
 
@@ -46,14 +46,7 @@ Evidence gates (20+ closed trades scoring 7+ that beat the random benchmark by m
 | P | Breakdown near low | 7-9 | 1 | 1 | +16.7% |
 | P | Failed rally | 7-9 | 4 | 2 | -4.9% |
 
-## This run: 1 closed, 4 opened, 3 reached +50%, 2 without a quote
-- Closed S12 T 22P 2026-12-18: -65.3% (-60% stop)
-- Opened A35 CRSP 50P 2027-04-16 at 11.56: score 8, Breakdown near low
-- Opened A36 UPST 22.5P 2027-02-19 at 4.87: score 8, Breakdown near low
-- Opened A37 ZETA 35C 2027-03-19 at 5.57: score 7, Breakout
-- Opened A38 GM 85C 2027-03-19 at 7.26: score 6, Pullback
-
-## Open: 56
+## Open: 52
 
 | Id | Entered | Contract | Score | Setup | Entry | Last mid | P/L | Stop now | Stock exit level | Time stop | Earnings exit |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -81,17 +74,13 @@ Evidence gates (20+ closed trades scoring 7+ that beat the random benchmark by m
 | A3 | 2026-11-10 | ON 75P 2027-02-19 | 9 | Breakdown | 12.51 | 12.00 | -5% | 5.00 | 78.67 | 2027-01-29 | none |
 | A4 | 2026-11-10 | CRCL 70P 2027-01-15 | 8 | Breakdown | 11.40 | 14.80 | +29% | 4.56 | 80.23 | 2026-12-24 | none |
 | A5 | 2026-11-10 | FISV 65C 2027-03-19 | 8 | Breakout | 5.86 | 5.95 | -1% | 2.34 | 57.57 | 2027-02-26 | 2027-02-09 |
-| A6 | 2026-11-10 | LOW 230C 2027-03-19 | 8 | Breakout | 20.43 | 16.45 | -21% | 8.17 | 212.63 | 2027-02-26 | 2026-11-17 |
 | A7 | 2026-11-10 | NEM 115C 2027-03-19 | 6 | Breakout | 14.82 | 10.18 | -33% | 5.93 | 106.61 | 2027-02-26 | 2027-02-18 |
 | A8 | 2026-11-10 | TTD 15C 2027-03-19 | 6 | Breakout | 2.83 | 2.12 | -26% | 1.13 | 13.44 | 2027-02-26 | 2027-02-25 |
 | A9 | 2026-11-10 | U 45C 2027-02-19 | 6 | Breakout | 8.34 | 10.80 | +25% | 3.33 | 40.81 | 2027-01-29 | none |
 | A11 | 2026-11-11 | ASTS 45P 2027-02-19 | 9 | Breakdown | 12.66 | 16.55 | +29% | 5.06 | 45.01 | 2027-01-29 | none |
 | A12 | 2026-11-11 | HIMS 25P 2027-02-19 | 9 | Breakdown | 6.43 | 7.03 | +8% | 2.57 | 27.05 | 2027-01-29 | none |
-| A13 | 2026-11-11 | HPE 60P 2027-02-19 | 9 | Breakdown | 12.55 | 15.57 | +21% | 5.02 | 60.33 | 2027-01-29 | 2026-11-23 |
 | A14 | 2026-11-11 | INTC 70P 2027-02-19 | 9 | Breakdown | 11.94 | 16.73 | +40% | 4.77 | 81.46 | 2027-01-29 | 2027-01-28 |
-| A15 | 2026-11-11 | BABA 105P 2027-02-19 | 8 | Failed rally | 10.65 | 16.23 | +50% | 11.36 (trailing) | 109.45 | 2027-01-29 | 2026-11-18 |
 | A16 | 2026-11-11 | DAL 90C 2027-03-19 | 8 | Breakout | 10.19 | 7.25 | -32% | 4.07 | 81.80 | 2027-02-26 | 2027-01-12 |
-| A17 | 2026-11-11 | KLAR 15P 2027-03-19 | 6 | Failed rally | 2.82 | 2.88 | -2% | 1.13 | 14.61 | 2027-02-26 | 2026-11-16 |
 | A18 | 2026-11-11 | XLV 180C 2027-03-19 | 6 | Breakout | 14.37 | 15.72 | +8% | 5.75 | 179.72 | 2027-02-26 | none |
 | A19 | 2026-11-11 | XLF 57C 2027-03-19 | 6 | Breakout | 3.52 | 3.65 | +1% | 1.41 | 56.13 | 2027-02-26 | none |
 | A20 | 2026-11-11 | AMZN 270C 2027-01-15 | 5 | Breakout | 13.65 | 11.18 | -19% | 5.46 | 240.35 | 2026-12-24 | none |
@@ -133,3 +122,10 @@ Evidence gates (20+ closed trades scoring 7+ that beat the random benchmark by m
 | S24 | CVNA 68C 2026-12-18 | 6 | Breakout | 2026-11-03 | 2026-11-05 | -4.2% | trailing stop |
 | S14 | PDD 85P 2027-01-15 | 7 | Failed rally | 2026-10-30 | 2026-11-03 | -4.6% | invalidation close 81.68 vs 81.63 on 11-02 (late) |
 | S10 | HPQ 30C 2027-01-15 | 7 | Pullback | 2026-10-29 | 2026-11-03 | -47.0% | migrated from the chat ledger |
+
+## Dropped from the test (not in any result above)
+
+- A6 LOW270319C00230000, opened 2026-11-10, dropped 2026-11-16: opened inside the 2 weeks before an earnings report without the pre-event test: the earnings calendar was down from 2026-11-10 to 2026-11-16, and with it the scan would have skipped this setup
+- A13 HPE270219P00060000, opened 2026-11-11, dropped 2026-11-16: opened inside the 2 weeks before an earnings report without the pre-event test: the earnings calendar was down from 2026-11-10 to 2026-11-16, and with it the scan would have skipped this setup
+- A15 BABA270219P00105000, opened 2026-11-11, dropped 2026-11-16: opened inside the 2 weeks before an earnings report without the pre-event test: the earnings calendar was down from 2026-11-10 to 2026-11-16, and with it the scan would have skipped this setup
+- A17 KLAR270319P00015000, opened 2026-11-11, dropped 2026-11-16: opened inside the 2 weeks before an earnings report without the pre-event test: the earnings calendar was down from 2026-11-10 to 2026-11-16, and with it the scan would have skipped this setup

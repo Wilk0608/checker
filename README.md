@@ -19,7 +19,7 @@ the owner.
   - liquidity and pricing points (IV/HV and breakeven in sigma), the two score factors that need option data.
 
   Cboe leaves some quiet names' files from the night before; when a market-hours run gets one of those, the chosen expiration's quotes are re-read from Nasdaq's option chain.
-- `events.py`: earnings dates (Nasdaq's earnings calendar), which set the catalyst point, the pre-event rule and the earnings-exit date; a provisional pre-event test; and merger filings in the last 120 days.
+- `events.py`: earnings dates (Nasdaq's earnings calendar; when Nasdaq refuses the request, Yahoo is asked one name at a time for the setups with a contract, the open shadows and the real positions, and the answers are kept in `results/earnings.json`), which set the catalyst point, the pre-event rule and the earnings-exit date; a provisional pre-event test; and merger filings in the last 120 days.
 - `shadow.py`: the automatic shadow ledger. Once each trading day, on regular-hours quotes, it opens one-contract paper trades for the day's best setups in every score tier (calls and puts), applies the plan's exits to the open ones, and writes `results/shadow.json` and `results/shadow.md`. It also checks the exits of the real positions listed in `plan.json`.
 - `gate.py`, `market_days.py`: the workflow's gate (which hourly run scans) and the NYSE holidays and early closes. Standard library only.
 - `scanner.py`: downloads ~13 months of daily bars, applies the filters and setup rules to final bars, runs the option check, the market regime, the shadow ledger and the alerts, and writes the files in `results/`.

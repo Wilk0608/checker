@@ -449,8 +449,8 @@ def report(book, summary=None):
     L += [f"| {c['id']} | {c['tk']} {c['strike']:g}{c['cp']} {c['exp']} | {c['score']} | {c['setup']} | {c['entry_date']} | {c['exit_date']} | "
           f"{c['ret']:+.1%} | {c['reason']} |" for c in reversed(recent)]
     if book.get("dropped"):
-        L += ["", f"## Dropped: no two-sided quote on {MAX_MISSES} runs in a row (not in any result above)", ""]
-        L += [f"- {d['id']} {d['osi']}, opened {d['entry_date']}, dropped {d['date']}" for d in book["dropped"]]
+        L += ["", "## Dropped from the test (not in any result above)", ""]
+        L += [f"- {d['id']} {d['osi']}, opened {d['entry_date']}, dropped {d['date']}: {d.get('reason', 'no reason recorded')}" for d in book["dropped"]]
     return "\n".join(L) + "\n"
 
 
