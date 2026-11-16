@@ -1,0 +1,287 @@
+{
+"AGNC": {
+"date": "2027-01-25",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"ALB": {
+"date": "2027-02-10",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"AMZN": {
+"date": "2027-02-04",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"ASTS": {
+"date": "2027-03-01",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"AXTI": {
+"date": "2027-02-18",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"BA": {
+"date": "2027-01-26",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"BABA": {
+"date": "2026-11-19",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"BIDU": {
+"date": "2026-11-16",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"CCL": {
+"date": "2026-12-18",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"CRCL": {
+"date": "2027-02-24",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"CRSP": {
+"date": "2027-02-11",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"DAL": {
+"date": "2027-01-13",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"FCX": {
+"date": "2027-01-21",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"FISV": {
+"date": "2027-02-10",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"FTNT": {
+"date": "2027-02-04",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"GM": {
+"date": "2027-01-27",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"HAL": {
+"date": "2027-01-20",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"HAWK": {
+"date": "2026-11-12",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"HIMS": {
+"date": "2027-03-01",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"HOOD": {
+"date": "2027-02-10",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"HPE": {
+"date": "2026-11-23",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"INTC": {
+"date": "2027-01-28",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"IREN": {
+"date": "2027-02-04",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"JOBY": {
+"date": "2027-02-24",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"KD": {
+"date": "2027-02-08",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"KLAR": {
+"date": "2026-11-17",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"LBTYK": {
+"date": "2027-02-17",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"LOW": {
+"date": "2026-11-18",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"MCHP": {
+"date": "2027-02-04",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"MO": {
+"date": "2027-01-28",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"MP": {
+"date": "2027-02-25",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"NEM": {
+"date": "2027-02-18",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"NFLX": {
+"date": "2027-01-19",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"NLY": {
+"date": "2027-01-27",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"NOK": {
+"date": "2027-01-28",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"NVDA": {
+"date": "2026-11-17",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"NVO": {
+"date": "2027-02-03",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"ON": {
+"date": "2027-02-08",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"ORCL": {
+"date": "2026-12-14",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"PGNY": {
+"date": "2027-02-25",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"QUBT": {
+"date": "2027-03-01",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"RDDT": {
+"date": "2027-02-04",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"REZI": {
+"date": "2027-02-18",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"RIO": {
+"date": "2027-02-18",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"SBET": {
+"date": "2027-03-05",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"SMCI": {
+"date": "2027-02-02",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"T": {
+"date": "2027-01-27",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"TBBB": {
+"date": "2027-03-10",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"TLS": {
+"date": "2027-03-15",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"TTD": {
+"date": "2027-02-25",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"TTWO": {
+"date": "2027-02-09",
+"fetched": "2026-11-16",
+"when": "AMC"
+},
+"U": {
+"date": "2027-02-10",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"UPST": {
+"date": "2027-02-09",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"VST": {
+"date": "2027-02-25",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"WEN": {
+"date": "2027-02-12",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"WMT": {
+"date": "2026-11-19",
+"fetched": "2026-11-16",
+"when": "BMO"
+},
+"ZETA": {
+"date": "2027-02-23",
+"fetched": "2026-11-16",
+"when": "AMC"
+}
+}
