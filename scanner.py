@@ -157,8 +157,14 @@ def drop_partial(df, now_et):
 
 
 def stale_names(bars, now_et, expected):
-    """Names whose last final bar is older than the session the run should have (a data-feed lag)."""
-    return sorted(t for t, df in bars.items() if len(df) and drop_partial(df, now_et).index[-1].date() < expected)
+    """Names whose last final bar is older than the session the run should have (a data-feed lag). A name with no
+    final bar at all (a listing whose only bar is today's unfinished one) is not stale: it has no history to scan."""
+    out = []
+    for t, df in bars.items():
+        final = drop_partial(df, now_et)
+        if len(final) and final.index[-1].date() < expected:
+            out.append(t)
+    return sorted(out)
 
 
 def download_macro():
@@ -1289,6 +1295,13 @@ def v77_selftest(res, rows2, miss, etf3, last, now, caps, up):
         assert closed_["ran"] is False and "regular" in closed_["why"]
     finally:
         SH.BOOK, SH.REPORT = saved
+    # 17a) a listing whose only bar is today's unfinished one has no final bar: not stale, and no crash (this stopped
+    #      the scan on 2026-11-16)
+    t0 = dt.datetime(2026, 11, 16, 10, 45, tzinfo=ET)
+    mk = lambda days: pd.DataFrame({"Open": 10.0, "High": 11.0, "Low": 9.5, "Close": 10.5, "Volume": 1e6},
+                                   index=pd.DatetimeIndex([pd.Timestamp(x) for x in days]))
+    assert stale_names({"NEW": mk(["2026-11-16"]), "OLD": mk(["2026-11-12", "2026-11-16"]), "OK": mk(["2026-11-13", "2026-11-16"]),
+                        "EMPTY": mk(["2026-11-16"]).iloc[:0]}, t0, dt.date(2026, 11, 13)) == ["OLD"]
     # 17b) the catalyst point without a calendar date: a stock's contract with 95+ days left contains its next report
     ent = dt.date(2026, 10, 26)
     far = copy.deepcopy(up)
