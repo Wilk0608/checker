@@ -1,5 +1,7 @@
 # Shadow ledger (automatic): updated 2026-11-17
 
+This run made no changes (run outside regular hours: exits and entries wait for regular-hours quotes).
+
 One contract each. Open shadows are valued at their last regular-hours quote, at the plan's exit price (mid minus a quarter of the spread minus the $1 fee).
 
 | | Trades | Cost | P/L |
@@ -45,9 +47,6 @@ Evidence gates (20+ closed trades scoring 7+ that beat the random benchmark by m
 | P | Breakdown | 7-9 | 9 | 2 | -28.6% |
 | P | Breakdown near low | 7-9 | 1 | 1 | +16.7% |
 | P | Failed rally | 7-9 | 4 | 2 | -4.9% |
-
-## This run: 0 closed, 1 opened, 1 reached +50%, 8 without a quote
-- Opened A39 IWM 275P 2027-02-19 at 11.75: score 8, Failed rally
 
 ## Open: 53
 
