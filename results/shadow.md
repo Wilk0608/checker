@@ -1,5 +1,7 @@
 # Shadow ledger (automatic): updated 2026-11-18
 
+This run made no changes (run outside regular hours: exits and entries wait for regular-hours quotes).
+
 One contract each. Open shadows are valued at their last regular-hours quote, at the plan's exit price (mid minus a quarter of the spread minus the $1 fee).
 
 | | Trades | Cost | P/L |
@@ -46,12 +48,6 @@ Evidence gates (20+ closed trades scoring 7+ that beat the random benchmark by m
 | P | Breakdown | 7-9 | 9 | 2 | -28.6% |
 | P | Breakdown near low | 7-9 | 1 | 1 | +16.7% |
 | P | Failed rally | 7-9 | 4 | 2 | -4.9% |
-
-## This run: 2 closed, 2 opened, 5 reached +50%, 4 without a quote
-- Closed S20 WMT 120C 2026-12-18: -4.9% (earnings exit)
-- Closed S37 CCL 30C 2027-01-15: -51.0% (invalidation close 28.16 vs 28.37 on 11-17 (late))
-- Opened A40 NKE 40P 2027-03-19 at 5.95: score 7, Breakdown
-- Opened A41 JETS 29C 2027-03-19 at 2.21: score 5, Pullback
 
 ## Open: 53
 

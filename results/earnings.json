@@ -84,9 +84,14 @@
 "fetched": "2026-11-18",
 "when": "BMO"
 },
+"BHP": {
+"date": "2027-02-15",
+"fetched": "2026-11-18",
+"when": "AMC"
+},
 "BIDU": {
 "date": "2026-11-16",
-"fetched": "2026-11-17",
+"fetched": "2026-11-18",
 "when": "BMO"
 },
 "BOX": {
@@ -122,6 +127,16 @@
 "DAL": {
 "date": "2027-01-13",
 "fetched": "2026-11-16",
+"when": "BMO"
+},
+"DAN": {
+"date": "2027-02-17",
+"fetched": "2026-11-18",
+"when": "BMO"
+},
+"DKS": {
+"date": "2026-11-24",
+"fetched": "2026-11-18",
 "when": "BMO"
 },
 "FCX": {
@@ -304,6 +319,11 @@
 "fetched": "2026-11-16",
 "when": "BMO"
 },
+"NXE": {
+"date": "2027-03-02",
+"fetched": "2026-11-18",
+"when": "AMC"
+},
 "ON": {
 "date": "2027-02-08",
 "fetched": "2026-11-16",
@@ -314,9 +334,19 @@
 "fetched": "2026-11-16",
 "when": "AMC"
 },
+"PAAS": {
+"date": "2027-02-17",
+"fetched": "2026-11-18",
+"when": "AMC"
+},
 "PGNY": {
 "date": "2027-02-25",
 "fetched": "2026-11-16",
+"when": "AMC"
+},
+"PRCT": {
+"date": "2027-02-25",
+"fetched": "2026-11-18",
 "when": "AMC"
 },
 "QUBT": {
@@ -389,9 +419,24 @@
 "fetched": "2026-11-16",
 "when": "AMC"
 },
+"TEVA": {
+"date": "2027-01-27",
+"fetched": "2026-11-18",
+"when": "AMC"
+},
+"TGT": {
+"date": "2026-11-18",
+"fetched": "2026-11-18",
+"when": "BMO"
+},
 "TLS": {
 "date": "2027-03-15",
 "fetched": "2026-11-16",
+"when": "BMO"
+},
+"TSN": {
+"date": "2026-11-16",
+"fetched": "2026-11-18",
 "when": "BMO"
 },
 "TTD": {
@@ -422,6 +467,16 @@
 "UPST": {
 "date": "2027-02-09",
 "fetched": "2026-11-16",
+"when": "BMO"
+},
+"USAR": {
+"date": "2027-03-29",
+"fetched": "2026-11-18",
+"when": "AMC"
+},
+"VIK": {
+"date": "2026-11-17",
+"fetched": "2026-11-18",
 "when": "BMO"
 },
 "VST": {
