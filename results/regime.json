@@ -1,7 +1,7 @@
 {
  "SPY": {
   "date": "2026-11-18",
-  "close": 730.33,
+  "close": 730.2,
   "sma50": 762.51,
   "sma200": 732.55,
   "above50": false,
@@ -31,8 +31,8 @@
    "easing": true
   },
   "dollar": {
-   "now": 103.77,
-   "avg50": 101.69,
+   "now": 103.86,
+   "avg50": 101.7,
    "easing": false
   }
  },
