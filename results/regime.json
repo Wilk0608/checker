@@ -1,7 +1,7 @@
 {
  "SPY": {
   "date": "2026-11-19",
-  "close": 715.78,
+  "close": 715.87,
   "sma50": 761.67,
   "sma200": 732.69,
   "above50": false,
@@ -9,7 +9,7 @@
  },
  "QQQ": {
   "date": "2026-11-19",
-  "close": 645.1,
+  "close": 645.04,
   "sma50": 713.09,
   "sma200": 683.0,
   "above50": false,
@@ -31,7 +31,7 @@
    "easing": true
   },
   "dollar": {
-   "now": 103.86,
+   "now": 103.9,
    "avg50": 101.79,
    "easing": false
   }

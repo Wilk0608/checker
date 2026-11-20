@@ -1,6 +1,4 @@
-# Shadow ledger (automatic): updated 2026-11-19
-
-This run made no changes (run outside regular hours: exits and entries wait for regular-hours quotes).
+# Shadow ledger (automatic): updated 2026-11-20
 
 One contract each. Open shadows are valued at their last regular-hours quote, at the plan's exit price (mid minus a quarter of the spread minus the $1 fee).
 
@@ -48,6 +46,8 @@ Evidence gates (20+ closed trades scoring 7+ that beat the random benchmark by m
 | P | Breakdown | 7-9 | 9 | 2 | -28.6% |
 | P | Breakdown near low | 7-9 | 1 | 1 | +16.7% |
 | P | Failed rally | 7-9 | 4 | 2 | -4.9% |
+
+## This run: 0 closed, 0 opened, 0 reached +50%, 53 without a quote
 
 ## Open: 53
 
