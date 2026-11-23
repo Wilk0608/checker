@@ -161,11 +161,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 18%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 34.66,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -336,11 +341,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 112, spread 58%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.69,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -873,11 +883,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 21%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 8.31,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -1559,11 +1574,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 99, spread 68%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 34.86,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -1689,7 +1709,7 @@
  },
  {
   "tk": "ACHV",
-  "err": "only 8 bars",
+  "err": "only 5 bars",
   "group": "",
   "sector_etf": "XLV"
  },
@@ -1863,11 +1883,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 36%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 50.97,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -2039,11 +2064,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 23, spread 18%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 78.0,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -2641,11 +2671,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 10P -0.45, 12.5P -0.75, Mar 19)"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 9.5,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -2842,11 +2877,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 43, spread 36%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 14.77,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -2985,11 +3025,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.50-0.60 delta: OI 44, spread 87%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 29.21,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -3465,11 +3510,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 41, spread 9%, cost $4,064 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 161.07,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -3939,15 +3989,62 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "ok",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "contract": null
-   }
+    "cap": 1288.45,
+    "contract": {
+     "osi": "AG270319P00014000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 14.0,
+     "bid": 3.2,
+     "ask": 3.4,
+     "oi": 1469,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 3.3,
+     "spread_pct": 0.0606,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 336.0,
+     "fits": true,
+     "lim": 3.35,
+     "iv": 0.6993,
+     "delta": -0.5995,
+     "be": 10.64,
+     "be_sd": 0.206,
+     "ivhv": 0.992,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 11.58,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 1,
+   "score": 7,
+   "earn": {
+    "date": "2027-02-18",
+    "time": "BMO",
+    "days": 87,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-02-17"
+   },
+   "cat_est": false
   }
  },
  {
@@ -4451,11 +4548,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: spread 24%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 9.85,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -4977,11 +5079,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 273, spread 11%, cost $2,234 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 82.01,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -5120,11 +5227,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 74.65,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -5621,11 +5733,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 1, spread 14%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.96,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -6126,11 +6243,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 40%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 19.91,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -6388,11 +6510,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 13, spread 14%, cost $2,793 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 56.27,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -7100,11 +7227,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 16%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.48,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -8335,23 +8467,70 @@
    "setups": [
     "Breakdown 11-20 (< 13.98, vol 1.64x)"
    ],
-   "exp": "2027-03-19",
-   "ts": "2027-02-26",
-   "rr": 1.44,
+   "exp": "2027-04-16",
+   "ts": "2027-03-25",
+   "rr": 1.63,
    "rr_pts": 0,
-   "cap": 3.75,
+   "cap": 2.71,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "ok",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "contract": null
-   }
+    "cap": 1288.45,
+    "contract": {
+     "osi": "APLD270416P00020000",
+     "exp": "2027-04-16",
+     "cp": "P",
+     "strike": 20.0,
+     "bid": 7.45,
+     "ask": 7.9,
+     "oi": 1460,
+     "src": "Public",
+     "dte": 144,
+     "quote": true,
+     "mid": 7.675,
+     "spread_pct": 0.0586,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 779.75,
+     "fits": true,
+     "lim": 7.788,
+     "iv": 1.0748,
+     "delta": -0.5555,
+     "be": 12.2,
+     "be_sd": 0.214,
+     "ivhv": 0.814,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 14.27,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 1,
+   "score": 7,
+   "earn": {
+    "date": "2027-01-06",
+    "time": "AMC",
+    "days": 44,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-01-06"
+   },
+   "cat_est": false
   }
  },
  {
@@ -8636,11 +8815,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 151, spread 29%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 36.63,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -9085,11 +9269,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 12%, cost $1,317 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 69.91,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -9259,11 +9448,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $6,518 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $4,747 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 176.09,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -9402,11 +9597,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 18%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 56.34,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -9847,11 +10047,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 24%, cost $1,478 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 43.37,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -10115,11 +10320,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 30P -0.47, 35P -0.74, Mar 19)"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 29.52,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -10789,15 +10999,60 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "ASST270319P00025000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 25.0,
+     "bid": 9.0,
+     "ask": 9.75,
+     "oi": 727,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 9.375,
+     "spread_pct": 0.08,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 957.25,
+     "fits": true,
+     "lim": 9.562,
+     "iv": 0.965,
+     "delta": -0.666,
+     "be": 15.43,
+     "be_sd": 0.156,
+     "ivhv": 0.9,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 16.86,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 1,
+   "score": 7,
+   "earn": {
+    "date": "2027-03-18",
+    "time": "BMO",
+    "days": 115,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": null
+   },
+   "cat_est": false
   }
  },
  {
@@ -11144,11 +11399,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 295, spread 10%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 31.61,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -11346,11 +11606,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: spread 32%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 31.61,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -11814,11 +12079,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 71, spread 20%, cost $2,176 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 78.14,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -13094,12 +13364,59 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "ok",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "contract": null
-   }
+    "cap": 1288.45,
+    "contract": {
+     "osi": "B270319P00037000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 37.0,
+     "bid": 5.55,
+     "ask": 5.8,
+     "oi": 1225,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 5.675,
+     "spread_pct": 0.0441,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 574.75,
+     "fits": true,
+     "lim": 5.737,
+     "iv": 0.5103,
+     "delta": -0.5607,
+     "be": 31.25,
+     "be_sd": 0.238,
+     "ivhv": 0.884,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 33.55,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 1,
+   "score": 8,
+   "earn": {
+    "date": "2027-02-04",
+    "time": "BMO",
+    "days": 73,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-02-03"
+   },
+   "cat_est": false
   }
  },
  {
@@ -13257,23 +13574,72 @@
     "Breakdown 11-19 (< 84.37, vol 1.89x), holding",
     "Breakdown 11-17 (< 90.62, vol 1.62x), holding"
    ],
-   "exp": "2027-03-19",
-   "ts": "2027-02-26",
-   "rr": 1.73,
+   "exp": "2027-02-19",
+   "ts": "2027-01-29",
+   "rr": 1.47,
    "rr_pts": 0,
-   "cap": 62.22,
+   "cap": 65.04,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "ok",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $1,764 > cap $1,288",
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)",
+     "60+ day expiration (90+ over the cap)"
     ],
-    "contract": null
-   }
+    "cap": 1288.45,
+    "contract": {
+     "osi": "BABA270219P00090000",
+     "exp": "2027-02-19",
+     "cp": "P",
+     "strike": 90.0,
+     "bid": 9.15,
+     "ask": 9.65,
+     "oi": 2837,
+     "src": "Public",
+     "dte": 88,
+     "quote": true,
+     "mid": 9.4,
+     "spread_pct": 0.0532,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 953.5,
+     "fits": true,
+     "lim": 9.525,
+     "iv": 0.4617,
+     "delta": -0.5111,
+     "be": 80.46,
+     "be_sd": 0.3,
+     "ivhv": 1.013,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 86.33,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 0,
+   "score": 6,
+   "earn": {
+    "date": "2026-11-19",
+    "time": "BMO",
+    "days": -4,
+    "recent": true,
+    "inside_life": false,
+    "pre_event": false,
+    "exit_by": null
+   },
+   "cat_est": false
   }
  },
  {
@@ -13806,11 +14172,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 40%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 14.29,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -14073,11 +14444,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 156, spread 18%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 19.12,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -14877,11 +15253,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $8,270 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $6,353 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 170.59,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -15022,11 +15404,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 41%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 22.55,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -15498,11 +15885,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 158%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 11.27,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -15670,11 +16062,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: spread 176%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 8.23,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -15877,11 +16274,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 205"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 71.05,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -16053,11 +16455,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 22%, cost $1,307 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 65.67,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -16256,11 +16663,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.50-0.60 delta: OI 1, spread 148%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 61.55,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -16434,7 +16846,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -16871,11 +17283,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 15, spread 61%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 8.9,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -17599,11 +18016,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 451, spread 16%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 21.62,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -17861,11 +18283,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 206, spread 14%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 14.96,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -18185,11 +18612,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 40%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 38.81,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -18538,11 +18970,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 177, spread 20%, cost $1,756 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 145.82,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -18886,11 +19323,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: spread 13%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 44.24,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -19026,19 +19468,64 @@
    "ts": "2027-02-26",
    "rr": 0.09,
    "rr_pts": 0,
-   "cap": 36.1,
+   "cap": 35.33,
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 7,
+   "max": 5,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "BP270319P00047000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 47.0,
+     "bid": 5.4,
+     "ask": 5.7,
+     "oi": 875,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 5.55,
+     "spread_pct": 0.0541,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 563.5,
+     "fits": true,
+     "lim": 5.625,
+     "iv": 0.3403,
+     "delta": -0.6307,
+     "be": 41.37,
+     "be_sd": 0.167,
+     "ivhv": 1.116,
+     "pricing": 1,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 42.73,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
+   },
+   "liq": 1,
+   "pricing": 1,
+   "cat": 1,
+   "score": 4,
+   "earn": {
+    "date": "2027-02-09",
+    "time": "BMO",
+    "days": 78,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-02-08"
+   },
+   "cat_est": false
   }
  },
  {
@@ -19448,11 +19935,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.50-0.60 delta: OI 34, spread 43%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 14.25,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -19651,11 +20143,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 41, spread 47%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 72.58,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -20914,11 +21411,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 11, spread 64%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 20.4,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -21273,11 +21775,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 0, spread 154%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 15.76,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -21480,11 +21987,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 1, spread 26%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 23.14,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -21798,11 +22310,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 17%, cost $1,467 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 113.91,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -21943,11 +22460,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 11, spread 110%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.23,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -22474,11 +22996,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 30%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 34.26,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -23821,11 +24348,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 1, spread 18%, cost $2,301 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 55.87,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -24418,11 +24950,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 11, spread 18%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 37.35,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -24774,11 +25311,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 3, spread 15%, cost $1,914 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 48.34,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -24917,11 +25459,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 57, spread 28%, cost $1,596 > cap $1,546"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 80.64,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -25623,11 +26170,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 28, cost $4,474 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 271.5,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -26182,11 +26734,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 1, spread 169%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 10.81,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -26327,11 +26884,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.50-0.60 delta: OI 9, spread 40%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 11.06,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -26677,7 +27239,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -28171,11 +28733,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 198, spread 38%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 44.4,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -28606,11 +29173,17 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $3,473 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $2,860 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 108.75,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -29559,11 +30132,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $6,951 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $5,718 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 121.0,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -29940,11 +30519,17 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $4,408 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $3,438 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 183.5,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -30345,11 +30930,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 20, spread 14%, cost $2,518 > cap $1,546"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 157.28,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -30521,11 +31111,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: spread 15%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 42.04,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -30904,11 +31499,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: spread 13%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.7,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -31711,11 +32311,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 2, spread 89%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 21.75,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -31856,11 +32461,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 246, spread 51%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 26.99,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -32177,11 +32787,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 21, spread 14%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 28.73,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -32587,11 +33202,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 73%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 19.65,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -32910,11 +33530,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 419, cost $4,002 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 161.16,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -33236,11 +33861,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 10, spread 20%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 34.16,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -33710,11 +34340,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 142, cost $5,982 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 169.33,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -34275,11 +34910,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 19, spread 43%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 29.0,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -34966,11 +35606,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 127, spread 10%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 56.0,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:03 ET"
    }
   }
  },
@@ -35111,11 +35756,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 18%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 12.63,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -35285,11 +35935,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 107, spread 16%, cost $1,984 > cap $1,546"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 138.01,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -35972,11 +36627,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 22, spread 13%, cost $1,848 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 75.47,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -36115,11 +36775,16 @@
    "max": 7,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 12.5P -0.44, 15P -0.76, May 21)"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 12.36,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -37586,11 +38251,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 57, spread 11%, cost $1,716 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 81.02,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -38002,11 +38672,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 71%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 13.5,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -38382,11 +39057,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 21, spread 34%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 9.13,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -38560,7 +39240,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (empty chain)"
     ],
     "contract": null
    }
@@ -38789,11 +39469,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 11%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 58.19,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -39749,11 +40434,16 @@
    "max": 10,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 80, spread 72%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 18.0,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -39890,11 +40580,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 69, spread 15%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 58.71,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -40124,11 +40819,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 68%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 26.1,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -40300,11 +41000,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.50-0.60 delta: spread 62%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 28.31,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -40594,11 +41299,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, cost $6,748 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 140.88,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -40826,11 +41536,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 44, spread 12%, cost $2,861 > cap $1,546"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 153.68,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -41514,11 +42229,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.50-0.60 delta: spread 100%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.54,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -41657,11 +42377,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 252, spread 11%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 23.18,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -41918,11 +42643,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 40%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 31.87,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -42090,11 +42820,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread $1.30"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 5.19,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -42384,11 +43119,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 2, cost $2,443 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 80.55,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -42588,11 +43328,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 15%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 40.26,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -42789,11 +43534,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 2, spread 77%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 19.49,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -42932,11 +43682,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 29%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 106.4,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -43943,11 +44698,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 35%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 87.63,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -44353,11 +45113,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 56, spread 14%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.19,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -44947,11 +45712,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 105, spread 8%, cost $2,884 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 176.38,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -45090,11 +45860,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 17, spread 27%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 51.33,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -45481,11 +46256,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 16%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 49.58,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -46943,11 +47723,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 52, spread 75%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 21.68,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -47297,11 +48082,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.50-0.60 delta: OI 0, spread 84%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.99,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -47800,11 +48590,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 5, spread 13%, cost $2,416 > cap $1,546"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 106.92,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -48270,11 +49065,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 10, spread 89%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 7.75,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -48597,11 +49397,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 12, spread 17%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 59.77,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -48893,11 +49698,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 36, spread 33%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.65,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -49127,11 +49937,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 5, spread 17%, cost $3,087 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 89.14,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -49448,11 +50263,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 6, spread 39%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 104.48,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -49647,11 +50467,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 22%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 31.68,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -49790,11 +50615,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 51, spread 68%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 41.52,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -49933,7 +50763,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -50076,11 +50906,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 22, spread 16%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 21.21,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -50436,11 +51271,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 28, spread 24%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 14.86,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -50574,15 +51414,54 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 7,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "ok",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "contract": null
-   }
+    "cap": 1288.45,
+    "contract": {
+     "osi": "GDX270319P00080000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 80.0,
+     "bid": 11.65,
+     "ask": 12.35,
+     "oi": 17547,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 12.0,
+     "spread_pct": 0.0583,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 1218.5,
+     "fits": true,
+     "lim": 12.175,
+     "iv": 0.5016,
+     "delta": -0.5593,
+     "be": 67.81,
+     "be_sd": 0.24,
+     "ivhv": 0.814,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 72.76,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 0,
+   "score": 6,
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -50718,11 +51597,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 15%, cost $1,891 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 87.03,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -50860,11 +51744,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 103, spread 116%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 13.02,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -51032,11 +51921,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 116, spread 28%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 81.04,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:04 ET"
    }
   }
  },
@@ -51235,11 +52129,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 419, spread 16%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.38,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -51592,11 +52491,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 37%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 70.33,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -51917,11 +52821,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 12, spread 22%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 34.31,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -52393,11 +53302,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 2, spread 35%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 34.41,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -52686,11 +53600,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 24%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 39.94,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -52885,11 +53804,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.50-0.60 delta: spread 106%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 9.0,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -53028,11 +53952,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $3,018 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $2,456 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 107.61,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -53254,19 +54184,64 @@
    "ts": "2027-02-26",
    "rr": 0.11,
    "rr_pts": 0,
-   "cap": 31.6,
+   "cap": 34.0,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 5,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1546.14,
+    "contract": {
+     "osi": "GME270319C00025000",
+     "exp": "2027-03-19",
+     "cp": "C",
+     "strike": 25.0,
+     "bid": 3.9,
+     "ask": 4.15,
+     "oi": 7801,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 4.025,
+     "spread_pct": 0.0621,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 409.75,
+     "fits": true,
+     "lim": 4.088,
+     "iv": 0.5393,
+     "delta": 0.6459,
+     "be": 29.1,
+     "be_sd": 0.335,
+     "ivhv": 1.486,
+     "pricing": 0,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 26.41,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
+   },
+   "liq": 1,
+   "pricing": 0,
+   "cat": 1,
+   "score": 5,
+   "earn": {
+    "date": "2026-12-08",
+    "time": "BMO",
+    "days": 15,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2026-12-07"
+   },
+   "cat_est": false
   }
  },
  {
@@ -53588,11 +54563,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 28, spread 33%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.07,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -53851,7 +54831,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -54828,11 +55808,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 8, spread 13%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 9.91,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -54967,11 +55952,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 13%, cost $3,101 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.89,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -55501,11 +56491,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 9%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 23.21,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -55704,11 +56699,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 4, spread 60%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 21.68,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -56116,11 +57116,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 122, spread 18%, cost $1,956 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 93.84,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -56437,11 +57442,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 128, spread 14%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 17.52,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -56698,11 +57708,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.50-0.60 delta: OI 144, spread 110%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 26.9,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -57023,11 +58038,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 45, spread 59%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.41,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -57522,11 +58542,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 140, spread 99%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 7.93,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -57965,11 +58990,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 21, spread 47%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 8.99,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -58406,11 +59436,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 50, spread 19%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 32.78,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -58737,11 +59772,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 24, spread 57%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 32.76,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -59334,15 +60374,62 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "ok",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "contract": null
-   }
+    "cap": 1288.45,
+    "contract": {
+     "osi": "HSBC270319P00090000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 90.0,
+     "bid": 10.0,
+     "ask": 10.7,
+     "oi": 1910,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 10.35,
+     "spread_pct": 0.0676,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 1053.5,
+     "fits": true,
+     "lim": 10.525,
+     "iv": 0.3666,
+     "delta": -0.5884,
+     "be": 79.46,
+     "be_sd": 0.209,
+     "ivhv": 0.943,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 83.06,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 1,
+   "score": 7,
+   "earn": {
+    "date": "2027-02-23",
+    "time": "BMO",
+    "days": 92,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-02-22"
+   },
+   "cat_est": false
   }
  },
  {
@@ -59666,11 +60753,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 5, spread 55%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 51.99,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -59904,11 +60996,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 14, cost $6,616 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 193.28,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -60256,11 +61353,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 42%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 60.12,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -60496,11 +61598,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 7, spread 8%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 13.76,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -60790,19 +61897,56 @@
    "ts": "2027-02-26",
    "rr": 0.04,
    "rr_pts": 0,
-   "cap": 25.93,
+   "cap": 25.45,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "IBIT270319P00042000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 42.0,
+     "bid": 7.35,
+     "ask": 7.6,
+     "oi": 8314,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 7.475,
+     "spread_pct": 0.0334,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 754.75,
+     "fits": true,
+     "lim": 7.537,
+     "iv": 0.4495,
+     "delta": -0.6814,
+     "be": 34.45,
+     "be_sd": 0.131,
+     "ivhv": 1.068,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 35.63,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 0,
+   "score": 7,
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -61182,11 +62326,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 8, spread 9%, cost $2,193 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 30.81,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -61533,11 +62682,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 43%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 26.61,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -61674,11 +62828,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 272, spread 16%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.69,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -62157,11 +63316,16 @@
    "max": 10,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 17, spread 43%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 46.36,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -62660,11 +63824,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 250, spread 14%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 7.11,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -62832,11 +64001,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 54%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 30.41,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -63424,11 +64598,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 69, spread 16%, cost $2,041 > cap $1,546"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 145.09,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -64023,11 +65202,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 287, spread 30%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 30.2,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -64349,12 +65533,57 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "IREN270319P00023000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 23.0,
+     "bid": 9.05,
+     "ask": 9.45,
+     "oi": 1364,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 9.25,
+     "spread_pct": 0.0432,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 936.0,
+     "fits": true,
+     "lim": 9.35,
+     "iv": 1.1284,
+     "delta": -0.6164,
+     "be": 13.64,
+     "be_sd": 0.176,
+     "ivhv": 0.744,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 15.37,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 1,
+   "score": 8,
+   "earn": {
+    "date": "2027-02-04",
+    "time": "AMC",
+    "days": 73,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-02-04"
+   },
+   "cat_est": false
   }
  },
  {
@@ -65035,11 +66264,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $2,117 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $1,999 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 263.68,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -65929,11 +67164,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 51, spread 23%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 39.98,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -67211,11 +68451,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 71%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.12,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -67598,11 +68843,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 29, spread 47%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 9.29,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -67770,11 +69020,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 211, spread 25%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 19.85,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -67973,11 +69228,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 59, spread 9%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 18.44,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -68205,11 +69465,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 237, spread 18%, cost $1,631 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 91.6,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -68348,11 +69613,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 348, spread 9%, cost $4,574 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 141.79,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -69272,11 +70542,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 10%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 69.25,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -70122,11 +71397,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 11, spread 53%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 22.53,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -70261,11 +71541,16 @@
    "max": 10,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: spread 20%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 21.39,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -70970,11 +72255,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: spread 19%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.28,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -71715,11 +73005,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 166, spread 19%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 14.45,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -71943,11 +73238,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 155, spread 20%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 10.69,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -72264,11 +73564,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 5C +0.91, 7.5C +0.76, Apr 16)"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 8.87,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -72759,11 +74064,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 272, cost $1,454 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 37.78,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -73231,11 +74541,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 49, cost $1,804 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 99.6,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -73405,11 +74720,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 10%, cost $2,481 > cap $1,546"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 222.82,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -73820,11 +75140,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $6,912 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: OI 362, cost $5,166 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 210.15,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -75539,11 +76865,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 197, spread 34%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 83.03,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -76252,11 +77583,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 14%, cost $1,799 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 60.48,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -76454,11 +77790,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 22, spread 36%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 27.1,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -76932,11 +78273,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 1, spread 24%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 41.89,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -78485,11 +79831,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 416, spread 73%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 42.26,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -79714,11 +81065,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 10%, cost $2,700 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 172.44,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -80123,11 +81479,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $3,838 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 87.78,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -80688,11 +82049,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 185, cost $5,884 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 160.53,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -81071,11 +82437,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: spread 65%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 19.4,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -81243,11 +82614,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 2, spread 62%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 9.71,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -81718,7 +83094,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -81866,7 +83242,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -82309,11 +83685,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $5,910 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $4,880 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 101.02,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -82846,7 +84228,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -83016,11 +84398,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 11%, cost $2,336 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 100.35,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -83692,21 +85079,66 @@
    ],
    "exp": "2027-03-19",
    "ts": "2027-02-26",
-   "rr": 1.58,
-   "rr_pts": 0,
-   "cap": 47.41,
+   "rr": 2.01,
+   "rr_pts": 1,
+   "cap": 44.83,
    "trend": 2,
    "rs": 1,
-   "known": 3,
-   "max": 9,
+   "known": 4,
+   "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "NFLX270319P00065000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 65.0,
+     "bid": 9.2,
+     "ask": 9.7,
+     "oi": 29244,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 9.45,
+     "spread_pct": 0.0529,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 958.5,
+     "fits": true,
+     "lim": 9.575,
+     "iv": 0.4111,
+     "delta": -0.6347,
+     "be": 55.41,
+     "be_sd": 0.17,
+     "ivhv": 1.277,
+     "pricing": 1,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 57.69,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
+   },
+   "liq": 1,
+   "pricing": 1,
+   "cat": 1,
+   "score": 7,
+   "earn": {
+    "date": "2027-01-19",
+    "time": "AMC",
+    "days": 57,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-01-19"
+   },
+   "cat_est": false
   }
  },
  {
@@ -84412,11 +85844,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 51%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 16.71,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -84579,19 +86016,64 @@
    "ts": "2027-02-26",
    "rr": 0.2,
    "rr_pts": 0,
-   "cap": 25.01,
+   "cap": 24.75,
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 8,
+   "max": 7,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "NKE270319P00040000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 40.0,
+     "bid": 7.5,
+     "ask": 8.05,
+     "oi": 8747,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 7.775,
+     "spread_pct": 0.0707,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 792.25,
+     "fits": true,
+     "lim": 7.913,
+     "iv": 0.4867,
+     "delta": -0.6843,
+     "be": 32.08,
+     "be_sd": 0.139,
+     "ivhv": 1.033,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 33.34,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 1,
+   "score": 6,
+   "earn": {
+    "date": "2026-12-17",
+    "time": "AMC",
+    "days": 24,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2026-12-17"
+   },
+   "cat_est": false
   }
  },
  {
@@ -86180,11 +87662,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 23, spread 22%, cost $1,808 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 101.94,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -86385,11 +87872,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 3, spread 11%, cost $1,549 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 57.27,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -86559,11 +88051,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 14%, cost $2,698 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 167.04,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:05 ET"
    }
   }
  },
@@ -86822,11 +88319,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 5, cost $4,541 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 243.75,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -86969,7 +88471,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -87172,11 +88674,17 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $3,962 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $3,027 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 166.4,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -87320,7 +88828,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -87712,11 +89220,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.50-0.60 delta: OI 101, spread 9%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 15.38,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -88006,11 +89519,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 22%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 6.8,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -89686,11 +91204,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 38%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 13.75,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -89920,11 +91443,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 1, spread 79%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 23.63,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -91027,7 +92555,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (empty chain)"
     ],
     "contract": null
    }
@@ -91226,11 +92754,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 115, spread 9%, cost $1,998 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 27.74,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -91613,11 +93146,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 11%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 32.46,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -91967,11 +93505,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 81%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 20.78,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -92143,11 +93686,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 15%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 11.43,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -92952,11 +94500,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 1, spread 21%, cost $1,411 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 103.57,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -93157,11 +94710,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: spread 26%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 72.2,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -93366,11 +94924,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.50-0.60 delta: OI 0, spread 62%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 14.72,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -93629,7 +95192,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -93976,15 +95539,60 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1546.14,
+    "contract": {
+     "osi": "PEP270319C00135000",
+     "exp": "2027-03-19",
+     "cp": "C",
+     "strike": 135.0,
+     "bid": 9.7,
+     "ask": 10.45,
+     "oi": 669,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 10.075,
+     "spread_pct": 0.0744,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 1027.25,
+     "fits": true,
+     "lim": 10.262,
+     "iv": 0.2199,
+     "delta": 0.659,
+     "be": 145.27,
+     "be_sd": 0.354,
+     "ivhv": 0.797,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 139.17,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 1,
+   "score": 6,
+   "earn": {
+    "date": "2027-02-02",
+    "time": "BMO",
+    "days": 71,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-02-01"
+   },
+   "cat_est": false
   }
  },
  {
@@ -94570,11 +96178,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 183, spread 34%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 14.71,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -95071,11 +96684,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 36%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.73,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -95816,11 +97434,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 29, spread 14%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 58.38,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -96079,11 +97702,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $3,283 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $3,505 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 156.68,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -96370,11 +97999,17 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $2,298 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: OI 11, spread 11%, cost $2,231 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 181.52,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -96724,11 +98359,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 15, spread 31%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 68.93,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -96929,11 +98569,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 23%, cost $2,801 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 133.56,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -97336,11 +98981,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 45P -0.43, 50P -0.71, Mar 19)"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 45.07,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -97659,11 +99309,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 144, spread 72%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 41.86,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -97800,11 +99455,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 13%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 15.47,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -98153,11 +99813,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 141, spread 41%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 24.93,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -99499,11 +101164,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 1, spread 76%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 14.86,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -99704,11 +101374,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 47, cost $4,866 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 239.66,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -99972,11 +101647,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.50-0.60 delta: OI 235, spread 38%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 5.87,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -100622,11 +102302,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 31%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 54.12,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -100858,11 +102543,17 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $4,367 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $3,432 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 162.59,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -100999,11 +102690,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 12, spread 55%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 8.96,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -101469,11 +103165,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 75, spread 24%, cost $1,761 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 30.8,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -102090,11 +103791,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.50-0.60 delta: OI 145, spread 19%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 34.78,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -102781,11 +104487,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 8, spread 108%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 20.88,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -102924,11 +104635,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 1, spread 16%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 27.12,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -103458,11 +105174,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 21, spread 82%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 8.24,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -103694,11 +105415,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 11%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 13.79,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -104408,17 +106134,136 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 56%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 39.39,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
  {
   "tk": "ROKU",
-  "err": "only 2 bars",
+  "date": "2026-11-06",
+  "close": 160.52,
+  "avg20m": 2.8,
+  "filtered": null,
+  "sma20": 156.85,
+  "sma50": 155.33,
+  "trend_call": 2,
+  "trend_put": 0,
+  "atr_pct": 1.63,
+  "hv20": 17.2,
+  "ret3m": 5.7,
+  "rs_spy": 15.3,
+  "rs_sector": 22.9,
+  "lo52": 78.53,
+  "hi52": 163.57,
+  "pct_above_lo52": 104.4,
+  "pct_below_hi52": 1.9,
+  "near_low": false,
+  "vol_ratio": 4.11,
+  "hi20": 162.77,
+  "lo20": 152.57,
+  "setups": [
+   "Breakout 11-03 (> 160.06, vol 1.66x), holding"
+  ],
+  "watch": [
+   "within 1.4% of 20d high 162.77"
+  ],
+  "note": "",
+  "levels_call": {
+   "dir": "call",
+   "entry": 160.52,
+   "atr14": 2.616,
+   "ext10_close": 155.12,
+   "invalidation": 155.12,
+   "risk": 5.4,
+   "target": 163.57,
+   "next_levels": [
+    163.57
+   ],
+   "rr_before_cap": 0.56,
+   "tail": [
+    [
+     "2026-10-22",
+     160.1,
+     156.78,
+     160.06
+    ],
+    [
+     "2026-10-23",
+     160.22,
+     158.52,
+     158.58
+    ],
+    [
+     "2026-10-26",
+     159.38,
+     156.79,
+     157.23
+    ],
+    [
+     "2026-10-27",
+     157.45,
+     156.18,
+     156.66
+    ],
+    [
+     "2026-10-28",
+     156.64,
+     155.0,
+     155.33
+    ],
+    [
+     "2026-10-29",
+     156.45,
+     154.76,
+     156.33
+    ],
+    [
+     "2026-10-30",
+     156.69,
+     154.43,
+     155.12
+    ],
+    [
+     "2026-11-02",
+     158.72,
+     155.22,
+     155.52
+    ],
+    [
+     "2026-11-03",
+     161.26,
+     154.23,
+     160.36
+    ],
+    [
+     "2026-11-04",
+     163.08,
+     160.59,
+     162.77
+    ],
+    [
+     "2026-11-05",
+     163.57,
+     160.12,
+     160.37
+    ],
+    [
+     "2026-11-06",
+     162.27,
+     158.82,
+     160.52
+    ]
+   ]
+  },
   "group": "g02_software_fintech",
   "sector_etf": "XLK"
  },
@@ -104702,11 +106547,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 15, spread 9%, cost $2,914 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 217.43,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -105983,11 +107833,16 @@
    "max": 10,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 30, spread 16%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 19.3,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -106340,11 +108195,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 173, spread 28%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 26.9,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -106663,11 +108523,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: spread 9%, cost $1,526 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 26.64,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -106862,11 +108727,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 134, spread 27%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 7.81,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -107034,11 +108904,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 11, cost $4,428 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 142.38,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -107177,11 +109052,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 12%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 91.69,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -107323,11 +109203,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 5, spread 36%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 69.59,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -107679,11 +109564,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 11%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 18.96,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -108124,11 +110014,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 3, spread 75%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 21.68,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -108265,11 +110160,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 319, spread 14%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 12.23,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -108766,11 +110666,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 17%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 72.94,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -109151,11 +111056,17 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $3,898 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: OI 2, cost $3,737 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 133.59,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -109561,11 +111472,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: spread 12%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 19.77,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -109704,11 +111620,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 111, spread 8%, cost $7,251 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 147.76,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -109847,11 +111768,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 23%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 31.18,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -110166,11 +112092,17 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $5,328 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: spread 9%, cost $4,362 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 124.13,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -110337,11 +112269,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 41%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 27.43,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -111206,11 +113143,16 @@
    "max": 6,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: spread 17%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 13.97,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -111346,15 +113288,52 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "SLV270319P00045000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 45.0,
+     "bid": 7.35,
+     "ask": 7.5,
+     "oi": 13865,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 7.425,
+     "spread_pct": 0.0202,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 747.25,
+     "fits": true,
+     "lim": 7.463,
+     "iv": 0.4734,
+     "delta": -0.6255,
+     "be": 37.53,
+     "be_sd": 0.175,
+     "ivhv": 0.988,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 39.37,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 0,
+   "score": 7,
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -111705,11 +113684,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 7, spread 71%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 22.31,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -112001,11 +113985,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 2, spread 29%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 10.53,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -112417,11 +114406,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 5, spread 47%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 38.59,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -112982,11 +114976,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 9%, cost $3,406 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 139.03,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -113360,11 +115359,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 1, spread 88%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 26.55,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -114254,11 +116258,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 385, spread 17%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 11.57,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -114393,11 +116402,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 15P -0.71, 17.5P -0.71, Apr 16)"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 11.22,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -114569,11 +116583,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 62, spread 12%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 23.12,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -114829,11 +116848,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 30%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 37.62,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -115378,23 +117402,70 @@
    "setups": [
     "Breakdown 11-20 (< 39.95, vol 2.16x)"
    ],
-   "exp": "2027-03-19",
-   "ts": "2027-02-26",
+   "exp": "2027-04-16",
+   "ts": "2027-03-25",
    "rr": 1.11,
    "rr_pts": 0,
-   "cap": 21.81,
+   "cap": 19.51,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "ok",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "contract": null
-   }
+    "cap": 1288.45,
+    "contract": {
+     "osi": "STM270416P00050000",
+     "exp": "2027-04-16",
+     "cp": "P",
+     "strike": 50.0,
+     "bid": 9.4,
+     "ask": 9.7,
+     "oi": 519,
+     "src": "Public",
+     "dte": 144,
+     "quote": true,
+     "mid": 9.55,
+     "spread_pct": 0.0314,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 963.5,
+     "fits": true,
+     "lim": 9.625,
+     "iv": 0.5573,
+     "delta": -0.5641,
+     "be": 40.37,
+     "be_sd": 0.221,
+     "ivhv": 0.643,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 43.75,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 1,
+   "score": 7,
+   "earn": {
+    "date": "2027-01-28",
+    "time": "BMO",
+    "days": 66,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-01-27"
+   },
+   "cat_est": false
   }
  },
  {
@@ -116227,11 +118298,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 7.5P -0.46, 10P -0.71, Apr 16)"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 7.01,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -116430,11 +118506,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 18%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 38.71,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -116601,11 +118682,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 11, spread 84%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 7.95,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -116953,11 +119039,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 11, spread 9%, cost $1,624 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 37.0,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -117096,11 +119187,16 @@
    "max": 6,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 13, spread 103%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 116.92,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -117268,11 +119364,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 3, spread 26%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 79.09,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -117653,11 +119754,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 244 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 65.82,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -118337,11 +120443,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 6, spread 40%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 51.47,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -119054,11 +121165,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 448, spread 20%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.72,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -119619,11 +121735,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 300, spread 20%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 138.95,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -120840,11 +122961,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 18%, cost $2,351 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 100.9,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -121804,11 +123930,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 239, spread 43%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 63.31,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -122274,11 +124405,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 10%, cost $2,904 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 68.0,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -122450,11 +124586,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 2.5C +0.98, 10C +0.87, Mar 19)"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 10.68,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -123020,11 +125161,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 60, cost $5,066 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 293.97,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -123480,21 +125626,66 @@
    ],
    "exp": "2027-03-19",
    "ts": "2027-02-26",
-   "rr": 1.55,
+   "rr": 1.67,
    "rr_pts": 0,
-   "cap": 52.23,
+   "cap": 51.36,
    "trend": 2,
    "rs": 1,
    "known": 3,
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "UBER270319P00072500",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 72.5,
+     "bid": 9.6,
+     "ask": 10.05,
+     "oi": 1824,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 9.825,
+     "spread_pct": 0.0458,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 994.75,
+     "fits": true,
+     "lim": 9.938,
+     "iv": 0.374,
+     "delta": -0.6467,
+     "be": 62.55,
+     "be_sd": 0.155,
+     "ivhv": 1.078,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 64.67,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 1,
+   "score": 8,
+   "earn": {
+    "date": "2027-02-03",
+    "time": "BMO",
+    "days": 72,
+    "recent": false,
+    "inside_life": true,
+    "pre_event": false,
+    "exit_by": "2027-02-02"
+   },
+   "cat_est": false
   }
  },
  {
@@ -123996,11 +126187,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 40P -0.70, 45P -0.78, Apr 16)"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 35.51,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -124383,11 +126579,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: spread 20%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 14.45,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -125057,23 +127258,60 @@
    "setups": [
     "Breakdown 11-20 (< 28.67, vol 1.68x)"
    ],
-   "exp": "2027-03-19",
-   "ts": "2027-02-26",
-   "rr": 1.76,
+   "exp": "2027-04-16",
+   "ts": "2027-03-25",
+   "rr": 1.99,
    "rr_pts": 0,
-   "cap": 19.19,
+   "cap": 18.18,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 9,
+   "max": 7,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "URA270416P00035000",
+     "exp": "2027-04-16",
+     "cp": "P",
+     "strike": 35.0,
+     "bid": 7.4,
+     "ask": 7.8,
+     "oi": 747,
+     "src": "Public",
+     "dte": 144,
+     "quote": true,
+     "mid": 7.6,
+     "spread_pct": 0.0526,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 771.0,
+     "fits": true,
+     "lim": 7.7,
+     "iv": 0.5056,
+     "delta": -0.6679,
+     "be": 27.29,
+     "be_sd": 0.138,
+     "ivhv": 0.909,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 28.54,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 0,
+   "score": 6,
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -125387,7 +127625,7 @@
    "opt": {
     "status": "no-chain",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no option chain (HTTPError: HTTP Error 400: )"
     ],
     "contract": null
    }
@@ -125526,12 +127764,57 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
-    "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
-    ],
-    "contract": null
-   }
+    "status": "ok",
+    "notes": [],
+    "cap": 1288.45,
+    "contract": {
+     "osi": "USAR270319P00011000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 11.0,
+     "bid": 4.7,
+     "ask": 4.9,
+     "oi": 1111,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 4.8,
+     "spread_pct": 0.0417,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 486.0,
+     "fits": true,
+     "lim": 4.85,
+     "iv": 1.118,
+     "delta": -0.6707,
+     "be": 6.14,
+     "be_sd": 0.141,
+     "ivhv": 0.933,
+     "pricing": 2,
+     "liquidity": 2,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 6.74,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
+   },
+   "liq": 2,
+   "pricing": 2,
+   "cat": 1,
+   "score": 8,
+   "earn": {
+    "date": "2027-03-29",
+    "time": "AMC",
+    "days": 126,
+    "recent": false,
+    "inside_life": false,
+    "pre_event": false,
+    "exit_by": null
+   },
+   "cat_est": true
   }
  },
  {
@@ -125990,11 +128273,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 70 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 18.1,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -127117,11 +129405,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 17, spread 14%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 98.03,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -127293,11 +129586,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 2, spread 51%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 8.79,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -127436,11 +129734,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 111, spread 37%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 57.07,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -127611,11 +129914,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 132, spread 23%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 50.73,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -128380,11 +130688,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 15%, cost $2,421 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 99.07,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -128521,11 +130834,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 12, spread 19%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 20.2,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -128816,11 +131134,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 8, spread 15%, cost $2,491 > cap $1,546"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 197.51,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -129402,11 +131725,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 23, spread 52%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 36.94,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -129797,11 +132125,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 28%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 5.39,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -130635,11 +132968,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 4, spread 13%, cost $2,841 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 50.35,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -131049,11 +133387,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 10, spread 68%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 35.94,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -131221,11 +133564,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 30%, cost $1,516 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 57.74,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -131456,11 +133804,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 18, spread 55%"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 32.78,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -131783,11 +134136,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 176"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 21.8,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -132167,11 +134525,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 49%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 17.01,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -132372,11 +134735,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 46, spread 11%, cost $3,559 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 213.09,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -132517,11 +134885,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.50-0.60 delta: OI 14, spread 40%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 19.82,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -132964,11 +135337,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 14%, cost $2,218 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 145.42,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -133350,11 +135728,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 6, spread 21%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 98.21,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -133589,15 +135972,54 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 8,
+   "max": 6,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "ok",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "contract": null
-   }
+    "cap": 1288.45,
+    "contract": {
+     "osi": "XLE270319P00063000",
+     "exp": "2027-03-19",
+     "cp": "P",
+     "strike": 63.0,
+     "bid": 4.6,
+     "ask": 4.95,
+     "oi": 11363,
+     "src": "Public",
+     "dte": 116,
+     "quote": true,
+     "mid": 4.775,
+     "spread_pct": 0.0733,
+     "spread_ok": true,
+     "spread_provisional": false,
+     "oi_ok": true,
+     "cost": 487.25,
+     "fits": true,
+     "lim": 4.863,
+     "iv": 0.2885,
+     "delta": -0.5272,
+     "be": 58.13,
+     "be_sd": 0.262,
+     "ivhv": 0.934,
+     "pricing": 2,
+     "liquidity": 1,
+     "reasons": [],
+     "passes": true
+    },
+    "S": 60.71,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
+   },
+   "liq": 1,
+   "pricing": 2,
+   "cat": 0,
+   "score": 5,
+   "earn": {},
+   "cat_est": false
   }
  },
  {
@@ -133737,11 +136159,16 @@
    "max": 7,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 10%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 55.56,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -133880,11 +136307,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 14%, cost $1,441 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 161.18,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -134025,11 +136457,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $2,168 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: OI 16, spread 12%, cost $2,167 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 162.29,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -134261,11 +136699,16 @@
    "max": 6,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 16%, cost $1,551 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 179.03,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -134669,11 +137112,16 @@
    "max": 10,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: spread 17%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 8.78,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -134903,11 +137351,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: spread 26%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 8.31,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -135046,11 +137499,16 @@
    "max": 6,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 18%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 87.01,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -135247,11 +137705,16 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Apr 16 0.60-0.70 delta: OI 110, spread 23%, cost $1,736 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 95.45,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -135390,11 +137853,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: spread 14%, cost $1,388 > cap $1,288"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 72.83,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -135657,11 +138125,16 @@
    "max": 8,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "no strike at 0.50-0.70 delta (nearest 7.5C +0.90, 10C +0.44, Mar 19)"
     ],
-    "contract": null
+    "cap": 1546.14,
+    "contract": null,
+    "S": 8.96,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:06 ET"
    }
   }
  },
@@ -135827,11 +138300,16 @@
    "max": 9,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: OI 6, spread 25%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 33.71,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -136455,11 +138933,17 @@
    "max": 9,
    "near_low": false,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "Mar 19 0.60-0.70 delta: cost $1,492 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: OI 197, spread 20%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 84.35,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
@@ -136718,11 +139202,16 @@
    "max": 8,
    "near_low": true,
    "opt": {
-    "status": "no-chain",
+    "status": "fail",
     "notes": [
-     "no option chain (HTTPError: HTTP Error 403: Forbidden)"
+     "May 21 0.60-0.70 delta: OI 0, spread 34%"
     ],
-    "contract": null
+    "cap": 1288.45,
+    "contract": null,
+    "S": 44.7,
+    "quotes": "Public",
+    "regular": true,
+    "quote_time": "11-23 10:07 ET"
    }
   }
  },
