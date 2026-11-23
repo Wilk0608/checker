@@ -2190,7 +2190,7 @@
    "ret": 1.9523350323736053,
    "rules": "7.6",
    "reason": "trailing stop (late): Friday 11-20 close 94.06 sets the trail at 65.84; the scan had no option prices that day, and today it opened near 54",
-   "stepped": null
+   "stepped": true
   }
  ],
  "notes": [
