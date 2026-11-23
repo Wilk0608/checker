@@ -50,6 +50,8 @@ jobs:
       - if: steps.gate.outputs.mode != 'skip'
         run: python scanner.py --test
       - if: steps.gate.outputs.mode != 'skip'
+        env:
+          PUBLIC_SECRET: ${{ secrets.PUBLIC_SECRET }}   # option quotes from Public's API (market data only; see public_api.py)
         run: python scanner.py
       - name: Record the scan (a failed scan is not recorded, so the next hourly run retries it)
         if: steps.gate.outputs.mode == 'regular' || steps.gate.outputs.mode == 'close'

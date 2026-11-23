@@ -435,11 +435,23 @@ def choose(contracts, direction, fresh, plan_exps, S, caps, hv, today, regular, 
 
 
 def fetch_all(tickers, workers=2):
-    """Cboe chains for many tickers in parallel. Returns {ticker: (meta, contracts)} and {ticker: error}."""
+    """Option chains for many tickers in parallel: from Public's API when PUBLIC_SECRET is set (Cboe and Nasdaq refuse
+    GitHub's machines since November 2026), else Cboe. Returns {ticker: (meta, contracts)} and {ticker: error}."""
+    import public_api as P
     got, err = {}, {}
+    use_public = P.enabled()
+    prices = {}
+    if use_public:
+        workers = max(workers, 4)
+        try:
+            prices = P.stock_prices(tickers)
+        except Exception as e:
+            return {}, {t: f"Public quotes failed: {type(e).__name__}: {e}"[:120] for t in sorted(set(tickers))}
 
     def one(t):
         try:
+            if use_public:
+                return t, P.fetch_chain(t, S=(prices.get(t.upper()) or (None,))[0]), None
             return t, fetch_cboe(t), None
         except Exception as e:
             return t, None, f"{type(e).__name__}: {e}"[:120]

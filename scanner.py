@@ -437,6 +437,8 @@ def run_option_screen(rows, raw_bars, asof, now, plan, workers=2):
 
     def needs_refresh(meta):
         age_h = (now_utc - meta["ts"]).total_seconds() / 3600 if meta.get("ts") else 999
+        if meta.get("source") == "Public":              # Public's quotes are current; Nasdaq refuses this runner anyway
+            return False
         return (run_regular and not O.regular_hours(meta.get("ts"), HOLIDAYS)) or age_h > 20
 
     def refresh(t):
@@ -754,7 +756,7 @@ def report(results, rows, missing, etf3, expected, now_et, src, screened=False):
           f"- Too little history: {len(errs)}" + (f" ({', '.join(errs[:20])})" if errs else "")]
     if screened:
         ce = SCREEN.get("chain_errors") or {}
-        L += [f"- Option chains: {SCREEN['chains']} read from Cboe" + (f", {len(ce)} missing ({', '.join(sorted(ce)[:15])}"
+        L += [f"- Option chains: {SCREEN['chains']} read from " + ("Public's API (market data only)" if __import__("public_api").enabled() else "Cboe") + (f", {len(ce)} missing ({', '.join(sorted(ce)[:15])}"
               f"{', ...' if len(ce) > 15 else ''})" if ce else "") + (f"; Nasdaq re-read failed for {len(SCREEN['refresh_failed'])}"
               f" ({', '.join(SCREEN['refresh_failed'][:15])})" if SCREEN.get("refresh_failed") else "") + f"; Cboe rate-limit retries {SCREEN.get('cboe_429', 0)}; option step took {SCREEN['secs']}s",
               (f"- Earnings dates: Nasdaq's calendar refused the request, so Yahoo was asked, one name at a time: "
