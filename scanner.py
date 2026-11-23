@@ -842,6 +842,20 @@ def build_alerts(rows, plan, now, bars, fetch=True):
     return out
 
 
+def data_alerts(screen, n_tickers):
+    """A DATA PROBLEM alert when the market-hours scan couldn't price options: the owner relies on alerts instead of
+    checking, so a silent data failure has to say so (Cboe stopped answering on 2026-11-19 and nothing told anyone)."""
+    if not screen.get("run_regular") or n_tickers < 20:
+        return []
+    if screen.get("error"):
+        return [f"DATA PROBLEM: the option check failed ({str(screen['error'])[:100]}). No call can be scored; check the scanner."]
+    got = int(screen.get("chains") or 0)
+    if got < 0.5 * n_tickers:
+        return [f"DATA PROBLEM: option prices were read for only {got} of {n_tickers} setups. Calls can't reach the bar and "
+                "the shadow test can't update until this is fixed; check the data notes in results/latest.md."]
+    return []
+
+
 def write_alert(lines, now, folder=None):
     """results/alert.md exists only while there is a new alert (its first line is the issue title); the same alert is
     raised once a day at most. Returns True when a new alert file was written."""
@@ -1355,6 +1369,10 @@ def v77_selftest(res, rows2, miss, etf3, last, now, caps, up):
     except RuntimeError:
         pass
     E.NASDAQ["blocked"] = False
+    # 17a3) a market-hours scan that can't price options raises a DATA PROBLEM alert; after hours it doesn't
+    assert data_alerts({"run_regular": True, "chains": 0}, 240)[0].startswith("DATA PROBLEM: option prices were read for only 0 of 240")
+    assert data_alerts({"run_regular": True, "chains": 230}, 240) == [] and data_alerts({"run_regular": False, "chains": 0}, 240) == []
+    assert data_alerts({"run_regular": True, "error": "boom"}, 240)[0].startswith("DATA PROBLEM: the option check failed")
     # 17b) the catalyst point without a calendar date: a stock's contract with 95+ days left contains its next report
     ent = dt.date(2026, 10, 26)
     far = copy.deepcopy(up)
@@ -1461,6 +1479,7 @@ def run_scan():
     except Exception as e:
         traceback.print_exc()
         alerts = [f"ALERT CHECK FAILED: {type(e).__name__}: {str(e)[:120]}. Check open positions by hand."]
+    alerts += data_alerts(SCREEN, len({x["r"]["tk"] for x in rows}) if screened else 0)
     SCREEN["alerts"] = alerts
     md = report(results, rows, missing, etf3, expected, now, src, screened=screened)
     if SCREEN.get("error"):
