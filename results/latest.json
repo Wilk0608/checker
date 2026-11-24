@@ -136,14 +136,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 29, cost $4,173 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 20, spread 14%, cost $2,131 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 156.37,
+    "S": 183.87,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -492,14 +492,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 241 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 172, spread 27%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 46.4,
+    "S": 45.57,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -972,14 +972,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 67, cost $5,521 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 136, cost $3,454 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 76.26,
+    "S": 75.29,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -1576,14 +1576,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.50-0.60 delta: OI 0"
+     "May 21 0.60-0.70 delta: OI 0, spread 37%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 50.5,
+    "S": 52.16,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -1755,14 +1755,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 208 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 208, spread 30%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 83.6,
+    "S": 82.01,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -2646,14 +2646,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 64, cost $3,254 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 94, cost $3,841 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 159.01,
+    "S": 157.03,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -2852,14 +2852,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0, cost $4,291 > cap $1,546"
+     "Apr 16 0.60-0.70 delta: OI 19, spread 15%, cost $1,688 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 140.1,
+    "S": 165.58,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -3323,60 +3323,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 14%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "AG270319P00014000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 14.0,
-     "bid": 3.2,
-     "ask": 3.7,
-     "oi": 1469,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 3.45,
-     "spread_pct": 0.1449,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 352.9,
-     "fits": true,
-     "lim": 3.519,
-     "iv": 0.6498,
-     "delta": -0.6567,
-     "be": 10.47,
-     "be_sd": 0.167,
-     "ivhv": 0.901,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 11.15,
+    "contract": null,
+    "S": 10.89,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-18",
-    "time": "BMO",
-    "days": 86,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-17"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -3867,60 +3827,20 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 6,
+   "max": 7,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 11%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "AI270319P00012500",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 12.5,
-     "bid": 2.97,
-     "ask": 3.35,
-     "oi": 1208,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 3.16,
-     "spread_pct": 0.1203,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 323.32,
-     "fits": true,
-     "lim": 3.223,
-     "iv": 0.6925,
-     "delta": -0.6374,
-     "be": 9.27,
-     "be_sd": 0.181,
-     "ivhv": 0.967,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 9.97,
+    "contract": null,
+    "S": 9.91,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 5,
-   "earn": {
-    "date": "2026-12-09",
-    "time": "AMC",
-    "days": 15,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2026-12-09"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -4445,14 +4365,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 200, cost $1,761 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 200, spread 13%, cost $1,858 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 81.75,
+    "S": 80.38,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -4593,14 +4513,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0, spread 8%"
+     "May 21 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 74.52,
+    "S": 76.56,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 16:00 ET"
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -4770,14 +4690,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 19, cost $3,525 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 4, spread 29%, cost $2,381 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 150.83,
+    "S": 166.02,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -4949,14 +4869,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0, spread 59%"
+     "Apr 16 0.50-0.60 delta: OI 7, spread 64%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 22.77,
+    "S": 25.19,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -5186,14 +5106,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 1, spread 34%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 42.13,
+    "S": 49.76,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -5333,14 +5253,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0"
+     "Mar 19 0.60-0.70 delta: OI 7, spread 29%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 14.38,
+    "S": 13.64,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -5567,14 +5487,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 1 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 59, spread 16%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 6.79,
+    "S": 6.65,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -6065,14 +5985,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 122"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 26%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 19.73,
+    "S": 19.81,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -6620,14 +6540,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 18%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 16.76,
+    "S": 17.4,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -6770,10 +6690,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 6.1,
+    "S": 5.64,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -7896,14 +7816,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 84 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.50-0.60 delta: OI 70, spread 58%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 64.27,
+    "S": 65.17,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -8186,62 +8106,20 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+     "Mar 19 0.60-0.70 delta: spread 11%, cost $1,528 > cap $1,288"
     ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "APH270319P00082500",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 82.5,
-     "bid": 9.7,
-     "ask": 11.4,
-     "oi": 571,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 10.55,
-     "spread_pct": 0.1611,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 1077.1,
-     "fits": true,
-     "lim": 10.761,
-     "iv": 0.4655,
-     "delta": -0.5281,
-     "be": 71.73,
-     "be_sd": 0.274,
-     "ivhv": 0.584,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 77.26,
+    "contract": null,
+    "S": 73.11,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 6,
-   "earn": {
-    "date": "2027-01-27",
-    "time": "BMO",
-    "days": 64,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-01-26"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -8367,68 +8245,28 @@
    "setups": [
     "Breakdown 11-20 (< 13.98, vol 1.66x), holding"
    ],
-   "exp": "2027-04-16",
-   "ts": "2027-03-25",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.17,
    "rr_pts": 0,
-   "cap": 1.78,
+   "cap": 3.21,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Apr 16 0.60-0.70 delta: spread 9%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "APLD270416P00021000",
-     "exp": "2027-04-16",
-     "cp": "P",
-     "strike": 21.0,
-     "bid": 6.9,
-     "ask": 9.55,
-     "oi": 2204,
-     "src": "Public",
-     "dte": 143,
-     "quote": true,
-     "mid": 8.225,
-     "spread_pct": 0.3222,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 839.95,
-     "fits": true,
-     "lim": 8.39,
-     "iv": 0.9272,
-     "delta": -0.6541,
-     "be": 12.6,
-     "be_sd": 0.155,
-     "ivhv": 0.613,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 13.85,
+    "contract": null,
+    "S": 12.05,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-01-06",
-    "time": "AMC",
-    "days": 43,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-01-06"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -8566,14 +8404,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 17.5C +0.75, 20C +0.46, Apr 16)"
+     "no strike at 0.50-0.70 delta (nearest 17.5C +0.82, 20C +0.48, Apr 16)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 19.14,
+    "S": 19.34,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -9149,52 +8987,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 17%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "ARKK270319P00075000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 75.0,
-     "bid": 9.05,
-     "ask": 11.45,
-     "oi": 694,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 10.25,
-     "spread_pct": 0.2341,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 1046.5,
-     "fits": true,
-     "lim": 10.455,
-     "iv": 0.3755,
-     "delta": -0.6484,
-     "be": 64.53,
-     "be_sd": 0.161,
-     "ivhv": 0.569,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 66.8,
+    "contract": null,
+    "S": 66.73,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {},
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -9568,14 +9374,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 24%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 7.08,
+    "S": 7.73,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -9743,14 +9549,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $9,698 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: spread 22%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 49.65,
+    "S": 46.26,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -10010,14 +9816,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no IV/delta for the Mar 19 quotes"
+     "Mar 19 0.50-0.60 delta: OI 101, spread 16%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 25.87,
+    "S": 29.1,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -10780,38 +10586,38 @@
     "notes": [],
     "cap": 1288.45,
     "contract": {
-     "osi": "ASST270319P00023000",
+     "osi": "ASST270319P00022000",
      "exp": "2027-03-19",
      "cp": "P",
-     "strike": 23.0,
+     "strike": 22.0,
      "bid": 8.15,
-     "ask": 9.6,
-     "oi": 679,
+     "ask": 8.75,
+     "oi": 3266,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 8.875,
-     "spread_pct": 0.1634,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 8.45,
+     "spread_pct": 0.071,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 906.25,
+     "cost": 861.0,
      "fits": true,
-     "lim": 9.053,
-     "iv": 0.9933,
-     "delta": -0.666,
-     "be": 13.94,
-     "be_sd": 0.157,
-     "ivhv": 0.902,
+     "lim": 8.6,
+     "iv": 0.9627,
+     "delta": -0.683,
+     "be": 13.39,
+     "be_sd": 0.143,
+     "ivhv": 0.874,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 15.27,
+    "S": 14.51,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -11262,14 +11068,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.50-0.60 delta: OI 35"
+     "May 21 0.60-0.70 delta: spread 14%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 33.13,
+    "S": 31.65,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -11644,14 +11450,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 5, cost $2,551 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 71, spread 19%, cost $2,276 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 78.19,
+    "S": 76.55,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -12258,14 +12064,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 20 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: spread 117%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 16.91,
+    "S": 17.3,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -13109,60 +12915,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 19%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "B270319P00040000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 40.0,
-     "bid": 7.2,
-     "ask": 7.85,
-     "oi": 9093,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 7.525,
-     "spread_pct": 0.0864,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 768.55,
-     "fits": true,
-     "lim": 7.676,
-     "iv": 0.4921,
-     "delta": -0.6649,
-     "be": 32.31,
-     "be_sd": 0.156,
-     "ivhv": 0.762,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 33.77,
+    "contract": null,
+    "S": 33.58,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-04",
-    "time": "BMO",
-    "days": 72,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-03"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -13337,34 +13103,34 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 90.0,
-     "bid": 10.55,
-     "ask": 11.3,
-     "oi": 10196,
+     "bid": 11.35,
+     "ask": 12.0,
+     "oi": 10195,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 10.925,
-     "spread_pct": 0.0686,
+     "mid": 11.675,
+     "spread_pct": 0.0557,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1112.25,
+     "cost": 1184.75,
      "fits": true,
-     "lim": 11.113,
-     "iv": 0.4362,
-     "delta": -0.5357,
-     "be": 78.88,
-     "be_sd": 0.265,
-     "ivhv": 0.844,
+     "lim": 11.838,
+     "iv": 0.4588,
+     "delta": -0.5418,
+     "be": 78.15,
+     "be_sd": 0.256,
+     "ivhv": 0.887,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 84.34,
+    "S": 83.68,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:14 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -13902,14 +13668,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 30P -0.49, 35P -0.49, Apr 16)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 41%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 17.97,
+    "S": 15.13,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -14110,14 +13876,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 25P -0.49, 30P -0.81, Apr 16)"
+     "no strike at 0.50-0.70 delta (nearest 25P -0.48, 30P -0.76, Apr 16)"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 24.04,
+    "S": 24.0,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -14348,7 +14114,7 @@
     [
      "2026-11-23",
      11.98,
-     11.74,
+     11.63,
      11.92
     ]
    ]
@@ -15106,68 +14872,28 @@
    "setups": [
     "Pullback (off 18.85 -6.4%, +0.3% vs SMA20)"
    ],
-   "exp": "2027-04-16",
-   "ts": "2027-03-25",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.17,
    "rr_pts": 0,
-   "cap": 22.07,
+   "cap": 21.17,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 6,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Apr 16 0.60-0.70 delta: spread 16%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "BEKE270416C00017000",
-     "exp": "2027-04-16",
-     "cp": "C",
-     "strike": 17.0,
-     "bid": 2.25,
-     "ask": 2.6,
-     "oi": 526,
-     "src": "Public",
-     "dte": 143,
-     "quote": true,
-     "mid": 2.425,
-     "spread_pct": 0.1443,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 248.35,
-     "fits": true,
-     "lim": 2.474,
-     "iv": 0.3765,
-     "delta": 0.6754,
-     "be": 19.48,
-     "be_sd": 0.319,
-     "ivhv": 1.144,
-     "pricing": 1,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 18.12,
+    "contract": null,
+    "S": 18.19,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 1,
-   "cat": 1,
-   "score": 6,
-   "earn": {
-    "date": "2027-03-16",
-    "time": "BMO",
-    "days": 112,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-03-15"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -15650,68 +15376,28 @@
    "setups": [
     "Pullback (off 8.91 -10.7%, +2.0% vs SMA20)"
    ],
-   "exp": "2027-04-16",
-   "ts": "2027-03-25",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 1.01,
    "rr_pts": 0,
-   "cap": 13.4,
+   "cap": 12.8,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Apr 16 0.60-0.70 delta: spread 14%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "BHC270416C00008000",
-     "exp": "2027-04-16",
-     "cp": "C",
-     "strike": 8.0,
-     "bid": 0.6,
-     "ask": 1.5,
-     "oi": 966,
-     "src": "Public",
-     "dte": 143,
-     "quote": true,
-     "mid": 1.05,
-     "spread_pct": 0.8571,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 108.1,
-     "fits": true,
-     "lim": 1.071,
-     "iv": 0.4311,
-     "delta": 0.6156,
-     "be": 9.08,
-     "be_sd": 0.388,
-     "ivhv": 0.407,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 8.22,
+    "contract": null,
+    "S": 8.54,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-17",
-    "time": "AMC",
-    "days": 85,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-17"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -15911,14 +15597,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 205 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 72"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 69.81,
+    "S": 68.62,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -16087,62 +15773,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (no strike at 0.60-0.70)"
+     "Mar 19 0.60-0.70 delta: spread 15%"
     ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "BIDU270319P00070000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 70.0,
-     "bid": 8.15,
-     "ask": 10.65,
-     "oi": 1287,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 9.4,
-     "spread_pct": 0.266,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 959.8,
-     "fits": true,
-     "lim": 9.588,
-     "iv": 0.4164,
-     "delta": -0.5963,
-     "be": 60.4,
-     "be_sd": 0.209,
-     "ivhv": 0.836,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 63.5,
+    "contract": null,
+    "S": 62.9,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-25",
-    "time": "BMO",
-    "days": 93,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-24"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -16340,14 +15984,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.50-0.60 delta: OI 1"
+     "May 21 0.50-0.60 delta: OI 1, spread 140%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 61.73,
+    "S": 61.54,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -16731,7 +16375,7 @@
     [
      "2026-11-23",
      10.95,
-     10.8,
+     10.76,
      10.9
     ]
    ]
@@ -16876,14 +16520,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0, cost $5,966 > cap $1,288"
+     "May 21 0.60-0.70 delta: OI 0, spread 17%, cost $1,934 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 110.31,
+    "S": 104.5,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -17531,14 +17175,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 71 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 71, spread 30%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 10.27,
+    "S": 10.63,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -17833,34 +17477,34 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 18.0,
-     "bid": 4.8,
-     "ask": 5.05,
-     "oi": 1059,
+     "bid": 5.3,
+     "ask": 5.7,
+     "oi": 1142,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 4.925,
-     "spread_pct": 0.0508,
+     "mid": 5.5,
+     "spread_pct": 0.0727,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 499.75,
+     "cost": 561.0,
      "fits": true,
-     "lim": 4.987,
-     "iv": 0.793,
-     "delta": -0.6066,
-     "be": 13.0,
-     "be_sd": 0.197,
-     "ivhv": 0.796,
+     "lim": 5.6,
+     "iv": 0.8425,
+     "delta": -0.6324,
+     "be": 12.39,
+     "be_sd": 0.18,
+     "ivhv": 0.846,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 14.25,
+    "S": 13.54,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -18514,54 +18158,54 @@
    "ts": "2027-02-26",
    "rr": 0.21,
    "rr_pts": 0,
-   "cap": 32.98,
+   "cap": 35.1,
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 5,
+   "max": 6,
    "near_low": false,
    "opt": {
     "status": "ok",
     "notes": [],
     "cap": 1288.45,
     "contract": {
-     "osi": "BP270319P00050000",
+     "osi": "BP270319P00047000",
      "exp": "2027-03-19",
      "cp": "P",
-     "strike": 50.0,
-     "bid": 8.0,
-     "ask": 8.5,
-     "oi": 605,
+     "strike": 47.0,
+     "bid": 5.5,
+     "ask": 5.75,
+     "oi": 685,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 8.25,
-     "spread_pct": 0.0606,
+     "mid": 5.625,
+     "spread_pct": 0.0444,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 838.5,
+     "cost": 569.75,
      "fits": true,
-     "lim": 8.375,
-     "iv": 0.4388,
-     "delta": -0.6596,
-     "be": 41.62,
-     "be_sd": 0.153,
-     "ivhv": 1.439,
-     "pricing": 0,
+     "lim": 5.688,
+     "iv": 0.3406,
+     "delta": -0.6376,
+     "be": 41.3,
+     "be_sd": 0.16,
+     "ivhv": 1.117,
+     "pricing": 1,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 43.25,
+    "S": 42.6,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    },
    "liq": 1,
-   "pricing": 0,
+   "pricing": 1,
    "cat": 1,
-   "score": 4,
+   "score": 5,
    "earn": {
     "date": "2027-02-09",
     "time": "BMO",
@@ -18707,7 +18351,7 @@
   "sma50": 12.37,
   "trend_call": 0,
   "trend_put": 2,
-  "atr_pct": 2.69,
+  "atr_pct": 2.7,
   "hv20": 24.5,
   "ret3m": -5.0,
   "rs_spy": 0.7,
@@ -18730,7 +18374,7 @@
   "levels_put": {
    "dir": "put",
    "entry": 11.5,
-   "atr14": 0.309,
+   "atr14": 0.311,
    "ext10_close": 12.26,
    "invalidation": 12.26,
    "risk": 0.76,
@@ -18809,7 +18453,7 @@
     [
      "2026-11-23",
      11.94,
-     11.47,
+     11.45,
      11.5
     ]
    ]
@@ -18989,14 +18633,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 34 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 34, spread 31%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 9.18,
+    "S": 15.04,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -19195,14 +18839,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 43 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.50-0.60 delta: OI 489, spread 42%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 63.09,
+    "S": 75.05,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -19642,14 +19286,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 6 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 23%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 47.0,
+    "S": 42.51,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -20571,14 +20215,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 2 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 2, spread 65%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 19.83,
+    "S": 20.02,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -20750,14 +20394,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $5,986 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 255, spread 12%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 56.0,
+    "S": 49.63,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -21137,14 +20781,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 1 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 0, spread 15%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 24.09,
+    "S": 23.41,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -21458,62 +21102,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+     "Mar 19 0.60-0.70 delta: spread 17%"
     ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "C270319P00120000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 120.0,
-     "bid": 9.95,
-     "ask": 10.5,
-     "oi": 1992,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 10.225,
-     "spread_pct": 0.0538,
-     "spread_ok": true,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 1037.25,
-     "fits": true,
-     "lim": 10.363,
-     "iv": 0.3042,
-     "delta": -0.5495,
-     "be": 109.63,
-     "be_sd": 0.239,
-     "ivhv": 0.879,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 114.29,
+    "contract": null,
+    "S": 112.17,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-01-14",
-    "time": "BMO",
-    "days": 51,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-01-13"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -22188,14 +21790,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.50-0.60 delta: OI 12"
+     "May 21 0.60-0.70 delta: OI 6, spread 22%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 17.06,
+    "S": 16.54,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -23102,10 +22704,10 @@
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 7.72,
+    "S": 7.71,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -23777,14 +23379,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $10,386 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 11%, cost $3,061 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 65.89,
+    "S": 63.75,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -24073,14 +23675,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 31, cost $3,132 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 99, spread 8%, cost $2,384 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 118.8,
+    "S": 119.83,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -24399,14 +24001,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $3,286 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 11, spread 13%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 40.64,
+    "S": 37.97,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -25290,14 +24892,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $18,136 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 28, cost $4,111 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 302.0,
+    "S": 275.23,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -25672,14 +25274,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "no strike at 0.50-0.70 delta (nearest 12.5P -0.76, 15P -0.85, Apr 16)"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 11.8,
+    "S": 10.74,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -27270,14 +26872,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 112, spread 15%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 11.81,
+    "S": 10.93,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -27743,14 +27345,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 32"
+     "Mar 19 0.60-0.70 delta: OI 198, spread 13%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 45.6,
+    "S": 44.36,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -28100,14 +27702,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 3"
+     "Apr 16 0.60-0.70 delta: OI 3, spread 20%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 55.56,
+    "S": 60.63,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -28481,15 +28083,15 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $3,910 > cap $1,288",
-     "Feb 19 0.60-0.70 delta: cost $2,819 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $4,163 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $3,191 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 107.01,
+    "S": 103.64,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -29012,60 +28614,20 @@
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 6,
+   "max": 7,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 45%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "CPB270319C00023000",
-     "exp": "2027-03-19",
-     "cp": "C",
-     "strike": 23.0,
-     "bid": 1.55,
-     "ask": 2.25,
-     "oi": 1400,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 1.9,
-     "spread_pct": 0.3684,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 194.8,
-     "fits": true,
-     "lim": 1.938,
-     "iv": 0.2673,
-     "delta": 0.6327,
-     "be": 24.95,
-     "be_sd": 0.372,
-     "ivhv": 0.677,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 23.63,
+    "contract": null,
+    "S": 23.71,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 6,
-   "earn": {
-    "date": "2026-12-09",
-    "time": "BMO",
-    "days": 15,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2026-12-08"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:46 ET"
+   }
   }
  },
  {
@@ -29769,15 +29331,15 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $3,502 > cap $1,288",
-     "Feb 19 0.60-0.70 delta: cost $3,275 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $3,668 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: OI 362, cost $3,470 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 183.29,
+    "S": 193.82,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -30362,14 +29924,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 0, spread 20%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 11.1,
+    "S": 11.67,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -30690,15 +30252,15 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $6,697 > cap $1,288",
-     "Feb 19 0.60-0.70 delta: OI 212, cost $5,988 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $5,217 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: OI 211, cost $4,992 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 211.0,
+    "S": 209.38,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -30913,70 +30475,28 @@
     "Breakdown 11-20 (< 7.81, vol 4.85x), holding",
     "Breakdown 11-17 (< 8.85, vol 1.87x), holding"
    ],
-   "exp": "2027-04-16",
-   "ts": "2027-03-25",
-   "rr": 1.65,
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
+   "rr": 1.46,
    "rr_pts": 0,
-   "cap": 1.25,
+   "cap": 1.78,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": true,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+     "Apr 16 0.60-0.70 delta: spread 13%"
     ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "CSIQ270416P00009000",
-     "exp": "2027-04-16",
-     "cp": "P",
-     "strike": 9.0,
-     "bid": 3.7,
-     "ask": 4.7,
-     "oi": 641,
-     "src": "Public",
-     "dte": 143,
-     "quote": true,
-     "mid": 4.2,
-     "spread_pct": 0.2381,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 429.4,
-     "fits": true,
-     "lim": 4.284,
-     "iv": 1.2985,
-     "delta": -0.5546,
-     "be": 4.71,
-     "be_sd": 0.211,
-     "ivhv": 0.958,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 5.68,
+    "contract": null,
+    "S": 5.01,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2026-12-03",
-    "time": "BMO",
-    "days": 9,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": true,
-    "exit_by": "2026-12-02"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
+   }
   }
  },
  {
@@ -31408,14 +30928,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 2.5C +0.93, 5C +0.76, Apr 16)"
+     "no strike at 0.50-0.70 delta (nearest 2.5C +0.97, 5C +0.78, Apr 16)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 6.36,
+    "S": 6.64,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -32005,14 +31525,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 176 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 246, spread 24%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 27.28,
+    "S": 26.75,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -32335,14 +31855,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 40P -0.46, 45P -0.49, May 21)"
+     "May 21 0.60-0.70 delta: OI 21, spread 13%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 34.13,
+    "S": 28.4,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -33396,14 +32916,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 115, cost $3,392 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 3, spread 18%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 131.48,
+    "S": 150.15,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -33544,14 +33064,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $4,379 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $4,515 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 162.8,
+    "S": 166.76,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -33954,62 +33474,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+     "Mar 19 0.60-0.70 delta: spread 13%, cost $1,931 > cap $1,546"
     ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "DG270319C00130000",
-     "exp": "2027-03-19",
-     "cp": "C",
-     "strike": 130.0,
-     "bid": 13.95,
-     "ask": 16.0,
-     "oi": 517,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 14.975,
-     "spread_pct": 0.1369,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 1528.45,
-     "fits": true,
-     "lim": 15.274,
-     "iv": 0.438,
-     "delta": 0.5992,
-     "be": 145.28,
-     "be_sd": 0.393,
-     "ivhv": 0.991,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 132.47,
+    "contract": null,
+    "S": 140.07,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2026-12-03",
-    "time": "BMO",
-    "days": 9,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": true,
-    "exit_by": "2026-12-02"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
+   }
   }
  },
  {
@@ -34209,14 +33687,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "no strike at 0.50-0.70 delta (nearest 7.5P -0.42, 10P -0.78, Mar 19)"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 7.73,
+    "S": 7.19,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:45 ET"
    }
   }
  },
@@ -34643,11 +34121,11 @@
    "ts": "2027-02-26",
    "rr": 0.09,
    "rr_pts": 0,
-   "cap": 139.2,
+   "cap": 137.97,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
     "status": "ok",
@@ -34658,39 +34136,39 @@
      "exp": "2027-03-19",
      "cp": "C",
      "strike": 115.0,
-     "bid": 10.55,
-     "ask": 11.35,
-     "oi": 3401,
+     "bid": 11.45,
+     "ask": 11.9,
+     "oi": 3427,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 10.95,
-     "spread_pct": 0.0731,
+     "mid": 11.675,
+     "spread_pct": 0.0385,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1116.0,
+     "cost": 1179.75,
      "fits": true,
-     "lim": 11.15,
-     "iv": 0.3102,
-     "delta": 0.6343,
-     "be": 126.16,
-     "be_sd": 0.359,
-     "ivhv": 1.07,
+     "lim": 11.788,
+     "iv": 0.2696,
+     "delta": 0.6972,
+     "be": 126.8,
+     "be_sd": 0.294,
+     "ivhv": 0.93,
      "pricing": 2,
-     "liquidity": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 118.74,
+    "S": 121.39,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    },
-   "liq": 1,
+   "liq": 2,
    "pricing": 2,
    "cat": 1,
-   "score": 7,
+   "score": 8,
    "earn": {
     "date": "2027-02-01",
     "time": "BMO",
@@ -34937,14 +34415,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 127 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 127, spread 12%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 57.0,
+    "S": 57.42,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -35089,10 +34567,10 @@
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 12.52,
+    "S": 12.48,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -35261,14 +34739,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 107, cost $2,008 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 151, spread 13%, cost $2,161 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 138.09,
+    "S": 155.25,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -35939,14 +35417,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 22, cost $1,760 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 9%, cost $2,314 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 75.35,
+    "S": 80.84,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -36085,14 +35563,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 0, spread 37%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 14.0,
+    "S": 12.37,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -36621,7 +36099,7 @@
   "pct_above_lo52": 1.9,
   "pct_below_hi52": 3.6,
   "near_low": true,
-  "vol_ratio": 0.12,
+  "vol_ratio": 0.13,
   "hi20": 10.18,
   "lo20": 10.08,
   "setups": [
@@ -36850,7 +36328,7 @@
    "atr14": 0.138,
    "ext10_close": 10.05,
    "invalidation": 9.93,
-   "risk": 0.414,
+   "risk": 0.415,
    "target": 9.3,
    "next_levels": [
     9.3
@@ -36925,7 +36403,7 @@
     ],
     [
      "2026-11-23",
-     9.53,
+     9.54,
      9.44,
      9.52
     ]
@@ -37844,14 +37322,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 7 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 0, spread 89%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 13.38,
+    "S": 13.08,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -38138,14 +37616,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, spread 23%"
+     "Mar 19 0.60-0.70 delta: OI 6, spread 39%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 10.72,
+    "S": 9.79,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -38549,38 +38027,38 @@
     "notes": [],
     "cap": 1288.45,
     "contract": {
-     "osi": "EEM270319P00064000",
+     "osi": "EEM270319P00062000",
      "exp": "2027-03-19",
      "cp": "P",
-     "strike": 64.0,
-     "bid": 5.2,
-     "ask": 10.0,
-     "oi": 11323,
+     "strike": 62.0,
+     "bid": 7.15,
+     "ask": 7.7,
+     "oi": 5877,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 7.6,
-     "spread_pct": 0.6316,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 7.425,
+     "spread_pct": 0.0741,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 776.2,
+     "cost": 757.25,
      "fits": true,
-     "lim": 7.752,
-     "iv": 0.3176,
-     "delta": -0.6621,
-     "be": 56.24,
-     "be_sd": 0.142,
-     "ivhv": 0.682,
+     "lim": 7.563,
+     "iv": 0.347,
+     "delta": -0.63,
+     "be": 54.43,
+     "be_sd": 0.172,
+     "ivhv": 0.745,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 57.7,
+    "S": 56.31,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:15 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -38725,14 +38203,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 7 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 7, spread 29%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 11.34,
+    "S": 11.28,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -39647,14 +39125,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 80 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 80, spread 55%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 18.04,
+    "S": 18.01,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -39793,14 +39271,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 11 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 8, spread 16%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 60.82,
+    "S": 60.44,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -40079,70 +39557,28 @@
     "Breakout 11-18 (> 27.40, vol 2.29x), holding",
     "Breakout 11-17 (> 25.19, vol 3.36x), holding"
    ],
-   "exp": "2027-05-21",
-   "ts": "2027-04-30",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.01,
    "rr_pts": 0,
-   "cap": 39.34,
+   "cap": 37.0,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (no strike at 0.60-0.70)"
+     "May 21 0.50-0.60 delta: spread 35%"
     ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "ENR270521C00030000",
-     "exp": "2027-05-21",
-     "cp": "C",
-     "strike": 30.0,
-     "bid": 2.95,
-     "ask": 5.3,
-     "oi": 1016,
-     "src": "Public",
-     "dte": 178,
-     "quote": true,
-     "mid": 4.125,
-     "spread_pct": 0.5697,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 421.75,
-     "fits": true,
-     "lim": 4.207,
-     "iv": 0.5366,
-     "delta": 0.5581,
-     "be": 34.22,
-     "be_sd": 0.485,
-     "ivhv": 0.983,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 28.96,
+    "contract": null,
+    "S": 28.25,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-02",
-    "time": "BMO",
-    "days": 70,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-01"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
+   }
   }
  },
  {
@@ -41144,14 +40580,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 252 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 23, spread 11%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 23.45,
+    "S": 21.61,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -41468,14 +40904,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: spread $1.20"
+     "Mar 19 0.60-0.70 delta: spread $0.75"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 5.26,
+    "S": 5.29,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 16:00 ET"
+    "quote_time": "11-24 10:46 ET"
    }
   }
  },
@@ -41763,52 +41199,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 11%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "ETHA270319P00045000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 45.0,
-     "bid": 8.3,
-     "ask": 9.0,
-     "oi": 718,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 8.65,
-     "spread_pct": 0.0809,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 883.3,
-     "fits": true,
-     "lim": 8.823,
-     "iv": 0.5539,
-     "delta": -0.6196,
-     "be": 36.17,
-     "be_sd": 0.193,
-     "ivhv": 0.827,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 38.48,
+    "contract": null,
+    "S": 37.87,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {},
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
+   }
   }
  },
  {
@@ -42004,14 +41408,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $4,173 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 2, spread 27%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 21.87,
+    "S": 19.09,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -42310,7 +41714,7 @@
     [
      "2026-11-23",
      8.96,
-     8.78,
+     8.77,
      8.9
     ]
    ]
@@ -42954,52 +42358,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 39%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "EWJ270319P00095000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 95.0,
-     "bid": 7.4,
-     "ask": 11.4,
-     "oi": 2526,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 9.4,
-     "spread_pct": 0.4255,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 959.8,
-     "fits": true,
-     "lim": 9.588,
-     "iv": 0.2823,
-     "delta": -0.6379,
-     "be": 85.4,
-     "be_sd": 0.156,
-     "ivhv": 0.763,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 87.56,
+    "contract": null,
+    "S": 86.25,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {},
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
+   }
   }
  },
  {
@@ -43161,7 +42533,7 @@
   "sma50": 9.41,
   "trend_call": 0,
   "trend_put": 2,
-  "atr_pct": 2.4,
+  "atr_pct": 2.41,
   "hv20": 27.8,
   "ret3m": -9.0,
   "rs_spy": -3.3,
@@ -43302,70 +42674,28 @@
    "setups": [
     "Breakdown 11-18 (< 7.03, vol 1.78x), holding"
    ],
-   "exp": "2027-05-21",
-   "ts": "2027-04-30",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.37,
    "rr_pts": 0,
-   "cap": 2.7,
+   "cap": 3.48,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (no strike at 0.60-0.70)"
+     "May 21 0.50-0.60 delta: spread 11%"
     ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "EXK270521P00007500",
-     "exp": "2027-05-21",
-     "cp": "P",
-     "strike": 7.5,
-     "bid": 1.9,
-     "ask": 2.2,
-     "oi": 577,
-     "src": "Public",
-     "dte": 178,
-     "quote": true,
-     "mid": 2.05,
-     "spread_pct": 0.1463,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 210.1,
-     "fits": true,
-     "lim": 2.091,
-     "iv": 0.6972,
-     "delta": -0.5632,
-     "be": 5.4,
-     "be_sd": 0.218,
-     "ivhv": 0.817,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 6.04,
+    "contract": null,
+    "S": 5.84,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-25",
-    "time": "AMC",
-    "days": 93,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-25"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
+   }
   }
  },
  {
@@ -43505,14 +42835,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 17 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.50-0.60 delta: OI 84, spread 17%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 41.44,
+    "S": 44.49,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -43681,14 +43011,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 1, cost $2,112 > cap $1,546"
+     "May 21 0.60-0.70 delta: OI 0, spread 12%, cost $2,576 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 197.07,
+    "S": 192.78,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -44482,41 +43812,43 @@
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [],
+    "notes": [
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+    ],
     "cap": 1288.45,
     "contract": {
-     "osi": "FCX270319P00060000",
+     "osi": "FCX270319P00050000",
      "exp": "2027-03-19",
      "cp": "P",
-     "strike": 60.0,
-     "bid": 10.5,
-     "ask": 13.55,
-     "oi": 3570,
+     "strike": 50.0,
+     "bid": 7.2,
+     "ask": 7.45,
+     "oi": 788,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 12.025,
-     "spread_pct": 0.2536,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 7.325,
+     "spread_pct": 0.0341,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1227.55,
+     "cost": 739.75,
      "fits": true,
-     "lim": 12.266,
-     "iv": 0.4921,
-     "delta": -0.6928,
-     "be": 47.72,
-     "be_sd": 0.135,
-     "ivhv": 0.718,
+     "lim": 7.388,
+     "iv": 0.5429,
+     "delta": -0.5162,
+     "be": 42.6,
+     "be_sd": 0.279,
+     "ivhv": 0.793,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 49.57,
+    "S": 46.55,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -44818,14 +44150,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 190 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.50-0.60 delta: OI 251, spread 19%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 58.26,
+    "S": 58.92,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -44966,14 +44298,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 9, cost $2,740 > cap $1,546"
+     "May 21 0.60-0.70 delta: OI 1, spread 8%, cost $3,676 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 253.12,
+    "S": 248.08,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -46210,14 +45542,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 7 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 7, spread 21%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 79.68,
+    "S": 80.2,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -46656,14 +45988,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.50-0.60 delta: OI 0"
+     "May 21 0.50-0.60 delta: OI 0, spread 33%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 7.24,
+    "S": 5.99,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -47527,14 +46859,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 10 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 10, spread 42%"
     ],
     "cap": 1288.45,
     "contract": null,
     "S": 7.59,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -47664,14 +46996,14 @@
   "sma50": 5.41,
   "trend_call": 0,
   "trend_put": 2,
-  "atr_pct": 1.36,
+  "atr_pct": 1.4,
   "hv20": 14.2,
   "ret3m": -8.3,
   "rs_spy": -2.6,
   "rs_sector": -3.7,
-  "lo52": 5.24,
+  "lo52": 5.23,
   "hi52": 6.29,
-  "pct_above_lo52": 1.3,
+  "pct_above_lo52": 1.5,
   "pct_below_hi52": 15.6,
   "near_low": true,
   "vol_ratio": 0.65,
@@ -47853,14 +47185,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 0, cost $5,626 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 12, spread 13%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 69.81,
+    "S": 58.15,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -48030,14 +47362,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $3,445 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $3,341 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 131.31,
+    "S": 132.03,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -48271,14 +47603,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.50-0.60 delta: OI 55"
+     "May 21 0.50-0.60 delta: OI 36, spread 38%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 5.62,
+    "S": 5.47,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -48713,14 +48045,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 7, cost $2,225 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 6, spread 23%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 94.66,
+    "S": 105.81,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -48917,52 +48249,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 9,
    "near_low": true,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 22%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "FXI270319P00033000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 33.0,
-     "bid": 0.5,
-     "ask": 4.05,
-     "oi": 1846,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 2.275,
-     "spread_pct": 1.5604,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 233.05,
-     "fits": true,
-     "lim": 2.321,
-     "iv": 0.2039,
-     "delta": -0.6286,
-     "be": 30.67,
-     "be_sd": 0.14,
-     "ivhv": 0.919,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 31.17,
+    "contract": null,
+    "S": 31.3,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:15 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {},
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
+   }
   }
  },
  {
@@ -49101,14 +48401,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 51 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "no strike at 0.50-0.70 delta (nearest 40C +0.70, 45C +0.46, Mar 19)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 42.55,
+    "S": 42.97,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -49605,14 +48905,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 34 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 257, spread 47%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 14.02,
+    "S": 13.6,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -49757,38 +49057,38 @@
     ],
     "cap": 1288.45,
     "contract": {
-     "osi": "GDX270319P00081000",
+     "osi": "GDX270319P00078000",
      "exp": "2027-03-19",
      "cp": "P",
-     "strike": 81.0,
-     "bid": 12.1,
-     "ask": 12.7,
-     "oi": 5213,
+     "strike": 78.0,
+     "bid": 10.9,
+     "ask": 11.45,
+     "oi": 1328,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 12.4,
-     "spread_pct": 0.0484,
+     "mid": 11.175,
+     "spread_pct": 0.0492,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1256.0,
+     "cost": 1132.25,
      "fits": true,
-     "lim": 12.55,
-     "iv": 0.4805,
-     "delta": -0.587,
-     "be": 68.44,
-     "be_sd": 0.214,
-     "ivhv": 0.726,
+     "lim": 11.312,
+     "iv": 0.4902,
+     "delta": -0.5527,
+     "be": 66.68,
+     "be_sd": 0.246,
+     "ivhv": 0.74,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 72.64,
+    "S": 71.51,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -49933,14 +49233,15 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $2,523 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $2,027 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: OI 4, spread 18%, cost $2,116 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 88.0,
+    "S": 84.59,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -50139,14 +49440,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 179 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 116, spread 22%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 76.68,
+    "S": 82.1,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -50345,14 +49646,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 0"
+     "Apr 16 0.60-0.70 delta: OI 419, spread 12%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 6.85,
+    "S": 5.32,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -50812,14 +50113,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 0, cost $4,173 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 12, spread 33%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 41.0,
+    "S": 34.65,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -51111,14 +50412,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 2 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 18%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 34.8,
+    "S": 35.72,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -51402,64 +50703,24 @@
    "ts": "2027-02-26",
    "rr": 0.64,
    "rr_pts": 0,
-   "cap": 29.9,
+   "cap": 32.35,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 6,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 12%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "GLNG270319P00045000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 45.0,
-     "bid": 6.2,
-     "ask": 7.8,
-     "oi": 685,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 7.0,
-     "spread_pct": 0.2286,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 715.0,
-     "fits": true,
-     "lim": 7.14,
-     "iv": 0.4691,
-     "delta": -0.6045,
-     "be": 37.85,
-     "be_sd": 0.204,
-     "ivhv": 1.356,
-     "pricing": 0,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 40.0,
+    "contract": null,
+    "S": 39.24,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 0,
-   "cat": 1,
-   "score": 5,
-   "earn": {
-    "date": "2026-11-19",
-    "time": "AMC",
-    "days": -5,
-    "recent": true,
-    "inside_life": false,
-    "pre_event": false,
-    "exit_by": null
-   },
-   "cat_est": true
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
+   }
   }
  },
  {
@@ -51795,7 +51056,7 @@
    "ts": "2027-02-26",
    "rr": 0.48,
    "rr_pts": 0,
-   "cap": 34.54,
+   "cap": 34.78,
    "trend": 2,
    "rs": 1,
    "known": 3,
@@ -51806,38 +51067,38 @@
     "notes": [],
     "cap": 1546.14,
     "contract": {
-     "osi": "GME270319C00025000",
+     "osi": "GME270319C00026000",
      "exp": "2027-03-19",
      "cp": "C",
-     "strike": 25.0,
-     "bid": 4.45,
-     "ask": 4.6,
-     "oi": 7801,
+     "strike": 26.0,
+     "bid": 4.0,
+     "ask": 4.15,
+     "oi": 1304,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 4.525,
-     "spread_pct": 0.0331,
+     "mid": 4.075,
+     "spread_pct": 0.0368,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 457.25,
+     "cost": 412.25,
      "fits": true,
-     "lim": 4.562,
-     "iv": 0.5223,
-     "delta": 0.6877,
-     "be": 29.57,
-     "be_sd": 0.284,
-     "ivhv": 1.564,
+     "lim": 4.113,
+     "iv": 0.5401,
+     "delta": 0.6388,
+     "be": 30.12,
+     "be_sd": 0.34,
+     "ivhv": 1.617,
      "pricing": 0,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 27.3,
+    "S": 27.31,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    },
    "liq": 2,
    "pricing": 0,
@@ -52292,7 +51553,7 @@
     [
      "2026-11-23",
      8.46,
-     8.31,
+     8.3,
      8.31
     ]
    ]
@@ -53377,14 +52638,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 28P -0.47, 29P -0.47, Apr 16)"
+     "Apr 16 0.60-0.70 delta: OI 30, spread 11%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 13.0,
+    "S": 9.23,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -53948,14 +53209,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0"
+     "May 21 0.60-0.70 delta: OI 1, spread 9%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 24.95,
+    "S": 22.22,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -54272,14 +53533,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 2 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 43, spread 19%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 45.96,
+    "S": 53.6,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -54689,14 +53950,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 38%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 9.01,
+    "S": 8.72,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -54868,14 +54129,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 0, cost $10,186 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 66, spread 14%, cost $1,511 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 116.0,
+    "S": 93.94,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -55134,14 +54395,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 8, spread 101%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 12.65,
+    "S": 16.37,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -55310,14 +54571,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 442 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 189, spread 13%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 18.36,
+    "S": 16.56,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -55758,14 +55019,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 144"
+     "Apr 16 0.50-0.60 delta: OI 144, spread 20%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 27.14,
+    "S": 27.41,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -56173,14 +55434,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 8 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 8, spread 19%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 6.27,
+    "S": 6.8,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -56256,14 +55517,14 @@
   "sma50": 6.15,
   "trend_call": 0,
   "trend_put": 2,
-  "atr_pct": 6.0,
+  "atr_pct": 6.04,
   "hv20": 35.9,
   "ret3m": -44.7,
   "rs_spy": -39.0,
   "rs_sector": -40.1,
-  "lo52": 4.07,
+  "lo52": 4.05,
   "hi52": 10.1,
-  "pct_above_lo52": 2.2,
+  "pct_above_lo52": 2.7,
   "pct_below_hi52": 58.8,
   "near_low": true,
   "vol_ratio": 1.04,
@@ -56279,10 +55540,10 @@
   "levels_put": {
    "dir": "put",
    "entry": 4.16,
-   "atr14": 0.25,
+   "atr14": 0.251,
    "ext10_close": 5.22,
    "invalidation": 4.91,
-   "risk": 0.749,
+   "risk": 0.754,
    "target": 4.12,
    "next_levels": [
     4.12
@@ -56358,7 +55619,7 @@
     [
      "2026-11-23",
      4.2,
-     4.07,
+     4.05,
      4.16
     ]
    ]
@@ -56913,14 +56174,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.50-0.60 delta: OI 21"
+     "May 21 0.50-0.60 delta: OI 21, spread 22%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 9.14,
+    "S": 9.23,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -57504,14 +56765,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 27, cost $3,061 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 124, spread 14%, cost $2,441 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 216.7,
+    "S": 222.05,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -57768,14 +57029,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 60P -0.48, 65P -0.49, Mar 19)"
+     "Mar 19 0.60-0.70 delta: OI 9, spread 34%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 42.2,
+    "S": 34.48,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -58542,43 +57803,41 @@
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
-    ],
+    "notes": [],
     "cap": 1288.45,
     "contract": {
      "osi": "HSBC270319P00090000",
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 90.0,
-     "bid": 8.6,
-     "ask": 12.1,
+     "bid": 11.1,
+     "ask": 11.9,
      "oi": 1910,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 10.35,
-     "spread_pct": 0.3382,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 11.5,
+     "spread_pct": 0.0696,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1056.7,
+     "cost": 1171.0,
      "fits": true,
-     "lim": 10.557,
-     "iv": 0.3927,
-     "delta": -0.5592,
-     "be": 79.43,
-     "be_sd": 0.242,
-     "ivhv": 0.944,
+     "lim": 11.7,
+     "iv": 0.3807,
+     "delta": -0.6167,
+     "be": 78.29,
+     "be_sd": 0.186,
+     "ivhv": 0.915,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 83.9,
+    "S": 81.53,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -59263,14 +58522,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.50-0.60 delta: OI 42"
+     "May 21 0.60-0.70 delta: OI 0, spread 37%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 56.31,
+    "S": 59.52,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -59505,14 +58764,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 18"
+     "May 21 0.60-0.70 delta: OI 1"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 13.37,
+    "S": 12.74,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -59819,34 +59078,34 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 39.0,
-     "bid": 6.0,
-     "ask": 6.2,
-     "oi": 7497,
+     "bid": 6.55,
+     "ask": 6.7,
+     "oi": 7496,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 6.1,
-     "spread_pct": 0.0328,
+     "mid": 6.625,
+     "spread_pct": 0.0226,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 616.0,
+     "cost": 667.25,
      "fits": true,
-     "lim": 6.15,
-     "iv": 0.4333,
-     "delta": -0.6423,
-     "be": 32.84,
-     "be_sd": 0.162,
-     "ivhv": 0.906,
+     "lim": 6.662,
+     "iv": 0.4701,
+     "delta": -0.643,
+     "be": 32.33,
+     "be_sd": 0.161,
+     "ivhv": 0.984,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 34.19,
+    "S": 33.77,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:15 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -59993,14 +59252,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 144"
+     "Mar 19 0.60-0.70 delta: OI 144, spread 16%, cost $1,389 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 76.38,
+    "S": 73.62,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -60289,14 +59548,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 393 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 318, spread 20%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 182.0,
+    "S": 175.5,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -60700,14 +59959,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 0, cost $3,372 > cap $1,288"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 47%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 31.83,
+    "S": 28.43,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -60848,14 +60107,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 18 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 272 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 5.82,
+    "S": 5.32,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -61173,14 +60432,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $2,286 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 25%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 85.8,
+    "S": 83.9,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -61736,14 +60995,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 90 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 90, spread 11%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 6.75,
+    "S": 6.29,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -61913,14 +61172,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 59%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 30.19,
+    "S": 29.91,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -62421,15 +61680,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $2,979 > cap $1,546",
-     "Feb 19 0.60-0.70 delta: OI 17, cost $2,867 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 115, spread 119%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 144.0,
+    "S": 170.37,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -63011,14 +62269,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $3,698 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 287, spread 28%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 32.3,
+    "S": 29.83,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -63279,14 +62537,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 145"
+     "Mar 19 0.60-0.70 delta: OI 107, spread 31%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 84.91,
+    "S": 81.73,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -63456,38 +62714,38 @@
     "notes": [],
     "cap": 1288.45,
     "contract": {
-     "osi": "IREN270319P00023000",
+     "osi": "IREN270319P00020000",
      "exp": "2027-03-19",
      "cp": "P",
-     "strike": 23.0,
-     "bid": 9.65,
-     "ask": 9.9,
-     "oi": 1364,
+     "strike": 20.0,
+     "bid": 8.7,
+     "ask": 8.85,
+     "oi": 3776,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 9.775,
-     "spread_pct": 0.0256,
+     "mid": 8.775,
+     "spread_pct": 0.0171,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 984.75,
+     "cost": 882.25,
      "fits": true,
-     "lim": 9.838,
-     "iv": 1.1524,
-     "delta": -0.6368,
-     "be": 13.15,
-     "be_sd": 0.158,
-     "ivhv": 0.658,
+     "lim": 8.812,
+     "iv": 1.2183,
+     "delta": -0.6253,
+     "be": 11.18,
+     "be_sd": 0.161,
+     "ivhv": 0.696,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 14.65,
+    "S": 12.56,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -65033,14 +64291,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $1,971 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 28, spread 18%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 43.95,
+    "S": 40.18,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -65304,14 +64562,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 295 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: spread 16%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 27.5,
+    "S": 28.14,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -66435,14 +65693,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 39 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 9, spread 19%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 5.9,
+    "S": 6.32,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:47 ET"
    }
   }
  },
@@ -66610,60 +65868,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: OI 69, spread 9%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "KD270319C00014000",
-     "exp": "2027-03-19",
-     "cp": "C",
-     "strike": 14.0,
-     "bid": 2.9,
-     "ask": 3.4,
-     "oi": 849,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 3.15,
-     "spread_pct": 0.1587,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 322.3,
-     "fits": true,
-     "lim": 3.213,
-     "iv": 0.7302,
-     "delta": 0.6716,
-     "be": 17.22,
-     "be_sd": 0.316,
-     "ivhv": 0.704,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 15.25,
+    "contract": null,
+    "S": 15.96,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-08",
-    "time": "BMO",
-    "days": 76,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-05"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -66890,14 +66108,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 29, spread 47%"
+     "Mar 19 0.60-0.70 delta: OI 29, spread 49%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 9.27,
+    "S": 9.17,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -67067,14 +66285,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 208, spread 22%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 21.12,
+    "S": 19.66,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -67260,68 +66478,28 @@
    "setups": [
     "Breakdown 11-19 (< 18.97, vol 1.63x), holding"
    ],
-   "exp": "2027-05-21",
-   "ts": "2027-04-30",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.33,
    "rr_pts": 0,
-   "cap": 10.35,
+   "cap": 12.14,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "May 21 0.60-0.70 delta: spread 24%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "KGC270521P00022000",
-     "exp": "2027-05-21",
-     "cp": "P",
-     "strike": 22.0,
-     "bid": 4.0,
-     "ask": 5.1,
-     "oi": 2006,
-     "src": "Public",
-     "dte": 178,
-     "quote": true,
-     "mid": 4.55,
-     "spread_pct": 0.2418,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 465.1,
-     "fits": true,
-     "lim": 4.641,
-     "iv": 0.4564,
-     "delta": -0.6444,
-     "be": 17.35,
-     "be_sd": 0.148,
-     "ivhv": 0.691,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 18.21,
+    "contract": null,
+    "S": 17.84,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-17",
-    "time": "AMC",
-    "days": 85,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-17"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -67579,14 +66757,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 141, cost $4,581 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 213, spread 11%, cost $4,476 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 145.3,
+    "S": 131.63,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -68079,14 +67257,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 0"
+     "Mar 19 0.60-0.70 delta: OI 1, spread 27%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 51.93,
+    "S": 52.91,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -68227,14 +67405,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0, cost $3,928 > cap $1,288"
+     "May 21 0.60-0.70 delta: OI 1, spread 22%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 68.2,
+    "S": 59.93,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -68542,54 +67720,56 @@
    "ts": "2027-02-26",
    "rr": 0.33,
    "rr_pts": 0,
-   "cap": 58.52,
+   "cap": 60.86,
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 4,
+   "max": 5,
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [],
+    "notes": [
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+    ],
     "cap": 1288.45,
     "contract": {
-     "osi": "KRE270319P00077000",
+     "osi": "KRE270319P00073000",
      "exp": "2027-03-19",
      "cp": "P",
-     "strike": 77.0,
-     "bid": 6.25,
-     "ask": 11.15,
-     "oi": 12539,
+     "strike": 73.0,
+     "bid": 5.3,
+     "ask": 5.7,
+     "oi": 2104,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 8.7,
-     "spread_pct": 0.5632,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 5.5,
+     "spread_pct": 0.0727,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 888.4,
+     "cost": 561.0,
      "fits": true,
-     "lim": 8.874,
-     "iv": 0.3123,
-     "delta": -0.649,
-     "be": 68.12,
-     "be_sd": 0.152,
-     "ivhv": 1.466,
-     "pricing": 0,
+     "lim": 5.6,
+     "iv": 0.246,
+     "delta": -0.5897,
+     "be": 67.39,
+     "be_sd": 0.189,
+     "ivhv": 1.155,
+     "pricing": 1,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 69.98,
+    "S": 69.2,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:15 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    },
    "liq": 1,
-   "pricing": 0,
+   "pricing": 1,
    "cat": 0,
-   "score": 3,
+   "score": 4,
    "earn": {},
    "cat_est": false
   }
@@ -69176,14 +68356,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 88 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 0"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 21.5,
+    "S": 24.12,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -69533,14 +68713,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 5, cost $2,214 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 3, cost $2,951 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 155.51,
+    "S": 163.54,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -69580,7 +68760,7 @@
    "atr14": 0.31,
    "ext10_close": 13.93,
    "invalidation": 13.85,
-   "risk": 0.931,
+   "risk": 0.93,
    "target": 12.28,
    "next_levels": [
     12.28,
@@ -69658,7 +68838,7 @@
     [
      "2026-11-23",
      13.22,
-     12.9,
+     12.91,
      12.92
     ]
    ]
@@ -70482,14 +69662,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 92 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 270, spread 19%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 22.66,
+    "S": 24.14,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -70778,14 +69958,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 155 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 256, spread 17%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 10.5,
+    "S": 10.54,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -71160,14 +70340,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "no strike at 0.50-0.70 delta (nearest 12C +0.72, 15C +0.44, Mar 19)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 12.2,
+    "S": 13.56,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -71600,14 +70780,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 90 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 92, spread 19%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 36.87,
+    "S": 36.7,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -72128,62 +71308,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+     "Mar 19 0.60-0.70 delta: spread 11%, cost $2,213 > cap $1,546"
     ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "LOW270319C00230000",
-     "exp": "2027-03-19",
-     "cp": "C",
-     "strike": 230.0,
-     "bid": 14.2,
-     "ask": 15.5,
-     "oi": 1229,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 14.85,
-     "spread_pct": 0.0875,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 1515.7,
-     "fits": true,
-     "lim": 15.147,
-     "iv": 0.3024,
-     "delta": 0.5227,
-     "be": 245.16,
-     "be_sd": 0.499,
-     "ivhv": 0.762,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 226.0,
+    "contract": null,
+    "S": 229.09,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-24",
-    "time": "BMO",
-    "days": 92,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-23"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -72410,14 +71548,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 30 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 17, spread 24%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 81.31,
+    "S": 76.4,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -73261,60 +72399,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 25%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "LUV270319C00042500",
-     "exp": "2027-03-19",
-     "cp": "C",
-     "strike": 42.5,
-     "bid": 5.8,
-     "ask": 6.6,
-     "oi": 951,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 6.2,
-     "spread_pct": 0.129,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 633.4,
-     "fits": true,
-     "lim": 6.324,
-     "iv": 0.4637,
-     "delta": 0.6547,
-     "be": 48.83,
-     "be_sd": 0.327,
-     "ivhv": 0.989,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 45.0,
+    "contract": null,
+    "S": 45.14,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-01-27",
-    "time": "AMC",
-    "days": 64,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-01-27"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -73568,66 +72666,24 @@
    "ts": "2027-02-26",
    "rr": 0.07,
    "rr_pts": 0,
-   "cap": 40.35,
+   "cap": 43.29,
    "trend": 1,
    "rs": 1,
    "known": 2,
-   "max": 6,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+     "Mar 19 0.60-0.70 delta: spread 12%, cost $1,428 > cap $1,288"
     ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "LYB270319P00060000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 60.0,
-     "bid": 7.8,
-     "ask": 8.8,
-     "oi": 15048,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 8.3,
-     "spread_pct": 0.1205,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 847.6,
-     "fits": true,
-     "lim": 8.466,
-     "iv": 0.5181,
-     "delta": -0.5123,
-     "be": 51.52,
-     "be_sd": 0.289,
-     "ivhv": 1.257,
-     "pricing": 1,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 56.26,
+    "contract": null,
+    "S": 55.56,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 1,
-   "cat": 1,
-   "score": 5,
-   "earn": {
-    "date": "2027-01-29",
-    "time": "BMO",
-    "days": 66,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-01-28"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -74197,14 +73253,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 1 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.50-0.60 delta: OI 215, spread 65%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 24.3,
+    "S": 22.53,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -74819,14 +73875,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 10 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 197, spread 30%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 80.9,
+    "S": 84.74,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -75669,14 +74725,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 10 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 10, spread 22%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 39.0,
+    "S": 38.53,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -76080,14 +75136,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0"
+     "Mar 19 0.60-0.70 delta: OI 1, spread 20%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 43.57,
+    "S": 41.92,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -76704,15 +75760,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: cost $2,689 > cap $1,546",
-     "Feb 19 0.60-0.70 delta: OI 8, cost $2,199 > cap $1,546"
+     "May 21 0.60-0.70 delta: OI 401, spread 10%, cost $2,411 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 140.0,
+    "S": 143.9,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -77354,62 +76409,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 6,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+     "Mar 19 0.60-0.70 delta: OI 313, spread 8%, cost $1,942 > cap $1,546"
     ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "MMM270319C00185000",
-     "exp": "2027-03-19",
-     "cp": "C",
-     "strike": 185.0,
-     "bid": 11.0,
-     "ask": 13.3,
-     "oi": 587,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 12.15,
-     "spread_pct": 0.1893,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 1240.3,
-     "fits": true,
-     "lim": 12.393,
-     "iv": 0.3297,
-     "delta": 0.5059,
-     "be": 197.4,
-     "be_sd": 0.522,
-     "ivhv": 0.783,
-     "pricing": 1,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 180.03,
+    "contract": null,
+    "S": 185.46,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 1,
-   "cat": 1,
-   "score": 6,
-   "earn": {
-    "date": "2027-01-19",
-    "time": "BMO",
-    "days": 56,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-01-15"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -77843,14 +76856,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 20P -0.33, 22.5P -0.34, Apr 16)"
+     "Apr 16 0.60-0.70 delta: OI 134, spread 46%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 13.65,
+    "S": 7.75,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -78024,14 +77037,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 4 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: spread 12%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 43.78,
+    "S": 42.21,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -79153,15 +78166,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $2,630 > cap $1,288",
-     "Feb 19 0.60-0.70 delta: OI 17, cost $2,166 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: spread 10%, cost $2,185 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 172.67,
+    "S": 168.34,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -79569,14 +78581,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $3,287 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $3,247 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 82.73,
+    "S": 79.27,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -79804,14 +78816,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 28 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 7, spread 19%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 39.58,
+    "S": 40.48,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -80413,68 +79425,28 @@
     "Breakdown 11-19 (< 20.08, vol 1.90x), holding",
     "Breakdown 11-18 (< 20.47, vol 1.53x), holding"
    ],
-   "exp": "2027-05-21",
-   "ts": "2027-04-30",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.44,
    "rr_pts": 0,
-   "cap": 14.36,
+   "cap": 15.49,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "May 21 0.60-0.70 delta: spread 29%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "MUFG270521P00022500",
-     "exp": "2027-05-21",
-     "cp": "P",
-     "strike": 22.5,
-     "bid": 2.4,
-     "ask": 4.7,
-     "oi": 690,
-     "src": "Public",
-     "dte": 178,
-     "quote": true,
-     "mid": 3.55,
-     "spread_pct": 0.6479,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 363.1,
-     "fits": true,
-     "lim": 3.621,
-     "iv": 0.3867,
-     "delta": -0.6028,
-     "be": 18.87,
-     "be_sd": 0.178,
-     "ivhv": 0.984,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 19.82,
+    "contract": null,
+    "S": 19.34,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-04",
-    "time": "AMC",
-    "days": 72,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-04"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -80643,14 +79615,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 2 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 21, spread 78%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 9.54,
+    "S": 9.01,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -80914,7 +79886,7 @@
     [
      "2026-11-23",
      8.9,
-     8.79,
+     8.75,
      8.85
     ]
    ]
@@ -81088,14 +80060,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 39"
+     "Apr 16 0.60-0.70 delta: OI 39, spread $0.75"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 4.44,
+    "S": 5.12,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -81138,7 +80110,7 @@
   "sma50": 10.38,
   "trend_call": 0,
   "trend_put": 1,
-  "atr_pct": 2.04,
+  "atr_pct": 2.05,
   "hv20": 22.4,
   "ret3m": -13.4,
   "rs_spy": -7.7,
@@ -81238,7 +80210,7 @@
     ],
     [
      "2026-11-23",
-     10.16,
+     10.17,
      9.99,
      10.12
     ]
@@ -82550,7 +81522,7 @@
    "ts": "2027-02-26",
    "rr": 0.26,
    "rr_pts": 0,
-   "cap": 46.13,
+   "cap": 46.29,
    "trend": 2,
    "rs": 1,
    "known": 3,
@@ -82561,38 +81533,38 @@
     "notes": [],
     "cap": 1288.45,
     "contract": {
-     "osi": "NFLX270319P00067500",
+     "osi": "NFLX270319P00065000",
      "exp": "2027-03-19",
      "cp": "P",
-     "strike": 67.5,
-     "bid": 10.75,
-     "ask": 11.05,
-     "oi": 7988,
+     "strike": 65.0,
+     "bid": 8.4,
+     "ask": 8.65,
+     "oi": 29259,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 10.9,
-     "spread_pct": 0.0275,
+     "mid": 8.525,
+     "spread_pct": 0.0293,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1098.5,
+     "cost": 859.75,
      "fits": true,
-     "lim": 10.975,
-     "iv": 0.4059,
-     "delta": -0.6847,
-     "be": 56.52,
-     "be_sd": 0.124,
-     "ivhv": 1.237,
+     "lim": 8.588,
+     "iv": 0.4007,
+     "delta": -0.6051,
+     "be": 56.4,
+     "be_sd": 0.191,
+     "ivhv": 1.222,
      "pricing": 1,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 58.16,
+    "S": 58.94,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:15 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    },
    "liq": 2,
    "pricing": 1,
@@ -82741,60 +81713,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 22%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "NG270319P00006000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 6.0,
-     "bid": 1.1,
-     "ask": 1.55,
-     "oi": 1844,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 1.325,
-     "spread_pct": 0.3396,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 136.15,
-     "fits": true,
-     "lim": 1.352,
-     "iv": 0.5697,
-     "delta": -0.6689,
-     "be": 4.64,
-     "be_sd": 0.161,
-     "ivhv": 0.663,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 4.89,
+    "contract": null,
+    "S": 4.96,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-01-21",
-    "time": "BMO",
-    "days": 58,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-01-20"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -83286,14 +82218,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 0, spread 17%"
+     "Apr 16 0.50-0.60 delta: OI 0, spread 39%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 19.25,
+    "S": 16.66,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -83469,34 +82401,34 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 40.0,
-     "bid": 7.1,
-     "ask": 7.45,
-     "oi": 8747,
+     "bid": 6.05,
+     "ask": 6.3,
+     "oi": 8743,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 7.275,
-     "spread_pct": 0.0481,
+     "mid": 6.175,
+     "spread_pct": 0.0405,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 737.25,
+     "cost": 624.75,
      "fits": true,
-     "lim": 7.363,
-     "iv": 0.4586,
-     "delta": -0.6819,
-     "be": 32.63,
-     "be_sd": 0.135,
-     "ivhv": 0.959,
+     "lim": 6.237,
+     "iv": 0.4661,
+     "delta": -0.6061,
+     "be": 33.75,
+     "be_sd": 0.196,
+     "ivhv": 0.975,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 33.8,
+    "S": 35.58,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -84892,14 +83824,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 43, cost $1,302 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 23, spread 25%, cost $1,891 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 99.7,
+    "S": 100.7,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -85098,14 +84030,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 7 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 17, spread 11%, cost $1,424 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 54.31,
+    "S": 56.37,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -85454,7 +84386,7 @@
   "pct_above_lo52": 4.3,
   "pct_below_hi52": 21.0,
   "near_low": true,
-  "vol_ratio": 1.54,
+  "vol_ratio": 1.55,
   "hi20": 11.65,
   "lo20": 10.42,
   "setups": [],
@@ -85842,14 +84774,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 101, spread 8%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 15.13,
+    "S": 15.17,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -86143,34 +85075,34 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 8.0,
-     "bid": 1.5,
-     "ask": 1.65,
+     "bid": 1.65,
+     "ask": 1.75,
      "oi": 557,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 1.575,
-     "spread_pct": 0.0952,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 1.7,
+     "spread_pct": 0.0588,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 161.65,
+     "cost": 173.5,
      "fits": true,
-     "lim": 1.607,
-     "iv": 0.5445,
-     "delta": -0.6382,
-     "be": 6.38,
-     "be_sd": 0.182,
-     "ivhv": 0.842,
+     "lim": 1.725,
+     "iv": 0.5736,
+     "delta": -0.6501,
+     "be": 6.27,
+     "be_sd": 0.169,
+     "ivhv": 0.887,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 6.76,
+    "S": 6.62,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -87059,14 +85991,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 300P -0.49, 310P -0.50, Apr 16)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 13%, cost $3,421 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 213.62,
+    "S": 165.66,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -87955,14 +86887,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 49 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 0, spread 52%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 13.35,
+    "S": 13.88,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -88103,14 +87035,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 13 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 13, spread 16%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 55.35,
+    "S": 55.83,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -88309,14 +87241,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, spread 35%"
+     "Mar 19 0.50-0.60 delta: OI 1, spread 116%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 25.8,
+    "S": 23.67,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -89255,14 +88187,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 205 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.50-0.60 delta: OI 3, spread 93%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 27.97,
+    "S": 30.49,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -89519,14 +88451,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 124, cost $2,439 > cap $1,288"
+     "May 21 0.60-0.70 delta: OI 48, cost $1,584 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 28.0,
+    "S": 24.74,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -90054,14 +88986,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 1 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 72, spread 47%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 7.76,
+    "S": 7.64,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -90311,64 +89243,24 @@
    "ts": "2027-02-26",
    "rr": 0.19,
    "rr_pts": 0,
-   "cap": 8.1,
+   "cap": 8.85,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 10%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "PATH270319P00015000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 15.0,
-     "bid": 3.5,
-     "ask": 3.9,
-     "oi": 620,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 3.7,
-     "spread_pct": 0.1081,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 378.4,
-     "fits": true,
-     "lim": 3.774,
-     "iv": 0.6221,
-     "delta": -0.6783,
-     "be": 11.22,
-     "be_sd": 0.151,
-     "ivhv": 1.249,
-     "pricing": 1,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 11.84,
+    "contract": null,
+    "S": 12.01,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 1,
-   "cat": 1,
-   "score": 6,
-   "earn": {
-    "date": "2026-12-03",
-    "time": "AMC",
-    "days": 9,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": true,
-    "exit_by": "2026-12-03"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -91071,14 +89963,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: spread 24%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 70.28,
+    "S": 75.26,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -91283,14 +90175,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.50-0.60 delta: OI 0"
+     "May 21 0.60-0.70 delta: OI 0, spread 19%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 14.69,
+    "S": 15.4,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -91432,41 +90324,43 @@
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [],
+    "notes": [
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+    ],
     "cap": 1546.14,
     "contract": {
-     "osi": "PDD270319C00080000",
+     "osi": "PDD270319C00085000",
      "exp": "2027-03-19",
      "cp": "C",
-     "strike": 80.0,
-     "bid": 10.3,
-     "ask": 12.95,
-     "oi": 1875,
+     "strike": 85.0,
+     "bid": 7.15,
+     "ask": 7.65,
+     "oi": 2747,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 11.625,
-     "spread_pct": 0.228,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 7.4,
+     "spread_pct": 0.0676,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1186.75,
+     "cost": 753.5,
      "fits": true,
-     "lim": 11.857,
-     "iv": 0.3961,
-     "delta": 0.6957,
-     "be": 91.87,
-     "be_sd": 0.286,
-     "ivhv": 0.797,
+     "lim": 7.525,
+     "iv": 0.3492,
+     "delta": 0.5752,
+     "be": 92.54,
+     "be_sd": 0.423,
+     "ivhv": 0.703,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 86.38,
+    "S": 85.45,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -92526,14 +91420,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 171 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 2, spread 42%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 14.3,
+    "S": 14.1,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -93030,14 +91924,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 15P -0.78, 17.5P -0.97, May 21)"
+     "no strike at 0.50-0.70 delta (nearest 7.5P -0.74, 10P -0.83, May 21)"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 4.89,
+    "S": 4.95,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -93681,14 +92575,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 9 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 9, spread 16%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 59.98,
+    "S": 59.13,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -94132,14 +93026,15 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 146, cost $3,076 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $2,126 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: OI 11, spread 10%, cost $2,061 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 184.8,
+    "S": 184.68,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -94396,14 +93291,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 15"
+     "May 21 0.60-0.70 delta: OI 0, spread 32%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 64.59,
+    "S": 70.39,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -94606,14 +93501,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 3, cost $3,117 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 3, spread 14%, cost $2,988 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 134.02,
+    "S": 137.35,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -95348,14 +94243,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 137 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 19, spread 11%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 14.94,
+    "S": 14.26,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -95704,14 +94599,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 141 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 175, spread 73%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 24.94,
+    "S": 25.8,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -96832,14 +95727,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 75 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 75, spread 49%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 52.3,
+    "S": 52.2,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -96913,7 +95808,7 @@
   "sma50": 37.31,
   "trend_call": 0,
   "trend_put": 2,
-  "atr_pct": 2.69,
+  "atr_pct": 2.7,
   "hv20": 31.7,
   "ret3m": -11.6,
   "rs_spy": -5.9,
@@ -97071,14 +95966,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 9, cost $7,481 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 427, cost $4,238 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 246.42,
+    "S": 235.73,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -97748,14 +96643,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 20, cost $4,034 > cap $1,288"
+     "May 21 0.60-0.70 delta: OI 8, cost $3,838 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 114.68,
+    "S": 106.29,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -97925,15 +96820,15 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: cost $3,875 > cap $1,288",
-     "Feb 19 0.60-0.70 delta: cost $3,321 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: cost $4,442 > cap $1,288",
+     "Feb 19 0.60-0.70 delta: cost $3,154 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 164.94,
+    "S": 162.15,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -98072,14 +96967,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 32.5P -0.44, 35P -0.44, Mar 19)"
+     "Mar 19 0.60-0.70 delta: OI 12, spread 26%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 12.7,
+    "S": 8.51,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -98746,14 +97641,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 40 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 12, spread 28%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 91.22,
+    "S": 93.93,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -99073,14 +97968,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 17 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 144, spread 20%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 31.65,
+    "S": 36.1,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -99874,14 +98769,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 11 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 496, spread 20%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 26.86,
+    "S": 27.08,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -100053,14 +98948,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0, cost $5,711 > cap $1,288"
+     "May 21 0.60-0.70 delta: OI 0, cost $4,801 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 171.2,
+    "S": 170.13,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -100526,14 +99421,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 21 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 0, spread 12%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 8.24,
+    "S": 8.32,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -100756,60 +99651,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 16%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "RKT270319C00013000",
-     "exp": "2027-03-19",
-     "cp": "C",
-     "strike": 13.0,
-     "bid": 2.15,
-     "ask": 2.38,
-     "oi": 7909,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 2.265,
-     "spread_pct": 0.1015,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 232.03,
-     "fits": true,
-     "lim": 2.31,
-     "iv": 0.5192,
-     "delta": 0.6781,
-     "be": 15.32,
-     "be_sd": 0.302,
-     "ivhv": 0.86,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 14.08,
+    "contract": null,
+    "S": 13.98,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-22",
-    "time": "AMC",
-    "days": 90,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-22"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
+   }
   }
  },
  {
@@ -101096,14 +99951,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 28, cost $2,847 > cap $1,546"
+     "Apr 16 0.60-0.70 delta: OI 28, spread 10%, cost $2,961 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 239.73,
+    "S": 242.56,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -101540,134 +100395,20 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 0, spread 43%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 40.67,
+    "S": 41.1,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
  {
   "tk": "ROKU",
-  "date": "2026-11-06",
-  "close": 160.52,
-  "avg20m": 2.8,
-  "filtered": null,
-  "sma20": 156.85,
-  "sma50": 155.33,
-  "trend_call": 2,
-  "trend_put": 0,
-  "atr_pct": 1.63,
-  "hv20": 17.2,
-  "ret3m": 5.7,
-  "rs_spy": 11.4,
-  "rs_sector": 16.4,
-  "lo52": 78.53,
-  "hi52": 163.57,
-  "pct_above_lo52": 104.4,
-  "pct_below_hi52": 1.9,
-  "near_low": false,
-  "vol_ratio": 4.11,
-  "hi20": 162.77,
-  "lo20": 152.57,
-  "setups": [
-   "Breakout 11-03 (> 160.06, vol 1.66x), holding"
-  ],
-  "watch": [
-   "within 1.4% of 20d high 162.77"
-  ],
-  "note": "",
-  "levels_call": {
-   "dir": "call",
-   "entry": 160.52,
-   "atr14": 2.616,
-   "ext10_close": 155.12,
-   "invalidation": 155.12,
-   "risk": 5.4,
-   "target": 163.57,
-   "next_levels": [
-    163.57
-   ],
-   "rr_before_cap": 0.56,
-   "tail": [
-    [
-     "2026-10-22",
-     160.1,
-     156.78,
-     160.06
-    ],
-    [
-     "2026-10-23",
-     160.22,
-     158.52,
-     158.58
-    ],
-    [
-     "2026-10-26",
-     159.38,
-     156.79,
-     157.23
-    ],
-    [
-     "2026-10-27",
-     157.45,
-     156.18,
-     156.66
-    ],
-    [
-     "2026-10-28",
-     156.64,
-     155.0,
-     155.33
-    ],
-    [
-     "2026-10-29",
-     156.45,
-     154.76,
-     156.33
-    ],
-    [
-     "2026-10-30",
-     156.69,
-     154.43,
-     155.12
-    ],
-    [
-     "2026-11-02",
-     158.72,
-     155.22,
-     155.52
-    ],
-    [
-     "2026-11-03",
-     161.26,
-     154.23,
-     160.36
-    ],
-    [
-     "2026-11-04",
-     163.08,
-     160.59,
-     162.77
-    ],
-    [
-     "2026-11-05",
-     163.57,
-     160.12,
-     160.37
-    ],
-    [
-     "2026-11-06",
-     162.27,
-     158.82,
-     160.52
-    ]
-   ]
-  },
+  "err": "only 2 bars",
   "group": "g02_software_fintech",
   "sector_etf": "XLK"
  },
@@ -101955,14 +100696,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 106, cost $2,250 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 32, cost $3,294 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 213.5,
+    "S": 221.97,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -102161,14 +100902,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0, cost $2,306 > cap $1,546"
+     "May 21 0.60-0.70 delta: OI 2, spread 23%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 94.65,
+    "S": 105.11,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -102659,7 +101400,7 @@
   "sma50": 16.9,
   "trend_call": 0,
   "trend_put": 2,
-  "atr_pct": 2.42,
+  "atr_pct": 2.46,
   "hv20": 32.7,
   "ret3m": -13.6,
   "rs_spy": -7.9,
@@ -103344,14 +102085,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 300 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "May 21 0.60-0.70 delta: OI 3, spread 15%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 16.02,
+    "S": 18.41,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -103894,71 +102635,28 @@
    "setups": [
     "Failed rally (off 25.70 +5.0%, -1.6% vs SMA20)"
    ],
-   "exp": "2027-02-19",
-   "ts": "2027-01-29",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.28,
    "rr_pts": 0,
-   "cap": 19.13,
+   "cap": 22.31,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 6,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
+    "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: cost $1,480 > cap $1,288",
-     "60+ day expiration (90+ over the cap)"
+     "May 21 0.60-0.70 delta: spread 9%, cost $1,478 > cap $1,288"
     ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "SBLK270219P00034000",
-     "exp": "2027-02-19",
-     "cp": "P",
-     "strike": 34.0,
-     "bid": 7.3,
-     "ask": 8.8,
-     "oi": 1083,
-     "src": "Public",
-     "dte": 87,
-     "quote": true,
-     "mid": 8.05,
-     "spread_pct": 0.1863,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 822.1,
-     "fits": true,
-     "lim": 8.211,
-     "iv": 0.6852,
-     "delta": -0.6776,
-     "be": 25.78,
-     "be_sd": 0.161,
-     "ivhv": 2.003,
-     "pricing": 0,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 27.25,
+    "contract": null,
+    "S": 27.01,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 0,
-   "cat": 0,
-   "score": 4,
-   "earn": {
-    "date": "2027-02-24",
-    "time": "AMC",
-    "days": 92,
-    "recent": false,
-    "inside_life": false,
-    "pre_event": false,
-    "exit_by": null
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
+   }
   }
  },
  {
@@ -104245,14 +102943,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 149"
+     "Mar 19 0.50-0.60 delta: OI 149, spread 37%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 7.69,
+    "S": 7.54,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -104422,14 +103120,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 11, cost $4,275 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 163, cost $4,096 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 144.0,
+    "S": 134.78,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -104604,14 +103302,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 5 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 6, spread 23%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 69.71,
+    "S": 70.62,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -105133,14 +103831,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0, cost $2,189 > cap $1,288"
+     "Apr 16 0.60-0.70 delta: OI 2, spread 26%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 71.35,
+    "S": 68.26,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -105403,14 +104101,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, spread 39%"
+     "Mar 19 0.60-0.70 delta: OI 3, spread 84%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 22.69,
+    "S": 21.67,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -105549,14 +104247,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 348 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 348, spread 10%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 12.99,
+    "S": 12.5,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -105866,64 +104564,24 @@
    "ts": "2027-02-26",
    "rr": 0.21,
    "rr_pts": 0,
-   "cap": 93.63,
+   "cap": 91.5,
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 5,
+   "max": 7,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 18%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "SHAK270319C00070000",
-     "exp": "2027-03-19",
-     "cp": "C",
-     "strike": 70.0,
-     "bid": 9.4,
-     "ask": 11.3,
-     "oi": 1043,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 10.35,
-     "spread_pct": 0.1836,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 1056.7,
-     "fits": true,
-     "lim": 10.557,
-     "iv": 0.5523,
-     "delta": 0.6158,
-     "be": 80.57,
-     "be_sd": 0.375,
-     "ivhv": 1.116,
-     "pricing": 1,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 72.17,
+    "contract": null,
+    "S": 74.75,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 1,
-   "cat": 1,
-   "score": 5,
-   "earn": {
-    "date": "2027-02-25",
-    "time": "BMO",
-    "days": 93,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-24"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
+   }
   }
  },
  {
@@ -106562,60 +105220,20 @@
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: OI 338, spread 26%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "SIRI270319C00030000",
-     "exp": "2027-03-19",
-     "cp": "C",
-     "strike": 30.0,
-     "bid": 1.66,
-     "ask": 5.2,
-     "oi": 504,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 3.43,
-     "spread_pct": 1.0321,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 350.86,
-     "fits": true,
-     "lim": 3.499,
-     "iv": 0.3727,
-     "delta": 0.6394,
-     "be": 33.51,
-     "be_sd": 0.349,
-     "ivhv": 0.896,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 31.23,
+    "contract": null,
+    "S": 32.32,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-04",
-    "time": "BMO",
-    "days": 72,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-03"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
+   }
   }
  },
  {
@@ -106755,14 +105373,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 12 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 12, spread 19%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 115.0,
+    "S": 113.62,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:48 ET"
    }
   }
  },
@@ -107109,14 +105727,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: spread 49%"
+     "Mar 19 0.60-0.70 delta: OI 64, spread 35%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 27.76,
+    "S": 26.37,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 16:00 ET"
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -107885,14 +106503,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 6, spread 37%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 17.17,
+    "S": 16.58,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -108083,68 +106701,28 @@
    "setups": [
     "Breakout 11-17 (> 12.17, vol 15.73x), holding"
    ],
-   "exp": "2027-04-16",
-   "ts": "2027-03-25",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.41,
    "rr_pts": 0,
-   "cap": 41.35,
+   "cap": 38.02,
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 5,
+   "max": 6,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Apr 16 0.60-0.70 delta: spread 18%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "SLS270416C00013000",
-     "exp": "2027-04-16",
-     "cp": "C",
-     "strike": 13.0,
-     "bid": 3.6,
-     "ask": 4.3,
-     "oi": 1230,
-     "src": "Public",
-     "dte": 143,
-     "quote": true,
-     "mid": 3.95,
-     "spread_pct": 0.1772,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 403.9,
-     "fits": true,
-     "lim": 4.029,
-     "iv": 1.1457,
-     "delta": 0.6619,
-     "be": 17.04,
-     "be_sd": 0.387,
-     "ivhv": 0.312,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 13.34,
+    "contract": null,
+    "S": 12.62,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 5,
-   "earn": {
-    "date": "2027-03-18",
-    "time": "AMC",
-    "days": 114,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-03-18"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
+   }
   }
  },
  {
@@ -108290,34 +106868,34 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 44.0,
-     "bid": 6.85,
-     "ask": 7.0,
+     "bid": 8.2,
+     "ask": 8.35,
      "oi": 1287,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 6.925,
-     "spread_pct": 0.0217,
+     "mid": 8.275,
+     "spread_pct": 0.0181,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 697.25,
+     "cost": 832.25,
      "fits": true,
-     "lim": 6.963,
-     "iv": 0.4328,
-     "delta": -0.6455,
-     "be": 37.03,
-     "be_sd": 0.157,
-     "ivhv": 0.815,
+     "lim": 8.312,
+     "iv": 0.4989,
+     "delta": -0.6604,
+     "be": 35.68,
+     "be_sd": 0.147,
+     "ivhv": 0.939,
      "pricing": 2,
      "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 38.5,
+    "S": 37.21,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:15 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    },
    "liq": 2,
    "pricing": 2,
@@ -108584,14 +107162,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 7, spread 71%"
+     "Apr 16 0.60-0.70 delta: OI 7, spread 51%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 22.97,
+    "S": 22.32,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -108790,14 +107368,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 259 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 2, spread 35%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 10.16,
+    "S": 10.47,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -109197,14 +107775,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 1, spread 64%"
+     "Apr 16 0.60-0.70 delta: OI 5, spread 38%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 37.4,
+    "S": 37.9,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -109641,14 +108219,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 12, spread 30%"
+     "May 21 0.60-0.70 delta: OI 12, spread 19%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 62.0,
+    "S": 62.72,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -109789,14 +108367,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 5, cost $2,526 > cap $1,288"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 16%, cost $1,646 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 88.5,
+    "S": 86.0,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -110351,14 +108929,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 1"
+     "Apr 16 0.60-0.70 delta: OI 1, spread 68%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 25.38,
+    "S": 26.91,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -111062,14 +109640,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 0, spread 30%"
+     "Mar 19 0.50-0.60 delta: OI 385, spread 16%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 13.7,
+    "S": 11.47,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -111208,14 +109786,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 0, spread 22%, cost $1,514 > cap $1,288"
+     "Apr 16 0.60-0.70 delta: OI 7, spread 24%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 13.58,
+    "S": 10.13,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -111387,14 +109965,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 179 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 179, spread 9%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 22.7,
+    "S": 22.58,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -112507,14 +111085,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 10, spread 63%"
+     "Mar 19 0.60-0.70 delta: OI 1, spread 46%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 28.56,
+    "S": 30.18,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 15:59 ET"
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -112744,14 +111322,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 241 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.50-0.60 delta: OI 67, spread 9%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 7.1,
+    "S": 6.6,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -113037,14 +111615,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 5, cost $2,761 > cap $1,546"
+     "Apr 16 0.60-0.70 delta: OI 360, spread 12%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 90.48,
+    "S": 107.73,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -113451,14 +112029,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 4, cost $1,506 > cap $1,288"
+     "May 21 0.60-0.70 delta: OI 1, cost $1,698 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 34.89,
+    "S": 37.74,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -114313,14 +112891,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 107"
+     "Mar 19 0.50-0.60 delta: OI 107, spread 47%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 50.49,
+    "S": 49.58,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -114916,68 +113494,28 @@
    "setups": [
     "Breakdown 11-18 (< 6.21, vol 1.65x), holding"
    ],
-   "exp": "2027-05-21",
-   "ts": "2027-04-30",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.18,
    "rr_pts": 0,
-   "cap": 2.85,
+   "cap": 3.5,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "May 21 0.60-0.70 delta: spread 23%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "TGB270521P00007000",
-     "exp": "2027-05-21",
-     "cp": "P",
-     "strike": 7.0,
-     "bid": 1.65,
-     "ask": 2.05,
-     "oi": 1519,
-     "src": "Public",
-     "dte": 178,
-     "quote": true,
-     "mid": 1.85,
-     "spread_pct": 0.2162,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 189.7,
-     "fits": true,
-     "lim": 1.887,
-     "iv": 0.61,
-     "delta": -0.6166,
-     "be": 5.1,
-     "be_sd": 0.177,
-     "ivhv": 0.793,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 5.52,
+    "contract": null,
+    "S": 5.34,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-17",
-    "time": "AMC",
-    "days": 85,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-17"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
+   }
   }
  },
  {
@@ -115230,56 +113768,56 @@
    "ts": "2027-02-26",
    "rr": 0.23,
    "rr_pts": 0,
-   "cap": 201.32,
+   "cap": 199.6,
    "trend": 2,
    "rs": 0,
    "known": 2,
-   "max": 7,
+   "max": 6,
    "near_low": false,
    "opt": {
-    "status": "ok-high-only",
+    "status": "ok",
     "notes": [
-     "fits only the High cap ($2,577): needs 10+"
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
     ],
-    "cap": 2576.9,
+    "cap": 1546.14,
     "contract": {
-     "osi": "TGT270319C00160000",
+     "osi": "TGT270319C00175000",
      "exp": "2027-03-19",
      "cp": "C",
-     "strike": 160.0,
-     "bid": 18.0,
-     "ask": 18.6,
-     "oi": 1697,
+     "strike": 175.0,
+     "bid": 14.0,
+     "ask": 14.45,
+     "oi": 873,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 18.3,
-     "spread_pct": 0.0328,
+     "mid": 14.225,
+     "spread_pct": 0.0316,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1846.0,
+     "cost": 1434.75,
      "fits": true,
-     "lim": 18.45,
-     "iv": 0.3882,
-     "delta": 0.6284,
-     "be": 178.46,
-     "be_sd": 0.353,
-     "ivhv": 1.055,
+     "lim": 14.337,
+     "iv": 0.3386,
+     "delta": 0.5627,
+     "be": 189.35,
+     "be_sd": 0.435,
+     "ivhv": 0.92,
      "pricing": 2,
-     "liquidity": 2,
+     "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 165.71,
+    "S": 174.88,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    },
-   "liq": 2,
+   "liq": 1,
    "pricing": 2,
    "cat": 1,
-   "score": 7,
+   "score": 6,
    "earn": {
     "date": "2027-03-03",
     "time": "BMO",
@@ -115783,14 +114321,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 300 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: spread 15%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 141.0,
+    "S": 142.24,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -117175,14 +115713,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 1, cost $1,893 > cap $1,546"
+     "Mar 19 0.60-0.70 delta: OI 11, spread 16%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 125.0,
+    "S": 129.12,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -117468,14 +116006,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0, cost $2,602 > cap $1,288"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 9%, cost $2,691 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 102.52,
+    "S": 107.09,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -118894,41 +117432,41 @@
     ],
     "cap": 2576.9,
     "contract": {
-     "osi": "TTWO270319C00210000",
+     "osi": "TTWO270319C00230000",
      "exp": "2027-03-19",
      "cp": "C",
-     "strike": 210.0,
-     "bid": 22.5,
-     "ask": 24.1,
-     "oi": 1006,
+     "strike": 230.0,
+     "bid": 20.1,
+     "ask": 20.8,
+     "oi": 6217,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 23.3,
-     "spread_pct": 0.0687,
+     "mid": 20.45,
+     "spread_pct": 0.0342,
      "spread_ok": true,
-     "spread_provisional": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 2371.0,
+     "cost": 2063.5,
      "fits": true,
-     "lim": 23.7,
-     "iv": 0.4831,
-     "delta": 0.5646,
-     "be": 233.71,
-     "be_sd": 0.439,
-     "ivhv": 0.804,
-     "pricing": 2,
-     "liquidity": 1,
+     "lim": 20.625,
+     "iv": 0.4855,
+     "delta": 0.5027,
+     "be": 250.63,
+     "be_sd": 0.525,
+     "ivhv": 0.808,
+     "pricing": 1,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 208.85,
+    "S": 219.24,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    },
-   "liq": 1,
-   "pricing": 2,
+   "liq": 2,
+   "pricing": 1,
    "cat": 1,
    "score": 6,
    "earn": {
@@ -119080,14 +117618,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 10C +0.81, 12.5C +0.24, Mar 19)"
+     "no strike at 0.50-0.70 delta (nearest 10C +0.74, 12.5C +0.24, Mar 19)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 10.94,
+    "S": 10.84,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -119260,14 +117798,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $1,934 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 20, spread 24%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 51.3,
+    "S": 51.29,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -119929,11 +118467,11 @@
    "ts": "2027-02-26",
    "rr": 0.0,
    "rr_pts": 0,
-   "cap": 51.33,
+   "cap": 52.02,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 9,
    "near_low": true,
    "opt": {
     "status": "ok",
@@ -119944,39 +118482,39 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 72.5,
-     "bid": 9.65,
-     "ask": 10.7,
+     "bid": 9.35,
+     "ask": 9.75,
      "oi": 1824,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 10.175,
-     "spread_pct": 0.1032,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 9.55,
+     "spread_pct": 0.0419,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1038.85,
+     "cost": 966.0,
      "fits": true,
-     "lim": 10.379,
-     "iv": 0.3917,
-     "delta": -0.6411,
-     "be": 62.11,
-     "be_sd": 0.168,
-     "ivhv": 1.126,
-     "pricing": 1,
-     "liquidity": 1,
+     "lim": 9.65,
+     "iv": 0.3706,
+     "delta": -0.6407,
+     "be": 62.84,
+     "be_sd": 0.16,
+     "ivhv": 1.065,
+     "pricing": 2,
+     "liquidity": 2,
      "reasons": [],
      "passes": true
     },
-    "S": 64.5,
+    "S": 65.0,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    },
-   "liq": 1,
-   "pricing": 1,
+   "liq": 2,
+   "pricing": 2,
    "cat": 1,
-   "score": 6,
+   "score": 8,
    "earn": {
     "date": "2027-02-03",
     "time": "BMO",
@@ -120391,14 +118929,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0"
+     "no strike at 0.50-0.70 delta (nearest 35P -0.48, 40P -0.73, Apr 16)"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 36.7,
+    "S": 34.33,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -121329,60 +119867,28 @@
    "setups": [
     "Breakdown 11-20 (< 28.67, vol 1.68x), holding"
    ],
-   "exp": "2027-04-16",
-   "ts": "2027-03-25",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.37,
    "rr_pts": 0,
-   "cap": 18.47,
+   "cap": 19.65,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Apr 16 0.60-0.70 delta: OI 213, spread 17%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "URA270416P00035000",
-     "exp": "2027-04-16",
-     "cp": "P",
-     "strike": 35.0,
-     "bid": 7.1,
-     "ask": 8.3,
-     "oi": 747,
-     "src": "Public",
-     "dte": 143,
-     "quote": true,
-     "mid": 7.7,
-     "spread_pct": 0.1558,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 786.4,
-     "fits": true,
-     "lim": 7.854,
-     "iv": 0.5066,
-     "delta": -0.6729,
-     "be": 27.14,
-     "be_sd": 0.14,
-     "ivhv": 0.836,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 28.4,
+    "contract": null,
+    "S": 27.27,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 0,
-   "score": 6,
-   "earn": {},
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
+   }
   }
  },
  {
@@ -121996,14 +120502,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 38 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 20.05,
+    "S": 19.12,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -122408,7 +120914,7 @@
   "sma50": 25.19,
   "trend_call": 0,
   "trend_put": 2,
-  "atr_pct": 13.85,
+  "atr_pct": 13.86,
   "hv20": 130.0,
   "ret3m": -68.5,
   "rs_spy": -62.8,
@@ -122418,7 +120924,7 @@
   "pct_above_lo52": 1.2,
   "pct_below_hi52": 97.6,
   "near_low": true,
-  "vol_ratio": 1.36,
+  "vol_ratio": 1.37,
   "hi20": 25.04,
   "lo20": 14.01,
   "setups": [
@@ -122426,16 +120932,16 @@
    "Breakdown 11-19 (< 19.38, vol 4.92x), holding"
   ],
   "watch": [
-   "below 20d low 14.01 but vol 1.36x"
+   "below 20d low 14.01 but vol 1.37x"
   ],
   "note": "PUT BLOCKED: near 52-wk low",
   "levels_put": {
    "dir": "put",
    "entry": 13.99,
-   "atr14": 1.938,
+   "atr14": 1.939,
    "ext10_close": 23.9,
-   "invalidation": 19.8,
-   "risk": 5.813,
+   "invalidation": 19.81,
+   "risk": 5.816,
    "target": 13.83,
    "next_levels": [
     13.83
@@ -122510,8 +121016,8 @@
     ],
     [
      "2026-11-23",
-     15.15,
-     13.92,
+     15.16,
+     13.91,
      13.99
     ]
    ]
@@ -122832,14 +121338,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 241 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: spread 26%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 20.02,
+    "S": 20.7,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -123160,14 +121666,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 93, cost $2,214 > cap $1,546"
+     "May 21 0.60-0.70 delta: OI 19, spread 13%, cost $1,554 > cap $1,546"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 90.0,
+    "S": 99.27,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -123425,14 +121931,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 21%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 49.6,
+    "S": 50.32,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -124020,14 +122526,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.50-0.60 delta: OI 60"
+     "Apr 16 0.60-0.70 delta: OI 43, spread 8%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 15.19,
+    "S": 13.47,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -124344,14 +122850,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0"
+     "Apr 16 0.60-0.70 delta: OI 1, spread 18%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 20.1,
+    "S": 17.95,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -124876,14 +123382,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "May 21 0.60-0.70 delta: OI 0, spread 90%"
+     "May 21 0.50-0.60 delta: OI 11, spread 32%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 13.56,
+    "S": 14.38,
     "quotes": "Public",
     "regular": true,
-    "quote_time": "11-23 16:00 ET"
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -125231,14 +123737,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 23 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "no strike at 0.50-0.70 delta (nearest 35C +0.70, 40C +0.48, Apr 16)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 36.5,
+    "S": 38.0,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -125492,68 +123998,28 @@
    "setups": [
     "Pullback (off 10.48 -12.2%, +1.5% vs SMA20)"
    ],
-   "exp": "2027-04-16",
-   "ts": "2027-03-25",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.46,
    "rr_pts": 0,
-   "cap": 13.41,
+   "cap": 12.96,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 7,
+   "max": 8,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Apr 16 0.50-0.60 delta: spread 73%"
+    ],
     "cap": 1546.14,
-    "contract": {
-     "osi": "VYX270416C00010000",
-     "exp": "2027-04-16",
-     "cp": "C",
-     "strike": 10.0,
-     "bid": 0.8,
-     "ask": 2.25,
-     "oi": 522,
-     "src": "Public",
-     "dte": 143,
-     "quote": true,
-     "mid": 1.525,
-     "spread_pct": 0.9508,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 156.55,
-     "fits": true,
-     "lim": 1.555,
-     "iv": 0.4958,
-     "delta": 0.6255,
-     "be": 11.57,
-     "be_sd": 0.375,
-     "ivhv": 0.711,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 10.36,
+    "contract": null,
+    "S": 9.94,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-02-25",
-    "time": "BMO",
-    "days": 93,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-02-24"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
+   }
   }
  },
  {
@@ -125877,14 +124343,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 29%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 5.15,
+    "S": 5.18,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -126708,14 +125174,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $2,214 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 3, spread 13%, cost $2,561 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 48.8,
+    "S": 47.81,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -127273,14 +125739,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0, cost $5,788 > cap $1,288"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 28%, cost $1,428 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 66.71,
+    "S": 58.87,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -127509,14 +125975,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 18 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Apr 16 0.60-0.70 delta: OI 17, spread 42%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 32.7,
+    "S": 32.96,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -128106,14 +126572,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 23, cost $4,278 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 46, spread 10%, cost $3,831 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 213.45,
+    "S": 208.45,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -128254,14 +126720,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 63"
+     "Mar 19 0.60-0.70 delta: OI 14, spread 24%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 18.88,
+    "S": 19.73,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -128576,14 +127042,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 1 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 55, spread 87%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 23.99,
+    "S": 25.86,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -129080,14 +127546,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 104 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 19%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 102.35,
+    "S": 104.11,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:15 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -129229,41 +127695,43 @@
    "near_low": false,
    "opt": {
     "status": "ok",
-    "notes": [],
+    "notes": [
+     "0.50-0.60 delta (0.60-0.70 failed the spread or the cap)"
+    ],
     "cap": 1288.45,
     "contract": {
-     "osi": "XLE270319P00065000",
+     "osi": "XLE270319P00063000",
      "exp": "2027-03-19",
      "cp": "P",
-     "strike": 65.0,
-     "bid": 4.6,
-     "ask": 8.35,
-     "oi": 3832,
+     "strike": 63.0,
+     "bid": 4.85,
+     "ask": 5.15,
+     "oi": 11365,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 6.475,
-     "spread_pct": 0.5792,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 5.0,
+     "spread_pct": 0.06,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 661.45,
+     "cost": 508.5,
      "fits": true,
-     "lim": 6.604,
-     "iv": 0.2807,
-     "delta": -0.643,
-     "be": 58.39,
-     "be_sd": 0.151,
-     "ivhv": 0.917,
+     "lim": 5.075,
+     "iv": 0.2815,
+     "delta": -0.5557,
+     "be": 57.91,
+     "be_sd": 0.23,
+     "ivhv": 0.92,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 59.81,
+    "S": 60.09,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:15 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -129405,52 +127873,20 @@
    "trend": 1,
    "rs": 0,
    "known": 1,
-   "max": 5,
+   "max": 7,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Mar 19 0.60-0.70 delta: spread 9%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "XLF270319P00060000",
-     "exp": "2027-03-19",
-     "cp": "P",
-     "strike": 60.0,
-     "bid": 4.55,
-     "ask": 5.1,
-     "oi": 20594,
-     "src": "Public",
-     "dte": 115,
-     "quote": true,
-     "mid": 4.825,
-     "spread_pct": 0.114,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 493.15,
-     "fits": true,
-     "lim": 4.921,
-     "iv": 0.2161,
-     "delta": -0.665,
-     "be": 55.07,
-     "be_sd": 0.112,
-     "ivhv": 0.871,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 55.83,
+    "contract": null,
+    "S": 55.8,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:15 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 0,
-   "score": 4,
-   "earn": {},
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
+   }
   }
  },
  {
@@ -130106,68 +128542,28 @@
    "setups": [
     "Breakdown 11-20 (< 9.04, vol 2.40x), holding"
    ],
-   "exp": "2027-04-16",
-   "ts": "2027-03-25",
+   "exp": "2027-03-19",
+   "ts": "2027-02-26",
    "rr": 0.46,
    "rr_pts": 0,
-   "cap": 4.89,
+   "cap": 5.34,
    "trend": 2,
    "rs": 1,
    "known": 3,
-   "max": 8,
+   "max": 9,
    "near_low": false,
    "opt": {
-    "status": "ok",
-    "notes": [],
+    "status": "fail",
+    "notes": [
+     "Apr 16 0.60-0.70 delta: spread 19%"
+    ],
     "cap": 1288.45,
-    "contract": {
-     "osi": "XPEV270416P00011000",
-     "exp": "2027-04-16",
-     "cp": "P",
-     "strike": 11.0,
-     "bid": 2.53,
-     "ask": 2.79,
-     "oi": 1087,
-     "src": "Public",
-     "dte": 143,
-     "quote": true,
-     "mid": 2.66,
-     "spread_pct": 0.0977,
-     "spread_ok": false,
-     "spread_provisional": true,
-     "oi_ok": true,
-     "cost": 272.32,
-     "fits": true,
-     "lim": 2.713,
-     "iv": 0.637,
-     "delta": -0.6055,
-     "be": 8.28,
-     "be_sd": 0.196,
-     "ivhv": 0.84,
-     "pricing": 2,
-     "liquidity": 1,
-     "reasons": [],
-     "passes": true
-    },
-    "S": 8.98,
+    "contract": null,
+    "S": 8.79,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
-   },
-   "liq": 1,
-   "pricing": 2,
-   "cat": 1,
-   "score": 7,
-   "earn": {
-    "date": "2027-03-18",
-    "time": "BMO",
-    "days": 114,
-    "recent": false,
-    "inside_life": true,
-    "pre_event": false,
-    "exit_by": "2027-03-17"
-   },
-   "cat_est": false
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
+   }
   }
  },
  {
@@ -130395,14 +128791,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Apr 16 0.60-0.70 delta: OI 0"
+     "Apr 16 0.60-0.70 delta: OI 0, spread 23%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 9.45,
+    "S": 9.21,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -130669,34 +129065,34 @@
      "exp": "2027-03-19",
      "cp": "P",
      "strike": 80.0,
-     "bid": 10.65,
-     "ask": 11.9,
+     "bid": 10.15,
+     "ask": 10.9,
      "oi": 2105,
      "src": "Public",
      "dte": 115,
      "quote": true,
-     "mid": 11.275,
-     "spread_pct": 0.1109,
-     "spread_ok": false,
-     "spread_provisional": true,
+     "mid": 10.525,
+     "spread_pct": 0.0713,
+     "spread_ok": true,
+     "spread_provisional": false,
      "oi_ok": true,
-     "cost": 1151.05,
+     "cost": 1072.25,
      "fits": true,
-     "lim": 11.501,
-     "iv": 0.4402,
-     "delta": -0.5917,
-     "be": 68.49,
-     "be_sd": 0.214,
-     "ivhv": 0.596,
+     "lim": 10.713,
+     "iv": 0.4658,
+     "delta": -0.5408,
+     "be": 69.28,
+     "be_sd": 0.26,
+     "ivhv": 0.631,
      "pricing": 2,
      "liquidity": 1,
      "reasons": [],
      "passes": true
     },
-    "S": 72.31,
+    "S": 74.33,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    },
    "liq": 1,
    "pricing": 2,
@@ -131060,14 +129456,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 7.5C +0.82, 10C +0.35, Mar 19)"
+     "no strike at 0.50-0.70 delta (nearest 7.5C +0.80, 10C +0.35, Mar 19)"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 8.82,
+    "S": 8.9,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -131208,14 +129604,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.50-0.60 delta: OI 31"
+     "Mar 19 0.60-0.70 delta: OI 209, spread 19%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 55.0,
+    "S": 52.48,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -131357,14 +129753,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 0, cost $4,758 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 0, spread 22%"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 36.3,
+    "S": 31.95,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -131863,14 +130259,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "no strike at 0.50-0.70 delta (nearest 12.5C +0.76, 15C +0.47, Apr 16)"
+     "Apr 16 0.60-0.70 delta: OI 1, spread 130%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 14.12,
+    "S": 13.45,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -132013,14 +130409,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 73 (0.50-0.60 not allowed: the 0.60-0.70 strikes failed on open interest only)"
+     "Mar 19 0.60-0.70 delta: OI 85, spread 150%"
     ],
     "cap": 1546.14,
     "contract": null,
-    "S": 29.62,
+    "S": 30.34,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
@@ -132219,14 +130615,14 @@
    "opt": {
     "status": "fail",
     "notes": [
-     "Mar 19 0.60-0.70 delta: OI 409, cost $1,735 > cap $1,288"
+     "Mar 19 0.60-0.70 delta: OI 409, cost $1,537 > cap $1,288"
     ],
     "cap": 1288.45,
     "contract": null,
-    "S": 86.1,
+    "S": 89.32,
     "quotes": "Public",
-    "regular": false,
-    "quote_time": "11-23 16:00 ET"
+    "regular": true,
+    "quote_time": "11-24 10:49 ET"
    }
   }
  },
