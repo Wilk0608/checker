@@ -1,5 +1,7 @@
 # Shadow ledger (automatic): updated 2026-11-27
 
+This run made no changes (run outside regular hours: exits and entries wait for regular-hours quotes).
+
 One contract each. Open shadows are valued at their last regular-hours quote, at the plan's exit price (mid minus a quarter of the spread minus the $1 fee).
 
 | | Trades | Cost | P/L |
@@ -48,17 +50,6 @@ Evidence gates (20+ closed trades scoring 7+ that beat the random benchmark by m
 | P | Breakdown near low | 7-9 | 2 | 2 | +76.0% |
 | P | Failed rally | 7-9 | 4 | 2 | -4.9% |
 | P | Failed rally near low | 7-9 | 1 | 1 | +24.7% |
-
-## This run: 3 closed, 6 opened, 1 reached +50%, 0 without a quote
-- Closed S5 SLV 55P 2026-12-18: +218.4% (time stop)
-- Closed S18 SLV 48P 2026-12-18: +135.3% (trailing stop (mid 8.925 <= 8.977))
-- Closed S19 AGNC 9P 2027-01-15: +24.7% (trailing stop (mid 0.935 <= 0.976))
-- Opened A70 BIDU 70P 2027-03-19 at 10.70: score 9, Breakdown
-- Opened A71 DKS 150C 2027-03-19 at 23.43: score 8, Breakout
-- Opened A72 KSS 25C 2027-03-19 at 5.42: score 8, Breakout
-- Opened A73 SLV 47P 2027-03-19 at 9.31: score 8, Breakdown
-- Opened A74 XE 12.5P 2027-04-16 at 4.83: score 8, Breakdown near low
-- Opened A75 PHG 30C 2027-04-16 at 2.42: score 7, Pullback
 
 ## Open: 71
 
