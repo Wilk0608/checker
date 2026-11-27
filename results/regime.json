@@ -16,12 +16,12 @@
   "above200": false
  },
  "VIX": {
-  "last": 28.29,
-  "ago5": 24.56
+  "last": 26.8,
+  "ago5": 28.44
  },
  "signals": {
   "tbill": {
-   "now": 4.15,
+   "now": 4.16,
    "then": 3.68,
    "easing": false
   },
@@ -31,8 +31,8 @@
    "easing": true
   },
   "dollar": {
-   "now": 103.75,
-   "avg50": 102.14,
+   "now": 103.67,
+   "avg50": 102.13,
    "easing": false
   }
  },
